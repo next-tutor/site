@@ -1,0 +1,11 @@
+.openning-text {
+  .middle {
+    font-size: 40px;
+    font-family: "Champion-HTF-Middleweight";
+  }
+
+  .heavy {
+    font-size: 40px;
+    font-family: "Champion-HTF-Heavyweight";
+  }
+}

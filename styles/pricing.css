@@ -11,6 +11,7 @@
     font-size: 80px;
     color: #fff;
     font-weight: 600;
+    animation: fadeIn 1s, slideIn 1.5s;
 
     .gradient {
       margin-right: 30px;
@@ -18,10 +19,15 @@
   }
 
   .subtitle {
-    color: #d2d2d2;
-    text-align: center;
     font-family: Poppins;
-    font-size: 54px;
+    font-size: 20px;
+    color: #959494;
+    width: 80%;
+    max-width: 720px;
+    line-height: 43px;
+    text-align: center;
+    animation: fadeIn 1s, slideIn 1.5s;
+    margin-top: 25px;
   }
 
   .wrapper {

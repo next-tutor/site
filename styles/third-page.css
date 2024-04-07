@@ -36,7 +36,10 @@
     line-height: 67.2px;
     letter-spacing: -1.4px;
     color: #e2e2e2;
+    background: linear-gradient(135deg, #ededed 0%, #ffa061 100%);
     background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
 
@@ -116,7 +119,7 @@
     }
 
     &:nth-of-type(2) {
-      margin-top: 120px;
+      height: 400px;
 
       .text {
         margin-left: auto;
@@ -127,15 +130,15 @@
     &.why1 {
       img {
         position: absolute;
-        top: 15px;
-        right: -20px;
-        width: 400px;
+        top: 30px;
+        right: 25px;
+        width: 370px;
       }
     }
   }
 
   .why-img2 {
-    width: 460px;
+    width: 430px;
     position: absolute;
     top: 40px;
     left: -20px;
