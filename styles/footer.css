@@ -48,7 +48,7 @@ footer1 {
   .get-app-wrapper {
     display: flex;
     flex-direction: column;
-    margin-left: 270px;
+    margin-left: 110px;
     margin-right: auto;
 
     .btn {
