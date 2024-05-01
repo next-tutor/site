@@ -209,7 +209,7 @@
       <div class="gradient-box">
       </div>
       <div class="main-wrap">
-        <img src="./images/viva/test.png" />
+        <img src="./images/features/students/students.png" />
       </div>
     </div>
   </div>
@@ -222,7 +222,7 @@
 
   <div class="feature-details">
     <div class="inner-details">
-      <div class="main-title">
+      <div class="main-title" data-swap="image--1">
         <div class="title">
           Tools to amplify your talent
         </div>
@@ -233,31 +233,27 @@
       </div>
       <div class="more-details">
         <div class="sticky-box">
-          <img src="./images/features/fe11.png">
+          <img src="./images/features/students/student-paybook.png" class="image--1 active">
+          <img src="./images/features/students/students-lessons.png" class="image--2">
+          <img src="./images/features/students/student-tasks.png" class="image--3">
         </div>
         <div class="items">
-          <div class="item">
+          <div class="item" data-swap="image--1">
             <div class="title bold">Pixel-Perfect sites, every time</div>
             <div class="desc">asdf asdjkf ajskdfk fd asjdf klajsdkf alkdjf lksda jahsdfkhakd fhkjhjakdhfkahsd
               fahsdkfhaksdhfkjahsd kfhaksdhf kajsh
               fkjahsf</div>
           </div>
-          <div class="item">
+          <div class="item" data-swap="image--2">
             <div class="title">Pixel-Perfect sites, every time</div>
             <div class="desc">asdf asdjkf ajskdfk asjkdf lkasjd fljaskd jakdsf jahsdfkhakd fhkjhjakdhfkahsd
               fahsdkfhaksdhfkjahsd kfhaksdhf kajsh
               fkjahsf</div>
           </div>
-          <div class="item">
+          <div class="item" data-swap="image--3">
             <div class="title bold">Pixel-Perfect sites, every time</div>
             <div class="desc">asdf asdjkf ajskdfk fsajdhf kjhasdjkfhaksdhf kjasdkjasd jahsdfkhakd fhkjhjakdhfkahsd
               fahsdkfhaksdhfkjahsd kfhaksdhf kajsh
-              fkjahsf</div>
-          </div>
-          <div class="item">
-            <div class="title">Pixel-Perfect sites, every time</div>
-            <div class="desc">asdf asdjkf ajskdfk a sdfajsdkfja sjdlkfjakdjs flkjsad klaskdf ljahsdfkhakd
-              fhkjhjakdhfkahsd fahsdkfhaksdhfkjahsd kfhaksdhf kajsh
               fkjahsf</div>
           </div>
         </div>
@@ -267,7 +263,7 @@
   </div>
 
 
-  <div class="more-features">
+  <div class="more-features" data-swap="image--3">
     <div class="caption">Explore more features</div>
     <div class="items">
       <div class="item">
@@ -492,9 +488,44 @@
     </div>
   </footer2>
 </body>
+
+<script>
+
+</script>
+
 <script src="./js/index.js"></script>
 <script src="./js/platform.js"></script>
 <script src="./js/navbar.js"></script>
 <script src="./js/footer.js"></script>
+
+<script>
+  $(document).ready(function () {
+    var last = null;
+    if (typeof window.IntersectionObserver !== 'undefined') {
+      let options = {
+        threshold: [0.5, 1]
+      }
+      const targets = document.querySelectorAll('.feature-details .item');
+      const locker = document.querySelector('.sticky-box');
+      function handleIntersection(entries) {
+        entries.map((entry) => {
+          if (entry.isIntersecting) {
+            last = entry.target.current;
+            entry.target.current = entry.target.dataset.swap;
+            $(".sticky-box ." + entry.target.current).addClass("active");
+          } else {
+            if (last !== entry.target.current) {
+              $(".sticky-box ." + entry.target.current).removeClass("active");
+            }
+          }
+        });
+      }
+      const observer = new IntersectionObserver(handleIntersection, options);
+      targets.forEach(target => observer.observe(target));
+    } else {
+      // Fallback
+    }
+  });
+</script>
 
 </html>

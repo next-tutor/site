@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="./styles/platform.css" />
   <link rel="stylesheet" href="./styles/style.css" />
   <link rel="stylesheet" href="./tt.css" />
-  <link rel="stylesheet" href="./styles/credits.css" />
+  <link rel="stylesheet" href="./styles/features.css" />
 </head>
 
 <body>
@@ -201,30 +201,91 @@
     </div>
   </header>
 
-  <section class="credits">
-    <div class="inner">
-      <div class="title gradient">Images Credits</div>
-      <div class="content">
-        <div class="declaration">The images below are used under the <a href="http://www.freepik.com" target="_blank"
-            class="bold">FREEPIK</a>
-          free license
-        </div>
-
-        <div><a href="https://www.freepik.com/vectors/hand" rel="nofollow noopener" target="_blank">Hand vector created
-            by
-            Harryarts (STORYSET)</a></div>
-        <div><a href="https://www.freepik.com/vectors/hand" rel="nofollow noopener" target="_blank">Hand vector created
-            by
-            Harryarts (STORYSET)</a></div>
-        <div><a href="https://www.freepik.com/vectors/hand" rel="nofollow noopener" target="_blank">Hand vector created
-            by
-            Harryarts (STORYSET)</div>
-
-
-        <!-- https://www.istockphoto.com/photo/beautiful-teen-girl-using-her-laptop-at-junior-high-shcool-gm1485931648-511801167?utm_source=pixabay&utm_medium=affiliate&utm_campaign=SRP_image_sponsored&utm_content=https%3A%2F%2Fpixabay.com%2Fimages%2Fsearch%2Fgirl%2F%3Fpagi%3D2&utm_term=girl -->
+  <div class="feature-opening">
+    <div class="title">
+      <div>Build a <span class="gradient">Website</span> that fit you.</div>
+    </div>
+    <div class="page welcome">
+      <div class="gradient-box">
+      </div>
+      <div class="main-wrap">
+        <img src="./images/features/lessons/lessons.png" />
       </div>
     </div>
-  </section>
+  </div>
+
+
+
+  <div class="feature-opening-bg">
+  </div>
+
+
+  <div class="feature-details">
+    <div class="inner-details">
+      <div class="main-title" data-swap="image--1">
+        <div class="title">
+          Tools to amplify your talent
+        </div>
+        <div class="text">
+          dfgk sdfklgsl sdf asdkf askdjfkasdkjf kjsadfk lajsdkfj kdajsf lkjsda kljdsalkdsa kdjg lsjdfkg jskdljf gklsjdj
+          glksjdfklgjsd sdfgk lsdkflgk asdfKAS fdgksdjfgkjs dflglksdjgljsdfklg jsldkfglksdjfglsjdf s;
+        </div>
+      </div>
+      <div class="more-details">
+        <div class="sticky-box">
+          <img src="./images/features/lessons/lesson-achivements.png" class="image--1 achivements active">
+          <img src="./images/features/lessons/lesson-homework.png" class="image--2 homework">
+        </div>
+        <div class="items">
+          <div class="item" data-swap="image--1">
+            <div class="title bold">Pixel-Perfect sites, every time</div>
+            <div class="desc">asdf asdjkf ajskdfk fd asjdf klajsdkf alkdjf lksda jahsdfkhakd fhkjhjakdhfkahsd
+              fahsdkfhaksdhfkjahsd kfhaksdhf kajsh
+              fkjahsf</div>
+          </div>
+          <div class="item" data-swap="image--2">
+            <div class="title">Pixel-Perfect sites, every time</div>
+            <div class="desc">asdf asdjkf ajskdfk asjkdf lkasjd fljaskd jakdsf jahsdfkhakd fhkjhjakdhfkahsd
+              fahsdkfhaksdhfkjahsd kfhaksdhf kajsh
+              fkjahsf</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="more-features">
+    <div class="caption">Explore more features</div>
+    <div class="items">
+      <div class="item">
+        <div class="title t1">Client Portal</div>
+        <div class="txt">sadkf lasjdfkl jakdfj alkjd asdf asdkl askdj klajsd jasldsalajsd ljaksdflkdjsa lsadflsada
+          skjdfl jsadfk</div>
+        <a class="find">Find out more
+          <img src="./images/arrow-right.svg">
+        </a>
+      </div>
+      <div class="item">
+        <div class="title t2">Client Portal</div>
+        <div class="txt">sadkf lasjdfkl jakdfj alkjd asdf asdkl askdj klajsd jasldsalajsd ljaksdflkdjsa lsadflsada
+          skjdfl jsadfk</div>
+        <a class="find">Find out more
+          <img src="./images/arrow-right.svg">
+        </a>
+      </div>
+      <div class="item">
+        <div class="title t3">Client Portal</div>
+        <div class="txt">sadkf lasjdfkl jakdfj alkjd asdf asdkl askdj klajsd jasldsalajsd ljaksdflkdjsa lsadflsada
+          skjdfl jsadfk</div>
+        <a class="find">Find out more
+          <img src="./images/arrow-right.svg">
+        </a>
+      </div>
+    </div>
+  </div>
+
 
   <section class="get-started see-more">
     <div class="wrapper">
@@ -420,9 +481,47 @@
     </div>
   </footer2>
 </body>
+
+<script>
+
+</script>
+
 <script src="./js/index.js"></script>
 <script src="./js/platform.js"></script>
 <script src="./js/navbar.js"></script>
 <script src="./js/footer.js"></script>
+
+<script>
+  $(document).ready(function () {
+    var last = null;
+    if (typeof window.IntersectionObserver !== 'undefined') {
+      let options = {
+        threshold: [0.5, 1]
+      }
+      const targets = document.querySelectorAll('.feature-details .item');
+      const locker = document.querySelector('.sticky-box');
+      function handleIntersection(entries) {
+        entries.map((entry) => {
+          if (entry.isIntersecting) {
+            last = entry.target.current;
+            entry.target.current = entry.target.dataset.swap;
+            console.log(last);
+            $(".sticky-box ." + entry.target.current).addClass("active");
+          } else {
+            console.log("... " + last + "  " + entry.target.current);
+
+            if (last !== entry.target.current) {
+              $(".sticky-box ." + entry.target.current).removeClass("active");
+            }
+          }
+        });
+      }
+      const observer = new IntersectionObserver(handleIntersection, options);
+      targets.forEach(target => observer.observe(target));
+    } else {
+      // Fallback
+    }
+  });
+</script>
 
 </html>
