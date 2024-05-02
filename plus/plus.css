@@ -38,8 +38,8 @@
 
           .logo {
             padding-left: 30px;
-            padding-top: 40px;
-            margin-bottom: 35px;
+            padding-top: 48px;
+            margin-bottom: 30px;
           }
 
           .item {
@@ -782,26 +782,6 @@
       display: flex;
       align-items: center;
       font-size: 15px;
-
-      .date {
-        font-weight: 600;
-        font-size: 13px;
-        color: #6f6e6e;
-      }
-
-      .splitter {
-        border-left: 1px solid #5d5d5d;
-        margin: 0 11px;
-        height: 21px;
-        width: 1px;
-        background: none;
-      }
-
-      .name {
-        color: #2196F3;
-      }
-
-
     }
 
 
@@ -969,6 +949,63 @@
         top: 135px;
         left: 375px;
       }
+    }
+  }
+
+  &.homeworks {
+
+
+    .inner-wrap {
+      height: 455px;
+      width: 590px;
+
+      .main {
+        right: 140px;
+
+        .header {
+          top: 50px;
+          font-size: 16px;
+          font-weight: 600;
+          color: #000;
+          font-family: 'Poppins';
+        }
+
+        .txt {
+          font-size: 16px;
+          color: #1f1f1f;
+          font-family: 'Poppins';
+          position: absolute;
+          top: 103px;
+          left: 40px;
+          width: 350px;
+          line-height: 33px;
+        }
+
+        .btn-attached {
+          position: absolute;
+          top: 240px;
+          left: 40px;
+          font-family: 'Poppins';
+          border: 1px solid #FF7F7F;
+          border-radius: 5px;
+          color: #e66767;
+          font-size: 14px;
+          padding: 5px 10px;
+          font-family: 'Poppins';
+          width: 128px;
+        }
+      }
+
+      img {
+        top: 131px;
+        left: 370px;
+        position: absolute;
+      }
+    }
+
+    img {
+      top: 135px;
+      left: 375px;
     }
   }
 }

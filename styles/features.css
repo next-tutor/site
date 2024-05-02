@@ -31,15 +31,14 @@
   }
 
   .page {
-    width: 1085px;
-    height: 610px;
-    border-radius: 20px;
+    /* width: 1085px;
+    height: 610px; */
     margin-top: 25px;
     z-index: 1;
     background: #fff;
     position: relative;
     margin-top: 130px;
-    border: 1px solid #808080;
+    border-radius: 20px;
 
     .gradient-box {
       display: none;
@@ -59,12 +58,9 @@
       }
     }
 
-    .main-wrap {
+    img {
       border-radius: 20px;
-      height: 100%;
-      width: 100%;
-      background: #fff;
-      overflow: hidden;
+      border: 1px solid #808080;
     }
   }
 }
@@ -135,9 +131,13 @@
             opacity: 1;
           }
 
-          &.achivements {
+          &.lessons {
             top: 40px;
             left: 30px;
+          }
+
+          &.tasks {
+            top: 50px;
           }
         }
       }
