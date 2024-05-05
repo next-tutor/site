@@ -244,10 +244,10 @@
 .portal {
 
   .inner-wrap .page .main-wrap .left-panel {
-    width: 180px;
+    width: 190px;
 
     .logo {
-      padding-top: 20px;
+      padding-top: 40px;
     }
   }
 
@@ -290,6 +290,7 @@
         margin-top: 45px;
 
         .item {
+          position: relative;
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -303,13 +304,13 @@
           margin: 0 8px;
 
           .num {
-            font-size: 70px;
+            font-size: 65px;
             margin-top: -10px;
           }
 
           .txt {
             color: #2196f3;
-            font-size: 18px;
+            font-size: 16px;
             font-family: 'Poppins';
             margin-top: -4px;
           }
