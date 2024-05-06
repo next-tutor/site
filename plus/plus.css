@@ -239,6 +239,60 @@
   }
 }
 
+.income {
+  .inner-wrap .page .main-wrap .right-panel {
+    .header {
+      width: 785px;
+    }
+
+    .items {
+      top: 170px;
+
+      .item {
+        position: relative;
+        display: flex;
+        height: 50px;
+        align-items: center;
+        border: 1px solid #8ecbff;
+        border-radius: 10px;
+        padding-left: 18px;
+        width: 280px;
+        margin-bottom: 28px;
+        ;
+
+        .caption {
+          padding: 0 10px;
+          font-size: 11px;
+          color: #303030;
+          position: absolute;
+          top: -10px;
+          background: #fff;
+          left: 10px;
+        }
+
+        .money {
+          font-size: 17px;
+          color: #428A42;
+        }
+
+        .arr svg {
+          top: 21px;
+          right: 17px;
+          width: 13px;
+        }
+      }
+    }
+  }
+
+  .inner-wrap .page .main-wrap .right-panel .pic {
+    top: 200px;
+    left: 485px;
+
+    svg {
+      width: 230px;
+    }
+  }
+}
 
 
 .portal {
@@ -534,62 +588,92 @@
   }
 
   &.offer-req {
-    .inner-wrap .content {
-      top: 120px;
+    .inner-wrap {
+      width: 530px;
 
-      .title {
-        color: #1a1a1a;
-        font-size: 13px;
-        font-weight: 600;
-        padding-bottom: 27px;
+      .header {
+        left: 40px;
+      }
+
+      .content {
+        top: 120px;
+        left: 45px;
+
+        .title {
+          color: #1a1a1a;
+          font-size: 13px;
+          font-weight: 600;
+          padding-bottom: 27px;
+        }
+
+        .input {
+          border-bottom: 1px solid #99CCF5;
+          min-height: 34px;
+          width: 300px;
+          margin-bottom: 27px;
+          position: relative;
+          display: flex;
+          align-items: center;
+          color: #a4a4a4;
+          font-size: 13px;
+        }
+
+        .img-task-req {
+          top: 42px;
+          left: 230px;
+        }
+      }
+    }
+  }
+
+  &.cancel-task-req {
+    .inner-wrap {
+      width: 530px;
+
+      .img-cancel-req {
+        position: absolute;
+        top: 60px;
+        left: 150px;
       }
 
       .input {
-        border-bottom: 1px solid #99CCF5;
+        border-bottom: 1px solid #f599ad;
         min-height: 34px;
-        width: 300px;
+        width: 347px;
         margin-bottom: 27px;
         position: relative;
         display: flex;
         align-items: center;
         color: #a4a4a4;
         font-size: 13px;
-      }
-
-      .img-task-req {
-        top: 42px;
-        left: 230px;
+        font-family: 'Poppins';
+        position: absolute;
+        top: 245px;
+        left: 82px;
       }
     }
   }
 
-  &.cancel-task-req {
-    .img-cancel-req {
-      position: absolute;
-      top: 43px;
-      left: 150px;
-    }
+  &.task-msg {
+    .inner-wrap {
+      width: 540px;
 
-    .input {
-      border-bottom: 1px solid #f599ad;
-      min-height: 34px;
-      width: 347px;
-      margin-bottom: 27px;
-      position: relative;
-      display: flex;
-      align-items: center;
-      color: #a4a4a4;
-      font-size: 13px;
-      font-family: 'Poppins';
-      position: absolute;
-      top: 228px;
-      left: 82px;
+      img {
+        left: 340px;
+      }
+
+      .main {
+        right: 103px;
+      }
     }
   }
+
 
   &.daily {
     .inner-wrap {
-      width: 520px;
+      width: 550px;
+      height: 435px;
+      ;
 
       .header .title {
         font-weight: 600;
@@ -603,7 +687,7 @@
         .income-item {
           font-family: 'Poppins';
           border-bottom: 1px solid #99CCF5;
-          min-height: 39px;
+          min-height: 35px;
           width: 250px;
           margin-bottom: 20px;
           position: relative;
@@ -618,10 +702,10 @@
 
           .date {
             color: #000;
-            font-size: 12px;
+            font-size: 13px;
             margin-left: 10px;
             font-weight: 600;
-            width: 43px;
+            width: 45px;
 
             &.today {
               color: red;
@@ -643,7 +727,7 @@
         }
 
         img {
-          top: 10px;
+          top: 25px;
           left: 250px;
         }
       }
@@ -673,9 +757,11 @@
 
   &.daily-details {
     .inner-wrap {
-      width: 520px;
+      height: 435px;
+      width: 550px;
 
       .content {
+        top: 115px;
 
         .item {
           display: flex;
@@ -1143,10 +1229,9 @@
 
     .content {
       background: #242424;
-      width: 1010px;
       background: #242424;
-      width: 1010px;
-      height: 665px;
+      width: 920px;
+      height: 645px;
       display: flex;
       align-items: center;
       flex-direction: column;
@@ -1159,11 +1244,11 @@
         margin-top: 50px;
 
         .sub {
-          font-size: 75px;
+          font-size: 70px;
         }
 
         .tutor {
-          font-size: 60px;
+          font-size: 55px;
           margin-top: -25px;
         }
       }
@@ -1179,7 +1264,7 @@
       }
 
       .items {
-        max-width: 737px;
+        max-width: 685px;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -1187,17 +1272,16 @@
 
         .item {
           border: 1px solid #dcdcdc;
-          padding: 3px 10px;
-          font-weight: 600;
+          padding: 3px 25px;
           font-family: 'Poppins';
-          min-width: 200px;
+          min-width: 146px;
           margin: 15px 10px;
           height: 35px;
-          font-size: 18px;
+          font-size: 16px;
           display: flex;
           justify-content: center;
           align-items: center;
-          color: #dcdcdc;
+          color: #ffffff;
         }
       }
     }
@@ -1229,7 +1313,7 @@
     .inner {
       position: relative;
       background: #ffffff;
-      width: 995px;
+      width: 970px;
       height: 535px;
       border-top: 3px solid #5b5b5b;
       border-bottom: 7px solid #5b5b5b;
@@ -1245,14 +1329,14 @@
         top: 65px;
         left: 65px;
         font-family: "Champion-HTF-Middleweight";
-        font-size: 55px;
+        font-size: 51px;
 
         .line {
           position: absolute;
-          top: 90px;
+          top: 80px;
           background: #9C2443ed;
-          width: 130px;
-          height: 8px;
+          width: 105px;
+          height: 7px;
 
           &:after {
             content: "";
@@ -1260,7 +1344,7 @@
             border-radius: 100%;
             position: absolute;
             top: -1px;
-            left: 135px;
+            left: 105px;
             width: 10px;
             height: 10px;
           }
@@ -1270,10 +1354,10 @@
       .content {
         position: absolute;
         top: 55px;
-        left: 400px;
+        left: 375px;
         font-family: Poppins;
         font-size: 19px;
-        width: 521px;
+        width: 495px;
         line-height: 40px;
         color: #000;
 

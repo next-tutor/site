@@ -93,7 +93,7 @@
       color: #000;
 
       .title {
-        font-size: 56px;
+        font-size: 52px;
         font-weight: 600;
       }
 
@@ -137,7 +137,17 @@
           }
 
           &.tasks {
-            top: 50px;
+            top: 70px;
+            left: 0;
+          }
+
+          &.task-msg {
+            top: 70px;
+            left: -10px;
+          }
+
+          &.income-img {
+            top: 55px;
           }
         }
       }
@@ -179,6 +189,26 @@
     }
   }
 
+}
+
+.site-block {
+  font-family: Poppins;
+  color: #000;
+
+  .tags {
+    img {
+      margin-top: 85px;
+    }
+  }
+
+  .about-me,
+  .testimonials {
+    margin-top: 145px;
+
+    img {
+      margin-top: 85px;
+    }
+  }
 }
 
 .more-features {
