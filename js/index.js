@@ -3,18 +3,18 @@ var responsiveMode = 0;
 $(document).ready(function () {
   $(this).scrollTop(0);
 
-  // $(".responsive-menu div").click(() => {
-  //   debugger;
-  //   if (responsiveMode == 0) {
-  //     responsiveMode = 1;
-  //     $(".responsive-menu .item1").removeClass("checked");
-  //     $(".responsive-menu .item2").addClass("checked");
-  //   } else {
-  //     responsiveMode = 0;
-  //     $(".responsive-menu .item2").removeClass("checked");
-  //     $(".responsive-menu .item1").addClass("checked");
-  //   }
-  // });
+  $(".responsive-menu div").click(() => {
+    debugger;
+    if (responsiveMode == 0) {
+      responsiveMode = 1;
+      $(".responsive-menu .item1").removeClass("checked");
+      $(".responsive-menu .item2").addClass("checked");
+    } else {
+      responsiveMode = 0;
+      $(".responsive-menu .item2").removeClass("checked");
+      $(".responsive-menu .item1").addClass("checked");
+    }
+  });
 
   // if ($(window).scrollTop() > 50) {
   //   $('.main-header').addClass('small');
