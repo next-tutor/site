@@ -1,4 +1,4 @@
-footer1 {
+.main-footer {
   display: flex;
   position: relative;
   box-sizing: border-box;
@@ -86,7 +86,7 @@ footer1 {
   }
 }
 
-footer2 {
+.mobile-footer {
   display: none;
   position: relative;
   flex-direction: column;
@@ -112,13 +112,29 @@ footer2 {
     transform: translateX(-50%);
   }
 
+  .info {
+    display: flex;
+    align-items: center;
+    font-family: Poppins;
+    margin: 10px 0;
+    color: #aeaeae;
+    text-decoration: none;
+
+    .linkedin {
+      margin: 7px 0px 0 14px;
+      fill: #c3c1c1;
+    }
+  }
+
+
   .btn-wrapper {
     display: flex;
     flex-direction: column;
     height: 60px;
     overflow: hidden;
     transition: 0.3s ease-in-out height;
-    width: 75%;
+    width: 100%;
+    padding: 0 30px;
     box-sizing: border-box;
 
     &.last.active {
@@ -146,7 +162,7 @@ footer2 {
       cursor: pointer;
 
       .title {
-        color: #fcfdfff0;
+        color: #b8b8b8;
         font-family: Poppins;
         font-size: 16px;
         font-weight: 400;
@@ -154,6 +170,10 @@ footer2 {
 
       svg {
         transition: 0.3s ease-in-out;
+
+        path {
+          stroke: #b8b8b8;
+        }
       }
     }
 
@@ -172,34 +192,24 @@ footer2 {
         font-weight: 400;
         text-decoration: none;
         margin-bottom: 23px;
+
+        &.btn {
+          margin: 5px 0 5px -20px;
+          scale: 0.9;
+        }
       }
     }
   }
 
   .bottom {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    width: 75%;
-    box-sizing: border-box;
-    padding-top: 50px;
+    justify-content: center;
+    width: 100%;
+    padding-top: 60px;
 
-    .get-app-wrapper {
-      margin-left: -20px;
-      display: flex;
-      flex-direction: column;
-      margin-right: auto;
 
-      .btn {
-        margin-top: 10px;
-        transition: 0.3s ease-in-out;
-        scale: 0.9;
 
-        &:hover {
-          scale: 0.94;
-        }
-      }
-    }
 
     .icons a {
       margin-right: 10px;
@@ -209,7 +219,7 @@ footer2 {
 }
 
 @media (max-width: 1153px) {
-  footer1 {
+  .main-footer {
     .get-app-wrapper {
       margin-left: 76px;
     }
@@ -221,7 +231,7 @@ footer2 {
 }
 
 @media (max-width: 870px) {
-  footer1 {
+  .main-footer {
     display: none;
 
     svg {
@@ -229,7 +239,7 @@ footer2 {
     }
   }
 
-  footer2 {
+  .mobile-footer {
     display: flex;
 
     .line {
