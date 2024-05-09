@@ -87,6 +87,7 @@
 }
 
 .mobile-footer {
+  font-family: Poppins;
   display: none;
   position: relative;
   flex-direction: column;
@@ -114,11 +115,21 @@
 
   .info {
     display: flex;
-    align-items: center;
-    font-family: Poppins;
-    margin: 10px 0;
+    margin: 25px 0 10px 0;
     color: #aeaeae;
     text-decoration: none;
+    width: 100%;
+    padding-left: 55px;
+
+    .rights {
+      color: #727070;
+      font-size: 14px;
+
+      .sign {
+        font-size: 17px;
+        font-weight: 500;
+      }
+    }
 
     .linkedin {
       margin: 7px 0px 0 14px;
