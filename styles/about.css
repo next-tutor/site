@@ -1,4 +1,6 @@
-@import "/styles/style.css";
+@import "common.css";
+@import "navbar.css";
+@import "footer.css";
 
 
 .about {

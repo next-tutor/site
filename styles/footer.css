@@ -1,4 +1,4 @@
-.main-footer {
+footer .main {
   display: flex;
   position: relative;
   box-sizing: border-box;
@@ -86,7 +86,7 @@
   }
 }
 
-.mobile-footer {
+footer .mobile {
   font-family: Poppins;
   display: none;
   position: relative;
@@ -230,7 +230,7 @@
 }
 
 @media (max-width: 1153px) {
-  .main-footer {
+  footer .main {
     .get-app-wrapper {
       margin-left: 76px;
     }
@@ -242,7 +242,7 @@
 }
 
 @media (max-width: 870px) {
-  .main-footer {
+  footer .main {
     display: none;
 
     svg {
@@ -250,7 +250,7 @@
     }
   }
 
-  .mobile-footer {
+  footer .mobile {
     display: flex;
 
     .line {

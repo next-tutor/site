@@ -484,7 +484,7 @@
       img {
         width: 460px;
         top: 0;
-        right: 25px;
+        right: -25px;
       }
     }
   }
@@ -515,6 +515,12 @@
       &.why2 {
         img {
           margin-right: -10px;
+        }
+      }
+
+      &.why3 {
+        img {
+          right: 25px;
         }
       }
     }
@@ -606,7 +612,6 @@
 /* ------------------------------------------- */
 /* recommendations */
 /* ------------------------------------------- */
-
 
 .recommendations {
   width: 100%;
@@ -752,6 +757,63 @@
   }
 }
 
+@media (max-width: 820px) {
+  .recommendations {
+    .title {
+      font-size: 6vw;
+    }
+  }
+}
+
+@media (max-width: 570px) {
+  .recommendations {
+    padding-top: 0;
+
+    .title {
+      padding-top: 20px;
+      font-size: 6.7vw;
+    }
+
+    .subtitle {
+      font-size: 15px;
+    }
+
+    .items {
+      padding-top: 100px;
+    }
+
+    .items {
+      .item {
+        width: 350px;
+      }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .recommendations {
+    .title {
+      font-size: 10vw;
+      text-align: center;
+    }
+
+    .items {
+      .item {
+        width: 295px;
+
+        .text {
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+}
+
+
+/* ------------------------------------------- */
+/* get-started */
+/* ------------------------------------------- */
+
 .get-started {
   width: 100%;
   background: #000;
@@ -826,77 +888,36 @@
   }
 }
 
-@media (max-width: 820px) {
-  .recommendations .title {
-    font-size: 6vw;
-  }
 
-  .get-started .wrapper {
-    .title {
-      font-size: 10vw !important;
-    }
-  }
-}
-
-@media (max-width: 700px) {
+@media (max-width: 850px) {
   .get-started {
-    height: 800px;
-
     .wrapper {
-      background-image: url("/assets/dots-small.png");
-
       .title {
-        font-size: 14vw !important;
-        line-height: 15vw;
-        padding-top: 37px;
-      }
-
-      .btn {
-        margin-top: 50px;
+        font-size: 70px
       }
     }
   }
 }
 
 @media (max-width: 570px) {
-  .recommendations {
-    padding-top: 0;
+  .get-started {
+    .wrapper {
+      background-image: url("/assets/dots-small.png");
 
-    .title {
-      padding-top: 20px;
-      font-size: 6.7vw;
-    }
-
-    .subtitle {
-      font-size: 15px;
-    }
-
-    .items {
-      padding-top: 100px;
-    }
-  }
-
-  .get-started .wrapper {
-    .title {
-      font-size: 18vw !important;
-      line-height: 19vw;
-      padding-top: 47px;
-    }
-
-    .btn {
-      margin-top: 40px;
+      .title {
+        font-size: 65px;
+      }
     }
   }
 }
 
-@media (max-width: 450px) {
-  .recommendations .title {
-    font-size: 10vw;
-    text-align: center;
-  }
 
-  .get-started .wrapper .title {
-    font-size: 20vw !important;
-    line-height: 20vw;
+@media (max-width: 450px) {
+  .get-started {
+    .wrapper {
+      .title {
+        font-size: 55px;
+      }
+    }
   }
 }
