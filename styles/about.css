@@ -1,7 +1,11 @@
-@import "common.css";
-@import "navbar.css";
-@import "footer.css";
+@import "_common.css";
+@import "_navbar.css";
+@import "_footer.css";
+@import "_get-start.css";
 
+/* ------------------------------------------- */
+/* about */
+/* ------------------------------------------- */
 
 .about {
   width: 100%;
@@ -9,16 +13,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  align-self: center;
-  width: 100%;
-  top: 0;
   margin-top: 240px;
   margin-bottom: 150px;
 
   .wrapper {
-    height: 485px;
-    width: 80%;
-    max-width: 1450px;
+    width: 1000px;
+    max-width: 1000px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -27,7 +27,6 @@
     background-repeat: no-repeat;
 
     .title {
-
       text-align: center;
       text-shadow: 1px 1px 0px #0000001a, -1px -1px 0px #ffffff33;
       -webkit-text-stroke-width: 0.5px;
@@ -36,7 +35,6 @@
       font-size: 95px;
       font-weight: 600;
       margin-top: 85px;
-      line-height: 190px;
       letter-spacing: -1.8px;
       background: linear-gradient(135deg, #fff 30%, #ffffff80 100%);
       background-clip: text;
@@ -69,25 +67,69 @@
   }
 }
 
-.our-team {
-  padding-top: 90px;
-  padding-bottom: 80px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+@media (max-width: 1024px) {
+  .about {
+    margin-top: 190px;
 
-  img {
-    margin-left: -35px;
-    border-radius: 30px;
-    max-width: 685px;
-    border: 1px solid #c3c1c1;
-    padding: 4px;
+    .wrapper {
+      width: 700px;
 
-    &.visible {
-      transform: translateY(0);
+      .title {
+        font-size: 80px;
+        line-height: 90px;
+        margin-bottom: 25px
+      }
+
+      .subtitle {
+        width: 500px;
+        font-size: 18px;
+      }
     }
   }
 }
+
+@media (max-width: 700px) {
+  .about {
+
+    .wrapper {
+      width: 500px;
+
+      .title {
+        line-height: 70px;
+        font-size: 60px;
+      }
+
+      .subtitle {
+        width: 400px;
+        font-size: 17px;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    margin-top: 190px;
+
+    .wrapper {
+      width: 400px;
+
+      .title {
+        font-size: 50px;
+        line-height: 60px;
+      }
+
+      .subtitle {
+        width: 300px;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+/* ------------------------------------------- */
+/* out-story */
+/* ------------------------------------------- */
 
 .our-story {
   padding: 105px 0;
@@ -96,27 +138,6 @@
   align-items: center;
   background-color: #131313;
 
-  .title {
-    position: relative;
-    color: #fcfdfff0;
-    text-align: center;
-    font-family: Poppins;
-    font-size: 50px;
-    font-weight: 400;
-    letter-spacing: -0.9px;
-    padding-bottom: 60px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      width: 55px;
-      height: 6px;
-      top: 85px;
-      left: 75px;
-      background-color: #fcaa2e;
-    }
-  }
-
 
   .avatars {
     display: flex;
@@ -124,18 +145,26 @@
     align-items: center;
     margin-bottom: 70px;
 
-    img {
-      width: 580px;
-    }
-
-    .name {
+    .img-wrap {
       display: flex;
+      flex-direction: column;
       justify-content: center;
-      font-size: 14px;
-      letter-spacing: 0px;
-      font-family: 'Poppins';
-      color: #b4b0b0;
-      margin-top: 20px;
+      align-items: center;
+
+      img {
+        max-width: 645px;
+        width: 90%;
+      }
+
+      .name {
+        display: flex;
+        justify-content: center;
+        font-size: 14px;
+        letter-spacing: 0px;
+        font-family: 'Poppins';
+        color: #b4b0b0;
+        margin-top: 20px;
+      }
     }
   }
 
@@ -146,7 +175,8 @@
     font-weight: 400;
     line-height: 35px;
     letter-spacing: 0.45px;
-    width: 760px;
+    width: 85%;
+    max-width: 730px;
   }
 
   strong {
@@ -159,7 +189,25 @@
   }
 }
 
-section.timeline {
+@media (max-width: 700px) {
+  .our-story {
+    p {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .our-story {
+    padding: 70px 0;
+  }
+}
+
+/* ------------------------------------------- */
+/* timeline */
+/* ------------------------------------------- */
+
+.timeline {
   padding-top: 95px;
   display: flex;
   flex-direction: column;
@@ -214,17 +262,13 @@ section.timeline {
     .dates-wrapper {
       display: flex;
       flex-direction: column;
-      margin-right: 20px;
+      margin: 35px 20px 0 0;
 
       .date {
         font-family: Poppins;
         font-size: 20px;
         transform: translateY(-11px);
         margin-bottom: 55px;
-
-        &:first-of-type {
-          margin-top: 35px;
-        }
       }
     }
 
@@ -232,6 +276,7 @@ section.timeline {
       display: flex;
       flex-direction: column;
       margin-left: 20px;
+      margin-top: 24px;
 
       .content {
         font-family: Poppins;
@@ -240,19 +285,73 @@ section.timeline {
         font-size: 17px;
         height: 85px;
         width: 410px;
+      }
+    }
+  }
+}
 
-        &:first-of-type {
-          margin-top: 24px;
+@media (max-width: 700px) {
+  .timeline {
+
+    .wrapper {
+      .dates-wrapper {
+        margin-top: 37px;
+
+        .date {
+          font-size: 18px;
+          height: 30px;
+          ;
+        }
+      }
+
+      .contents-wrapper {
+        .content {
+          font-size: 16px;
+          max-width: 300px;
         }
       }
     }
   }
 }
 
-.get-started .wrapper {
-  margin-top: 20px;
+@media (max-width: 600px) {
+  .timeline {
+
+    .wrapper {
+      .dates-wrapper {
+        .date {
+          font-size: 17px;
+          font-weight: 400;
+        }
+      }
+
+      .contents-wrapper {
+        .content {
+          font-size: 16px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
 }
 
+@media (max-width: 500px) {
+  .timeline {
+    .wrapper {
+      .contents-wrapper {
+        .content {
+          max-width: 200px;
+        }
+      }
+    }
+  }
+}
+
+/* .get-started .wrapper {
+  margin-top: 20px;
+} */
+
+/*
 @media (max-width: 1024px) {
   .about {
     .background {
@@ -314,3 +413,4 @@ section.timeline {
     }
   }
 }
+*/
