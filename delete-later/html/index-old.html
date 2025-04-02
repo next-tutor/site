@@ -1,0 +1,868 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Next Tutor</title>
+  <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles/style.css" />
+  <link rel="stylesheet" href="./tt.css" />
+</head>
+
+<body>
+
+  <header class="main-header">
+    <div class="inner-header">
+      <a href="./index.html">
+        <img src="./images/logo-large.png" alt="logo" class="logo" />
+      </a>
+      <nav class="navbar navbar--dark-text" role="menubar">
+        <div class="nav-buttons-container">
+          <div class="navbar-btn navbar-btn-platform navbar__mode--dark-text" role="menuitem" tabindex="0"
+            aria-label="platform">
+            Platform<span class="icon"><svg width="16px" height="16px" viewBox="0 0 16 16">
+                <g id="arrow-down-16" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <polygon id="Icon"
+                    transform="translate(8.000000, 8.500000) rotate(-90.000000) translate(-8.000000, -8.500000) "
+                    points="11.5 3.90176105 10.1581397 2.5 4.5 8.5 10.1581397 14.5 11.5 13.0982389 7.18372051 8.5">
+                  </polygon>
+                </g>
+              </svg></span>
+            <div class="nav-submenu nav-submenu--features">
+
+              <div class="wrap">
+                <div class="inner-wrap">
+                  <div class="right">
+                    <div class="inner-box">
+                      <img class="logo" src="./images/logo/logo.svg" />
+
+                      <a class="all-features" data-item-link="/proposal-software" tabindex="-1" target="_self"
+                        role="menuitem" href="./platform.html">
+                        See All Features
+                        <img src="./images/arrow-right.svg" />
+                      </a>
+                    </div>
+                  </div>
+                  <div class="left">
+                    <a class="nav-submenu-item " data-item-link="/all-in-one-business-platform" tabindex="-1"
+                      target="_self" role="menuitem" href="./feature1.html">
+                      <div class="nav-submenu-item__icon-container">
+                        <div class="media-element svg-content"><svg width="24px" height="24px" viewBox="0 0 24 24"
+                            version="1.1">
+                            <title>rocket</title>
+                            <g id="rocket-24" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                              <path
+                                d="M13.8994546,17.3113628 L14.6183149,15.9232721 C13.5279279,16.4883229 12.4345786,16.981921 11.7912977,17.2417927 L11.4301706,19.2902362 L14.3690616,17.5545615 L13.8994546,17.3113628 Z M6.84381345,19.8675375 L8.21932133,21.3194252 L5.95875198,23.4610721 L4.58324411,22.0091844 L6.84381345,19.8675375 Z M4.58465694,18.1269291 L5.97731815,19.5623715 L1.96732865,23.4528494 L0.574667442,22.0174071 L4.58465694,18.1269291 Z M21.9540324,1.00775977 L22.8150187,1.03333189 L22.9172732,1.88860699 C23.2998432,5.08849213 22.3554507,8.25277173 20.122815,11.3455189 C19.2758726,12.5187416 18.2903367,13.5202329 17.1887012,14.3704405 C16.6479051,14.78781 15.8868524,15.2444573 15.0884891,15.6748518 L15.9174925,16.1041736 C16.7060907,16.5125705 17.0143048,17.4829268 16.6059078,18.2715251 C16.4670958,18.5395656 16.2556407,18.7631223 15.9957319,18.9166213 L11.7139868,21.4453699 C10.9493131,21.8969773 9.96332236,21.6431869 9.51171498,20.8785131 C9.31670337,20.5483142 9.24612017,20.1592922 9.31269937,19.7816309 L10.017316,15.7847908 L10.4284302,15.5526269 C10.6345491,15.4362277 12.1114621,14.9137311 12.5911466,14.7147347 C13.803262,14.2118905 14.9172066,13.5971464 15.9667568,12.7871365 C16.9200129,12.0514433 17.7702408,11.1874507 18.501204,10.1748876 C20.239455,7.76698421 21.0620288,5.38593708 20.9962406,3.00640083 C18.0661135,3.09279544 15.5525966,4.05252801 13.4179868,5.89172002 C10.5587386,8.35526455 9.29296996,10.9002734 8.83312258,13.4435602 L8.71691696,14.0862608 L8.08171454,14.2382006 C6.96954855,14.5042296 5.64927552,14.744296 4.1189431,14.9594721 C3.239458,15.0832387 2.42621973,14.4705312 2.30255838,13.5910517 C2.25322621,13.2402013 2.3211482,12.8828802 2.49577212,12.5746009 L4.82851273,8.45640453 C5.26621592,7.68368781 6.24745513,7.41210568 7.02017185,7.84980887 C7.3544717,8.03917206 7.60992054,8.34197448 7.74026946,8.70339386 L7.9668243,9.33156411 L6.28848141,9.93687249 L4.63127317,12.8624909 C5.50411938,12.7278095 6.29353538,12.5845461 6.99901302,12.4329682 C7.62692227,9.69091804 9.10977122,6.96373013 12.1125102,4.37655303 C14.8472718,2.02026679 18.1445413,0.894614201 21.9540324,1.00775977 Z M2.84381345,15.8675375 L4.21932133,17.3194252 L1.95875198,19.4610721 L0.58324411,18.0091844 L2.84381345,15.8675375 Z M14.5,8 C15.3284271,8 16,8.67157288 16,9.5 C16,10.3284271 15.3284271,11 14.5,11 C13.6715729,11 13,10.3284271 13,9.5 C13,8.67157288 13.6715729,8 14.5,8 Z"
+                                id="Combined-Shape" fill="#000000" fill-rule="nonzero"></path>
+                            </g>
+                          </svg></div>
+                      </div>
+                      <div class="nav-submenu-item__text-container">
+                        <div class="nav-submenu-item__text-container__title">Features overview</div>
+                        <div class="nav-submenu-item__text-container__description">Powerful features built for your
+                          tutoring
+                          businesses.</div>
+                      </div>
+                    </a>
+
+                    <a class="nav-submenu-item" data-item-link="/features" tabindex="-1" target="_self" role="menuitem"
+                      href="./feature1.html">
+                      <div class="nav-submenu-item__icon-container">
+                        <div class="media-element svg-content"><svg width="24" height="24" viewBox="0 0 24 24"
+                            fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M2 2H11V11H2V2ZM4 4H9V9H4V4ZM2 13H11V22H2V13ZM4 15H9V20H4V15ZM22 2H13V11H22V2ZM20 4H15V9H20V4ZM13 13H22V22H13V13ZM15 15H20V20H15V15Z"
+                              fill="black"></path>
+                          </svg></div>
+                      </div>
+                      <div class="nav-submenu-item__text-container">
+                        <div class="nav-submenu-item__text-container__title">Features overview</div>
+                        <div class="nav-submenu-item__text-container__description">Powerful features built for small
+                          businesses.</div>
+                      </div>
+                    </a>
+
+                    <a class="nav-submenu-item" data-item-link="/online-contract" tabindex="-1" target="_self"
+                      role="menuitem" href="./feature1.html">
+                      <div class="nav-submenu-item__icon-container">
+                        <div class="media-element svg-content"><svg width="24px" height="24px" viewBox="0 0 24 24"
+                            version="1.1">
+                            <title>contract</title>
+                            <g id="contract-24" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                              <path
+                                d="M22,1 L22,23 L2,23 L2,1 L22,1 Z M20,3 L4,3 L4,21 L20,21 L20,3 Z M18,17 L18,19 L6,19 L6,17 L18,17 Z M7,12 L10,15 L7,15 L7,12 Z M14.3284271,5.55025253 L16.4497475,7.67157288 L10.6715729,13.4497475 L8.55025253,11.3284271 L14.3284271,5.55025253 Z"
+                                id="Combined-Shape" fill="#000000" fill-rule="nonzero"></path>
+                            </g>
+                          </svg></div>
+                      </div>
+                      <div class="nav-submenu-item__text-container">
+                        <div class="nav-submenu-item__text-container__title">Online contracts</div>
+                        <div class="nav-submenu-item__text-container__description">Customizable contracts that look
+                          professional.</div>
+                      </div>
+                    </a>
+
+                    <a class="nav-submenu-item" data-item-link="/online-invoices" tabindex="-1" target="_self"
+                      role="menuitem" href="./feature1.html">
+                      <div class="nav-submenu-item__icon-container">
+                        <div class="media-element svg-content"><svg width="24px" height="24px" viewBox="0 0 24 24"
+                            version="1.1">
+                            <title>invoice</title>
+                            <g id="invoice-24" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                              <path
+                                d="M22,1 L22,24 L19.5,23 L17,24 L14.5,23 L12,24 L9.5,23 L7,24 L4.5,23 L2,24 L2,1 L22,1 Z M20,3 L4,3 L4,21.0459341 L4.5,20.8459341 L7,21.8459341 L9.5,20.8459341 L12,21.8459341 L14.5,20.8459341 L17,21.8459341 L19.5,20.8459341 L20,21.0459341 L20,3 Z M13,5 L13.0011208,7.0714916 C14.0961528,7.23291032 15.0272745,7.6657025 15.7676951,8.34978229 L14.6206897,9.88824383 C13.8366606,9.16255443 12.7912886,8.8287373 11.8039927,8.8287373 C10.9328494,8.8287373 10.4392015,9.20609579 10.4392015,9.78664731 C10.4392015,11.3105951 16,10.2801161 16,13.8940493 C16,15.4523527 15.010436,16.6734272 13.0016192,16.9439251 L13,19 L11,19 L10.9994291,16.9184105 C9.70094994,16.7212005 8.72002507,16.1813023 8,15.4615385 L9.13248639,13.850508 C9.81488203,14.5616836 10.8747731,15.1712627 12.2105263,15.1712627 C13.3575318,15.1712627 13.8947368,14.6632801 13.8947368,14.0972424 C13.8947368,12.413643 8.31941924,13.5892598 8.31941924,9.94629898 C8.31941924,8.58470972 9.31504091,7.42009909 10.9994997,7.09209987 L11,5 L13,5 Z"
+                                id="Combined-Shape" fill="#000000" fill-rule="nonzero"></path>
+                            </g>
+                          </svg></div>
+                      </div>
+                      <div class="nav-submenu-item__text-container">
+                        <div class="nav-submenu-item__text-container__title">Online invoices</div>
+                        <div class="nav-submenu-item__text-container__description">Professional invoices that get you
+                          paid
+                          fast.</div>
+                      </div>
+                    </a>
+
+                    <a class="nav-submenu-item" data-item-link="/online-payment-software" tabindex="-1" target="_self"
+                      role="menuitem" href="./feature1.html">
+                      <div class="nav-submenu-item__icon-container">
+                        <div class="media-element svg-content"><svg width="24px" height="24px" viewBox="0 0 24 24"
+                            version="1.1">
+                            <title>dollar</title>
+                            <g id="dollar-circle-24" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                              <path
+                                d="M12,1 C18.0751322,1 23,5.92486775 23,12 C23,18.0751322 18.0751322,23 12,23 C5.92486775,23 1,18.0751322 1,12 C1,5.92486775 5.92486775,1 12,1 Z M12,3 C7.02943725,3 3,7.02943725 3,12 C3,16.9705627 7.02943725,21 12,21 C16.9705627,21 21,16.9705627 21,12 C21,7.02943725 16.9705627,3 12,3 Z M12,5 C12.5522847,5 13,5.44771525 13,6 L13.0007464,7.03897909 C14.0488188,7.14921352 15.0829235,7.48863726 15.8277017,7.99815157 L15.8277017,7.99815157 L15.023879,9.56931608 C14.1243632,9.03327172 12.9951837,8.70055453 12.0956679,8.70055453 C11.2344293,8.70055453 10.6028543,8.97781885 10.6028543,9.68022181 C10.6028543,11.4916821 16.019088,10.5120148 16,14.0794824 C16,15.7911907 14.6600285,16.7024107 13.0011616,16.9378223 L13,18 C13,18.5522847 12.5522847,19 12,19 C11.4477153,19 11,18.5522847 11,18 L11.0004815,16.915989 C9.86501081,16.7425268 8.76795469,16.3038896 8,15.6321627 L8,15.6321627 L8.78468403,14.116451 C9.66506124,14.8743068 11.0813202,15.336414 12.191361,15.336414 C13.1291542,15.336414 13.8564223,15.0221811 13.8564223,14.2828096 C13.8564223,12.2680222 8.49760451,13.3955638 8.51674314,9.84658041 C8.51674314,8.29659624 9.60127011,7.43748148 10.9999321,7.1308078 L11,6 C11,5.44771525 11.4477153,5 12,5 Z"
+                                id="Combined-Shape" fill="#000000" fill-rule="nonzero"></path>
+                            </g>
+                          </svg></div>
+                      </div>
+                      <div class="nav-submenu-item__text-container">
+                        <div class="nav-submenu-item__text-container__title">Online payments</div>
+                        <div class="nav-submenu-item__text-container__description">Make it easy for clients to pay you
+                          with online payments.</div>
+                      </div>
+                    </a>
+
+
+                    <a class="nav-submenu-item" data-item-link="/online-payment-software" tabindex="-1" target="_self"
+                      role="menuitem" href="./feature1.html">
+                      <div class="nav-submenu-item__icon-container">
+                        <div class="media-element svg-content"><svg width="24px" height="24px" viewBox="0 0 24 24"
+                            version="1.1">
+                            <title>dollar</title>
+                            <g id="dollar-circle-24" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                              <path
+                                d="M12,1 C18.0751322,1 23,5.92486775 23,12 C23,18.0751322 18.0751322,23 12,23 C5.92486775,23 1,18.0751322 1,12 C1,5.92486775 5.92486775,1 12,1 Z M12,3 C7.02943725,3 3,7.02943725 3,12 C3,16.9705627 7.02943725,21 12,21 C16.9705627,21 21,16.9705627 21,12 C21,7.02943725 16.9705627,3 12,3 Z M12,5 C12.5522847,5 13,5.44771525 13,6 L13.0007464,7.03897909 C14.0488188,7.14921352 15.0829235,7.48863726 15.8277017,7.99815157 L15.8277017,7.99815157 L15.023879,9.56931608 C14.1243632,9.03327172 12.9951837,8.70055453 12.0956679,8.70055453 C11.2344293,8.70055453 10.6028543,8.97781885 10.6028543,9.68022181 C10.6028543,11.4916821 16.019088,10.5120148 16,14.0794824 C16,15.7911907 14.6600285,16.7024107 13.0011616,16.9378223 L13,18 C13,18.5522847 12.5522847,19 12,19 C11.4477153,19 11,18.5522847 11,18 L11.0004815,16.915989 C9.86501081,16.7425268 8.76795469,16.3038896 8,15.6321627 L8,15.6321627 L8.78468403,14.116451 C9.66506124,14.8743068 11.0813202,15.336414 12.191361,15.336414 C13.1291542,15.336414 13.8564223,15.0221811 13.8564223,14.2828096 C13.8564223,12.2680222 8.49760451,13.3955638 8.51674314,9.84658041 C8.51674314,8.29659624 9.60127011,7.43748148 10.9999321,7.1308078 L11,6 C11,5.44771525 11.4477153,5 12,5 Z"
+                                id="Combined-Shape" fill="#000000" fill-rule="nonzero"></path>
+                            </g>
+                          </svg></div>
+                      </div>
+                      <div class="nav-submenu-item__text-container">
+                        <div class="nav-submenu-item__text-container__title">Online payments</div>
+                        <div class="nav-submenu-item__text-container__description">Make it easy for clients to pay you
+                          with online payments.</div>
+                      </div>
+                    </a>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <a class="navbar-btn  navbar__mode--dark-text" data-item-link="./pricing" tabindex="0" target="_self"
+            role="menuitem" href="./about.html">about</a><a class="navbar-btn  navbar__mode--dark-text"
+            data-item-link="/templates" tabindex="0" target="_self" role="menuitem" href="./pricing.html">Pricing</a>
+        </div>
+
+        <a class="navbar-btn" data-item-link="/templates" tabindex="0" target="_self" role="menuitem" href="#">Login</a>
+
+        <a href="https://www.honeybook.com/app/login" class="navbar-btn btn-start "
+          data-item-link="https://www.honeybook.com/app/login" tabindex="0" target="_self" role="menuitem">Let's
+          Start</a>
+
+
+        <div class="mobile-menu-buttons-wrapper">
+          <section class="registration-form__container registration-form__container--column ">
+            <div class="registration-form__form-container"><button
+                class="hbui-button hbui-button--small hbui-button--primary--dark  " type="submit"
+                data-testid="start-trial--button">Start free trial</button></div>
+          </section><button class="hbui-button hbui-button--large hbui-button--invisible  drawer-button"
+            aria-label="menuitem" role="menuitem"><span class="icon-container nx-hamburger-16-container"><i
+                class="icon icon-hb-nx-hamburger-16"></i></span></button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="homePage">
+    <div class="inner-hp">
+      <div class="title">
+        The <strong class="gradient">ultimate</strong> platform for private
+        tutors.
+      </div>
+      <div class="subtitle">
+        Next Tutor is the first and only platform that is designed for private
+        tutors. It has all needed to make your tutoring business thrive.
+      </div>
+      <a href="https://www.honeybook.com/app/login" class="btn-start">
+        Start now - It's free</a>
+    </div>
+  </section>
+  <!-- <section class="splitter">
+      <img src="./assets/glow.png" alt="glow" class="glow" />
+      <div class="line"></div>
+    </section> -->
+
+  <section class="second">
+
+    <div class="inner-wrap">
+      <!-- <div class="tabNavigation">
+        <div class="items">
+          <div class="item">
+            <div class="svgContainerWrapper">
+              <div class="svgContainer">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M30.6032 15.8506C30.6032 19.1695 30.4585 21.8545 30.2724 23.9353C29.9626 27.4007 27.4023 29.9976 23.9358 30.2956C21.8948 30.4711 19.2307 30.6046 15.8492 30.6046C12.4676 30.6046 9.80354 30.4711 7.76255 30.2956C4.29608 29.9976 1.73578 27.4007 1.42593 23.9353C1.23989 21.8545 1.09521 19.1695 1.09521 15.8506C1.09521 12.6599 1.22894 10.055 1.40458 8.0097C1.71338 4.41382 4.41236 1.71484 8.00824 1.40604C10.0536 1.2304 12.6585 1.09668 15.8492 1.09668"
+                    stroke="#7b73ae" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path
+                    d="M9.82514 15.5405C13.3924 17.9488 14.9206 20.0857 14.9206 20.0857C14.9206 20.0857 16.4583 16.585 19.4075 12.7251C22.5841 8.56757 24.9387 7.00165 24.9387 7.00165"
+                    stroke="#7b73ae" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </div>
+              <div class="tabTitle">Reminders</div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="svgContainerWrapper">
+              <div class="svgContainer">
+                <svg width="33" height="25" viewBox="0 0 33 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M31.4283 12.4981C31.4283 10.834 31.3602 9.38804 31.2574 8.15311C30.9641 4.63108 28.1543 2.17497 24.6273 1.94948C22.5654 1.81765 19.9236 1.71631 16.6744 1.71631C13.4251 1.71631 10.7834 1.81765 8.72146 1.94948C5.19444 2.17497 2.38467 4.63108 2.09136 8.15311C1.98852 9.38804 1.92041 10.834 1.92041 12.4981C1.92041 14.244 1.99538 15.7498 2.10679 17.0238C2.40615 20.4469 5.10998 22.8336 8.53926 23.0509C10.5865 23.1807 13.266 23.2798 16.6744 23.2798C20.0828 23.2798 22.7623 23.1807 24.8095 23.0509C28.2388 22.8336 30.9426 20.4469 31.242 17.0238C31.3534 15.7498 31.4283 14.244 31.4283 12.4981Z"
+                    fill="#7F76B3" fill-opacity="0.1" stroke="#7F76B3" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                  <path d="M17.8096 14.7671L21.7818 17.6044L25.754 14.7671" stroke="#7F76B3" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M25.7539 10.228L21.7817 7.39073L17.8095 10.228" stroke="#7F76B3" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </div>
+              <div class="tabTitle">Personal Site</div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="svgContainerWrapper">
+              <div class="svgContainer">
+                <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M31.3414 16.15C31.3414 12.9593 31.2077 10.3543 31.0321 8.30902C30.7233 4.71314 28.0243 2.01416 24.4284 1.70536C22.3831 1.52972 19.7782 1.396 16.5875 1.396C13.3968 1.396 10.7918 1.52972 8.74652 1.70536C5.15064 2.01416 2.45166 4.71314 2.14286 8.30902C1.96722 10.3543 1.8335 12.9593 1.8335 16.15C1.8335 19.4688 1.97817 22.1538 2.16422 24.2346C2.47406 27.7 5.03436 30.2969 8.50083 30.5949C10.5418 30.7704 13.2059 30.9039 16.5875 30.9039C19.969 30.9039 22.6331 30.7704 24.6741 30.5949C28.1406 30.2969 30.7009 27.7 31.0107 24.2346C31.1968 22.1538 31.3414 19.4688 31.3414 16.15Z"
+                    stroke="#7F76B3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path
+                    d="M30.7738 9.625L24.3078 16.6083C23.9108 17.0371 23.3423 17.2652 22.759 17.2299L15.356 16.7812C14.7069 16.7419 14.081 17.0286 13.6869 17.5458L10.2461 22.0619C9.94527 22.4568 9.50519 22.722 9.01558 22.8036L2.96826 23.8115"
+                    stroke="#7F76B3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path
+                    d="M23.6807 17.002L31.3414 9.625L30.7739 27.2163L25.9505 30.621L8.07552 30.9047L4.1033 28.9186L2.11719 23.8115L9.7779 22.6766L14.885 16.7183L23.6807 17.002Z"
+                    fill="#7F76B3" fill-opacity="0.1"></path>
+                </svg>
+              </div>
+              <div class="tabTitle">Lessons</div>
+            </div>
+          </div>
+          <div class="item active">
+            <div class="svgContainerWrapper">
+              <div class="svgContainer">
+                <svg width="29" height="27" viewBox="0 0 29 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M22 21C20.7195 21 19.671 21.0221 18.8443 21.0512C17.2961 21.1059 16 21.9509 16 23.5C16 25.0512 17.2928 25.8998 18.8432 25.9522C19.6551 25.9797 20.6964 26 22 26C23.3036 26 24.3449 25.9797 25.1568 25.9522C26.7072 25.8998 28 25.0512 28 23.5C28 21.9509 26.7039 21.1059 25.1557 21.0512C24.329 21.0221 23.2805 21 22 21Z"
+                    stroke="#7F76B3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path
+                    d="M24 13.5C24 13.4682 23.9998 13.4368 23.9994 13.4058C23.9782 11.827 22.4482 11.1372 20.87 11.0878C19.4277 11.0427 17.3189 11 14.5 11C11.6811 11 9.57227 11.0427 8.12997 11.0878C6.55177 11.1372 5.02182 11.827 5.00063 13.4058C5.00021 13.4368 5 13.4682 5 13.5C5 13.5503 5.00053 13.5996 5.00156 13.6479C5.03455 15.1918 6.53082 15.8666 8.0743 15.915C9.47923 15.9591 11.5719 16 14.5 16C17.4281 16 19.5208 15.9591 20.9257 15.915C22.4692 15.8666 23.9655 15.1918 23.9984 13.6479C23.9995 13.5996 24 13.5503 24 13.5Z"
+                    stroke="#7F76B3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path
+                    d="M7 1C5.71951 1 4.67101 1.02207 3.84427 1.05125C2.29613 1.1059 1 1.9509 1 3.5C1 5.05124 2.29279 5.89983 3.84315 5.95223C4.65505 5.97967 5.69645 6 7 6C8.30355 6 9.34495 5.97967 10.1568 5.95223C11.7072 5.89983 13 5.05124 13 3.5C13 1.9509 11.7039 1.1059 10.1557 1.05125C9.32899 1.02207 8.28049 1 7 1Z"
+                    stroke="#7F76B3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </div>
+              <div class="tabTitle">Dashboard</div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="svgContainerWrapper">
+              <div class="svgContainer">
+                <svg width="27" height="32" viewBox="0 0 27 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M13.3473 30.7286C10.8782 30.7286 8.89195 30.6115 7.33302 30.4526C4.3617 30.1496 2.27568 27.8491 2.03183 24.8723C1.85742 22.7432 1.71436 19.8237 1.71436 15.9747C1.71436 12.1257 1.85742 9.20615 2.03183 7.07705C2.27568 4.10029 4.3617 1.79977 7.33302 1.49677C8.89195 1.3378 10.8783 1.2207 13.3473 1.2207C15.7764 1.2207 17.7949 1.33405 19.4198 1.4891C22.6642 1.79869 24.9983 4.33323 25.2509 7.58262C25.4158 9.70402 25.5477 12.49 25.5477 15.9747C25.5477 17.3111 25.5283 18.5448 25.4951 19.6776C22.7294 22.0071 19.3898 22.0357 17.651 21.8475C17.1374 21.7919 16.6472 22.3099 16.722 22.821C16.9705 24.5202 17.002 27.7874 14.4615 30.7205C14.1002 30.7258 13.7288 30.7286 13.3473 30.7286Z"
+                    fill="#7F76B3" fill-opacity="0.1"></path>
+                  <path
+                    d="M7.80266 30.4984C9.28506 30.6338 11.1198 30.7291 13.3475 30.7291C15.5241 30.7291 17.371 30.6381 18.9005 30.5077C22.4691 30.2032 25.0347 27.4205 25.2898 23.848C25.4361 21.7979 25.5479 19.1825 25.5479 15.9752C25.5479 12.7678 25.4361 10.1524 25.2898 8.10227C25.0347 4.52984 22.4691 1.74708 18.9005 1.44267C17.371 1.3122 15.5241 1.22119 13.3475 1.22119C11.1198 1.22119 9.28507 1.31652 7.80267 1.45191C4.53415 1.75045 2.24207 4.27504 1.995 7.54785C1.8378 9.63016 1.71452 12.4022 1.71452 15.9752C1.71452 19.5481 1.8378 22.3202 1.995 24.4025C2.24207 27.6753 4.53414 30.1999 7.80266 30.4984Z"
+                    fill="#7F76B3" fill-opacity="0.1" stroke="#7F76B3" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                  <path
+                    d="M25.2642 19.3804C22.0256 22.9027 19.5444 19.4255 17.036 21.9339C14.5276 24.4424 18.0047 26.9236 14.1987 30.4458"
+                    stroke="#7F76B3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M7.95654 8.03125H19.3057" stroke="#7F76B3" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                  <path d="M7.95654 13.7061H15.3335" stroke="#7F76B3" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                </svg>
+              </div>
+              <div class="tabTitle">Docs</div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="svgContainerWrapper">
+              <div class="svgContainer">
+                <svg width="27" height="32" viewBox="0 0 27 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M13.3473 30.7286C10.8782 30.7286 8.89195 30.6115 7.33302 30.4526C4.3617 30.1496 2.27568 27.8491 2.03183 24.8723C1.85742 22.7432 1.71436 19.8237 1.71436 15.9747C1.71436 12.1257 1.85742 9.20615 2.03183 7.07705C2.27568 4.10029 4.3617 1.79977 7.33302 1.49677C8.89195 1.3378 10.8783 1.2207 13.3473 1.2207C15.7764 1.2207 17.7949 1.33405 19.4198 1.4891C22.6642 1.79869 24.9983 4.33323 25.2509 7.58262C25.4158 9.70402 25.5477 12.49 25.5477 15.9747C25.5477 17.3111 25.5283 18.5448 25.4951 19.6776C22.7294 22.0071 19.3898 22.0357 17.651 21.8475C17.1374 21.7919 16.6472 22.3099 16.722 22.821C16.9705 24.5202 17.002 27.7874 14.4615 30.7205C14.1002 30.7258 13.7288 30.7286 13.3473 30.7286Z"
+                    fill="#7F76B3" fill-opacity="0.1"></path>
+                  <path
+                    d="M7.80266 30.4984C9.28506 30.6338 11.1198 30.7291 13.3475 30.7291C15.5241 30.7291 17.371 30.6381 18.9005 30.5077C22.4691 30.2032 25.0347 27.4205 25.2898 23.848C25.4361 21.7979 25.5479 19.1825 25.5479 15.9752C25.5479 12.7678 25.4361 10.1524 25.2898 8.10227C25.0347 4.52984 22.4691 1.74708 18.9005 1.44267C17.371 1.3122 15.5241 1.22119 13.3475 1.22119C11.1198 1.22119 9.28507 1.31652 7.80267 1.45191C4.53415 1.75045 2.24207 4.27504 1.995 7.54785C1.8378 9.63016 1.71452 12.4022 1.71452 15.9752C1.71452 19.5481 1.8378 22.3202 1.995 24.4025C2.24207 27.6753 4.53414 30.1999 7.80266 30.4984Z"
+                    fill="#7F76B3" fill-opacity="0.1" stroke="#7F76B3" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                  <path
+                    d="M25.2642 19.3804C22.0256 22.9027 19.5444 19.4255 17.036 21.9339C14.5276 24.4424 18.0047 26.9236 14.1987 30.4458"
+                    stroke="#7F76B3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M7.95654 8.03125H19.3057" stroke="#7F76B3" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                  <path d="M7.95654 13.7061H15.3335" stroke="#7F76B3" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                </svg>
+              </div>
+              <div class="tabTitle">PayBook</div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="svgContainerWrapper">
+              <div class="svgContainer">
+                <svg width="27" height="32" viewBox="0 0 27 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M13.3473 30.7286C10.8782 30.7286 8.89195 30.6115 7.33302 30.4526C4.3617 30.1496 2.27568 27.8491 2.03183 24.8723C1.85742 22.7432 1.71436 19.8237 1.71436 15.9747C1.71436 12.1257 1.85742 9.20615 2.03183 7.07705C2.27568 4.10029 4.3617 1.79977 7.33302 1.49677C8.89195 1.3378 10.8783 1.2207 13.3473 1.2207C15.7764 1.2207 17.7949 1.33405 19.4198 1.4891C22.6642 1.79869 24.9983 4.33323 25.2509 7.58262C25.4158 9.70402 25.5477 12.49 25.5477 15.9747C25.5477 17.3111 25.5283 18.5448 25.4951 19.6776C22.7294 22.0071 19.3898 22.0357 17.651 21.8475C17.1374 21.7919 16.6472 22.3099 16.722 22.821C16.9705 24.5202 17.002 27.7874 14.4615 30.7205C14.1002 30.7258 13.7288 30.7286 13.3473 30.7286Z"
+                    fill="#7F76B3" fill-opacity="0.1"></path>
+                  <path
+                    d="M7.80266 30.4984C9.28506 30.6338 11.1198 30.7291 13.3475 30.7291C15.5241 30.7291 17.371 30.6381 18.9005 30.5077C22.4691 30.2032 25.0347 27.4205 25.2898 23.848C25.4361 21.7979 25.5479 19.1825 25.5479 15.9752C25.5479 12.7678 25.4361 10.1524 25.2898 8.10227C25.0347 4.52984 22.4691 1.74708 18.9005 1.44267C17.371 1.3122 15.5241 1.22119 13.3475 1.22119C11.1198 1.22119 9.28507 1.31652 7.80267 1.45191C4.53415 1.75045 2.24207 4.27504 1.995 7.54785C1.8378 9.63016 1.71452 12.4022 1.71452 15.9752C1.71452 19.5481 1.8378 22.3202 1.995 24.4025C2.24207 27.6753 4.53414 30.1999 7.80266 30.4984Z"
+                    fill="#7F76B3" fill-opacity="0.1" stroke="#7F76B3" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                  <path
+                    d="M25.2642 19.3804C22.0256 22.9027 19.5444 19.4255 17.036 21.9339C14.5276 24.4424 18.0047 26.9236 14.1987 30.4458"
+                    stroke="#7F76B3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M7.95654 8.03125H19.3057" stroke="#7F76B3" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                  <path d="M7.95654 13.7061H15.3335" stroke="#7F76B3" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                </svg>
+              </div>
+              <div class="tabTitle">Tasks</div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+      <img src="./images/m-f1.png" />
+    </div>
+  </section>
+
+  <!-- <section class="why-us">
+    <div class="main-title-small">YOU ARE IN GOOD HANDS</div>
+    <div class="main-title">Join our 10,000+ happy tutors</div>
+
+    <div class="main-wrapper">
+      <div class="row1">
+        <div class="content">
+        </div>
+        <div class="image-1">
+          <div class="rec"></div>
+          <img src="./images/m-f2.png" />
+        </div>
+      </div>
+      <div class="content-wrap">
+        <div class="item">
+          <div CLASS="title gradient">
+            Improve collaboration
+          </div>
+        </div>
+      </div>
+      <div class="images-wrap">
+        <div class="big-image">
+
+        </div>
+        <img class="small-img" src="./images/m-f2-small.png" />
+      </div>
+    </div>
+
+  </section> -->
+
+  <section class="third-page">
+    <div class="main-title-small">YOU ARE IN GOOD HANDS</div>
+    <div class="main-title">Join our 10,000+ happy tutors</div>
+
+    <section class="section1 why1">
+      <div class="text">
+        <!-- <div class="lbl">Stand uo from the rest</div> -->
+        <!-- <div class="subtitle1">Stand up from the rest. <span class="gradient">Be a super tutor</span></div> -->
+        <div class="title"><span class="gradient">Stand out</span> the rest</div>
+        <div class="subtitle">
+          Whether you are an experienced tutor or a beginner, you must stand
+          out. Our platform has everything you need to do it in a big way.
+          From a stunning personal website to an account for each student
+          which is truly a game changer sdf asd asd fasdf asdf asdfasdf asdf.
+        </div>
+      </div>
+      <img src="./images/why us/1.svg" loading="eager">
+    </section>
+    <section class="section2">
+      <div class="why-img2">
+        <img src="./images/why us/2.svg">
+      </div>
+      <div class="text">
+        <div class="title"><span class="gradient">Focus on</span> your students</div>
+        <div class="subtitle">
+          Running a tutoring business is time-consuming. Besides the tutoring
+          hours, you have to deal with setting lessons, collecting money,
+          talking to parents, and more. We offer you full automation so you
+          can focus on tutoring as you want xkvjzkcjxvk zjxclvjzlxcjkv vxzczx ckzcjhv jzxcjk klzjxclv.
+        </div>
+      </div>
+    </section>
+    <section class="section3">
+      <div class="text">
+        <div class="title"><span class="gradient">Increase</span> your incomes</div>
+        <div class="subtitle">
+          Do you have free time? Excellent! From now on you can offer your
+          student paid help for special tasks. You determine what and how much
+          to do and we will help you do it in an orderly and transparent
+          manner. Your students won't stop thanking you.
+        </div>
+      </div>
+      <div class="why-img3">
+        <img src="./images/why us/3.svg" loading="eager">
+      </div>
+    </section>
+  </section>
+
+  <section class="recommendations">
+    <div class="subtitle">YOU ARE IN GOOD HANDS</div>
+    <div class="title">Tutors love using NextTutor</div>
+    <div class="items">
+      <div class="slide-track sliding">
+        <div class="item">
+          <div class="border">
+            <div class="text">
+              “I”ve used Mailgun, Sendgrid and Mandrill and they don’t come
+              close to providing the quality of developer experience you get
+              with Resend.”
+            </div>
+            <div style="
+                  display: flex;
+                  align-items: center;
+                  height: auto;
+                  margin-left: -20px;
+                ">
+              <img style="width: 80px" src="./images/reviewers/reviewers.png" alt="reviewers" />
+              <div style="flex-direction: column">
+                <div class="name">Ariel Mazor</div>
+                <div class="role">Co-founder of Next Tutor</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="border">
+            <div class="text">
+              “I”ve used Mailgun, Sendgrid and Mandrill and they don’t come
+              close to providing the quality of developer experience you get
+              with Resend.”
+            </div>
+            <div style="
+                  display: flex;
+                  align-items: center;
+                  height: auto;
+                  margin-left: -20px;
+                ">
+              <img style="width: 80px" src="./images/reviewers/reviewers.png" alt="reviewers" />
+              <div style="flex-direction: column">
+                <div class="name">Ariel Mazor</div>
+                <div class="role">Co-founder of Next Tutor</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="border">
+            <div class="text">
+              “I”ve used Mailgun, Sendgrid and Mandrill and they don’t come
+              close to providing the quality of developer experience you get
+              with Resend.”
+            </div>
+            <div style="
+                  display: flex;
+                  align-items: center;
+                  height: auto;
+                  margin-left: -20px;
+                ">
+              <img style="width: 80px" src="./images/reviewers/reviewers.png" alt="reviewers" />
+              <div style="flex-direction: column">
+                <div class="name">Ariel Mazor</div>
+                <div class="role">Co-founder of Next Tutor</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="border">
+            <div class="text">
+              “I”ve used Mailgun, Sendgrid and Mandrill and they don’t come
+              close to providing the quality of developer experience you get
+              with Resend.”
+            </div>
+            <div style="
+                  display: flex;
+                  align-items: center;
+                  height: auto;
+                  margin-left: -20px;
+                ">
+              <img style="width: 80px" src="./images/reviewers/reviewers.png" alt="reviewers" />
+              <div style="flex-direction: column">
+                <div class="name">Ariel Mazor</div>
+                <div class="role">Co-founder of Next Tutor</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="border">
+            <div class="text">
+              “I”ve used Mailgun, Sendgrid and Mandrill and they don’t come
+              close to providing the quality of developer experience you get
+              with Resend.”
+            </div>
+            <div style="
+                  display: flex;
+                  align-items: center;
+                  height: auto;
+                  margin-left: -20px;
+                ">
+              <img style="width: 80px" src="./images/reviewers/reviewers.png" alt="reviewers" />
+              <div style="flex-direction: column">
+                <div class="name">Ariel Mazor</div>
+                <div class="role">Co-founder of Next Tutor</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="border">
+            <div class="text">
+              “I”ve used Mailgun, Sendgrid and Mandrill and they don’t come
+              close to providing the quality of developer experience you get
+              with Resend.”
+            </div>
+            <div style="
+                  display: flex;
+                  align-items: center;
+                  height: auto;
+                  margin-left: -20px;
+                ">
+              <img style="width: 80px" src="./images/reviewers/reviewers.png" alt="reviewers" />
+              <div style="flex-direction: column">
+                <div class="name">Ariel Mazor</div>
+                <div class="role">Co-founder of Next Tutor</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="border">
+            <div class="text">
+              “I”ve used Mailgun, Sendgrid and Mandrill and they don’t come
+              close to providing the quality of developer experience you get
+              with Resend.”
+            </div>
+            <div style="
+                  display: flex;
+                  align-items: center;
+                  height: auto;
+                  margin-left: -20px;
+                ">
+              <img style="width: 80px" src="./images/reviewers/reviewers.png" alt="reviewers" />
+              <div style="flex-direction: column">
+                <div class="name">Ariel Mazor</div>
+                <div class="role">Co-founder of Next Tutor</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="border">
+            <div class="text">
+              “I”ve used Mailgun, Sendgrid and Mandrill and they don’t come
+              close to providing the quality of developer experience you get
+              with Resend.”
+            </div>
+            <div style="
+                  display: flex;
+                  align-items: center;
+                  height: auto;
+                  margin-left: -20px;
+                ">
+              <img style="width: 80px" src="./images/reviewers/reviewers.png" alt="reviewers" />
+              <div style="flex-direction: column">
+                <div class="name">Ariel Mazor</div>
+                <div class="role">Co-founder of Next Tutor</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="border">
+            <div class="text">
+              “I”ve used Mailgun, Sendgrid and Mandrill and they don’t come
+              close to providing the quality of developer experience you get
+              with Resend.”
+            </div>
+            <div style="
+                  display: flex;
+                  align-items: center;
+                  height: auto;
+                  margin-left: -20px;
+                ">
+              <img style="width: 80px" src="./images/reviewers/reviewers.png" alt="reviewers" />
+              <div style="flex-direction: column">
+                <div class="name">Ariel Mazor</div>
+                <div class="role">Co-founder of Next Tutor</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="border">
+            <div class="text">
+              “I”ve used Mailgun, Sendgrid and Mandrill and they don’t come
+              close to providing the quality of developer experience you get
+              with Resend.”
+            </div>
+            <div style="
+                  display: flex;
+                  align-items: center;
+                  height: auto;
+                  margin-left: -20px;
+                ">
+              <img style="width: 80px" src="./images/reviewers/reviewers.png" alt="reviewers" />
+              <div style="flex-direction: column">
+                <div class="name">Ariel Mazor</div>
+                <div class="role">Co-founder of Next Tutor</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="get-started">
+    <div class="wrapper">
+      <img src="./images/logo-large.png" alt="logo" />
+      <div class="title">Want to see more?</div>
+      <div class="btn">
+        Let's start
+      </div>
+    </div>
+  </section>
+
+  <footer1>
+    <div class="line"></div>
+    <div class="left-side">
+      <div class="address">Tel Aviv, Israel</div>
+      <div class="icons">
+        <a target="_blank" href="https://github.com/next-tutor">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="33" viewBox="0 0 32 33" fill="none">
+            <g clip-path="url(#clip0_845_3101)">
+              <path
+                d="M31.625 16.8906C31.625 8.26118 24.6294 1.26562 16 1.26562C7.37055 1.26562 0.375 8.26118 0.375 16.8906C0.375 25.5201 7.37055 32.5156 16 32.5156C24.6294 32.5156 31.625 25.5201 31.625 16.8906Z"
+                fill="url(#paint0_linear_845_3101)" />
+              <path
+                d="M24 18.5306C24 19.5939 23.8933 20.7206 23.4167 21.6973C22.1533 24.2506 18.68 24.1906 16.1933 24.1906C13.6667 24.1906 9.98667 24.2806 8.67333 21.6973C8.18667 20.7306 8 19.5939 8 18.5306C8 17.1339 8.46333 15.8139 9.38333 14.7439C9.21 14.2173 9.12667 13.6639 9.12667 13.1173C9.12667 12.4006 9.29 12.0406 9.61333 11.3906C11.1233 11.3906 12.09 11.6906 13.24 12.5906C14.2067 12.3606 15.2 12.2573 16.1967 12.2573C17.0967 12.2573 18.0033 12.3539 18.8767 12.5639C20.01 11.6739 20.9767 11.3906 22.47 11.3906C22.7967 12.0406 22.9567 12.4006 22.9567 13.1173C22.9567 13.6639 22.87 14.2073 22.7 14.7239C23.6167 15.8039 24 17.1339 24 18.5306Z"
+                fill="url(#paint1_linear_845_3101)" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M24.0889 22.0299L24.0907 22.0262C24.6433 20.8939 24.75 19.6284 24.75 18.5306C24.75 17.1261 24.3956 15.7393 23.5276 14.5617C23.6465 14.0905 23.7067 13.6049 23.7067 13.1173C23.7067 12.2241 23.4837 11.7374 23.1401 11.0538L22.9325 10.6406H22.47C21.6769 10.6406 20.9786 10.7156 20.3101 10.9291C19.7422 11.1105 19.2239 11.3829 18.7027 11.7567C17.8764 11.5858 17.0315 11.5073 16.1967 11.5073C15.2661 11.5073 14.3325 11.5929 13.4141 11.7836C12.8881 11.4056 12.3666 11.127 11.7945 10.9402C11.1213 10.7203 10.4176 10.6406 9.61333 10.6406H9.14874L8.94183 11.0566C8.60433 11.735 8.37667 12.2227 8.37667 13.1173C8.37667 13.6032 8.43446 14.0957 8.5549 14.577C7.68538 15.7277 7.25 17.0993 7.25 18.5306C7.25 19.6713 7.44874 20.9327 8.00343 22.0345L8.00477 22.0372C8.80809 23.6173 10.3174 24.3234 11.821 24.646C13.213 24.9447 14.7322 24.9425 15.9333 24.9408L16.1933 24.9406L16.3822 24.9407C17.5729 24.9416 19.0673 24.9428 20.4301 24.6327C21.8813 24.3026 23.3173 23.5893 24.0889 22.0299ZM22.9567 13.1173C22.9567 13.6639 22.87 14.2073 22.7 14.7239C23.6167 15.8039 24 17.1339 24 18.5306C24 19.5939 23.8933 20.7206 23.4167 21.6973C22.6901 23.1658 21.2325 23.7698 19.652 24.0181C19.967 23.9284 20.272 23.8151 20.5591 23.6725C21.1372 23.3853 21.6605 22.9706 22.0354 22.3788C22.4111 21.7858 22.6067 21.0639 22.6067 20.2138C22.6067 19.3369 22.3407 18.4714 21.7949 17.8107C21.2372 17.1355 20.4139 16.7104 19.4067 16.7104C18.8479 16.7104 18.2963 16.7919 17.7984 16.8654C17.6748 16.8837 17.5546 16.9014 17.4383 16.9173L17.4256 16.9192C16.9746 16.9888 16.5172 17.0171 16.0367 17.0171C15.5598 17.0171 15.102 16.9889 14.647 16.9191L14.6366 16.9176C14.5281 16.9025 14.4155 16.8857 14.2997 16.8685C13.7988 16.7941 13.2364 16.7104 12.6667 16.7104C11.6595 16.7104 10.8362 17.1355 10.2784 17.8107C9.73265 18.4714 9.46667 19.3369 9.46667 20.2138C9.46667 21.0635 9.66262 21.7849 10.0385 22.3777C10.4135 22.9691 10.9367 23.3838 11.5143 23.6711C11.7514 23.789 12.0007 23.887 12.2577 23.9681C10.7459 23.6917 9.37339 23.0743 8.67333 21.6973C8.18667 20.7306 8 19.5939 8 18.5306C8 17.1339 8.46333 15.8139 9.38333 14.7439C9.21 14.2173 9.12667 13.6639 9.12667 13.1173C9.12667 12.4006 9.29 12.0406 9.61333 11.3906C11.1233 11.3906 12.09 11.6906 13.24 12.5906C14.2067 12.3606 15.2 12.2573 16.1967 12.2573C17.0967 12.2573 18.0033 12.3539 18.8767 12.5639C20.01 11.6739 20.9767 11.3906 22.47 11.3906C22.7967 12.0406 22.9567 12.4006 22.9567 13.1173ZM17.9346 17.6037C17.8041 17.6229 17.6727 17.6423 17.54 17.6604C17.0433 17.7371 16.5467 17.7671 16.0367 17.7671C15.53 17.7671 15.0333 17.7371 14.5333 17.6604C14.4106 17.6434 14.2883 17.6253 14.1663 17.6072C13.6688 17.5335 13.1753 17.4604 12.6667 17.4604C11.1067 17.4604 10.2167 18.7504 10.2167 20.2138C10.2167 23.1404 12.8967 23.5904 15.23 23.5904H16.8367C19.18 23.5904 21.8567 23.1438 21.8567 20.2138C21.8567 18.7504 20.9667 17.4604 19.4067 17.4604C18.9087 17.4604 18.4272 17.5312 17.9346 17.6037Z"
+                fill="url(#paint2_linear_845_3101)" />
+              <path
+                d="M12.9801 22.0503C13.8401 22.0503 14.2035 20.9103 14.2035 20.2137C14.2035 19.517 13.8401 18.377 12.9801 18.377C12.1201 18.377 11.7568 19.517 11.7568 20.2137C11.7568 20.9103 12.1201 22.0503 12.9801 22.0503Z"
+                fill="white" />
+              <path
+                d="M17.8799 20.2137C17.8799 19.517 18.2432 18.377 19.1032 18.377C19.9632 18.377 20.3266 19.517 20.3266 20.2137C20.3266 20.9103 19.9632 22.0503 19.1032 22.0503C18.2432 22.0503 17.8799 20.9103 17.8799 20.2137Z"
+                fill="white" />
+              <path
+                d="M31.625 16.8906C31.625 8.26118 24.6294 1.26562 16 1.26562C7.37055 1.26562 0.375 8.26118 0.375 16.8906C0.375 25.5201 7.37055 32.5156 16 32.5156C24.6294 32.5156 31.625 25.5201 31.625 16.8906Z"
+                stroke="url(#paint3_linear_845_3101)" stroke-width="0.75" />
+            </g>
+            <defs>
+              <linearGradient id="paint0_linear_845_3101" x1="31.7037" y1="32.8906" x2="-0.296307" y2="0.890625"
+                gradientUnits="userSpaceOnUse">
+                <stop stop-color="white" stop-opacity="0.15" />
+                <stop offset="1" stop-opacity="0" />
+              </linearGradient>
+              <linearGradient id="paint1_linear_845_3101" x1="34.2857" y1="3.13324" x2="13.9921" y2="25.8704"
+                gradientUnits="userSpaceOnUse">
+                <stop stop-color="white" stop-opacity="0" />
+                <stop offset="0.333333" stop-color="white" stop-opacity="0" />
+                <stop offset="0.666667" stop-color="white" stop-opacity="0" />
+                <stop offset="1" stop-color="white" stop-opacity="0.3" />
+              </linearGradient>
+              <linearGradient id="paint2_linear_845_3101" x1="25.0417" y1="10.879" x2="11.0278" y2="28.0282"
+                gradientUnits="userSpaceOnUse">
+                <stop stop-color="white" />
+                <stop offset="1" stop-color="white" stop-opacity="0.6" />
+              </linearGradient>
+              <linearGradient id="paint3_linear_845_3101" x1="31.7037" y1="0.890625" x2="16" y2="32.8906"
+                gradientUnits="userSpaceOnUse">
+                <stop stop-color="white" stop-opacity="0.3" />
+                <stop offset="1" stop-color="white" stop-opacity="0" />
+              </linearGradient>
+              <clipPath id="clip0_845_3101">
+                <rect width="32" height="32" fill="white" transform="translate(0 0.890625)" />
+              </clipPath>
+            </defs>
+          </svg>
+        </a>
+        <a target="_blank" href="https://www.linkedin.com/company/next-tutor/about">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="33" viewBox="0 0 32 33" fill="none">
+            <g clip-path="url(#clip0_845_3110)">
+              <path
+                d="M31.625 16.8906C31.625 8.26118 24.6294 1.26562 16 1.26562C7.37055 1.26562 0.375 8.26118 0.375 16.8906C0.375 25.5201 7.37055 32.5156 16 32.5156C24.6294 32.5156 31.625 25.5201 31.625 16.8906Z"
+                fill="url(#paint0_linear_845_3110)" />
+              <path
+                d="M12.875 14.3906V14.0156H12.5H9.5H9.125V14.3906V22.8906V23.2656H9.5H12.5H12.875V22.8906V14.3906ZM18.5 23.2656H18.875V22.8906V18.1866C18.875 17.6977 19.0327 17.3657 19.2366 17.1576C19.4435 16.9465 19.7202 16.8396 20 16.8396C20.2798 16.8396 20.5565 16.9465 20.7634 17.1576C20.9673 17.3657 21.125 17.6977 21.125 18.1866V22.8906V23.2656H21.5H24.4998H24.8748V22.8906V17.8906C24.8748 16.4719 24.48 15.37 23.7727 14.6204C23.0638 13.8691 22.0825 13.5156 21 13.5156C20.1667 13.5156 19.5583 13.7682 19.104 14.1186C19.0223 14.1816 18.9461 14.2474 18.875 14.3147V14.0156H18.5H15.5H15.125V14.3906V22.8906V23.2656H15.5H18.5ZM11 13.2656C12.0355 13.2656 12.875 12.4261 12.875 11.3906C12.875 10.3551 12.0355 9.51562 11 9.51562C9.96447 9.51562 9.125 10.3551 9.125 11.3906C9.125 12.4261 9.96447 13.2656 11 13.2656Z"
+                fill="url(#paint1_linear_845_3110)" stroke="url(#paint2_linear_845_3110)" stroke-width="0.75" />
+              <path
+                d="M31.625 16.8906C31.625 8.26118 24.6294 1.26562 16 1.26562C7.37055 1.26562 0.375 8.26118 0.375 16.8906C0.375 25.5201 7.37055 32.5156 16 32.5156C24.6294 32.5156 31.625 25.5201 31.625 16.8906Z"
+                stroke="url(#paint3_linear_845_3110)" stroke-width="0.75" />
+            </g>
+            <defs>
+              <linearGradient id="paint0_linear_845_3110" x1="31.7037" y1="32.8906" x2="-0.296307" y2="0.890625"
+                gradientUnits="userSpaceOnUse">
+                <stop stop-color="white" stop-opacity="0.15" />
+                <stop offset="1" stop-opacity="0" />
+              </linearGradient>
+              <linearGradient id="paint1_linear_845_3110" x1="34.1426" y1="1.50446" x2="13.4109" y2="22.9461"
+                gradientUnits="userSpaceOnUse">
+                <stop stop-color="white" stop-opacity="0" />
+                <stop offset="0.333333" stop-color="white" stop-opacity="0" />
+                <stop offset="0.666667" stop-color="white" stop-opacity="0" />
+                <stop offset="1" stop-color="white" stop-opacity="0.3" />
+              </linearGradient>
+              <linearGradient id="paint2_linear_845_3110" x1="24.7499" y1="10.1073" x2="11.8819" y2="24.9549"
+                gradientUnits="userSpaceOnUse">
+                <stop stop-color="white" />
+                <stop offset="1" stop-color="white" stop-opacity="0.6" />
+              </linearGradient>
+              <linearGradient id="paint3_linear_845_3110" x1="31.7037" y1="0.890625" x2="16" y2="32.8906"
+                gradientUnits="userSpaceOnUse">
+                <stop stop-color="white" stop-opacity="0.3" />
+                <stop offset="1" stop-color="white" stop-opacity="0" />
+              </linearGradient>
+              <clipPath id="clip0_845_3110">
+                <rect width="32" height="32" fill="white" transform="translate(0 0.890625)" />
+              </clipPath>
+            </defs>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div style="margin-left: 100px" class="list">
+      <div class="title">Resources</div>
+      <a href="./legal/AUP">Pricing</a>
+      <a href="./legal/terms-of-service">Features</a>
+      <a href="./about">About</a>
+    </div>
+    <div class="list">
+      <div class="title">Legal</div>
+      <a href="./legal/acceptable-use">Acceptable Use</a>
+      <a href="./legal/privacy-policy">Privacy Policy</a>
+      <a href="./legal/terms-of-service">Terms of Service</a>
+    </div>
+    <div class="list">
+      <div class="title">Support</div>
+      <a href="./contact">Contact us</a>
+    </div>
+    <div class="get-app-wrapper">
+      <a href="" class="btn" style="margin-top: 0">
+        <img src="./images/App Store.png" alt="App store" />
+      </a>
+      <a href="" class="btn">
+        <img src="./images/Google Play.png" alt="Google Play.png" />
+      </a>
+    </div>
+  </footer1>
+
+  <footer2>
+    <div class="line"></div>
+    <div class="btn-wrapper">
+      <div class="header">
+        <div class="title">Resources</div>
+        <svg width="15" height="10" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 1.59814L5.08941 5.68764L9.17904 1.59814" stroke="white" stroke-width="2"></path>
+        </svg>
+      </div>
+      <div class="content">
+        <a href="./pricing.html">Pricing</a>
+        <a href="./platform.html">Platform</a>
+        <a href="./about.html">About</a>
+      </div>
+    </div>
+    <div class="btn-wrapper">
+      <div class="header">
+        <div class="title">Legal</div>
+        <svg width="15" height="10" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 1.59814L5.08941 5.68764L9.17904 1.59814" stroke="white" stroke-width="2"></path>
+        </svg>
+      </div>
+      <div class="content">
+        <a href="/legal/acceptable-use">Acceptable Use</a>
+        <a href="/legal/privacy-policy">Privacy Policy</a>
+        <a href="/legal/terms-of-service">Terms of Service</a>
+      </div>
+    </div>
+    <div class="btn-wrapper last">
+      <div class="header">
+        <div class="title">Support</div>
+        <svg width="15" height="10" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 1.59814L5.08941 5.68764L9.17904 1.59814" stroke="white" stroke-width="2"></path>
+        </svg>
+      </div>
+      <div class="content">
+        <a href="/contact">Contact us</a>
+      </div>
+    </div>
+    <div class="bottom">
+      <div class="get-app-wrapper">
+        <a href="" class="btn" style="margin-top: 0">
+          <img src="./images/App Store.png" alt="App store" />
+        </a>
+        <a href="" class="btn">
+          <img src="./images/Google Play.png" alt="Google Play.png" />
+        </a>
+      </div>
+      <div class="icons">
+        <a target="_blank" href="https://github.com/next-tutor">
+          <img src="./images/github.svg " alt="github" />
+        </a>
+        <a target="_blank" href="https://www.linkedin.com/company/next-tutor/about">
+          <img src="./images/linkedin.svg" alt="linkedin" />
+        </a>
+      </div>
+    </div>
+  </footer2>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<script src="./js/index.js"></script>
+<script src="./js/navbar.js"></script>
+<!-- <script src="./js/footer.js"></script>  -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script> -->
+
+</html>

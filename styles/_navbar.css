@@ -6,15 +6,17 @@ header {
   position: fixed;
   z-index: 999;
   width: 100%;
+  height: 80px;
+  ;
   background-color: #000;
   transition: height .3s ease-in-out;
+
 
   .inner-header {
     display: flex;
     align-items: center;
     width: 100%;
     max-width: 1270px;
-    margin-top: 20px;
 
     .logo {
       margin-left: 35px;
@@ -29,7 +31,6 @@ header {
       align-items: center;
       justify-content: start;
       flex: 1;
-      background: #000;
       height: 54px;
       padding: 0 10px;
       z-index: 99;
@@ -62,6 +63,10 @@ header {
             }
           }
 
+          &.active {
+            text-decoration: underline
+          }
+
           &:hover {
             text-decoration: underline
           }
@@ -78,13 +83,13 @@ header {
           .nav-submenu {
             background: #fff;
             border-radius: 2px;
-            box-shadow: 0 14px 28px 0 rgba(0, 18, 71, .15), 0 0 10px 0 rgba(0, 18, 71, .08);
+            /* box-shadow: 0 14px 28px 0 rgba(0, 18, 71, .15), 0 0 10px 0 rgba(0, 18, 71, .08); */
             left: auto;
             opacity: 0;
             position: absolute;
             top: 100%;
-            transform: translateY(-5px);
-            transition: all .2s ease 0s;
+            /* transform: translateY(-5px); */
+            /* transition: all .2s ease 0s; */
             visibility: hidden;
             width: 400px;
             z-index: 200;
@@ -94,7 +99,7 @@ header {
             width: 100%;
             left: 0;
 
-            transition: all .3s ease-in-out .1s;
+            /* transition: all .3s ease-in-out .1s; */
 
             .wrap {
               width: 100%;
@@ -218,14 +223,6 @@ header {
                 }
               }
             }
-          }
-
-          &.show .nav-submenu {
-            opacity: 1;
-            transform: translateY(0);
-            transform-origin: top;
-            transition: all .3s ease-in-out .1s;
-            visibility: visible
           }
         }
       }
@@ -380,6 +377,10 @@ header {
       text-decoration: none;
       padding-left: 5px;
 
+      span {
+        border: 1px solid red;
+      }
+
       svg {
         transform: rotate(90deg);
         margin-left: 10px;
@@ -422,7 +423,30 @@ header {
     }
   }
 
-  &.open {
+
+  &.open-wide-menu {
+    background-color: white;
+
+    .inner-header .navbar {
+      .btn-login {
+        color: #000;
+      }
+
+      .nav-buttons-container .navbar-btn {
+        color: #000;
+
+        .nav-submenu {
+          opacity: 1;
+          /* transform: translateY(0);
+          transform-origin: top; */
+          /* transition: all .3s ease-in-out .1s; */
+          visibility: visible
+        }
+      }
+    }
+  }
+
+  &.open-side-menu {
     border-bottom: 1.5px solid #191a27;
     padding-bottom: 10px;
 

@@ -1,3 +1,8 @@
+@import "_common.css";
+@import "_navbar.css";
+@import "_footer.css";
+@import "_get-start.css";
+
 .pricing {
   margin-top: 215px;
   width: 100%;
@@ -27,7 +32,7 @@
     line-height: 43px;
     text-align: center;
     animation: fadeIn 1s, slideIn 1.5s;
-    margin-top: 25px;
+    margin-top: 15px;
   }
 
   .wrapper {

@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Next Tutor</title>
+  <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900" rel="stylesheet" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="./styles/platform.css" />
+  <link rel="stylesheet" href="./styles/style.css" />
+  <link rel="stylesheet" href="./tt.css" />
+  <link rel="stylesheet" href="./styles/features.css" />
+</head>
+
+<body>
+
+  <header class="main-header">
+    <div class="inner-header">
+      <a href="./index.html">
+        <img src="./images/logo-large.png" alt="logo" class="logo" />
+      </a>
+      <nav class="navbar navbar--dark-text" role="menubar">
+        <div class="nav-buttons-container">
+          <div class="navbar-btn navbar-btn-platform navbar__mode--dark-text" role="menuitem" tabindex="0"
+            aria-label="platform">
+            Platform<span class="icon"><svg width="16px" height="16px" viewBox="0 0 16 16">
+                <g id="arrow-down-16" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <polygon id="Icon"
+                    transform="translate(8.000000, 8.500000) rotate(-90.000000) translate(-8.000000, -8.500000) "
+                    points="11.5 3.90176105 10.1581397 2.5 4.5 8.5 10.1581397 14.5 11.5 13.0982389 7.18372051 8.5">
+                  </polygon>
+                </g>
+              </svg></span>
+            <div class="nav-submenu nav-submenu--features">
+
+              <div class="wrap">
+                <div class="inner-wrap">
+                  <div class="right">
+                    <div class="inner-box">
+                      <img class="logo" src="./images/logo/logo.svg" />
+
+                      <a class="all-features" data-item-link="/proposal-software" tabindex="-1" target="_self"
+                        role="menuitem" href="./platform.html">
+                        See All Features
+                        <img src="./images/arrow-right.svg" />
+                      </a>
+                    </div>
+                  </div>
+                  <div class="left">
+                    <a class="nav-submenu-item " data-item-link="/all-in-one-business-platform" tabindex="-1"
+                      target="_self" role="menuitem" href="./student-management.html">
+                      <div class="nav-submenu-item__icon-container">
+                        <div class="media-element svg-content"><svg width="24px" height="24px" viewBox="0 0 24 24"
+                            version="1.1">
+                            <title>rocket</title>
+                            <g id="rocket-24" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                              <path
+                                d="M13.8994546,17.3113628 L14.6183149,15.9232721 C13.5279279,16.4883229 12.4345786,16.981921 11.7912977,17.2417927 L11.4301706,19.2902362 L14.3690616,17.5545615 L13.8994546,17.3113628 Z M6.84381345,19.8675375 L8.21932133,21.3194252 L5.95875198,23.4610721 L4.58324411,22.0091844 L6.84381345,19.8675375 Z M4.58465694,18.1269291 L5.97731815,19.5623715 L1.96732865,23.4528494 L0.574667442,22.0174071 L4.58465694,18.1269291 Z M21.9540324,1.00775977 L22.8150187,1.03333189 L22.9172732,1.88860699 C23.2998432,5.08849213 22.3554507,8.25277173 20.122815,11.3455189 C19.2758726,12.5187416 18.2903367,13.5202329 17.1887012,14.3704405 C16.6479051,14.78781 15.8868524,15.2444573 15.0884891,15.6748518 L15.9174925,16.1041736 C16.7060907,16.5125705 17.0143048,17.4829268 16.6059078,18.2715251 C16.4670958,18.5395656 16.2556407,18.7631223 15.9957319,18.9166213 L11.7139868,21.4453699 C10.9493131,21.8969773 9.96332236,21.6431869 9.51171498,20.8785131 C9.31670337,20.5483142 9.24612017,20.1592922 9.31269937,19.7816309 L10.017316,15.7847908 L10.4284302,15.5526269 C10.6345491,15.4362277 12.1114621,14.9137311 12.5911466,14.7147347 C13.803262,14.2118905 14.9172066,13.5971464 15.9667568,12.7871365 C16.9200129,12.0514433 17.7702408,11.1874507 18.501204,10.1748876 C20.239455,7.76698421 21.0620288,5.38593708 20.9962406,3.00640083 C18.0661135,3.09279544 15.5525966,4.05252801 13.4179868,5.89172002 C10.5587386,8.35526455 9.29296996,10.9002734 8.83312258,13.4435602 L8.71691696,14.0862608 L8.08171454,14.2382006 C6.96954855,14.5042296 5.64927552,14.744296 4.1189431,14.9594721 C3.239458,15.0832387 2.42621973,14.4705312 2.30255838,13.5910517 C2.25322621,13.2402013 2.3211482,12.8828802 2.49577212,12.5746009 L4.82851273,8.45640453 C5.26621592,7.68368781 6.24745513,7.41210568 7.02017185,7.84980887 C7.3544717,8.03917206 7.60992054,8.34197448 7.74026946,8.70339386 L7.9668243,9.33156411 L6.28848141,9.93687249 L4.63127317,12.8624909 C5.50411938,12.7278095 6.29353538,12.5845461 6.99901302,12.4329682 C7.62692227,9.69091804 9.10977122,6.96373013 12.1125102,4.37655303 C14.8472718,2.02026679 18.1445413,0.894614201 21.9540324,1.00775977 Z M2.84381345,15.8675375 L4.21932133,17.3194252 L1.95875198,19.4610721 L0.58324411,18.0091844 L2.84381345,15.8675375 Z M14.5,8 C15.3284271,8 16,8.67157288 16,9.5 C16,10.3284271 15.3284271,11 14.5,11 C13.6715729,11 13,10.3284271 13,9.5 C13,8.67157288 13.6715729,8 14.5,8 Z"
+                                id="Combined-Shape" fill="#000000" fill-rule="nonzero"></path>
+                            </g>
+                          </svg></div>
+                      </div>
+                      <div class="nav-submenu-item__text-container">
+                        <div class="nav-submenu-item__text-container__title">Students Management</div>
+                        <div class="nav-submenu-item__text-container__description">Powerful features built for your
+                          tutoring
+                          businesses.</div>
+                      </div>
+                    </a>
+
+                    <a class="nav-submenu-item" data-item-link="/features" tabindex="-1" target="_self" role="menuitem"
+                      href="./lessons.html">
+                      <div class="nav-submenu-item__icon-container">
+                        <div class="media-element svg-content"><svg width="24" height="24" viewBox="0 0 24 24"
+                            fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M2 2H11V11H2V2ZM4 4H9V9H4V4ZM2 13H11V22H2V13ZM4 15H9V20H4V15ZM22 2H13V11H22V2ZM20 4H15V9H20V4ZM13 13H22V22H13V13ZM15 15H20V20H15V15Z"
+                              fill="black"></path>
+                          </svg></div>
+                      </div>
+                      <div class="nav-submenu-item__text-container">
+                        <div class="nav-submenu-item__text-container__title">Lessons</div>
+                        <div class="nav-submenu-item__text-container__description">Powerful features built for small
+                          businesses.</div>
+                      </div>
+                    </a>
+
+                    <a class="nav-submenu-item" data-item-link="/online-contract" tabindex="-1" target="_self"
+                      role="menuitem" href="./tasks.html">
+                      <div class="nav-submenu-item__icon-container">
+                        <div class="media-element svg-content"><svg width="24px" height="24px" viewBox="0 0 24 24"
+                            version="1.1">
+                            <title>contract</title>
+                            <g id="contract-24" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                              <path
+                                d="M22,1 L22,23 L2,23 L2,1 L22,1 Z M20,3 L4,3 L4,21 L20,21 L20,3 Z M18,17 L18,19 L6,19 L6,17 L18,17 Z M7,12 L10,15 L7,15 L7,12 Z M14.3284271,5.55025253 L16.4497475,7.67157288 L10.6715729,13.4497475 L8.55025253,11.3284271 L14.3284271,5.55025253 Z"
+                                id="Combined-Shape" fill="#000000" fill-rule="nonzero"></path>
+                            </g>
+                          </svg></div>
+                      </div>
+                      <div class="nav-submenu-item__text-container">
+                        <div class="nav-submenu-item__text-container__title">Tasks</div>
+                        <div class="nav-submenu-item__text-container__description">Customizable contracts that look
+                          professional.</div>
+                      </div>
+                    </a>
+
+                    <a class="nav-submenu-item" data-item-link="/online-invoices" tabindex="-1" target="_self"
+                      role="menuitem" href="./student-portal.html">
+                      <div class="nav-submenu-item__icon-container">
+                        <div class="media-element svg-content"><svg width="24px" height="24px" viewBox="0 0 24 24"
+                            version="1.1">
+                            <title>invoice</title>
+                            <g id="invoice-24" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                              <path
+                                d="M22,1 L22,24 L19.5,23 L17,24 L14.5,23 L12,24 L9.5,23 L7,24 L4.5,23 L2,24 L2,1 L22,1 Z M20,3 L4,3 L4,21.0459341 L4.5,20.8459341 L7,21.8459341 L9.5,20.8459341 L12,21.8459341 L14.5,20.8459341 L17,21.8459341 L19.5,20.8459341 L20,21.0459341 L20,3 Z M13,5 L13.0011208,7.0714916 C14.0961528,7.23291032 15.0272745,7.6657025 15.7676951,8.34978229 L14.6206897,9.88824383 C13.8366606,9.16255443 12.7912886,8.8287373 11.8039927,8.8287373 C10.9328494,8.8287373 10.4392015,9.20609579 10.4392015,9.78664731 C10.4392015,11.3105951 16,10.2801161 16,13.8940493 C16,15.4523527 15.010436,16.6734272 13.0016192,16.9439251 L13,19 L11,19 L10.9994291,16.9184105 C9.70094994,16.7212005 8.72002507,16.1813023 8,15.4615385 L9.13248639,13.850508 C9.81488203,14.5616836 10.8747731,15.1712627 12.2105263,15.1712627 C13.3575318,15.1712627 13.8947368,14.6632801 13.8947368,14.0972424 C13.8947368,12.413643 8.31941924,13.5892598 8.31941924,9.94629898 C8.31941924,8.58470972 9.31504091,7.42009909 10.9994997,7.09209987 L11,5 L13,5 Z"
+                                id="Combined-Shape" fill="#000000" fill-rule="nonzero"></path>
+                            </g>
+                          </svg></div>
+                      </div>
+                      <div class="nav-submenu-item__text-container">
+                        <div class="nav-submenu-item__text-container__title">Student Portal</div>
+                        <div class="nav-submenu-item__text-container__description">Professional invoices that get you
+                          paid
+                          fast.</div>
+                      </div>
+                    </a>
+
+                    <a class="nav-submenu-item" data-item-link="/online-payment-software" tabindex="-1" target="_self"
+                      role="menuitem" href="./analytics.html">
+                      <div class="nav-submenu-item__icon-container">
+                        <div class="media-element svg-content"><svg width="24px" height="24px" viewBox="0 0 24 24"
+                            version="1.1">
+                            <title>dollar</title>
+                            <g id="dollar-circle-24" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                              <path
+                                d="M12,1 C18.0751322,1 23,5.92486775 23,12 C23,18.0751322 18.0751322,23 12,23 C5.92486775,23 1,18.0751322 1,12 C1,5.92486775 5.92486775,1 12,1 Z M12,3 C7.02943725,3 3,7.02943725 3,12 C3,16.9705627 7.02943725,21 12,21 C16.9705627,21 21,16.9705627 21,12 C21,7.02943725 16.9705627,3 12,3 Z M12,5 C12.5522847,5 13,5.44771525 13,6 L13.0007464,7.03897909 C14.0488188,7.14921352 15.0829235,7.48863726 15.8277017,7.99815157 L15.8277017,7.99815157 L15.023879,9.56931608 C14.1243632,9.03327172 12.9951837,8.70055453 12.0956679,8.70055453 C11.2344293,8.70055453 10.6028543,8.97781885 10.6028543,9.68022181 C10.6028543,11.4916821 16.019088,10.5120148 16,14.0794824 C16,15.7911907 14.6600285,16.7024107 13.0011616,16.9378223 L13,18 C13,18.5522847 12.5522847,19 12,19 C11.4477153,19 11,18.5522847 11,18 L11.0004815,16.915989 C9.86501081,16.7425268 8.76795469,16.3038896 8,15.6321627 L8,15.6321627 L8.78468403,14.116451 C9.66506124,14.8743068 11.0813202,15.336414 12.191361,15.336414 C13.1291542,15.336414 13.8564223,15.0221811 13.8564223,14.2828096 C13.8564223,12.2680222 8.49760451,13.3955638 8.51674314,9.84658041 C8.51674314,8.29659624 9.60127011,7.43748148 10.9999321,7.1308078 L11,6 C11,5.44771525 11.4477153,5 12,5 Z"
+                                id="Combined-Shape" fill="#000000" fill-rule="nonzero"></path>
+                            </g>
+                          </svg></div>
+                      </div>
+                      <div class="nav-submenu-item__text-container">
+                        <div class="nav-submenu-item__text-container__title">Analytics</div>
+                        <div class="nav-submenu-item__text-container__description">Make it easy for clients to pay you
+                          with online payments.</div>
+                      </div>
+                    </a>
+
+
+                    <a class="nav-submenu-item" data-item-link="/online-payment-software" tabindex="-1" target="_self"
+                      role="menuitem" href="./site.html">
+                      <div class="nav-submenu-item__icon-container">
+                        <div class="media-element svg-content"><svg width="24px" height="24px" viewBox="0 0 24 24"
+                            version="1.1">
+                            <title>dollar</title>
+                            <g id="dollar-circle-24" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                              <path
+                                d="M12,1 C18.0751322,1 23,5.92486775 23,12 C23,18.0751322 18.0751322,23 12,23 C5.92486775,23 1,18.0751322 1,12 C1,5.92486775 5.92486775,1 12,1 Z M12,3 C7.02943725,3 3,7.02943725 3,12 C3,16.9705627 7.02943725,21 12,21 C16.9705627,21 21,16.9705627 21,12 C21,7.02943725 16.9705627,3 12,3 Z M12,5 C12.5522847,5 13,5.44771525 13,6 L13.0007464,7.03897909 C14.0488188,7.14921352 15.0829235,7.48863726 15.8277017,7.99815157 L15.8277017,7.99815157 L15.023879,9.56931608 C14.1243632,9.03327172 12.9951837,8.70055453 12.0956679,8.70055453 C11.2344293,8.70055453 10.6028543,8.97781885 10.6028543,9.68022181 C10.6028543,11.4916821 16.019088,10.5120148 16,14.0794824 C16,15.7911907 14.6600285,16.7024107 13.0011616,16.9378223 L13,18 C13,18.5522847 12.5522847,19 12,19 C11.4477153,19 11,18.5522847 11,18 L11.0004815,16.915989 C9.86501081,16.7425268 8.76795469,16.3038896 8,15.6321627 L8,15.6321627 L8.78468403,14.116451 C9.66506124,14.8743068 11.0813202,15.336414 12.191361,15.336414 C13.1291542,15.336414 13.8564223,15.0221811 13.8564223,14.2828096 C13.8564223,12.2680222 8.49760451,13.3955638 8.51674314,9.84658041 C8.51674314,8.29659624 9.60127011,7.43748148 10.9999321,7.1308078 L11,6 C11,5.44771525 11.4477153,5 12,5 Z"
+                                id="Combined-Shape" fill="#000000" fill-rule="nonzero"></path>
+                            </g>
+                          </svg></div>
+                      </div>
+                      <div class="nav-submenu-item__text-container">
+                        <div class="nav-submenu-item__text-container__title">Web Site</div>
+                        <div class="nav-submenu-item__text-container__description">Make it easy for clients to pay you
+                          with online payments.</div>
+                      </div>
+                    </a>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <a class="navbar-btn  navbar__mode--dark-text" data-item-link="./pricing" tabindex="0" target="_self"
+            role="menuitem" href="./about.html">about</a><a class="navbar-btn  navbar__mode--dark-text"
+            data-item-link="/templates" tabindex="0" target="_self" role="menuitem" href="./pricing.html">Pricing</a>
+        </div>
+
+        <a class="navbar-btn" data-item-link="/templates" tabindex="0" target="_self" role="menuitem" href="#">Login</a>
+
+        <a href="./plus/plus.html" class="navbar-btn btn-start " data-item-link="../plus/plus.html" tabindex="0"
+          target="_self" role="menuitem">Let's
+          Start</a>
+
+
+        <div class="mobile-menu-buttons-wrapper">
+          <section class="registration-form__container registration-form__container--column ">
+            <div class="registration-form__form-container"><button
+                class="hbui-button hbui-button--small hbui-button--primary--dark  " type="submit"
+                data-testid="start-trial--button">Start free trial</button></div>
+          </section><button class="hbui-button hbui-button--large hbui-button--invisible  drawer-button"
+            aria-label="menuitem" role="menuitem"><span class="icon-container nx-hamburger-16-container"><i
+                class="icon icon-hb-nx-hamburger-16"></i></span></button>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <div class="feature-opening">
+    <div class="title">
+      <div>Build a <span class="gradient">Website</span> that fit you.</div>
+    </div>
+    <div class="page welcome">
+      <div class="gradient-box">
+      </div>
+      <img src="./images/features/incomes/main.png" />
+    </div>
+  </div>
+
+
+
+  <div class="feature-opening-bg">
+  </div>
+
+
+
+
+  <div class="feature-details">
+    <div class="inner-details">
+      <div class="main-title" data-swap="image--1">
+        <div class="title">
+          Tools to amplify your talent
+        </div>
+        <div class="text">
+          dfgk sdfklgsl sdf asdkf askdjfkasdkjf kjsadfk lajsdkfj kdajsf lkjsda kljdsalkdsa kdjg lsjdfkg jskdljf gklsjdj
+          glksjdfklgjsd sdfgk lsdkflgk asdfKAS fdgksdjfgkjs dflglksdjgljsdfklg jsldkfglksdjfglsjdf s;
+        </div>
+      </div>
+      <div class="more-details">
+        <div class="sticky-box">
+          <img src="./images/features/incomes/daily-income.png" class="image--1 income-img active">
+          <img src="./images/features/incomes/daily-income-details.png" class="image--2 income-img">
+
+        </div>
+        <div class="items">
+          <div class="item" data-swap="image--1">
+            <div class="title bold">Pixel-Perfect sites, every time</div>
+            <div class="desc">asdf asdjkf ajskdfk fd asjdf klajsdkf alkdjf lksda jahsdfkhakd fhkjhjakdhfkahsd
+              fahsdkfhaksdhfkjahsd kfhaksdhf kajsh
+              fkjahsf</div>
+          </div>
+          <div class="item" data-swap="image--2">
+            <div class="title">Pixel-Perfect sites, every time</div>
+            <div class="desc">asdf asdjkf ajskdfk asjkdf lkasjd fljaskd jakdsf jahsdfkhakd fhkjhjakdhfkahsd
+              fahsdkfhaksdhfkjahsd kfhaksdhf kajsh
+              fkjahsf</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="more-features" data-swap="image--3">
+    <div class="caption">Explore more features</div>
+    <div class="items">
+      <div class="item">
+        <div class="title t1">Client Portal</div>
+        <div class="txt">sadkf lasjdfkl jakdfj alkjd asdf asdkl askdj klajsd jasldsalajsd ljaksdflkdjsa lsadflsada
+          skjdfl jsadfk</div>
+        <a class="find">Find out more
+          <img src="./images/arrow-right.svg">
+        </a>
+      </div>
+      <div class="item">
+        <div class="title t2">Client Portal</div>
+        <div class="txt">sadkf lasjdfkl jakdfj alkjd asdf asdkl askdj klajsd jasldsalajsd ljaksdflkdjsa lsadflsada
+          skjdfl jsadfk</div>
+        <a class="find">Find out more
+          <img src="./images/arrow-right.svg">
+        </a>
+      </div>
+      <div class="item">
+        <div class="title t3">Client Portal</div>
+        <div class="txt">sadkf lasjdfkl jakdfj alkjd asdf asdkl askdj klajsd jasldsalajsd ljaksdflkdjsa lsadflsada
+          skjdfl jsadfk</div>
+        <a class="find">Find out more
+          <img src="./images/arrow-right.svg">
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+  <section class="get-started see-more">
+    <div class="wrapper">
+      <img src="./images/logo-large.png" alt="logo" />
+      <div class="title">Want to see more?</div>
+      <div class="btn">
+        Let's start
+      </div>
+    </div>
+  </section>
+
+  <footer1>
+    <div class="line"></div>
+    <div class="left-side">
+      <div class="address">Tel Aviv, Israel</div>
+      <div class="icons">
+        <a target="_blank" href="https://github.com/next-tutor">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="33" viewBox="0 0 32 33" fill="none">
+            <g clip-path="url(#clip0_845_3101)">
+              <path
+                d="M31.625 16.8906C31.625 8.26118 24.6294 1.26562 16 1.26562C7.37055 1.26562 0.375 8.26118 0.375 16.8906C0.375 25.5201 7.37055 32.5156 16 32.5156C24.6294 32.5156 31.625 25.5201 31.625 16.8906Z"
+                fill="url(#paint0_linear_845_3101)" />
+              <path
+                d="M24 18.5306C24 19.5939 23.8933 20.7206 23.4167 21.6973C22.1533 24.2506 18.68 24.1906 16.1933 24.1906C13.6667 24.1906 9.98667 24.2806 8.67333 21.6973C8.18667 20.7306 8 19.5939 8 18.5306C8 17.1339 8.46333 15.8139 9.38333 14.7439C9.21 14.2173 9.12667 13.6639 9.12667 13.1173C9.12667 12.4006 9.29 12.0406 9.61333 11.3906C11.1233 11.3906 12.09 11.6906 13.24 12.5906C14.2067 12.3606 15.2 12.2573 16.1967 12.2573C17.0967 12.2573 18.0033 12.3539 18.8767 12.5639C20.01 11.6739 20.9767 11.3906 22.47 11.3906C22.7967 12.0406 22.9567 12.4006 22.9567 13.1173C22.9567 13.6639 22.87 14.2073 22.7 14.7239C23.6167 15.8039 24 17.1339 24 18.5306Z"
+                fill="url(#paint1_linear_845_3101)" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M24.0889 22.0299L24.0907 22.0262C24.6433 20.8939 24.75 19.6284 24.75 18.5306C24.75 17.1261 24.3956 15.7393 23.5276 14.5617C23.6465 14.0905 23.7067 13.6049 23.7067 13.1173C23.7067 12.2241 23.4837 11.7374 23.1401 11.0538L22.9325 10.6406H22.47C21.6769 10.6406 20.9786 10.7156 20.3101 10.9291C19.7422 11.1105 19.2239 11.3829 18.7027 11.7567C17.8764 11.5858 17.0315 11.5073 16.1967 11.5073C15.2661 11.5073 14.3325 11.5929 13.4141 11.7836C12.8881 11.4056 12.3666 11.127 11.7945 10.9402C11.1213 10.7203 10.4176 10.6406 9.61333 10.6406H9.14874L8.94183 11.0566C8.60433 11.735 8.37667 12.2227 8.37667 13.1173C8.37667 13.6032 8.43446 14.0957 8.5549 14.577C7.68538 15.7277 7.25 17.0993 7.25 18.5306C7.25 19.6713 7.44874 20.9327 8.00343 22.0345L8.00477 22.0372C8.80809 23.6173 10.3174 24.3234 11.821 24.646C13.213 24.9447 14.7322 24.9425 15.9333 24.9408L16.1933 24.9406L16.3822 24.9407C17.5729 24.9416 19.0673 24.9428 20.4301 24.6327C21.8813 24.3026 23.3173 23.5893 24.0889 22.0299ZM22.9567 13.1173C22.9567 13.6639 22.87 14.2073 22.7 14.7239C23.6167 15.8039 24 17.1339 24 18.5306C24 19.5939 23.8933 20.7206 23.4167 21.6973C22.6901 23.1658 21.2325 23.7698 19.652 24.0181C19.967 23.9284 20.272 23.8151 20.5591 23.6725C21.1372 23.3853 21.6605 22.9706 22.0354 22.3788C22.4111 21.7858 22.6067 21.0639 22.6067 20.2138C22.6067 19.3369 22.3407 18.4714 21.7949 17.8107C21.2372 17.1355 20.4139 16.7104 19.4067 16.7104C18.8479 16.7104 18.2963 16.7919 17.7984 16.8654C17.6748 16.8837 17.5546 16.9014 17.4383 16.9173L17.4256 16.9192C16.9746 16.9888 16.5172 17.0171 16.0367 17.0171C15.5598 17.0171 15.102 16.9889 14.647 16.9191L14.6366 16.9176C14.5281 16.9025 14.4155 16.8857 14.2997 16.8685C13.7988 16.7941 13.2364 16.7104 12.6667 16.7104C11.6595 16.7104 10.8362 17.1355 10.2784 17.8107C9.73265 18.4714 9.46667 19.3369 9.46667 20.2138C9.46667 21.0635 9.66262 21.7849 10.0385 22.3777C10.4135 22.9691 10.9367 23.3838 11.5143 23.6711C11.7514 23.789 12.0007 23.887 12.2577 23.9681C10.7459 23.6917 9.37339 23.0743 8.67333 21.6973C8.18667 20.7306 8 19.5939 8 18.5306C8 17.1339 8.46333 15.8139 9.38333 14.7439C9.21 14.2173 9.12667 13.6639 9.12667 13.1173C9.12667 12.4006 9.29 12.0406 9.61333 11.3906C11.1233 11.3906 12.09 11.6906 13.24 12.5906C14.2067 12.3606 15.2 12.2573 16.1967 12.2573C17.0967 12.2573 18.0033 12.3539 18.8767 12.5639C20.01 11.6739 20.9767 11.3906 22.47 11.3906C22.7967 12.0406 22.9567 12.4006 22.9567 13.1173ZM17.9346 17.6037C17.8041 17.6229 17.6727 17.6423 17.54 17.6604C17.0433 17.7371 16.5467 17.7671 16.0367 17.7671C15.53 17.7671 15.0333 17.7371 14.5333 17.6604C14.4106 17.6434 14.2883 17.6253 14.1663 17.6072C13.6688 17.5335 13.1753 17.4604 12.6667 17.4604C11.1067 17.4604 10.2167 18.7504 10.2167 20.2138C10.2167 23.1404 12.8967 23.5904 15.23 23.5904H16.8367C19.18 23.5904 21.8567 23.1438 21.8567 20.2138C21.8567 18.7504 20.9667 17.4604 19.4067 17.4604C18.9087 17.4604 18.4272 17.5312 17.9346 17.6037Z"
+                fill="url(#paint2_linear_845_3101)" />
+              <path
+                d="M12.9801 22.0503C13.8401 22.0503 14.2035 20.9103 14.2035 20.2137C14.2035 19.517 13.8401 18.377 12.9801 18.377C12.1201 18.377 11.7568 19.517 11.7568 20.2137C11.7568 20.9103 12.1201 22.0503 12.9801 22.0503Z"
+                fill="white" />
+              <path
+                d="M17.8799 20.2137C17.8799 19.517 18.2432 18.377 19.1032 18.377C19.9632 18.377 20.3266 19.517 20.3266 20.2137C20.3266 20.9103 19.9632 22.0503 19.1032 22.0503C18.2432 22.0503 17.8799 20.9103 17.8799 20.2137Z"
+                fill="white" />
+              <path
+                d="M31.625 16.8906C31.625 8.26118 24.6294 1.26562 16 1.26562C7.37055 1.26562 0.375 8.26118 0.375 16.8906C0.375 25.5201 7.37055 32.5156 16 32.5156C24.6294 32.5156 31.625 25.5201 31.625 16.8906Z"
+                stroke="url(#paint3_linear_845_3101)" stroke-width="0.75" />
+            </g>
+            <defs>
+              <linearGradient id="paint0_linear_845_3101" x1="31.7037" y1="32.8906" x2="-0.296307" y2="0.890625"
+                gradientUnits="userSpaceOnUse">
+                <stop stop-color="white" stop-opacity="0.15" />
+                <stop offset="1" stop-opacity="0" />
+              </linearGradient>
+              <linearGradient id="paint1_linear_845_3101" x1="34.2857" y1="3.13324" x2="13.9921" y2="25.8704"
+                gradientUnits="userSpaceOnUse">
+                <stop stop-color="white" stop-opacity="0" />
+                <stop offset="0.333333" stop-color="white" stop-opacity="0" />
+                <stop offset="0.666667" stop-color="white" stop-opacity="0" />
+                <stop offset="1" stop-color="white" stop-opacity="0.3" />
+              </linearGradient>
+              <linearGradient id="paint2_linear_845_3101" x1="25.0417" y1="10.879" x2="11.0278" y2="28.0282"
+                gradientUnits="userSpaceOnUse">
+                <stop stop-color="white" />
+                <stop offset="1" stop-color="white" stop-opacity="0.6" />
+              </linearGradient>
+              <linearGradient id="paint3_linear_845_3101" x1="31.7037" y1="0.890625" x2="16" y2="32.8906"
+                gradientUnits="userSpaceOnUse">
+                <stop stop-color="white" stop-opacity="0.3" />
+                <stop offset="1" stop-color="white" stop-opacity="0" />
+              </linearGradient>
+              <clipPath id="clip0_845_3101">
+                <rect width="32" height="32" fill="white" transform="translate(0 0.890625)" />
+              </clipPath>
+            </defs>
+          </svg>
+        </a>
+        <a target="_blank" href="https://www.linkedin.com/company/next-tutor/about">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="33" viewBox="0 0 32 33" fill="none">
+            <g clip-path="url(#clip0_845_3110)">
+              <path
+                d="M31.625 16.8906C31.625 8.26118 24.6294 1.26562 16 1.26562C7.37055 1.26562 0.375 8.26118 0.375 16.8906C0.375 25.5201 7.37055 32.5156 16 32.5156C24.6294 32.5156 31.625 25.5201 31.625 16.8906Z"
+                fill="url(#paint0_linear_845_3110)" />
+              <path
+                d="M12.875 14.3906V14.0156H12.5H9.5H9.125V14.3906V22.8906V23.2656H9.5H12.5H12.875V22.8906V14.3906ZM18.5 23.2656H18.875V22.8906V18.1866C18.875 17.6977 19.0327 17.3657 19.2366 17.1576C19.4435 16.9465 19.7202 16.8396 20 16.8396C20.2798 16.8396 20.5565 16.9465 20.7634 17.1576C20.9673 17.3657 21.125 17.6977 21.125 18.1866V22.8906V23.2656H21.5H24.4998H24.8748V22.8906V17.8906C24.8748 16.4719 24.48 15.37 23.7727 14.6204C23.0638 13.8691 22.0825 13.5156 21 13.5156C20.1667 13.5156 19.5583 13.7682 19.104 14.1186C19.0223 14.1816 18.9461 14.2474 18.875 14.3147V14.0156H18.5H15.5H15.125V14.3906V22.8906V23.2656H15.5H18.5ZM11 13.2656C12.0355 13.2656 12.875 12.4261 12.875 11.3906C12.875 10.3551 12.0355 9.51562 11 9.51562C9.96447 9.51562 9.125 10.3551 9.125 11.3906C9.125 12.4261 9.96447 13.2656 11 13.2656Z"
+                fill="url(#paint1_linear_845_3110)" stroke="url(#paint2_linear_845_3110)" stroke-width="0.75" />
+              <path
+                d="M31.625 16.8906C31.625 8.26118 24.6294 1.26562 16 1.26562C7.37055 1.26562 0.375 8.26118 0.375 16.8906C0.375 25.5201 7.37055 32.5156 16 32.5156C24.6294 32.5156 31.625 25.5201 31.625 16.8906Z"
+                stroke="url(#paint3_linear_845_3110)" stroke-width="0.75" />
+            </g>
+            <defs>
+              <linearGradient id="paint0_linear_845_3110" x1="31.7037" y1="32.8906" x2="-0.296307" y2="0.890625"
+                gradientUnits="userSpaceOnUse">
+                <stop stop-color="white" stop-opacity="0.15" />
+                <stop offset="1" stop-opacity="0" />
+              </linearGradient>
+              <linearGradient id="paint1_linear_845_3110" x1="34.1426" y1="1.50446" x2="13.4109" y2="22.9461"
+                gradientUnits="userSpaceOnUse">
+                <stop stop-color="white" stop-opacity="0" />
+                <stop offset="0.333333" stop-color="white" stop-opacity="0" />
+                <stop offset="0.666667" stop-color="white" stop-opacity="0" />
+                <stop offset="1" stop-color="white" stop-opacity="0.3" />
+              </linearGradient>
+              <linearGradient id="paint2_linear_845_3110" x1="24.7499" y1="10.1073" x2="11.8819" y2="24.9549"
+                gradientUnits="userSpaceOnUse">
+                <stop stop-color="white" />
+                <stop offset="1" stop-color="white" stop-opacity="0.6" />
+              </linearGradient>
+              <linearGradient id="paint3_linear_845_3110" x1="31.7037" y1="0.890625" x2="16" y2="32.8906"
+                gradientUnits="userSpaceOnUse">
+                <stop stop-color="white" stop-opacity="0.3" />
+                <stop offset="1" stop-color="white" stop-opacity="0" />
+              </linearGradient>
+              <clipPath id="clip0_845_3110">
+                <rect width="32" height="32" fill="white" transform="translate(0 0.890625)" />
+              </clipPath>
+            </defs>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div style="margin-left: 100px" class="list">
+      <div class="title">Resources</div>
+      <a href="./legal/AUP">Pricing</a>
+      <a href="./legal/terms-of-service">Features</a>
+      <a href="./about">About</a>
+    </div>
+    <div class="list">
+      <div class="title">Legal</div>
+      <a href="./legal/acceptable-use">Acceptable Use</a>
+      <a href="./legal/privacy-policy">Privacy Policy</a>
+      <a href="./legal/terms-of-service">Terms of Service</a>
+    </div>
+    <div class="list">
+      <div class="title">Support</div>
+      <a href="./contact">Contact us</a>
+    </div>
+    <div class="get-app-wrapper">
+      <a href="" class="btn" style="margin-top: 0">
+        <img src="./images/App Store.png" alt="App store" />
+      </a>
+      <a href="" class="btn">
+        <img src="./images/Google Play.png" alt="Google Play.png" />
+      </a>
+    </div>
+  </footer1>
+  <footer2>
+    <div class="line"></div>
+    <div class="btn-wrapper">
+      <div class="header">
+        <div class="title">Resources</div>
+        <svg width="15" height="10" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 1.59814L5.08941 5.68764L9.17904 1.59814" stroke="white" stroke-width="2"></path>
+        </svg>
+      </div>
+      <div class="content">
+        <a href="#">Pricing</a>
+        <a href="#">Features</a>
+        <a href="#">About</a>
+      </div>
+    </div>
+    <div class="btn-wrapper">
+      <div class="header">
+        <div class="title">Legal</div>
+        <svg width="15" height="10" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 1.59814L5.08941 5.68764L9.17904 1.59814" stroke="white" stroke-width="2"></path>
+        </svg>
+      </div>
+      <div class="content">
+        <a href="/legal/acceptable-use">Acceptable Use</a>
+        <a href="/legal/privacy-policy">Privacy Policy</a>
+        <a href="/legal/terms-of-service">Terms of Service</a>
+      </div>
+    </div>
+    <div class="btn-wrapper last">
+      <div class="header">
+        <div class="title">Support</div>
+        <svg width="15" height="10" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 1.59814L5.08941 5.68764L9.17904 1.59814" stroke="white" stroke-width="2"></path>
+        </svg>
+      </div>
+      <div class="content">
+        <a href="/contact">Contact us</a>
+      </div>
+    </div>
+    <div class="bottom">
+      <div class="get-app-wrapper">
+        <a href="" class="btn" style="margin-top: 0">
+          <img src="./images/App Store.png" alt="App store" />
+        </a>
+        <a href="" class="btn">
+          <img src="./images/Google Play.png" alt="Google Play.png" />
+        </a>
+      </div>
+      <div class="icons">
+        <a target="_blank" href="https://github.com/next-tutor">
+          <img src="./images/github.svg " alt="github" />
+        </a>
+        <a target="_blank" href="https://www.linkedin.com/company/next-tutor/about">
+          <img src="./images/linkedin.svg" alt="linkedin" />
+        </a>
+      </div>
+    </div>
+  </footer2>
+</body>
+
+<script>
+
+</script>
+
+<script src="./js/index.js"></script>
+<script src="./js/platform.js"></script>
+<script src="./js/navbar.js"></script>
+<script src="./js/footer.js"></script>
+
+<script>
+  $(document).ready(function () {
+    var last = null;
+    if (typeof window.IntersectionObserver !== 'undefined') {
+      let options = {
+        threshold: [0.5, 1]
+      }
+      const targets = document.querySelectorAll('.feature-details .item');
+      const locker = document.querySelector('.sticky-box');
+      function handleIntersection(entries) {
+        entries.map((entry) => {
+          if (entry.isIntersecting) {
+            last = entry.target.current;
+            entry.target.current = entry.target.dataset.swap;
+            $(".sticky-box ." + entry.target.current).addClass("active");
+          } else {
+            if (last !== entry.target.current) {
+              $(".sticky-box ." + entry.target.current).removeClass("active");
+            }
+          }
+        });
+      }
+      const observer = new IntersectionObserver(handleIntersection, options);
+      targets.forEach(target => observer.observe(target));
+    } else {
+      // Fallback
+    }
+  });
+</script>
+
+</html>

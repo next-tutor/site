@@ -2,16 +2,16 @@
 @import "_navbar.css";
 @import "_footer.css";
 @import "_get-start.css";
-@import "second-page.css";
+
 
 /* ------------------------------------------- */
-/* homePage */
+/* home-page */
 /* ------------------------------------------- */
 
-.homePage {
+.home-page {
   height: 900px;
   width: 100%;
-  background: url("../images/hp3.gif") center;
+  background: url("../images/hp.gif") center;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
@@ -151,10 +151,10 @@
 
 
 /* ------------------------------------------- */
-/* second */
+/* demo */
 /* ------------------------------------------- */
 
-.second {
+.demo {
   display: flex;
   justify-content: center;
   margin-bottom: 130px;
@@ -164,107 +164,6 @@
     flex-direction: column;
     position: relative;
     margin-top: 25px;
-
-    .tabNavigation {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 10px;
-      z-index: 1;
-
-
-      .items {
-        display: flex;
-
-        .item {
-          position: relative;
-          display: flex;
-          justify-content: center;
-          border-radius: 10px;
-          cursor: pointer;
-          width: 110px;
-
-          .svgContainerWrapper {
-            flex-direction: column;
-            display: flex;
-            width: 100%;
-            max-width: 114px;
-            align-items: center;
-
-            .svgContainer {
-              position: relative;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              height: 60px;
-              width: 60px;
-              border-radius: 10px;
-              margin: 0 5px;
-              border: 1px solid #9b9792;
-
-              svg {
-                z-index: 1;
-
-                width: 30px;
-
-                path {
-                  stroke: #ffc68e
-                }
-              }
-
-              .bg {
-                position: absolute;
-                background-color: #212121;
-                top: 30px;
-                bottom: 0;
-                right: 0;
-                left: 0;
-                border-radius: 4px;
-              }
-            }
-
-            .tabTitle {
-              font-size: 13px;
-              font-style: normal;
-              margin-top: 18px;
-              color: #d9dadb;
-            }
-          }
-
-          &.active {
-            width: 140px;
-
-            .svgContainerWrapper {
-              margin-top: -6px;
-
-              .svgContainer {
-                width: 100px;
-                height: 70px;
-                border: 1px solid #ffbf80;
-                /* background: linear-gradient(135deg, #ffc446 0%, #ff781ff5 100%); */
-                box-shadow: 0px 0px 20px 9px #ffffff59;
-
-                .bg {
-                  display: none;
-                }
-
-                svg path {
-                  stroke: #d9dadb;
-                }
-              }
-
-              .tabTitle {
-                margin-top: 14px;
-              }
-            }
-          }
-
-          &:hover {
-            transform: translateY(-3px);
-          }
-        }
-      }
-
-    }
 
     .page {
       width: 1110px;
@@ -297,58 +196,8 @@
         height: 100%;
         width: 100%;
         background: #fff;
-
-        .left-panel {
-          display: flex;
-          flex-direction: column;
-          width: 150px;
-          border-right: 1px solid #cfcfcf;
-          width: 215px;
-
-          .logo {
-            padding-left: 25px;
-            padding-top: 40px;
-            margin-bottom: 35px;
-          }
-
-          .item {
-            color: black;
-            display: flex;
-            height: 60px;
-            align-items: center;
-            padding-left: 20px;
-            cursor: pointer;
-
-            &:hover {
-              color: #ff781f;
-              background: #ebf4fc;
-            }
-
-            &.active {
-              color: #ff781f;
-              background: #ebf4fc;
-            }
-
-            .txt {
-              padding-left: 15px;
-              font-size: 15px;
-            }
-
-            svg {
-              width: 27px;
-            }
-          }
-        }
-
-        .right-panel {
-          flex: 1
-        }
       }
     }
-  }
-
-  .nav-buttons-container {
-    display: flex;
   }
 }
 
@@ -732,12 +581,30 @@
         z-index: 3;
       }
 
-      .text {
-        line-height: 1.6;
-        font-size: 0.9rem;
-        height: 100px;
-        color: #dbd9d9;
+      .content {
+        .text {
+          line-height: 1.6;
+          font-size: 0.9rem;
+          height: 100px;
+          color: #dbd9d9;
+        }
+
+        .info {
+          display: flex;
+          align-items: center;
+          height: auto;
+          margin-left: -20px;
+
+          img {
+            width: 80px;
+          }
+
+          .name {
+            flex-direction: column
+          }
+        }
       }
+
 
       .name {
         padding-left: 20px;

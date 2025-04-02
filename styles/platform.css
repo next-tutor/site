@@ -1,3 +1,8 @@
+@import "_common.css";
+@import "_navbar.css";
+@import "_footer.css";
+@import "_get-start.css";
+
 .platform {
   display: flex;
   justify-content: center;
@@ -60,7 +65,10 @@
       }
 
       .feature {
-        margin-bottom: 140px;
+        min-height: 497px;
+        display: flex;
+        flex-direction: column;
+
 
         .title {
           display: inline-block;
@@ -85,53 +93,91 @@
           max-width: 500px;
         }
 
-        /* 
-        .learn-more {
+        /* .read-more {
           display: flex;
+          align-items: center;
+          border-radius: 5px;
+          height: 40px;
+          background: #838282;
+          color: #262626;
+          margin-top: 48px;
+          width: fit-content;
+          padding: 0 20px 0 10px;
 
-          .txt {
-            transition: 0.3s;
-            padding-top: 25px;
-            color: #808080;
-            font-family: Poppins;
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 35px;
+          svg {
+            margin-left: 5px;
           }
         } */
 
+        .read-more {
+          position: relative;
+          display: none;
+          margin-left: 15px;
+          cursor: pointer;
+
+          .inner {
+            position: absolute;
+            top: -22px;
+            width: 30px;
+
+            .arrow {
+              margin-right: 2px;
+              display: inline-block;
+              width: 0px;
+              height: 0px;
+              border-top: 6px solid transparent;
+              border-bottom: 6px solid transparent;
+              border-left: 6px solid #e4e4e4;
+            }
+          }
+        }
+
+
+        .splitter {
+          margin-top: 119px;
+          width: 500px;
+          margin-left: -24px;
+          display: none;
+        }
+
         &.active {
           .title {
-            cursor: pointer;
-            background: linear-gradient(135deg, #ffc446 0%, #ff781ff5 100%);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: #c2c2c2;
           }
 
           .text {
+            color: #dddbdb;
             cursor: pointer;
-            color: #f6f6f6;
+
+            .read-more {
+              display: inline-block;
+            }
+          }
+
+          .splitter {
+            display: block;
           }
         }
       }
     }
 
-    .side {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .sticky-box {
       position: -webkit-sticky;
       position: sticky;
-      top: 410px;
+      top: 222px;
       width: 450px;
-      height: 140px;
+      height: 500px;
 
-      img {
-        display: none;
+      .feature {
+
+        position: absolute;
+        top: 0;
+        opacity: 0;
+        transition: all .5s ease;
+
 
         &.active {
-          display: block;
+          opacity: 1;
         }
       }
     }
@@ -139,5 +185,5 @@
 }
 
 .see-more {
-  margin-top: 205px;
+  margin-top: 115px;
 }
