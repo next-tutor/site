@@ -260,205 +260,108 @@ header {
       }
     }
 
+    /* ----------------------------- */
+
     .hamburger {
+      position: relative;
       display: none;
-      padding: 8px;
-      align-self: center;
-      border-radius: 7px;
-      flex-direction: column;
-      text-align: center;
-      justify-content: end;
       margin-right: 10px;
+      width: 25px;
+      height: 25px;
 
-      .line {
-        background-color: #bcbec2;
-        width: 25px;
-        height: 2px;
-        display: block;
-        margin: 6px auto;
-        -webkit-transition: all 0.3s ease-in-out;
-        -o-transition: all 0.3s ease-in-out;
-        transition: all 0.3s ease-in-out;
-      }
-
-      &.active {
-        .line:nth-child(2) {
-          opacity: 0;
-        }
-
-        .line:nth-child(1) {
-          -webkit-transform: translateY(10px) rotate(45deg);
-          -ms-transform: translateY(10px) rotate(45deg);
-          -o-transform: translateY(10px) rotate(45deg);
-          transform: translateY(7px) rotate(45deg);
-        }
-
-        .line:nth-child(3) {
-          -webkit-transform: translateY(-10px) rotate(-45deg);
-          -ms-transform: translateY(-10px) rotate(-45deg);
-          -o-transform: translateY(-10px) rotate(-45deg);
-          transform: translateY(-9px) rotate(-45deg);
-        }
-      }
-
-      &:hover {
+      .btn {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 26px;
+        height: 26px;
         cursor: pointer;
-        background: #23262d;
+        z-index: 1;
+      }
+
+      .btn>span,
+      .btn>span::before,
+      .btn>span::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #b9b8b8;
+        transition-duration: .25s;
+      }
+
+      .btn>span::before {
+        content: '';
+        top: -8px;
+      }
+
+      .btn>span::after {
+        content: '';
+        top: 8px;
       }
     }
-  }
 
-  .content {
-    display: none;
-    padding: 35px 0 50px 0;
-    width: 100% !important;
-    flex-direction: column;
-    flex: 1;
-    opacity: 0;
-    transition:
-      opacity 0.3s ease-in-out,
-      max-height 0.2s ease-in-out;
-    max-height: 0;
-    padding-left: 10%;
-    padding-right: 10%;
-    overflow: hidden;
-    box-sizing: border-box;
-    border-bottom: 1px solid gray;
-    background: #fff;
-
-    .btn {
-      border-radius: 0.375rem;
-      font-size: 16px;
-      font-weight: 600;
-      font-family: Poppins;
+    .sidebar {
+      position: fixed;
+      right: -100%;
+      top: 60px;
+      bottom: 0;
+      width: 100%;
+      z-index: 0;
+      background: #000;
+      transition: 0.3s ease-in-out;
       display: flex;
       align-items: center;
-      justify-content: center;
-      height: 44px;
-      width: 100%;
-      text-decoration: none;
-      margin-bottom: 15px;
-      transition: 0.2s ease-in-out;
+      flex-direction: column;
+      padding: 45px 8px 0 16px;
+      box-sizing: border-box;
+      display: none;
 
-      &.login {
-        background: #191a27;
-        border: 1px solid #d4e4fe31;
-        color: #eff5ffb1;
-        margin-top: 30px;
-
-        &:hover {
-          background-color: #232631;
-        }
+      .btn-login,
+      .btn-start {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 20;
+        border: 1px solid rgb(112, 112, 112);
+        border-radius: 5px;
+        height: 45px;
+        width: 100%;
+        color: #c2c2c2;
+        text-decoration: none;
       }
 
-      &.start {
-        background: white;
-        border: 1px solid white;
-        color: black;
-        margin-bottom: 20px;
-
-        &:hover {
-          background-color: #eae9ea;
-        }
-      }
-    }
-
-    .option {
-      width: 100%;
-      cursor: pointer;
-      border-bottom: 1px solid #d4e4fe1a;
-      color: #000;
-      font-size: 16px;
-      font-family: Poppins;
-      font-weight: 500;
-      height: 60px;
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-      padding-left: 5px;
-
-      span {
-        border: 1px solid red;
-      }
-
-      svg {
-        transform: rotate(90deg);
-        margin-left: 10px;
-        margin-top: 3px;
-        transition: rotate 0.2s ease-in-out;
-      }
-
-      &.first {
-        border-width: 0;
-      }
-
-      &:last-of-type {
-        border-bottom-width: 0;
-      }
-
-      &.active svg {
-        rotate: 180deg;
-      }
-    }
-
-    .sub-option {
-      width: 100%;
-      height: 55px;
-      text-decoration: none;
-      padding-left: 5px;
-      display: flex;
-      align-items: center;
-      color: #000;
-      font-family: Poppins;
-      font-size: 15px;
-
-      svg {
-        padding-right: 10px;
-      }
-
-      &.last {
-        padding-bottom: 10px;
-        border-bottom: 1px solid #d4e4fe1a;
-      }
-    }
-  }
-
-
-  &.open-wide-menu {
-    background-color: white;
-
-    .inner-header .navbar {
-      .btn-login {
+      .btn-start {
+        background: #fff;
         color: #000;
+        margin-top: 15px;
       }
+    }
 
-      .nav-buttons-container .navbar-btn {
-        color: #000;
+    &.open_sidebar {
 
-        .nav-submenu {
-          opacity: 1;
-          /* transform: translateY(0);
-          transform-origin: top; */
-          /* transition: all .3s ease-in-out .1s; */
-          visibility: visible
+      .hamburger {
+        .btn>span {
+          transform: rotate(45deg);
+        }
+
+        .btn>span::before {
+          top: 0;
+          transform: rotate(0);
+        }
+
+        .btn>span::after {
+          top: 0;
+          transform: rotate(90deg);
         }
       }
-    }
-  }
 
-  &.open-side-menu {
-    border-bottom: 1.5px solid #191a27;
-    padding-bottom: 10px;
-
-    &::before {
-      height: 100%;
-      backdrop-filter: blur(0);
-      background: black;
-    }
-
-    .content {
-      max-height: 1000px;
-      opacity: 1;
+      .sidebar {
+        z-index: 20;
+        right: 0;
+      }
     }
   }
 }
@@ -481,6 +384,10 @@ header {
       }
 
       .hamburger {
+        display: block;
+      }
+
+      .sidebar {
         display: block;
       }
     }

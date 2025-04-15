@@ -1,3 +1,4 @@
+@import "_common.css";
 @import "_navbar.css";
 @import "_footer.css";
 @import "_get-start.css";
@@ -18,7 +19,7 @@
   z-index: 10;
   animation: slideIn 1.5s;
 
-  .title {
+  /* .title {
     color: #e8e8e8;
     text-align: center;
     font-family: Poppins;
@@ -31,26 +32,23 @@
     .gradient {
       font-weight: 700;
     }
-  }
+  } */
 
   .page {
-    /* width: 1085px;
-    height: 610px; */
+    width: 1004px;
+    height: 591px;
     margin-top: 25px;
     z-index: 1;
     background: #fff;
     position: relative;
-    /* margin-top: 130px; */
     border-radius: 20px;
 
     .gradient-box {
-      display: none;
-
       &::after {
         content: "";
         position: absolute;
-        top: -3px;
-        left: -3px;
+        top: -4px;
+        left: -4px;
         height: calc(100% + 6px);
         width: calc(100% + 6px);
         background: linear-gradient(60deg, #fa8273, #e58a36, #69727d, #f1b10d, #e58a36, #956310, #6c374c, #0d1b3e);
@@ -98,7 +96,7 @@
       .title {
         font-size: 33px;
         font-weight: 600;
-        color: #2c2c2c;
+        color: #af375d;
       }
 
       .text {
@@ -119,7 +117,7 @@
         position: sticky;
         top: 250px;
         background-color: #000;
-        width: 585px;
+        width: 530px;
         height: 535px;
         margin-top: 100px;
         overflow: hidden;
@@ -156,7 +154,7 @@
       }
 
       .items {
-        margin-top: 100px;
+        margin: 100px 0 0 30px;
 
         .item {
           height: 560px;
@@ -171,6 +169,7 @@
             font-size: 27px;
             font-weight: 600;
             letter-spacing: -1.5px;
+            color: #af375d;
 
             &.bold {
               color: wheat;

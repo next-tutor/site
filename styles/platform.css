@@ -41,17 +41,6 @@
           letter-spacing: -1.8px;
           max-width: 645px;
           padding-top: 35px;
-
-          .gradient {
-            margin-right: 30px;
-            font-weight: 700;
-            background: linear-gradient(135deg, #ffc446 0%, #ff6a07f5 100%);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: none;
-            -webkit-text-stroke-width: 0;
-          }
         }
 
         .subtitle {
@@ -72,18 +61,23 @@
 
         .title {
           display: inline-block;
-          transition: 0.3s;
+          transition: 0.25s;
           font-family: Poppins;
           font-size: 30px;
           font-weight: 400;
           letter-spacing: -1px;
           color: #808080;
           border-bottom: 1px solid transparent;
-          ;
+
+          .gradient {
+            margin-right: 13px;
+            background: none;
+            -webkit-text-fill-color: gray;
+          }
         }
 
         .text {
-          transition: 0.3s;
+          transition: 0.25s;
           padding-top: 25px;
           color: #808080;
           font-family: Poppins;
@@ -91,23 +85,8 @@
           font-weight: 400;
           line-height: 35px;
           max-width: 500px;
+          text-decoration: none;
         }
-
-        /* .read-more {
-          display: flex;
-          align-items: center;
-          border-radius: 5px;
-          height: 40px;
-          background: #838282;
-          color: #262626;
-          margin-top: 48px;
-          width: fit-content;
-          padding: 0 20px 0 10px;
-
-          svg {
-            margin-left: 5px;
-          }
-        } */
 
         .read-more {
           position: relative;
@@ -127,22 +106,31 @@
               height: 0px;
               border-top: 6px solid transparent;
               border-bottom: 6px solid transparent;
-              border-left: 6px solid #e4e4e4;
+              border-left: 6px solid #fba536;
             }
           }
         }
-
 
         .splitter {
           margin-top: 119px;
           width: 500px;
           margin-left: -24px;
-          display: none;
+          opacity: 0;
+          transition: all .3s ease;
         }
 
         &.active {
           .title {
-            color: #c2c2c2;
+            color: #ececec;
+
+            .gradient {
+              background: linear-gradient(135deg, #ffc446 0%, #ff6a07f5 100%);
+              background-clip: text;
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              text-shadow: none;
+              -webkit-text-stroke-width: 0;
+            }
           }
 
           .text {
@@ -155,7 +143,7 @@
           }
 
           .splitter {
-            display: block;
+            opacity: 1;
           }
         }
       }
