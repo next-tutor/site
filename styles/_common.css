@@ -14,10 +14,6 @@ body {
 }
 
 
-.no_overflow {
-  overflow: hidden;
-}
-
 a:hover {
   cursor: pointer !important;
 }
@@ -76,5 +72,11 @@ a:hover {
 
   100% {
     background-position: 0% 50%
+  }
+}
+
+@media (max-width: 800px) {
+  .no_overflow {
+    overflow: hidden;
   }
 }

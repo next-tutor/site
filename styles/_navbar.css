@@ -315,7 +315,7 @@ header {
       display: flex;
       align-items: center;
       flex-direction: column;
-      padding: 45px 8px 0 16px;
+      padding: 45px 25px 0 25px;
       box-sizing: border-box;
       display: none;
 
@@ -336,7 +336,18 @@ header {
       .btn-start {
         background: #fff;
         color: #000;
-        margin-top: 15px;
+        margin: 15px 0 25px 0;
+      }
+
+      .item {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: #b4b4b4;
+        height: 56px;
+        border-bottom: 1px solid #393939;
+        font-weight: 600;
+        font-size: 14px;
       }
     }
 
