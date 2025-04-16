@@ -90,7 +90,7 @@
 }
 
 @media (max-width: 992px) {
-  .homePage {
+  .home-page {
     .inner-hp {
       margin-top: 195px;
 
@@ -113,7 +113,7 @@
 }
 
 @media (max-width: 700px) {
-  .homePage {
+  .home-page {
     .inner-hp {
       .title {
         width: 500px;
@@ -129,7 +129,7 @@
 }
 
 @media (max-width: 480px) {
-  .homePage {
+  .home-page {
     height: 740px;
 
     .inner-hp {
@@ -158,15 +158,18 @@
   display: flex;
   justify-content: center;
   margin-bottom: 130px;
+  width: 100%;
 
   .inner-wrap {
+    width: 1110px;
+    max-width: 85%;
     display: flex;
     flex-direction: column;
     position: relative;
     margin-top: 25px;
 
     .page {
-      width: 1110px;
+      width: 100%;
       height: 610px;
       border-radius: 20px;
       box-shadow: -10px -20px 122.09px #dcdcdc0a, 12px 7px 20px #0000004a, 0px 1px 38.888px #00000006, 0px 11px 19.8397px #00000005, -8px -7px 18px 1px #ffffff9c, 0 0.790228px 4.80448px #00000036;

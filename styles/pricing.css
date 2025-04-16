@@ -13,14 +13,11 @@
   .title {
     text-align: center;
     font-family: Poppins;
-    font-size: 80px;
+    font-size: 65px;
     color: #fff;
     font-weight: 600;
+    padding: 0 15px;
     animation: fadeIn 1s, slideIn 1.5s;
-
-    .gradient {
-      margin-right: 30px;
-    }
   }
 
   .subtitle {
@@ -167,6 +164,49 @@
         &:hover {
           background-color: #e9e8e9;
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .pricing {
+    margin-top: 150px;
+
+    .wrapper {
+      margin-top: 100px;
+      flex-direction: column;
+
+      .card {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .pricing {
+    .title {
+      font-size: 55px;
+    }
+
+    .subtitle {
+      font-size: 18px;
+    }
+  }
+}
+
+
+@media (max-width: 450px) {
+  .pricing {
+    margin-top: 150px;
+
+    .wrapper {
+      width: 100%;
+      align-items: center;
+
+      .card {
+        max-width: 90%;
       }
     }
   }
