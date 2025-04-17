@@ -87,8 +87,12 @@
 }
 
 @media (max-width: 570px) {
+
   .get-started {
+    height: 715px;
+
     .wrapper {
+      margin-top: 0;
       background-image: url("/assets/dots-small.png");
 
       .title {
@@ -97,6 +101,7 @@
     }
   }
 }
+
 
 
 @media (max-width: 450px) {

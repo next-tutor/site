@@ -16,7 +16,7 @@
     font-size: 65px;
     color: #fff;
     font-weight: 600;
-    padding: 0 15px;
+    padding: 0 25px;
     animation: fadeIn 1s, slideIn 1.5s;
   }
 
@@ -191,7 +191,7 @@
     }
 
     .subtitle {
-      font-size: 18px;
+      font-size: 17px;
     }
   }
 }
@@ -219,9 +219,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #131313;
 
   h1.title {
+    padding: 0 20px;
     text-align: center;
     font-family: Poppins;
     font-size: 40px;
@@ -234,6 +234,7 @@
   }
 
   .item {
+    max-width: 85%;
     width: 750px;
     min-height: 60px;
     height: auto;
@@ -289,6 +290,24 @@
       font-size: 16px;
       opacity: 0;
       transition: 0.3s ease-in-out opacity;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .faq {
+    margin-top: 0;
+
+    h1.title {
+      font-size: 30px;
+    }
+
+    .item {
+      .header {
+        .title {
+          font-size: 15px;
+        }
+      }
     }
   }
 }
