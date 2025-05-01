@@ -14,15 +14,16 @@
 
   .content {
     display: flex;
-    padding: 20px 0;
+    padding: 20px 0 0 40px;
     width: 100%;
     max-width: 1100px;
 
     .main {
-      flex: 1 0 auto;
+      /* flex: 1 0 auto; */
       display: flex;
       flex-direction: column;
       margin-right: 100px;
+
 
       .home-page {
         flex: 1;
@@ -40,11 +41,11 @@
           line-height: 90px;
           letter-spacing: -1.8px;
           max-width: 645px;
-          padding-top: 35px;
+          padding: 35px 30px 0 0;
         }
 
         .subtitle {
-          padding-top: 36px;
+          padding: 36px 30px 0 0;
           color: #eff5ffb0;
           font-family: Poppins;
           font-size: 18px;
@@ -146,6 +147,16 @@
             opacity: 1;
           }
         }
+
+        .small-image {
+          display: none;
+          text-align: center;
+          margin-bottom: 50px;
+
+          img {
+            max-width: 100%;
+          }
+        }
       }
     }
 
@@ -174,4 +185,81 @@
 
 .see-more {
   margin-top: 115px;
+}
+
+
+@media (max-width: 1200px) {
+  .platform {
+    .content {
+      .main {
+        width: 100%;
+        margin-right: 0;
+
+        .feature {
+          align-items: center;
+
+          .title {
+            color: #ececec;
+
+            .gradient {
+              background: linear-gradient(135deg, #ffc446 0%, #ff6a07f5 100%);
+              background-clip: text;
+              -webkit-text-fill-color: transparent;
+            }
+          }
+
+          .text {
+            padding: 25px;
+            color: #dddbdb;
+          }
+
+          .small-image {
+            display: block;
+          }
+
+          .splitter {
+            opacity: 1;
+            margin: 110px 0 115px 0;
+            width: 95%;
+            max-width: 533px;
+          }
+        }
+      }
+
+      .sticky-box {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .platform {
+    .content {
+      .main {
+        .home-page {
+          margin-top: 170px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .platform {
+    .content {
+      .main {
+        .home-page {
+          .title {
+            font-size: 50px;
+            line-height: 75px;
+          }
+        }
+
+        .feature {
+          margin-left: -40px;
+        }
+      }
+    }
+  }
 }
