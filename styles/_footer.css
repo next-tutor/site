@@ -144,7 +144,7 @@ footer .mobile {
   }
 
 
-  .btn-wrapper {
+  .category {
     display: flex;
     flex-direction: column;
     height: 60px;
@@ -156,18 +156,6 @@ footer .mobile {
 
     &.last.active {
       height: 100px;
-    }
-
-    &.active {
-      height: 200px;
-
-      .header svg {
-        rotate: 180deg;
-      }
-
-      .content {
-        opacity: 1;
-      }
     }
 
     .header {
@@ -196,12 +184,14 @@ footer .mobile {
 
     .content {
       padding-left: 10px;
-      display: flex;
-      flex-direction: column;
       opacity: 0;
-      transition: 0.3s ease-in-out;
+      max-height: 0;
+      overflow: hidden;
+      transition: opacity 250ms linear, max-height 250ms linear;
+      will-change: opacity, max-height;
 
       a {
+        display: block;
         color: #eff5ff84;
         font-family: Poppins;
         font-size: 13px;
@@ -216,7 +206,23 @@ footer .mobile {
         }
       }
     }
+
+    &.active {
+      height: 200px;
+
+      .header svg {
+        rotate: 180deg;
+      }
+
+      .content {
+        opacity: 1;
+        max-height: 9em;
+        transition: all 200ms linear;
+        will-change: opacity, max-height;
+      }
+    }
   }
+
 
   .bottom {
     display: flex;
@@ -224,9 +230,6 @@ footer .mobile {
     justify-content: center;
     width: 100%;
     padding-top: 60px;
-
-
-
 
     .icons a {
       margin-right: 10px;

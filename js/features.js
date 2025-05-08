@@ -1,26 +1,60 @@
-$(document).ready(function () {
-  var last = null;
+const registerStickbox = function () {
+
   if (typeof window.IntersectionObserver !== 'undefined') {
     let options = {
-      threshold: [0.5, 1]
+      threshold: [0.75, 1]
     }
-    const targets = document.querySelectorAll('.feature-details .item');
-    const locker = document.querySelector('.sticky-box');
+
+    const stickybox = document.querySelector('.feature-details .sticky-box');
     function handleIntersection(entries) {
       entries.map((entry) => {
-        if (entry.isIntersecting) {
-          last = entry.target.current;
-          entry.target.current = entry.target.dataset.swap;
-          $(".sticky-box ." + entry.target.current).addClass("active");
-        } else {
-          if (last !== entry.target.current) {
-            $(".sticky-box ." + entry.target.current).removeClass("active");
-          }
-        }
+        $(".feature-details .more-details").toggleClass("show", entry.isIntersecting)
       });
     }
+
     const observer = new IntersectionObserver(handleIntersection, options);
-    targets.forEach(target => observer.observe(target));
+    observer.observe(stickybox);
   }
+}
+
+
+const registerFeaturesItems = function () {
+
+  const sections = document.querySelectorAll(".feature-details .item");
+  let lastFeature = null;
+
+  function setActive() {
+    $(`.feature-details .item`).removeClass("active");
+    $(`.feature-details .item.${lastFeature}`).addClass("active");
+  }
+
+  function handleIntersect(entries) {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const currFeature = entry.target.dataset.swap;
+        if (lastFeature !== currFeature) {
+          lastFeature = currFeature;
+          setActive();
+        }
+      }
+    });
+  }
+
+  const observer = new IntersectionObserver(handleIntersect, {
+    threshold: 1,
+  });
+
+  sections.forEach((section) => {
+    observer.observe(section);
+  });
+
+}
+
+
+
+
+$(document).ready(function () {
+  registerStickbox();
+  registerFeaturesItems();
 });
 

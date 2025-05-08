@@ -30,7 +30,7 @@
     }
 
     .title {
-      padding-top: 50px;
+      padding: 50px 10px 0 10px;
       text-align: center;
       text-shadow: 1px 1px 0px #0000001a;
       font-size: 80px;
