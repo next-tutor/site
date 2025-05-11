@@ -41,7 +41,7 @@ const registerFeaturesItems = function () {
   }
 
   const observer = new IntersectionObserver(handleIntersect, {
-    threshold: 1,
+    threshold: [0.75, 1]
   });
 
   sections.forEach((section) => {
@@ -55,6 +55,6 @@ const registerFeaturesItems = function () {
 
 $(document).ready(function () {
   registerStickbox();
-  registerFeaturesItems();
+  // registerFeaturesItems();
 });
 
