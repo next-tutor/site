@@ -54,8 +54,9 @@
       }
 
       .feature {
-        min-height: 497px;
+        min-height: 585px;
         display: flex;
+        justify-content: center;
         flex-direction: column;
 
 
@@ -116,13 +117,6 @@
           }
         }
 
-        .splitter {
-          margin-top: 119px;
-          width: 465px;
-          opacity: 0;
-          transition: all .2s ease;
-        }
-
         &.active {
           .title {
             color: #ececec;
@@ -144,10 +138,6 @@
               cursor: pointer;
               display: inline-flex;
             }
-          }
-
-          .splitter {
-            opacity: 1;
           }
         }
 
@@ -218,13 +208,6 @@
 
           .small-image {
             display: block;
-          }
-
-          .splitter {
-            opacity: 1;
-            margin: 110px 0 115px 0;
-            width: 95%;
-            max-width: 533px;
           }
         }
       }
