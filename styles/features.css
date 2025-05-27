@@ -238,12 +238,13 @@
       width: 270px;
       height: 200px;
       border-radius: 10px;
-      padding: 33px 39px;
+      padding: 45px 39px 10px 40px;
       background: #fff;
       color: #000;
       margin: 0 10px;
       box-shadow: 0 42.6723px 122.09px #dcdcdc0a, 0 27.658px 71.5019px #0000004a, 0px 1px 38.888px #00000006, 0px 11px 19.8397px #00000005, -5px -4px 18px 1px #ffffff9c, 0 0.790228px 4.80448px #00000036;
       cursor: pointer;
+      text-decoration: none;
 
       .title {
         color: #000;

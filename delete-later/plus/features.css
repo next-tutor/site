@@ -200,12 +200,9 @@
       position: relative;
       font-family: Poppins;
       width: 270px;
-      position: relative;
-      font-family: Poppins;
-      width: 270px;
-      height: 200px;
+      height: 185px;
       border-radius: 10px;
-      padding: 33px 39px;
+      padding: 45px 39px 10px 40px;
       background: #fff;
       color: #000;
       margin: 0 10px;
@@ -238,7 +235,7 @@
 
       .find {
         position: absolute;
-        bottom: 66px;
+        bottom: 60px;
         left: 40px;
         font-weight: 600;
         display: flex;

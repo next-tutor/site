@@ -59,7 +59,7 @@
     .subtitle {
       font-family: Poppins;
       font-size: 20px;
-      color: #acacac;
+      color: #c9c9c9;
       width: 80%;
       max-width: 720px;
       line-height: 43px;
@@ -172,7 +172,7 @@
   }
 
   p {
-    color: #bdbbbb;
+    color: #d1d1d1;
     font-family: Poppins;
     font-size: 17px;
     font-weight: 400;
@@ -226,7 +226,7 @@
   .wrapper {
     display: flex;
     width: 100%;
-    height: 565px;
+    height: 647px;
     justify-content: center;
 
     .line-wrapper {
@@ -273,6 +273,10 @@
         font-size: 20px;
         transform: translateY(-11px);
         margin-bottom: 55px;
+
+        &.gray {
+          color: #b4b4b4;
+        }
       }
     }
 

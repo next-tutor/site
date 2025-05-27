@@ -596,10 +596,9 @@
           display: flex;
           align-items: center;
           height: auto;
-          margin-left: -20px;
 
           img {
-            width: 80px;
+            width: 70px;
           }
 
           .name {
@@ -610,7 +609,7 @@
 
 
       .name {
-        padding-left: 20px;
+        padding-left: 10px;
         color: #fff;
         font-size: 14px;
         font-weight: 400;
@@ -619,7 +618,7 @@
 
       .role {
         padding-top: 2px;
-        padding-left: 20px;
+        padding-left: 10px;
         line-height: 1.6;
         font-size: 0.9rem;
         color: #eff5ffb1;
