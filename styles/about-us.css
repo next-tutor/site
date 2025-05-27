@@ -70,6 +70,23 @@
   }
 }
 
+@media (max-width: 1536px) {
+  .about {
+    margin-top: 110px;
+
+    .wrapper {
+      .title {
+        font-size: 88px;
+      }
+
+      .sub-title {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+
 @media (max-width: 1024px) {
   .about {
     margin-top: 190px;

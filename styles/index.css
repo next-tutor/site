@@ -89,6 +89,18 @@
   }
 }
 
+@media (max-width: 1536px) {
+  .home-page {
+    .inner-hp {
+      margin-top: 190px;
+
+      .title {
+        font-size: 66px;
+      }
+    }
+  }
+}
+
 @media (max-width: 992px) {
   .home-page {
     .inner-hp {

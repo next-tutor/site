@@ -27,7 +27,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
 
     .gradient-box {
       &::after {
@@ -51,8 +51,6 @@
   position: relative;
   display: flex;
   justify-content: center;
-
-
 
   .inner-details {
     margin-top: 385px;
@@ -298,6 +296,33 @@
   margin-top: 0;
 }
 
+
+@media (max-width: 1536px) {
+  .feature-opening {
+    top: 125px;
+
+    .page {
+      width: 883px;
+      height: 518px;
+
+      img {
+        width: 880px;
+      }
+    }
+  }
+
+  .feature-details {
+    .inner-details {
+      margin-top: 235px;
+
+      .more-details {
+        .sticky-box {
+          top: 135px;
+        }
+      }
+    }
+  }
+}
 
 @media (max-width: 1250px) {
   .feature-details {

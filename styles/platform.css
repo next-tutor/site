@@ -180,6 +180,29 @@
   margin-top: 115px;
 }
 
+@media (max-width: 1536px) {
+  .platform {
+    .content {
+      .main {
+        .home-page {
+          margin-top: 165px;
+
+          .title {
+            font-size: 66px;
+          }
+        }
+      }
+
+      .sticky-box {
+        top: 144px;
+
+        img {
+          width: 365px;
+        }
+      }
+    }
+  }
+}
 
 @media (max-width: 1200px) {
   .platform {

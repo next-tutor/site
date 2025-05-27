@@ -169,6 +169,16 @@
   }
 }
 
+@media (max-width: 1536px) {
+  .pricing {
+    margin-top: 155px;
+
+    .wrapper {
+      margin-top: 100px;
+    }
+  }
+}
+
 @media (max-width: 900px) {
   .pricing {
     margin-top: 150px;
@@ -199,7 +209,6 @@
     }
   }
 }
-
 
 @media (max-width: 450px) {
   .pricing {
