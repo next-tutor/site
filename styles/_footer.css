@@ -7,6 +7,7 @@ footer .main {
   background: #000;
   padding-top: 105px;
   padding-bottom: 40px;
+  justify-content: center;
 
   .line {
     position: absolute;
@@ -22,71 +23,75 @@ footer .main {
     transform: translateX(-50%);
   }
 
-  .left-side {
-    margin-left: auto;
+  .box {
     display: flex;
-    flex-direction: column;
 
-    .address {
-      color: #eff5ffb0;
-      font-family: Poppins;
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 16px;
+    .left-side {
+      margin-left: auto;
+      display: flex;
+      flex-direction: column;
+
+      .address {
+        color: #eff5ff;
+        font-family: Poppins;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16px;
+      }
+
+      .icons {
+        padding-top: 30px;
+
+        a {
+          margin-right: 6px;
+          color: transparent !important;
+        }
+      }
     }
 
-    .icons {
-      padding-top: 30px;
+    .get-app-wrapper {
+      display: flex;
+      flex-direction: column;
+      margin-left: 110px;
+      margin-right: auto;
+
+      .btn {
+        margin-top: 20px;
+        transition: 0.3s ease-in-out;
+
+        &:hover {
+          scale: 1.04;
+        }
+      }
+    }
+
+    .list {
+      display: flex;
+      flex-direction: column;
+      margin-left: 125px;
+
+      .title {
+        color: #fcfdfff0;
+        font-family: Poppins;
+        font-size: 13px;
+        font-weight: 400;
+        margin-bottom: 28px;
+      }
 
       a {
-        margin-right: 6px;
-        color: transparent !important;
-      }
-    }
-  }
+        color: #fff;
+        opacity: 0.7;
+        font-family: Poppins;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        text-decoration: none;
+        margin-bottom: 23px;
+        transition: opacity 0.3s;
 
-  .get-app-wrapper {
-    display: flex;
-    flex-direction: column;
-    margin-left: 110px;
-    margin-right: auto;
-
-    .btn {
-      margin-top: 20px;
-      transition: 0.3s ease-in-out;
-
-      &:hover {
-        scale: 1.04;
-      }
-    }
-  }
-
-  .list {
-    display: flex;
-    flex-direction: column;
-    margin-left: 106px;
-
-    .title {
-      color: #fcfdfff0;
-      font-family: Poppins;
-      font-size: 13px;
-      font-weight: 400;
-      margin-bottom: 28px;
-    }
-
-    a {
-      color: #fff;
-      opacity: 0.7;
-      font-family: Poppins;
-      font-size: 13px;
-      font-style: normal;
-      font-weight: 400;
-      text-decoration: none;
-      margin-bottom: 23px;
-      transition: opacity 0.3s;
-
-      &:hover {
-        opacity: 1;
+        &:hover {
+          opacity: 1;
+        }
       }
     }
   }
