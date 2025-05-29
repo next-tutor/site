@@ -7,7 +7,7 @@
   <title>Next Tutor</title>
   <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles/features.css" />
+  <link rel="stylesheet" href="./styles/contact.css" />
 </head>
 
 <body>
@@ -44,108 +44,48 @@
     </div>
   </header>
 
-  <div class="feature-opening">
-    <div class="page welcome">
-      <div class="gradient-box">
-      </div>
-      <picture>
-        <source srcset="./images/features/tasks/tasks1.png" media="(min-width: 1100px)" />
-        <source srcset="./images/platform/feature1-small.png" media="(max-width: 769px)" />
-        <source srcset="./images/platform/feature5.png" media="(max-width: 1099px)" />
-        <img src="./images/features/tasks/tasks1.png" />
-      </picture>
-    </div>
-  </div>
+  <section class="contact">
+    <div class="main-wrap">
+      <div class="main-title">Hi, how can we help?</div>
 
-  <div class="feature-opening-bg">
-  </div>
-
-  <div class="feature-details">
-    <div class="inner-details">
-      <div class="main-title">
-        <div class="title">
-          <strong class="gradient">Automate</strong> your business.
-        </div>
-        <div class="subtitle">
-          No more calls around the clock. <br>
-          With NextTutor, your students schedule lessons, pay in advance, and get reminders—all without wasting your
-          time.
-        </div>
-      </div>
-      <div class="more-details">
-        <div class="sticky-box">
-          <div class="cover"></div>
-          <img src="./images/features/tasks/task-req.png" class="i1 active">
-          <img src="./images/features/tasks/reject-req.png" class="i2">
-          <img src="./images/features/tasks/task-messages.png" class="i3">
-        </div>
-        <div class="items">
-          <div class="item i1" data-swap="i1">
-            <div class="title wheat">Online Scheduling</div>
-            <div class="desc">
-              With NextTutor, lesson scheduling is fully online. Students can easily book sessions through their
-              personal portal, based on your live calendar availability.
-              For those who want recurring weekly lessons, setting up a subscription with upfront payment is quick and
-              seamless.
+      <div class="inner-wrap">
+        <div class="left-panel">
+          <form>
+            <div class="question q1">
+              <div class="lbl-wrap">
+                <label for="email">Email address</label>
+              </div>
+              <input type="email" required="" autocomplete="off" id="email" placeholder="Enter your email" value="">
             </div>
+            <div class="question q2">
+              <div class="lbl-wrap">
+                <label for="message">Your Message</label>
+              </div>
+              <textarea required="" id="message" name="message" placeholder="Write your message"></textarea>
+            </div>
+            <div class="btn-submit">
+              <button data-state="disabled" disabled="" type="submit">Submit
+                <svg fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10.75 8.75L14.25 12L10.75 15.25" stroke="currentColor" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="1.5"></path>
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="right-panel">
+          <div class="info">
+            <div class="title">email us</div>
+            <div class="email">support@nexttutor.com</div>
           </div>
-          <div class="item i2" data-swap="i2">
-            <div class="title white">Online Payments</div>
-            <div class="desc">
-              With NextTutor, you'll never have to chase payments again.
-              Your students deposit the required amount into your account (via PayPal or other providers) before booking
-              a lesson. Only then is the booking confirmed.
-            </div>
-          </div>
-          <div class="item i3" data-swap="i3">
-            <div class="title wheat">Email & SMS Reminders</div>
-            <div class="desc">With NextTutor, missed lessons become a thing of the past.
-              Your students receive one or more reminders via email or SMS before each session, keeping them on time.
-              If a student misses a lesson without canceling in advance, the payment is non-refundable.
-            </div>
+          <div class="info">
+            <div class="title">email us</div>
+            <div class="email">support@nexttutor.com</div>
           </div>
         </div>
       </div>
-
     </div>
-  </div>
 
-
-  <div class="more-features">
-    <div class="caption">Explore more features</div>
-    <div class="items">
-      <a class="item" href="./students.html">
-        <div class="title t1">Student Portal</div>
-        <div class="txt">Everything your students needת organized in one smart space.</div>
-        <div class="find">Find out more
-          <img src="./images/arrow-right.svg">
-        </div>
-      </a>
-      <a class="item" href="./tasks.html">
-        <div class="title t2">Offline Support</div>
-        <div class="txt">Earn more by offering paid help with exams and homework.</div>
-        <div class="find">Find out more
-          <img src="./images/arrow-right.svg">
-        </div>
-      </a>
-      <a class="item" href="./website.html">
-        <div class="title t3">Web studio</div>
-        <div class="txt">Create a beautiful, personalized website in minutes.</div>
-        <div class="find">Find out more
-          <img src="./images/arrow-right.svg">
-        </div>
-      </a>
-    </div>
-  </div>
-
-  <section class="get-started see-more">
-    <div class="wrapper">
-      <img src="./images/logo/logo-large.png" alt="logo" />
-      <div class="title">Want to see more?</div>
-      <div class="btn">
-        Let's start
-      </div>
-    </div>
   </section>
 
   <footer>
@@ -254,9 +194,7 @@
   </footer>
 </body>
 
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="./js/main.js"></script>
-<script src="./js/features.js"></script>
 
 </html>
