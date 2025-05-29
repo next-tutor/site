@@ -10,7 +10,9 @@
 
 
   .main-wrap {
-    width: 1200px;
+    width: 1270px;
+    padding: 0 35px;
+    box-sizing: border-box;
 
     .main-title {
       font-size: 55px;
@@ -28,6 +30,7 @@
       margin-top: 20px;
 
       .left-panel {
+        width: 500px;
 
         form {
           margin-top: 35px;
@@ -48,7 +51,8 @@
 
           input,
           textarea {
-            width: 500px;
+            width: 100%;
+            max-width: 500px;
             height: 35px;
             background-color: rgba(221, 234, 248, 0.08);
             border-bottom-color: rgba(214, 235, 253, 0.19);
@@ -83,7 +87,7 @@
               margin-top: 32px;
               text-decoration: none;
               text-transform: unset;
-              font-size: 13px;
+              font-size: 15px;
               background: #fba536;
               display: flex;
               align-items: center;
@@ -124,4 +128,36 @@
 
   }
 
+}
+
+@media (max-width: 1536px) {
+  .contact {
+    margin: 140px 0;
+
+    .main-wrap {
+      .main-title {
+        font-size: 50px;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .contact {
+    margin: 140px 0;
+
+    .main-wrap {
+      .inner-wrap {
+        flex-direction: column;
+
+        .left-panel {
+          width: 100%;
+        }
+
+        .right-panel {
+          align-items: baseline;
+        }
+      }
+    }
+  }
 }
