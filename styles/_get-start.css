@@ -93,7 +93,7 @@
 
     .wrapper {
       margin-top: 0;
-      background-image: url("/assets/dots-small.png");
+      /* background-image: url("/assets/dots-small.png"); */
 
       .title {
         font-size: 65px;
