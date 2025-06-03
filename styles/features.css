@@ -4,15 +4,11 @@
 @import "_get-start.css";
 
 .feature-opening-bg {
-  height: 610px;
   width: 100%;
 }
 
 .feature-opening {
-  position: absolute;
-  top: 200px;
-  left: 0;
-  right: 0;
+  margin: 185px 0 230px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,7 +18,6 @@
 
   .page {
     width: 90%;
-    height: 590px;
     max-width: 1305px;
     z-index: 1;
     display: flex;
@@ -52,11 +47,7 @@
       }
     }
   }
-
-
-
 }
-
 
 .feature-details {
   position: relative;
@@ -64,9 +55,10 @@
   justify-content: center;
 
   .inner-details {
-    margin-top: 385px;
+    max-width: 1270px;
     width: 100%;
-    max-width: 1200px;
+    padding: 0 35px;
+    box-sizing: border-box;
     margin-bottom: 220px;
 
     .main-title {
@@ -307,35 +299,41 @@
   margin-top: 0;
 }
 
-/*
+
 @media (max-width: 1536px) {
+
   .feature-opening {
-    top: 125px;
-    border: 1px solid #fff;
+    margin-top: 140px;
 
     .page {
-      height: 518px;
-
-      img {
-        width: 90%;
-      }
+      max-width: 850px;
     }
   }
 
   .feature-details {
     .inner-details {
-      margin-top: 235px;
-
       .more-details {
         .sticky-box {
-          top: 135px;
+          top: 120px;
         }
       }
     }
   }
 }
 
-@media (max-width: 1250px) {
+@media (max-width: 750px) {
+  .feature-opening {
+    .page {
+      .gradient-box {
+        display: none;
+      }
+    }
+  }
+}
+
+
+
+/* @media (max-width: 1250px) {
   .feature-details {
     .inner-details {
       .main-title {
@@ -343,12 +341,19 @@
       }
     }
   }
-}
+} */
 
-@media (max-width: 1100px) {
+/* @media (max-width: 1100px) {
+
   .feature-opening {
     .page {
-      img {
+      width: 750px;
+      z-index: 1;
+      position: relative;
+      border-radius: 20px;
+
+      .gradient-box {
+        display: none;
       }
     }
   }
@@ -365,20 +370,6 @@
       }
     }
   }
-
-  .feature-opening {
-    .page {
-      width: 1004px;
-      height: 591px;
-      z-index: 1;
-      position: relative;
-      border-radius: 20px;
-
-      .gradient-box {
-        display: none;
-      }
-    }
-  }
 }
 
 @media (max-width: 769px) {
@@ -389,6 +380,4 @@
       }
     }
   }
-}
-
-*/
+} */
