@@ -26,22 +26,26 @@ const registerFeaturesItems = function () {
   function setActive() {
     $(`.feature-details .item`).removeClass("active");
     $(`.feature-details .item.${lastFeature}`).addClass("active");
+
+    $(`.feature-details .sticky-box img`).removeClass("active");
+    $(`.feature-details .sticky-box img.${lastFeature}`).addClass("active");
   }
 
   function handleIntersect(entries) {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         const currFeature = entry.target.dataset.swap;
-        if (lastFeature !== currFeature) {
-          lastFeature = currFeature;
-          setActive();
-        }
+        // if (lastFeature !== currFeature) {
+        lastFeature = currFeature;
+        console.log(lastFeature);
+        setActive();
+        // }
       }
     });
   }
 
   const observer = new IntersectionObserver(handleIntersect, {
-    threshold: [0.75, 1]
+    threshold: [1, 1]
   });
 
   sections.forEach((section) => {
@@ -55,6 +59,6 @@ const registerFeaturesItems = function () {
 
 $(document).ready(function () {
   registerStickbox();
-  // registerFeaturesItems();
+  registerFeaturesItems();
 });
 
