@@ -8,6 +8,7 @@
   <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900" rel="stylesheet" />
   <link rel="stylesheet" href="./styles/features.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
 </head>
 
 <body>
@@ -47,7 +48,6 @@
   <div class="feature-opening">
     <div class="page welcome">
       <picture class="image-wrap">
-        <source srcset="./images/platform/feature1-small.png" media="(max-width: 750px)" />
         <source srcset="./images/features/tasks/tasks-mini.png" media="(max-width: 1536px)" />
         <div class="gradient-box"></div>
         <img src="./images/features/tasks/tasks1.png" />
@@ -79,9 +79,10 @@
         </div>
         <div class="items">
           <div class="item i1" data-swap="i1">
-            <div class="small-image">
-              <img src="./images/features/tasks/task-req.png" alt="platform" class="feature1" />
-            </div>
+            <picture class="small-image-wrap">
+              <source srcset="./images/features/tasks/task-messages.png" media="(min-width: 550px)" />
+              <img src="./images/features/tasks/tasks-450.png" />
+            </picture>
             <div class="title wheat">Receive Requests</div>
             <div class="desc">
               Let your students send you requests for help—anything from solving exercises to writing assignments.
@@ -90,9 +91,10 @@
             </div>
           </div>
           <div class="item i2" data-swap="i2">
-            <div class="small-image">
-              <img src="./images/features/tasks/reject-req.png" alt="platform" class="feature1" />
-            </div>
+            <picture class="small-image-wrap">
+              <source srcset="./images/features/tasks/task-messages.png" media="(min-width: 550px)" />
+              <img src="./images/features/tasks/tasks-450.png" />
+            </picture>
             <div class="title white">Wait for Payment</div>
             <div class="desc">
               The student reviews your offer on his portal.
@@ -101,9 +103,10 @@
             </div>
           </div>
           <div class="item i3" data-swap="i3">
-            <div class="small-image">
-              <img src="./images/features/tasks/task-messages.png" alt="platform" class="feature1" />
-            </div>
+            <picture class="small-image-wrap">
+              <source srcset="./images/features/tasks/task-messages.png" media="(min-width: 550px)" />
+              <img src="./images/features/tasks/tasks-450.png" />
+            </picture>
             <div class="title wheat">Work on Your Own Time</div>
             <div class="desc">Once payment is made, it's your turn to get to work.
               You can deliver the work all at once or in stages to collect feedback.
@@ -116,33 +119,121 @@
     </div>
   </div>
 
-
   <div class="more-features">
     <div class="caption">Explore more features</div>
-    <div class="items">
-      <a class="item" href="./automation.html">
-        <div class="title t1">Automation</div>
-        <div class="txt">Let students book lessons and pay — without interrupting you.</div>
-        <div class="find">Find out more
-          <img src="./images/arrow-right.svg">
+    <div class="carousel-wrap">
+      <div class="owl-carousel owl-theme">
+        <div class="item">
+          <h4>1</h4>
         </div>
-      </a>
-      <a class="item" href="./students.html">
-        <div class="title t2">Student Portal</div>
-        <div class="txt">Everything your students needת organized in one smart space.</div>
-        <div class="find">Find out more
-          <img src="./images/arrow-right.svg">
+        <div class="item">
+          <h4>2</h4>
         </div>
-      </a>
-      <a class="item" href="./website.html">
-        <div class="title t3">Web studio</div>
-        <div class="txt">Create a beautiful, personalized website in minutes.</div>
-        <div class="find">Find out more
-          <img src="./images/arrow-right.svg">
+        <div class="item">
+          <h4>3</h4>
         </div>
-      </a>
+        <div class="item">
+          <h4>4</h4>
+        </div>
+        <div class="item">
+          <h4>5</h4>
+        </div>
+        <div class="item">
+          <h4>6</h4>
+        </div>
+        <div class="item">
+          <h4>7</h4>
+        </div>
+        <div class="item">
+          <h4>8</h4>
+        </div>
+        <div class="item">
+          <h4>9</h4>
+        </div>
+        <div class="item">
+          <h4>10</h4>
+        </div>
+        <div class="item">
+          <h4>11</h4>
+        </div>
+        <div class="item">
+          <h4>12</h4>
+        </div>
+      </div>
+      <!-- <div class="owl-carousel owl-theme">
+        <div class="item">
+          <a href="./automation.html" class="carousel-item">
+            <div class="title t1">Automation</div>
+            <div class="txt">Let students book lessons and pay — without interrupting you.</div>
+            <div class="find">Find out more
+              <img src="./images/arrow-right.svg">
+            </div>
+          </a>
+        </div>
+        <div class="item">
+          <a href="./students.html" class="carousel-item">
+            <div class="title t2">Student Portal</div>
+            <div class="txt">Everything your students need organized in one smart space.</div>
+            <div class="find">Find out more
+              <img src="./images/arrow-right.svg">
+            </div>
+          </a>
+        </div>
+        <div class="item">
+          <a href="./website.html" class="carousel-item">
+            <div class="title t3">Web Studio</div>
+            <div class="txt">Create a beautiful, personalized website in minutes.</div>
+            <div class="find">Find out more
+              <img src="./images/arrow-right.svg">
+            </div>
+          </a>
+        </div>
+        <div class="item">
+          <a href="./website.html" class="carousel-item">
+            <div class="title t3">Web Studio</div>
+            <div class="txt">Create a beautiful, personalized website in minutes.</div>
+            <div class="find">Find out more
+              <img src="./images/arrow-right.svg">
+            </div>
+          </a>
+        </div>
+        <div class="item">
+          <a href="./website.html" class="carousel-item">
+            <div class="title t3">Web Studio</div>
+            <div class="txt">Create a beautiful, personalized website in minutes.</div>
+            <div class="find">Find out more
+              <img src="./images/arrow-right.svg">
+            </div>
+          </a>
+        </div>
+      </div> -->
     </div>
   </div>
+
+  <!-- <div class="more-features">
+    <div class="caption">Explore more features</div>
+    <a class="item i1" href="./automation.html">
+      <div class="title t1">Automation</div>
+      <div class="txt">Let students book lessons and pay — without interrupting you.</div>
+      <div class="find">Find out more
+        <img src="./images/arrow-right.svg">
+      </div>
+    </a>
+    <a class="item i2" href="./students.html">
+      <div class="title t2">Student Portal</div>
+      <div class="txt">Everything your students needת organized in one smart space.</div>
+      <div class="find">Find out more
+        <img src="./images/arrow-right.svg">
+      </div>
+    </a>
+    <a class="item i3" href="./website.html">
+      <div class="title t3">Web studio</div>
+      <div class="txt">Create a beautiful, personalized website in minutes.</div>
+      <div class="find">Find out more
+        <img src="./images/arrow-right.svg">
+      </div>
+    </a>
+  </div> -->
 
   <section class="get-started see-more">
     <div class="wrapper">
@@ -262,6 +353,7 @@
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 <script src="./js/main.js"></script>
 <script src="./js/features.js"></script>
 
