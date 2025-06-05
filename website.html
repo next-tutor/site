@@ -8,6 +8,7 @@
   <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900" rel="stylesheet" />
   <link rel="stylesheet" href="./styles/features.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
 </head>
 
 <body>
@@ -46,12 +47,9 @@
 
   <div class="feature-opening">
     <div class="page welcome">
-      <div class="gradient-box">
-      </div>
-      <picture>
-        <source srcset="./images/features/tasks/tasks1.png" media="(min-width: 1100px)" />
-        <source srcset="./images/platform/feature1-small.png" media="(max-width: 769px)" />
-        <source srcset="./images/platform/feature5.png" media="(max-width: 1099px)" />
+      <picture class="image-wrap">
+        <source srcset="./images/features/tasks/tasks-mini.png" media="(max-width: 1536px)" />
+        <div class="gradient-box"></div>
         <img src="./images/features/tasks/tasks1.png" />
       </picture>
     </div>
@@ -80,6 +78,10 @@
         </div>
         <div class="items">
           <div class="item i1" data-swap="i1">
+            <picture class="small-image-wrap">
+              <source srcset="./images/features/tasks/task-messages.png" media="(min-width: 550px)" />
+              <img src="./images/features/tasks/tasks-450.png" />
+            </picture>
             <div class="title wheat">Standout from the rest</div>
             <div class="desc">
               With so many private tutors out there, a professional website can set you apart. Our custom-made template
@@ -87,6 +89,10 @@
             </div>
           </div>
           <div class="item i2" data-swap="i2">
+            <picture class="small-image-wrap">
+              <source srcset="./images/features/tasks/task-messages.png" media="(min-width: 550px)" />
+              <img src="./images/features/tasks/tasks-450.png" />
+            </picture>
             <div class="title white">Be Independent. Be Found.</div>
             <div class="desc">
               Many tutors rely on directory websites to get noticed. But unless you pay extra, your profile often gets
@@ -100,31 +106,39 @@
     </div>
   </div>
 
-
   <div class="more-features">
     <div class="caption">Explore more features</div>
-    <div class="items">
-      <a class="item" href="./automation.html">
-        <div class="title t1">Automation</div>
-        <div class="txt">Let students book lessons and pay — without interrupting you.</div>
-        <div class="find">Find out more
-          <img src="./images/arrow-right.svg">
-        </div>
-      </a>
-      <a class="item" href="./tasks.html">
-        <div class="title t2">Offline Support</div>
-        <div class="txt">Earn more by offering paid help with exams and homework.</div>
-        <div class="find">Find out more
-          <img src="./images/arrow-right.svg">
-        </div>
-      </a>
-      <a class="item" href="./students.html">
-        <div class="title t3">Student Portal</div>
-        <div class="txt">Everything your students needת organized in one smart space.</div>
-        <div class="find">Find out more
-          <img src="./images/arrow-right.svg">
-        </div>
-      </a>
+    <div class="carousel-wrap">
+      <div class="owl-carousel owl-theme">
+        <a class="item" href="./automation.html">
+          <div class="title t2">Automation</div>
+          <div class="txt">Let students book lessons and pay without interrupting you.</div>
+          <div class="find">Find out more
+            <img src="./images/arrow-right.svg">
+          </div>
+        </a>
+        <a class="item" href="./tasks.html">
+          <div class="title t2">Offline Support</div>
+          <div class="txt">Earn more by offering paid help with exams and homework.</div>
+          <div class="find">Find out more
+            <img src="./images/arrow-right.svg">
+          </div>
+        </a>
+        <a class="item" href="./students.html">
+          <div class="title t3">Student Portal</div>
+          <div class="txt">Everything your students needת organized in one smart space.</div>
+          <div class="find">Find out more
+            <img src="./images/arrow-right.svg">
+          </div>
+        </a>
+        <a class="item" href="./reports.html">
+          <div class="title t2">Reports</div>
+          <div class="txt">Get reports of your income, organized by day, week or month.</div>
+          <div class="find">Find out more
+            <img src="./images/arrow-right.svg">
+          </div>
+        </a>
+      </div>
     </div>
   </div>
 
@@ -174,14 +188,6 @@
           <a href="./contact.html">Contact us</a>
         </div>
       </div>
-      <!-- <div class="get-app-wrapper">
-        <a href="./mobile.html" class="btn" style="margin-top: 0">
-          <img src="./images/App Store.png" alt="App store" />
-        </a>
-        <a href="./mobile.html" class="btn">
-          <img src="./images/Google Play.png" alt="Google Play.png" />
-        </a>
-      </div> -->
     </div>
     <div class="mobile">
       <div class="line"></div>
@@ -246,6 +252,7 @@
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 <script src="./js/main.js"></script>
 <script src="./js/features.js"></script>
 

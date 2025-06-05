@@ -75,25 +75,6 @@ const setCarousel = function () {
       '<svg width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>'
     ]
   })
-  // $('.owl-carousel').owlCarousel({
-  //   loop: true,
-  //   margin: 20,
-  //   nav: true,
-  //   dots: true,
-  //   center: false, // Changed to false to show 2 items properly
-  //   responsive: {
-  //     0: {
-  //       items: 2 // Changed to show 2 items on all screen sizes
-  //     }
-  //   },
-  //   navText: [
-  //     '<svg width="24" height="24" viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>',
-  //     '<svg width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>'
-  //   ],
-  //   autoplay: true,
-  //   autoplayTimeout: 5000,
-  //   autoplayHoverPause: true
-  // });
 }
 
 $(document).ready(function () {
