@@ -641,6 +641,7 @@
         width: 300px;
         font-size: 16px;
         margin-bottom: 50px;
+        line-height: 35px;
       }
     }
   }
@@ -651,7 +652,7 @@
 
   .why-us {
     .why2 img {
-      width: 340px;
+      width: 315px;
     }
 
     .why3 img {
