@@ -7,11 +7,18 @@
   <title>Next Tutor</title>
   <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="./styles/demo.css" />
 </head>
 
 <body>
   <div class="demo">
+    <div class="avatar">
+      <div class="inner">
+        YK
+      </div>
+    </div>
     <div class="sidebar">
       <div class="sidebar-wrap">
         <div class="logo f-h-c">
@@ -23,7 +30,7 @@
           </a>
         </div>
         <div class="menu">
-          <div class="item">
+          <div class="item active">
             <div class="icon">
               <svg width="35px" version="1.1" xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000"
@@ -37,7 +44,7 @@
                 </g>
               </svg>
             </div>
-            <div class="lbl">Tutees</div>
+            <div class="lbl">Students</div>
           </div>
           <div class="item">
             <div class="icon">
@@ -115,12 +122,49 @@
         </div>
       </div>
     </div>
-    <div calss="main-panel">
+    <div class="main-panel">
+      <div class="students">
+        <duv class="title">
+          Students
+        </duv>
+        <div class="row">
+          <div class="pic">
+            <img src="./images/student-gray.png">
+            <div class="name">Lucas D.</div>
+          </div>
+          <div class="pic active">
+            <div class="circle">
+              <div class="circle__item">
+                <svg class="circle__spinner" viewBox="0 0 50 50">
+                  <circle class="path" cx="25" cy="25" r="20" fill="none" stroke="#93bfec" stroke-width="1"></circle>
+                </svg>
+              </div>
+            </div>
+            <img src="./images/student.png">
+            <div class="name">Henry F.</div>
+          </div>
+          <div class="pic">
+            <img src="./images/student-gray.png">
+            <div class="name">Sophia W.</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="pic">
+            <img src="./images/student-gray.png">
+            <div class="name">Mateo Z.</div>
+          </div>
+          <div class="pic">
+            <img src="./images/student-gray.png">
+            <div class="name">Amelia B.</div>
+          </div>
+          <div class="pic">
+            <img src="./images/student-gray.png">
+            <div class="name">Liam A.</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-
-
-
 </body>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
