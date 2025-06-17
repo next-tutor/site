@@ -30,7 +30,7 @@
           </a>
         </div>
         <div class="menu">
-          <div class="item active">
+          <div class="item active students">
             <div class="icon">
               <svg width="35px" version="1.1" xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000"
@@ -46,7 +46,7 @@
             </div>
             <div class="lbl">Students</div>
           </div>
-          <div class="item">
+          <div class="item lessons">
             <div class="icon">
               <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <g fill="currentColor" fill-rule="nonzero">
@@ -57,9 +57,9 @@
                 </g>
               </svg>
             </div>
-            <div class="lbl">Lessons</div>
+            <div class="lbl tasks">Lessons</div>
           </div>
-          <div class="item">
+          <div class="item tasks">
             <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" fill="#000000" viewBox="0 0 50 50" width="25px"
                 height="25px">
                 <path
@@ -68,7 +68,7 @@
               </svg></div>
             <div class="lbl">Tasks</div>
           </div>
-          <div class="item">
+          <div class="item website">
             <div class="icon">
               <svg width="999" height="1000" viewBox="0 0 999 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -84,7 +84,7 @@
             </div>
             <div class="lbl">Website</div>
           </div>
-          <div class="item">
+          <div class="item reports">
             <div class="icon">
               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px"
                 y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
@@ -95,9 +95,9 @@
                 </g>
               </svg>
             </div>
-            <div class="lbl">Analytics</div>
+            <div class="lbl">Reports</div>
           </div>
-          <div class="item">
+          <div class="item settings">
             <div class="icon settings">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <circle cx="12" cy="12" r="3" style="fill: none; stroke:#000;"></circle>
@@ -109,24 +109,16 @@
             </div>
             <div class="lbl">Settings</div>
           </div>
-          <!-- <div class="item">
-            <div class="icon mail">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
-                  style="fill: none; stroke:#000;"></path>
-                <polyline points="22,6 12,13 2,6" style="fill:none; stroke:#000;"></polyline>
-              </svg>
-            </div>
-            <div class="lbl">Feedback</div>
-          </div> -->
         </div>
       </div>
     </div>
     <div class="main-panel">
-      <div class="students">
-        <duv class="title">
+
+      <!-- student -->
+      <div class="panel students">
+        <div class="title">
           Students
-        </duv>
+        </div>
         <div class="row">
           <div class="pic">
             <img src="./images/student-gray.png">
@@ -161,6 +153,59 @@
             <img src="./images/student-gray.png">
             <div class="name">Liam A.</div>
           </div>
+        </div>
+      </div>
+
+      <!-- lessons -->
+      <div class="panel lessons">
+        <div class="title">
+          Lessons
+        </div>
+        <div class="menu">
+          <div class="item upcoming active">Upcoming lessons</div>
+          <div class="center past">
+            <div class="item">Past lessons</div>
+          </div>
+          <div class="item canceled">Canceled lessons</div>
+        </div>
+        <div class="content">
+          <div class="list-wrap">
+            <div class="list-item"></div>
+            <div class="list-item"></div>
+            <div class="list-item"></div>
+            <div class="list-item"></div>
+          </div>
+          <div class="img-wrap">
+            <img src="https://admin-shaarmz.web.app/assets/gallery/calendar.svg" class="image decorator">
+          </div>
+        </div>
+      </div>
+
+      <!-- tasks -->
+      <div class="panel tasks">
+        <div class="title">
+          Tasks
+        </div>
+      </div>
+
+      <!-- reports -->
+      <div class="panel reports">
+        <div class="title">
+          Reports
+        </div>
+      </div>
+
+      <!-- website -->
+      <div class="panel website">
+        <div class="title">
+          Lessons
+        </div>
+      </div>
+
+      <!-- settings -->
+      <div class="panel settings">
+        <div class="title">
+          Settings
         </div>
       </div>
     </div>

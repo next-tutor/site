@@ -7,6 +7,16 @@ body {
   width: 100%;
   height: 590px;
   display: flex;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.show {
+  display: block !important;
 }
 
 .avatar {
@@ -80,7 +90,8 @@ body {
         font-size: 14px;
         font-family: Poppins;
         color: #000;
-        margin: 5px 0;
+        height: 35px;
+        ;
         cursor: pointer;
 
         .icon {
@@ -101,11 +112,13 @@ body {
 
         &:hover {
           color: #ff781f;
+          background: #f4f4f4;
         }
 
         &.active {
           font-weight: 500;
           color: #ff781f;
+          background: #f4f4f4;
         }
 
         .lbl {
@@ -126,21 +139,78 @@ body {
   flex: 1;
   display: flex;
   justify-content: center;
+
+  .panel {
+    display: none;
+    margin-top: 65px;
+
+    .title {
+      font-size: 30px;
+      font-family: "PT Serif", serif;
+      font-weight: 400;
+      font-style: normal;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 45px;
+    }
+
+    .menu {
+      display: flex;
+      justify-content: center;
+      padding: 0 10px;
+
+      .center {
+        width: 225px;
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+      }
+
+      .item {
+        padding: 0 20px 7px 20px;
+        border-bottom: 1px solid #fff;
+        font-size: 14px;
+        cursor: pointer;
+
+        &.active {
+          border-bottom: 1px solid red;
+        }
+      }
+    }
+
+    .content {
+      display: flex;
+      width: 600px;
+      height: 250px;
+      margin-top: 65px;
+      margin-left: 80px;
+
+      .img-wrap {
+        position: relative;
+        padding-left: 20px;
+      }
+
+      .list-wrap {
+        width: 375px;
+
+        .list-item {
+          position: relative;
+          padding: 17px 0 13px;
+          display: flex;
+          align-items: center;
+          border: 1px solid #99ccf5;
+          border-radius: 5px;
+          margin-bottom: 11px;
+          min-height: 18px;
+          cursor: pointer;
+          max-width: 310px;
+        }
+      }
+    }
+  }
 }
 
-.students {
-  margin-top: 65px;
-
-  .title {
-    font-size: 30px;
-    font-family: "PT Serif", serif;
-    font-weight: 400;
-    font-style: normal;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 40px;
-  }
-
+.main-panel .students {
   .row {
     display: flex;
 
@@ -151,7 +221,7 @@ body {
       cursor: pointer;
 
       img {
-        width: 115px;
+        width: 110px;
       }
 
       .name {
@@ -166,30 +236,40 @@ body {
       &:hover {
         margin-top: 7px;
       }
+
+      .circle {
+        position: absolute;
+        top: -1px;
+        left: -8px;
+
+
+        .circle__item {
+          width: 125px;
+          height: 125px;
+        }
+
+        .circle__spinner {
+          width: 125px;
+          height: 125px;
+
+          & .path {
+            stroke: #f5a30b;
+            stroke-linecap: round;
+            animation: dash 10s linear infinite;
+          }
+        }
+      }
     }
   }
 }
 
 
-.circle {
-  position: absolute;
-  top: 2px;
-  left: -5px;
-}
-
-.circle__item {
-  width: 127px;
-  height: 127px;
-}
-
-.circle__spinner {
-  width: 127px;
-  height: 127px;
-
-  & .path {
-    stroke: #f5a30b;
-    stroke-linecap: round;
-    animation: dash 10s linear infinite;
+.main-panel .lessons {
+  img {
+    top: 30px;
+    left: 0;
+    width: 115px;
+    position: absolute;
   }
 }
 
