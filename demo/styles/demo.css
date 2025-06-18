@@ -91,7 +91,6 @@ body {
         font-family: Poppins;
         color: #000;
         height: 35px;
-        ;
         cursor: pointer;
 
         .icon {
@@ -111,7 +110,6 @@ body {
         }
 
         &:hover {
-          color: #ff781f;
           background: #f4f4f4;
         }
 
@@ -151,29 +149,29 @@ body {
       font-style: normal;
       display: flex;
       justify-content: center;
-      margin-bottom: 45px;
+      margin-bottom: 30px;
     }
 
     .menu {
       display: flex;
       justify-content: center;
-      padding: 0 10px;
-
-      .center {
-        width: 225px;
-        display: flex;
-        justify-content: center;
-        cursor: pointer;
-      }
 
       .item {
-        padding: 0 20px 7px 20px;
+        padding: 10px 10px 7px 20px;
         border-bottom: 1px solid #fff;
         font-size: 14px;
         cursor: pointer;
+        min-width: 141px;
+        display: flex;
+        justify-content: center;
+        min-width: 155px;
 
         &.active {
-          border-bottom: 1px solid red;
+          border-bottom: 1px solid #DC7878;
+        }
+
+        &:hover {
+          background: #f4f4f4;
         }
       }
     }
@@ -182,28 +180,43 @@ body {
       display: flex;
       width: 600px;
       height: 250px;
-      margin-top: 65px;
-      margin-left: 80px;
+      margin-top: 55px;
+      margin-left: 110px;
 
       .img-wrap {
         position: relative;
         padding-left: 20px;
       }
 
-      .list-wrap {
+      .list {
         width: 375px;
+        display: none;
 
         .list-item {
           position: relative;
           padding: 17px 0 13px;
           display: flex;
           align-items: center;
-          border: 1px solid #99ccf5;
+          border: 1px solid #91ceff;
           border-radius: 5px;
           margin-bottom: 11px;
           min-height: 18px;
           cursor: pointer;
-          max-width: 310px;
+          max-width: 290px;
+          padding-left: 15px;
+          color: #607d8b;
+          text-transform: capitalize;
+
+          .name {
+            border-right: 1px solid #d15858;
+            font-weight: 600;
+            width: 38px;
+            margin-right: 6px;
+          }
+
+          &:hover {
+            box-shadow: 0 18px 18px -18px #162d3d3b;
+          }
         }
       }
     }
@@ -211,51 +224,55 @@ body {
 }
 
 .main-panel .students {
-  .row {
-    display: flex;
+  .items {
+    padding-top: 10px;
 
-    .pic {
-      position: relative;
-      margin: 10px 30px;
-      transition: all 0.3s ease;
-      cursor: pointer;
+    .row {
+      display: flex;
 
-      img {
-        width: 110px;
-      }
+      .pic {
+        position: relative;
+        margin: 10px 30px;
+        transition: all 0.3s ease;
+        cursor: pointer;
 
-      .name {
-        font-size: 13px;
-        display: flex;
-        justify-content: center;
-        margin-top: -10px;
-        font-weight: 500;
-        color: #008aff;
-      }
-
-      &:hover {
-        margin-top: 7px;
-      }
-
-      .circle {
-        position: absolute;
-        top: -1px;
-        left: -8px;
-
-
-        .circle__item {
-          width: 125px;
-          height: 125px;
+        img {
+          width: 110px;
         }
 
-        .circle__spinner {
-          width: 125px;
-          height: 125px;
+        .name {
+          font-size: 13px;
+          display: flex;
+          justify-content: center;
+          margin-top: -10px;
+          font-weight: 500;
+          color: #383737;
+        }
 
-          & .path {
-            stroke: #f5a30b;
-            stroke-linecap: round;
-            animation: dash 10s linear infinite;
+        &:hover {
+          margin-top: 7px;
+        }
+
+        .circle {
+          position: absolute;
+          top: -1px;
+          left: -8px;
+
+
+          .circle__item {
+            width: 125px;
+            height: 125px;
+          }
+
+          .circle__spinner {
+            width: 125px;
+            height: 125px;
+
+            & .path {
+              stroke: #e58a36;
+              stroke-linecap: round;
+              animation: dash 10s linear infinite;
+            }
           }
         }
       }
@@ -271,6 +288,18 @@ body {
     width: 115px;
     position: absolute;
   }
+
+  .date {
+    font-size: 12px;
+    font-weight: 600;
+    margin-right: 10px;
+    padding-left: 5px;
+  }
+
+  .time {
+    font-size: 13px;
+  }
+
 }
 
 @keyframes dash {

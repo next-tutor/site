@@ -1,0 +1,36 @@
+const htmlLoader = (function () {
+
+    const files = [
+        { id: 'sidebar', file: './html/sidebar.html' },
+        { id: 'students', file: './html/students.html' },
+        { id: 'lessons', file: './html/lessons.html' }
+    ];
+
+    //---------------------------------------------------
+
+    const loadHtmlIntoElement = function (elementId, filePath) {
+        return fetch(filePath)
+            .then(response => {
+                if (!response.ok) throw new Error(`Failed to load ${filePath}`);
+                return response.text();
+            })
+            .then(html => {
+                debugger;
+                document.getElementById(elementId).innerHTML = html;
+                return html;
+            });
+    }
+
+    //-----------------------------------------------------
+
+    const load = function () {
+        return Promise.all(
+            files.map(item => loadHtmlIntoElement(item.id, item.file))
+        );
+    }
+
+    return {
+        load
+    }
+})();
+

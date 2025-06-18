@@ -43,7 +43,7 @@ const showPanel = function (panelName) {
 const setLessonMenuClickEvents = function () {
 
     $(".panel.lessons .menu .upcoming").click(() => {
-        showLessonList("upconing");
+        showLessonList("upcoming");
     })
     $(".panel.lessons .menu .past").click(() => {
         showLessonList("past");
@@ -57,16 +57,28 @@ const setLessonMenuClickEvents = function () {
 
 const showLessonList = function (listName) {
 
+    if (listName !== "") {
+        $(".panel.lessons .menu .item").removeClass("active");
+        $(`.panel.lessons .menu .item.${listName}`).addClass("active");
+
+        $(`.panel.lessons .content .list`).removeClass("show");
+        $(`.panel.lessons .content .list.${listName}`).addClass("show");
+    }
+
 }
 
 //-------------------------------------------
 
 const init = function () {
-    setSidebarClickEvents();
-    setLessonMenuClickEvents();
+    htmlLoader.load()
+        .then(() => {
+            debugger;
+            setSidebarClickEvents();
+            setLessonMenuClickEvents();
 
-    hidePanels();
-    showPanel("students");
+            hidePanels();
+            showPanel("students");
+        });
 }
 
 //-------------------------------------------
