@@ -5,11 +5,11 @@ const hidePanels = function () {
 //-------------------------------------------
 
 const showPanel = function (panelName) {
-    $(".main-panel .panel").removeClass("show");
+    $(".panel").removeClass("show");
     $(`.sidebar .item`).removeClass("active");
 
     if (panelName !== "") {
-        $(`.main-panel .panel.${panelName}`).addClass("show");
+        $(`.panel.${panelName}`).addClass("show");
         $(`.sidebar .item.${panelName}`).addClass("active");
     }
 }

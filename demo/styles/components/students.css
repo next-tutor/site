@@ -1,0 +1,56 @@
+.main-panel .students {
+    .items {
+        padding-top: 10px;
+
+        .row {
+            display: flex;
+
+            .pic {
+                position: relative;
+                margin: 10px 30px;
+                transition: all 0.3s ease;
+                cursor: pointer;
+
+                img {
+                    width: 110px;
+                }
+
+                .name {
+                    font-size: 13px;
+                    display: flex;
+                    justify-content: center;
+                    margin-top: -10px;
+                    font-weight: 500;
+                    color: #383737;
+                }
+
+                &:hover {
+                    margin-top: 7px;
+                }
+
+                .circle {
+                    position: absolute;
+                    top: -1px;
+                    left: -8px;
+
+
+                    .circle__item {
+                        width: 125px;
+                        height: 125px;
+                    }
+
+                    .circle__spinner {
+                        width: 125px;
+                        height: 125px;
+
+                        & .path {
+                            stroke: #e58a36;
+                            stroke-linecap: round;
+                            animation: dash 10s linear infinite;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

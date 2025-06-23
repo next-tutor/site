@@ -1,0 +1,34 @@
+.panel.students {
+    .items {
+        padding-top: 30px;
+
+        .row {
+            display: flex;
+            margin-bottom: 15px;
+
+            .pic {
+                position: relative;
+                margin: 10px 45px;
+                transition: all 0.3s ease;
+                cursor: pointer;
+
+                img {
+                    width: 130px;
+                }
+
+                .name {
+                    font-size: 13px;
+                    display: flex;
+                    justify-content: center;
+                    margin-top: -10px;
+                    font-weight: 500;
+                    color: #383737;
+                }
+
+                &:hover {
+                    margin-top: 7px;
+                }
+            }
+        }
+    }
+}
