@@ -1,5 +1,6 @@
 .panel.students {
     .items {
+        position: relative;
         padding-top: 30px;
 
         .row {
@@ -17,17 +18,28 @@
                 }
 
                 .name {
-                    font-size: 13px;
+                    font-size: 15px;
                     display: flex;
                     justify-content: center;
                     margin-top: -10px;
                     font-weight: 500;
-                    color: #383737;
+                    color: #454545;
                 }
 
                 &:hover {
                     margin-top: 7px;
                 }
+            }
+        }
+
+        .btn-next {
+            position: absolute;
+            right: -50px;
+            top: 50%;
+            cursor: pointer;
+
+            img {
+                height: 60px;
             }
         }
     }

@@ -68,15 +68,15 @@ body {
       .item {
         padding: 10px 10px 7px 20px;
         border-bottom: 1px solid #fff;
-        font-size: 15px;
+        font-size: 16px;
         cursor: pointer;
         display: flex;
         justify-content: center;
         min-width: 225px;
-        color: #4c5357;
+        color: #272828;
 
         &.active {
-          font-weight: 600;
+          font-weight: 500;
           color: #000;
           border-bottom: 1px solid #DC7878;
         }
@@ -106,7 +106,7 @@ body {
           padding-left: 15px;
           color: #4c5357;
           text-transform: capitalize;
-          background: #dadada45;
+          background: #ededed80;
 
           .avatar {
             width: 52px;
@@ -133,8 +133,7 @@ body {
               margin-right: 10px;
               padding-left: 5px;
               min-width: 40px;
-              font-weight: 600;
-              margin-bottom: 3px;
+              font-weight: 500;
             }
           }
 

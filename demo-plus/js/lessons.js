@@ -18,6 +18,25 @@ const lessons = (function () {
         $(`.panel.lessons .content .list.past .list-item`).click(() => {
             showPastDialog();
         });
+
+        $(`.panel.lessons .btn-more`).click((e) => {
+            openMoreMenu(e);
+        });
+        $(`.panel.lessons`).click((event) => {
+            closeMoreMenu(event);
+        });
+    }
+
+
+    //-------------------------------------------
+
+    const openMoreMenu = function (e) {
+        e.stopPropagation();
+        $(`.panel.lessons .menu-more`).addClass("open");
+    }
+
+    const closeMoreMenu = function (event) {
+        $(`.panel.lessons .menu-more`).removeClass("open");
     }
 
     //-------------------------------------------

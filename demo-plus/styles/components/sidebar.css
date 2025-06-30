@@ -1,5 +1,5 @@
 .sidebar {
-    width: 255px;
+    width: 270px;
     transition: all .6s ease-in-out;
     overflow: hidden;
     position: relative;
@@ -23,8 +23,8 @@
                 transition: all .65s ease-in-out;
                 position: relative;
                 stroke: #000;
-                height: 45px;
-                width: 40px;
+                height: 40px;
+                width: 35px;
                 cursor: pointer;
 
                 path {

@@ -1,16 +1,9 @@
 .dlg-wrap {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-
     .popper {
         display: none;
         position: absolute;
         inset: 0;
-        background: #2a2a2a4d;
+        background: #2a2a2a6e;
         z-index: 2;
     }
 
@@ -20,15 +13,70 @@
         top: 0;
         bottom: 0;
         height: 100vh;
-        width: 450px;
-        transition: all .6s ease-in-out;
+        width: 550px;
+        /* transition: all .3s ease-in-out; */
         background: #fff;
         z-index: 4;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .btn-close {
+            width: 35px;
+            height: 35px;
+            border-radius: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 25px;
+            right: 20px;
+            cursor: pointer;
+
+            svg {
+                width: 20px;
+                stroke: #707070;
+            }
+
+            &:hover {
+                background: #eaeaea;
+            }
+        }
+
+        .info {
+            display: flex;
+            flex-direction: column;
+            margin-top: 80px;
+
+            .name {
+                font-size: 25px;
+                font-family: "PT Serif", serif;
+                font-weight: 400;
+                font-style: normal;
+                display: flex;
+                justify-content: center;
+                margin-bottom: 14px;
+            }
+        }
+
+        .date {
+            font-size: 14px;
+            display: flex;
+            justify-content: center;
+            color: #292929;
+        }
+
+        .main-box {
+            width: 90%;
+            height: 520px;
+            margin-top: 80px;
+            background: #FFF8F4;
+            border: 1px solid #FFAE7E;
+            border-radius: 5px;
+        }
     }
 
     &.open {
-        display: block;
-
         .popper {
             display: block;
         }
