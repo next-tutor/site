@@ -1,7 +1,16 @@
 .panel.students {
+    .search-input {
+        border-bottom: 1px solid #f1a3a3;
+        padding: 0 10px;
+
+        img {
+            width: 30px;
+        }
+    }
+
     .items {
         position: relative;
-        padding-top: 30px;
+        margin-top: 65px;
 
         .row {
             display: flex;
@@ -31,16 +40,128 @@
                 }
             }
         }
+    }
 
-        .btn-next {
-            position: absolute;
-            right: -50px;
-            top: 50%;
-            cursor: pointer;
+    .btn-plus {
+        .icon {
+            height: 25px;
 
             img {
-                height: 60px;
+                width: 21px;
             }
         }
+    }
+
+    .search-box {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 270px;
+        right: 0;
+        bottom: 0;
+        z-index: 11;
+        justify-content: center;
+        align-items: center;
+
+        .popper {
+            position: absolute;
+            inset: 0;
+            background: #2a2a2a6e;
+            z-index: 1;
+        }
+
+        .dlg {
+            height: 642px;
+            width: 665px;
+            background: #fff;
+            z-index: 4;
+
+
+            .find-input {
+                border-bottom: 1px solid red;
+                margin: 55px 35px 10px 35px;
+
+                .icon {
+                    img {
+                        width: 30px;
+                    }
+                }
+            }
+
+            .student-list {
+                padding: 30px 35px;
+
+                .item {
+                    display: flex;
+                    align-items: center;
+                    height: 75px;
+
+                    img {
+                        width: 55px;
+                    }
+
+                    .name {
+                        margin-left: 15px;
+                        font-size: 19px;
+                    }
+
+                    &:hover {
+                        background: #8080801a;
+                    }
+                }
+            }
+
+        }
+
+        &.show {
+            display: flex;
+        }
+    }
+
+    .more-options {
+        .item {
+
+            &.find {
+                img {
+                    width: 65px;
+                }
+            }
+
+            &.plus {
+                img {
+                    width: 53px;
+                }
+            }
+
+
+        }
+    }
+
+
+    .inner.show-options-menu {
+
+        .items {
+            display: none;
+        }
+
+        .more-options {
+            display: flex;
+        }
+
+    }
+}
+
+
+
+
+@keyframes dash {
+    0% {
+        stroke-dasharray: 1, 150;
+        stroke-dashoffset: 0;
+    }
+
+    100% {
+        stroke-dasharray: 130, 150;
+        stroke-dashoffset: 0;
     }
 }

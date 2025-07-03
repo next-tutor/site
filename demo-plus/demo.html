@@ -9,12 +9,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
     rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+
 
   <link rel="stylesheet" href="./styles/demo.css" />
   <link rel="stylesheet" href="./styles/components/dlg.css" />
   <link rel="stylesheet" href="./styles/components/sidebar.css" />
   <link rel="stylesheet" href="./styles/components/lessons.css" />
   <link rel="stylesheet" href="./styles/components/students.css" />
+  <link rel="stylesheet" href="./styles/components/student.css" />
 
 </head>
 
@@ -26,8 +31,12 @@
 
     <div id="sidebar" class="sidebar"></div>
 
-    <!-- student -->
+    <!-- students -->
     <div id="students" class="panel students">
+    </div>
+
+    <!-- student -->
+    <div id="student" class="student">
     </div>
 
     <!-- lessons -->
@@ -35,7 +44,7 @@
     </div>
 
     <!-- tasks -->
-    <div class="panel tasks">
+    <div id="tasks" class="panel tasks">
       <div class="title">
         Tasks
       </div>
@@ -70,9 +79,10 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="./js/htmlLoader.js"></script>
-<script src="./js/clickOutside.js"></script>
 <script src="./js/dlg.js"></script>
 <script src="./js/lessons.js"></script>
+<script src="./js/student.js"></script>
+<script src="./js/students.js"></script>
 <script src="./js/sidebar.js"></script>
 <script src="./js/demo.js"></script>
 

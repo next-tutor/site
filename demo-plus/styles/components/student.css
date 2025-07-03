@@ -1,0 +1,135 @@
+.student {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #606060;
+    z-index: 20;
+    padding: 10px;
+
+    .wrapper {
+        display: flex;
+        width: 100%;
+        background: #fff;
+    }
+
+    .panel {
+        .title {
+            font-size: 30px;
+            margin-bottom: 50px;
+            align-items: flex-end;
+
+            .name {
+                color: #DA5C00;
+                font-size: 40px;
+                font-family: "Dancing Script", cursive;
+                margin-right: 12px;
+                font-weight: 600;
+            }
+        }
+
+        .list {
+            .list-item {
+                height: 72px !important;
+            }
+        }
+    }
+
+    .student-side-bar {
+        width: 275px;
+        background: #090909;
+        height: 100%;
+
+        .avatar {
+            margin: 100px 0px 0 25px;
+
+            img {
+                width: 85px;
+            }
+        }
+
+        .menu {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            margin-top: 45px;
+
+            .item {
+                position: relative;
+                display: flex;
+                align-items: center;
+                padding: 13px 0;
+                font-size: 14px;
+                font-family: Poppins;
+                color: #fff;
+                height: 35px;
+                cursor: pointer;
+
+                .icon {
+                    display: flex;
+                    justify-content: center;
+                    margin-right: 5px;
+                    min-width: 60px;
+
+                    svg {
+                        width: 24px;
+                        height: 24px;
+
+                        path {
+                            fill: #fff;
+                        }
+                    }
+                }
+
+                &:hover {
+                    background: #303030;
+                }
+
+                &.active {
+                    font-weight: 600;
+                    color: #ffc39c;
+                    background: #303030;
+                }
+
+                .lbl {
+                    white-space: nowrap;
+                    overflow: hidden;
+                }
+            }
+
+            .splitter {
+                margin: 17px 0;
+                border-top: 1px solid #cecece;
+            }
+        }
+    }
+
+    .btn-close {
+        position: absolute;
+        top: 45px;
+        right: 45px;
+        width: 35px;
+        height: 35px;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        svg {
+            width: 30px;
+            stroke: #fd0000;
+        }
+
+        &:hover {
+            background: #eaeaea;
+        }
+    }
+
+    &.show {
+        display: flex;
+    }
+}

@@ -19,24 +19,28 @@ const lessons = (function () {
             showPastDialog();
         });
 
-        $(`.panel.lessons .btn-more`).click((e) => {
-            openMoreMenu(e);
+        $(`.panel.lessons .title`).click((event) => {
+            openMoreOptionsMenu(event);
         });
+
         $(`.panel.lessons`).click((event) => {
-            closeMoreMenu(event);
+            closeMoreOptionsMenu();
         });
     }
 
 
     //-------------------------------------------
 
-    const openMoreMenu = function (e) {
+    const openMoreOptionsMenu = function (e) {
         e.stopPropagation();
-        $(`.panel.lessons .menu-more`).addClass("open");
+        $(`.panel.lessons .inner`).addClass("show-options-menu");
     }
 
-    const closeMoreMenu = function (event) {
-        $(`.panel.lessons .menu-more`).removeClass("open");
+    //-------------------------------------------
+
+    const closeMoreOptionsMenu = function () {
+
+        $(`.panel.lessons .inner`).removeClass("show-options-menu");
     }
 
     //-------------------------------------------

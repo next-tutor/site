@@ -22,6 +22,8 @@ const init = function () {
             dlg.setDlgEvents();
             sidebar.setSidebarClickEvents();
             lessons.setLessonClickEvents();
+            student.setStudentClickEvents()
+            students.setStudentsClickEvents();
 
             hidePanels();
             showPanel("students");
