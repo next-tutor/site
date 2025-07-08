@@ -20,9 +20,15 @@ const students = (function () {
             closeMoreOptionsMenu();
         });
 
-
         $(`.panel.students .pic`).click((event) => {
             openStudent();
+        });
+
+        $(`.panel.students .btn-plus`).click((event) => {
+            openAddStudentDlg(event);
+        });
+        $(".panel.students .add-student-dlg .popper").click(() => {
+            closeAddStudentDlg();
         });
     }
 
@@ -57,6 +63,19 @@ const students = (function () {
     const openStudent = function () {
         $(`.student`).addClass("show");
         $(`.student .panel.lessons`).addClass("show");
+    }
+
+    //-------------------------------------------
+
+    const openAddStudentDlg = function (e) {
+        e.stopPropagation();
+        $(".panel.students .add-student-dlg").addClass("show");
+    }
+
+    //-------------------------------------------
+
+    const closeAddStudentDlg = function () {
+        $(".panel.students .add-student-dlg").removeClass("show");
     }
 
 

@@ -75,6 +75,7 @@
             width: 665px;
             background: #fff;
             z-index: 4;
+            border-radius: 10px;
 
 
             .find-input {
@@ -89,20 +90,22 @@
             }
 
             .student-list {
-                padding: 30px 35px;
+                padding: 20px 35px;
 
                 .item {
                     display: flex;
                     align-items: center;
                     height: 75px;
+                    background: #8080800f;
+                    margin-bottom: 5px;
 
                     img {
-                        width: 55px;
+                        width: 62px;
                     }
 
                     .name {
                         margin-left: 15px;
-                        font-size: 19px;
+                        font-size: 16px;
                     }
 
                     &:hover {
@@ -148,6 +151,83 @@
             display: flex;
         }
 
+    }
+
+    .add-student-dlg {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 270px;
+        right: 0;
+        bottom: 0;
+        z-index: 11;
+        justify-content: center;
+        align-items: center;
+
+        .popper {
+            position: absolute;
+            inset: 0;
+            background: #2a2a2a6e;
+            z-index: 1;
+        }
+
+        .dlg {
+            height: 630px;
+            width: 630px;
+            background: #fff;
+            z-index: 4;
+            border-radius: 10px;
+            padding: 24px 50px;
+            box-sizing: border-box;
+
+            .caption {
+                color: #9a4813;
+                font-size: 22px;
+                margin: 40px 0 22px 0;
+            }
+
+            .field {
+                display: flex;
+                border-bottom: 1px solid #ffe3d0;
+                height: 70px;
+                align-items: flex-end;
+                padding: 10px;
+                box-sizing: border-box;
+                font-size: 15px;
+
+                .name {
+                    font-weight: 500;
+                    margin-right: 20px;
+                    min-width: 80px;
+                }
+
+                .txt {
+                    color: #a4a4a4;
+                }
+            }
+
+            .actions {
+                display: flex;
+                justify-content: end;
+                margin-top: 65px;
+
+                .btn-save {
+                    background-color: #ff7d1e;
+                    color: #fff;
+                    width: 85px;
+                    height: 40px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 10px;
+                    font-size: 15px;
+                }
+            }
+        }
+
+        &.show {
+            display: flex;
+        }
     }
 }
 

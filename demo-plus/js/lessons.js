@@ -59,7 +59,7 @@ const lessons = (function () {
     //--------------------------------------------
 
     const showPastDialog = function () {
-        $(".dlg-wrap.past-lesson-dlg").addClass("open");
+        pastLessonDlg.open();
     }
 
     return {

@@ -1,0 +1,78 @@
+.past-lesson-dlg {
+
+    .attandence {
+        margin: 60px;
+        flex: 1;
+
+        .caption {
+            font-weight: 500;
+            margin: 0 0 25px 0;
+            font-size: 16px;
+            color: #8c5000;
+        }
+
+        .input-sammary {
+            margin-top: 69px;
+            border-bottom: 1px solid #E0B599;
+        }
+
+        .txt-sammary {
+            font-size: 15px;
+            line-height: 33px;
+            color: #7b5d35;
+        }
+
+        .add-attachment {
+            display: flex;
+            justify-content: flex-end;
+
+            img {
+                width: 30px;
+                margin-top: 40px;
+            }
+        }
+
+        .attachments {
+            display: flex;
+
+            .box {
+                display: flex;
+                border: 1px solid #e7ab76;
+                align-items: center;
+                padding: 5px 20px 5px 16px;
+                margin-top: 30px;
+                min-width: 125px;
+                border-radius: 18px;
+                font-size: 15px;
+                color: #6b1e1e;
+
+                img {
+                    width: 25px;
+                    margin-right: 10px;
+                }
+            }
+
+        }
+    }
+
+    .steps-wrap {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        height: 115px;
+        width: 100%;
+
+        .step {
+            height: 33px;
+            background-color: #ff8b24cf;
+            width: 41px;
+            border-radius: 7px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            margin-right: 40px;
+        }
+    }
+}

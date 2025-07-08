@@ -46,7 +46,7 @@
         .info {
             display: flex;
             flex-direction: column;
-            margin-top: 80px;
+            margin-top: 90px;
 
             .name {
                 font-size: 25px;
@@ -56,6 +56,7 @@
                 display: flex;
                 justify-content: center;
                 margin-bottom: 14px;
+                color: #bf600c;
             }
         }
 
@@ -67,12 +68,18 @@
         }
 
         .main-box {
+            display: none;
             width: 90%;
-            height: 520px;
-            margin-top: 80px;
-            background: #FFF8F4;
+            height: 515px;
+            margin-top: 50px;
+            background: #ffc39c14;
             border: 1px solid #FFAE7E;
             border-radius: 5px;
+            flex-direction: column;
+
+            &.show {
+                display: flex;
+            }
         }
     }
 
