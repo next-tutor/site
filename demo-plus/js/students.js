@@ -36,12 +36,14 @@ const students = (function () {
 
     const openSearchBox = function (e) {
         e.stopPropagation();
+        $(".panel.students .inner").addClass("hide-title");
         $(".panel.students .search-box").addClass("show");
     }
 
     //-------------------------------------------
 
     const closeSearchBox = function (e) {
+        $(".panel.students .inner").removeClass("hide-title");
         $(".panel.students .search-box").removeClass("show");
     }
 
@@ -69,12 +71,14 @@ const students = (function () {
 
     const openAddStudentDlg = function (e) {
         e.stopPropagation();
+        $(".panel.students .inner").addClass("hide-title");
         $(".panel.students .add-student-dlg").addClass("show");
     }
 
     //-------------------------------------------
 
     const closeAddStudentDlg = function () {
+        $(".panel.students .inner").removeClass("hide-title");
         $(".panel.students .add-student-dlg").removeClass("show");
     }
 

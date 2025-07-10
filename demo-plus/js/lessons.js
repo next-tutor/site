@@ -26,6 +26,15 @@ const lessons = (function () {
         $(`.panel.lessons`).click((event) => {
             closeMoreOptionsMenu();
         });
+
+        $(`.panel.lessons .more-options .plus`).click((event) => {
+            openLessonDlg();
+        });
+
+        $(`.panel.lessons .more-options .find`).click((event) => {
+            openSearchBoxDlg();
+        });
+
     }
 
 
@@ -60,6 +69,18 @@ const lessons = (function () {
 
     const showPastDialog = function () {
         pastLessonDlg.open();
+    }
+
+    //-------------------------------------------
+
+    const openLessonDlg = function (listName) {
+        newLessonDlg.open();
+    }
+
+    //-------------------------------------------
+
+    const openSearchBoxDlg = function (listName) {
+        searchLessonDlg.open();
     }
 
     return {

@@ -22,7 +22,9 @@ const init = function () {
             dlg.setDlgEvents();
             sidebar.setSidebarClickEvents();
             lessons.setLessonClickEvents();
-            students.setStudentsClickEvents();
+            student.setStudentClickEvents();
+            newLessonDlg.setNewLessonDlgClickEvents();
+            searchLessonDlg.setSearchLessonDlgClickEvents();
             pastLessonDlg.setPastLessonDlgClickEvents();
             students.setStudentsClickEvents();
 

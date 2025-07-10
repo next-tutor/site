@@ -1,0 +1,40 @@
+#search-lesson-dlg {
+
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 270px;
+    right: 0;
+    bottom: 0;
+    z-index: 11;
+    justify-content: center;
+    align-items: center;
+
+    .popper {
+        position: absolute;
+        inset: 0;
+        background: #2a2a2a6e;
+        z-index: 1;
+    }
+
+    .dlg {
+        position: relative;
+        display: flex;
+        height: 745px;
+        width: 1200px;
+        background: #fff;
+        z-index: 4;
+        border-radius: 10px;
+        padding: 24px 50px;
+        box-sizing: border-box;
+
+
+        &.show {
+            display: flex;
+        }
+    }
+
+    &.open {
+        display: flex;
+    }
+}

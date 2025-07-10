@@ -6,7 +6,6 @@ const student = (function () {
 
 
     const setStudentClickEvents = function () {
-
         $("#student .btn-close").click((e) => {
             closeStudentPanel(e);
         });

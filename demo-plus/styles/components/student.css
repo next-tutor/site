@@ -17,16 +17,15 @@
 
     .panel {
         .title {
-            font-size: 30px;
+            font-size: 28px;
             margin-bottom: 50px;
             align-items: flex-end;
 
             .name {
                 color: #c66e2d;
-                font-size: 40px;
-                font-family: "Dancing Script", cursive;
+                font-size: 29px;
                 margin-right: 12px;
-                font-weight: 600;
+                font-weight: 500;
             }
         }
 
@@ -43,11 +42,17 @@
         height: 100%;
 
         .avatar {
-            margin: 100px 0px 0 25px;
+            margin: 95px 0px 6px 8px;
 
             img {
                 width: 85px;
             }
+        }
+
+        .name {
+            color: #ffcaa7;
+            font-size: 19px;
+            margin-left: 20px;
         }
 
         .menu {
@@ -89,8 +94,7 @@
                 }
 
                 &.active {
-                    font-weight: 600;
-                    color: #ffc39c;
+                    font-weight: 500;
                     background: #303030;
                 }
 
@@ -121,7 +125,7 @@
 
         svg {
             width: 30px;
-            stroke: #fd0000;
+            stroke: #c7630a;
         }
 
         &:hover {

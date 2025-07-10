@@ -6,6 +6,8 @@ const htmlLoader = (function () {
         { id: 'student', file: './html/student.html' },
         { id: 'lessons', file: './html/lessons.html' },
         { id: 'tasks', file: './html/tasks.html' },
+        { id: 'new-lesson-dlg', file: './html/new-lesson-dlg.html' },
+        { id: 'search-lesson-dlg', file: './html/search-lesson-dlg.html' },
         { id: 'past-lesson-dlg', file: './html/past-lesson-dlg.html' }
     ];
 

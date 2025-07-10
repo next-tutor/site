@@ -1,4 +1,5 @@
 .panel.students {
+
     .search-input {
         border-bottom: 1px solid #f1a3a3;
         padding: 0 10px;
@@ -72,7 +73,7 @@
 
         .dlg {
             height: 642px;
-            width: 665px;
+            width: 605px;
             background: #fff;
             z-index: 4;
             border-radius: 10px;
@@ -98,6 +99,8 @@
                     height: 75px;
                     background: #8080800f;
                     margin-bottom: 5px;
+                    border-radius: 15px;
+                    padding: 0px 6px;
 
                     img {
                         width: 62px;
@@ -140,6 +143,13 @@
         }
     }
 
+    .inner.hide-title {
+
+        .search-input,
+        .title {
+            display: none;
+        }
+    }
 
     .inner.show-options-menu {
 
@@ -172,7 +182,7 @@
         }
 
         .dlg {
-            height: 630px;
+            height: 685px;
             width: 630px;
             background: #fff;
             z-index: 4;
@@ -181,9 +191,9 @@
             box-sizing: border-box;
 
             .caption {
-                color: #9a4813;
-                font-size: 22px;
-                margin: 40px 0 22px 0;
+                color: #853704;
+                font-size: 24px;
+                margin: 40px 0 30px 0;
             }
 
             .field {
@@ -209,7 +219,7 @@
             .actions {
                 display: flex;
                 justify-content: end;
-                margin-top: 65px;
+                margin-top: 100px;
 
                 .btn-save {
                     background-color: #ff7d1e;
