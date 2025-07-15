@@ -39,7 +39,7 @@
         }
 
         .caption {
-            color: #853704;
+            color: #1d1c1b;
             font-size: 24px;
             margin: 40px 0 30px 0;
         }
@@ -49,22 +49,28 @@
 
             .field {
                 display: flex;
-                border-bottom: 1px solid #ffe3d0;
-                height: 80px;
-                align-items: flex-end;
-                padding: 10px;
+                border: 1px solid #f8bd94;
+                height: 59px;
+                align-items: center;
+                padding: 0px 15px;
                 box-sizing: border-box;
                 font-size: 15px;
                 cursor: pointer;
-
-                .name {
-                    font-weight: 500;
-                    min-width: 125px;
-                    color: #343434;
-                }
+                margin: 16px 0;
+                width: 476px;
+                border-radius: 6px;
 
                 .txt {
-                    color: #a4a4a4;
+                    flex: 1;
+                    color: #585858;
+                }
+
+                .icon {
+                    display: flex;
+
+                    svg {
+                        width: 18px;
+                    }
                 }
 
                 &:hover {
@@ -167,7 +173,6 @@
                 svg {
                     width: 18px;
                 }
-
             }
         }
 

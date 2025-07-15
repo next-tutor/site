@@ -21,6 +21,8 @@ const init = function () {
         .then(() => {
             dlg.setDlgEvents();
             sidebar.setSidebarClickEvents();
+            tasks.setTasksClickEvents();
+            taskReqDlg.setTaskReqDlgClickEvents();
             lessons.setLessonClickEvents();
             student.setStudentClickEvents();
             newLessonDlg.setNewLessonDlgClickEvents();

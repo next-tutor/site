@@ -1,0 +1,79 @@
+.panel.tasks {
+
+    width: 100%;
+
+    .list-item {
+
+        .data {
+            display: flex;
+            align-items: center;
+
+            .task-date {
+                font-size: 14px;
+                margin-right: 10px;
+                padding-left: 5px;
+                color: #965600;
+                font-weight: 500;
+            }
+
+            .task-name {
+                font-size: 15px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                max-width: 200px;
+            }
+        }
+    }
+
+    .btn-plus {
+        .icon {
+            width: 33px;
+            height: 33px;
+
+            img {
+                width: 33px;
+            }
+        }
+    }
+
+
+    .more-options {
+        .item {
+
+            &.calendar {
+                img {
+                    width: 95px;
+                }
+            }
+
+            &.find {
+                img {
+                    width: 65px;
+                }
+            }
+
+            &.plus {
+                img {
+                    width: 53px;
+                }
+            }
+
+
+        }
+    }
+
+
+    .inner.show-options-menu {
+
+        .menu,
+        .content {
+            display: none;
+        }
+
+        .more-options {
+            display: flex;
+        }
+
+    }
+}

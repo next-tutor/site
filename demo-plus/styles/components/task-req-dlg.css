@@ -1,0 +1,103 @@
+.task-req-dlg {
+
+    .task-title {
+        font-weight: 600;
+        font-size: 13.5px;
+        color: #1d1c1b;
+        padding: 60px 45px 30px 45px;
+    }
+
+    .task-desc {
+        flex: 1;
+        font-size: 15px;
+        padding: 0 45px 30px 45px;
+        line-height: 30px;
+        color: #444444;
+    }
+
+
+    .attachments {
+        display: flex;
+
+        .box {
+            display: flex;
+            border: 1px solid #e7ab76;
+            align-items: center;
+            padding: 3px 20px 3px 16px;
+            margin-top: 30px;
+            min-width: 125px;
+            border-radius: 18px;
+            font-size: 15px;
+            color: #6b1e1e;
+
+            img {
+                width: 25px;
+                margin-right: 10px;
+            }
+        }
+
+    }
+
+    .question-wrap {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+
+        .question {
+            margin-bottom: 40px;
+            display: flex;
+            justify-content: center;
+            font-size: 18px;
+            color: #884000;
+        }
+
+        .options {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+
+            .btn {
+                width: 100px;
+                height: 35px;
+                color: #8c5000;
+                background: #FFD3B5;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 5px;
+                border-radius: 7px;
+                font-size: 15px;
+                font-weight: 500;
+
+                &.no {
+                    color: #e61515;
+                }
+            }
+        }
+    }
+
+
+    .steps-wrap {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        height: 115px;
+        width: 100%;
+
+        .step {
+            height: 33px;
+            background-color: #ff8b24cf;
+            width: 41px;
+            border-radius: 7px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            margin-right: 35px;
+        }
+    }
+}

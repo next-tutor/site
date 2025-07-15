@@ -54,10 +54,11 @@
             justify-content: center;
 
             .input-date {
+                position: relative;
                 display: flex;
                 align-items: center;
                 padding: 0 10px;
-                border: 1px solid #ff7d1e94;
+                border: 1px solid #ff7d1e61;
                 height: 49px;
                 width: 263px;
                 margin: 0 10px;
@@ -69,6 +70,19 @@
                     flex: 1;
                     font-size: 14px;
                     padding-left: 5px;
+                }
+
+                .date-picker {
+                    position: absolute;
+                    top: 100px;
+                    left: 0;
+                    display: none;
+                }
+
+                &.show-picker {
+                    .date-picker {
+                        display: block;
+                    }
                 }
             }
 
@@ -86,6 +100,14 @@
         .inner {
             .content {
                 margin: 0;
+
+                .list {
+                    .list-item {
+                        .info {
+                            margin-top: 0px;
+                        }
+                    }
+                }
             }
         }
     }
