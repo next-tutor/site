@@ -19,6 +19,10 @@ const taskReqDlg = (function () {
 
         $(`.dlg-wrap.task-req-dlg .steps-wrap .step`).click(() => {
             showCurrPage();
+        });
+
+        $(`.dlg-wrap.task-req-dlg .btn.yes`).click(() => {
+            openOffer();
         })
     }
 
@@ -30,6 +34,11 @@ const taskReqDlg = (function () {
         $(".dlg-wrap.task-req-dlg").addClass("open");
     }
 
+
+    const openOffer = function () {
+
+        offerDlg.open();
+    }
 
 
     return {

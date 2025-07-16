@@ -9,7 +9,8 @@ const htmlLoader = (function () {
         { id: 'new-lesson-dlg', file: './html/new-lesson-dlg.html' },
         { id: 'search-lesson-dlg', file: './html/search-lesson-dlg.html' },
         { id: 'past-lesson-dlg', file: './html/past-lesson-dlg.html' },
-        { id: 'task-req-dlg', file: './html/task-req-dlg.html' }
+        { id: 'task-req-dlg', file: './html/task-req-dlg.html' },
+        { id: 'offer-dlg', file: './html/offer-dlg.html' }
     ];
 
     //---------------------------------------------------

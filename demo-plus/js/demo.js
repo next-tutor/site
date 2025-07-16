@@ -23,6 +23,7 @@ const init = function () {
             sidebar.setSidebarClickEvents();
             tasks.setTasksClickEvents();
             taskReqDlg.setTaskReqDlgClickEvents();
+            offerDlg.setOfferDlgClickEvents();
             lessons.setLessonClickEvents();
             student.setStudentClickEvents();
             newLessonDlg.setNewLessonDlgClickEvents();

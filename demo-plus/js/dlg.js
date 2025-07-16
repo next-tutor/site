@@ -2,8 +2,8 @@ const dlg = (function () {
 
     const setDlgEvents = function () {
 
-        $(".popper").click(() => {
-            $(".dlg-wrap").removeClass("open");
+        $(".popper").click((e) => {
+            $(e.target).closest(".dlg-wrap").removeClass("open");
         })
     }
 
