@@ -18,7 +18,11 @@ const tasks = (function () {
         });
 
         $(`.panel.tasks .content .list.requests .list-item`).click(() => {
-            showTaskRequestsDialog();
+            openTaskReqDialog();
+        });
+
+        $(`.panel.tasks .content .list.inprogress .list-item`).click(() => {
+            openTaskDialog();
         });
 
         $(`.panel.tasks .title`).click((event) => {
@@ -68,10 +72,15 @@ const tasks = (function () {
 
     //--------------------------------------------
 
-    const showTaskRequestsDialog = function () {
+    const openTaskReqDialog = function () {
         taskReqDlg.open();
     }
 
+    //--------------------------------------------
+
+    const openTaskDialog = function () {
+        taskDlg.open();
+    }
 
     //-------------------------------------------
 

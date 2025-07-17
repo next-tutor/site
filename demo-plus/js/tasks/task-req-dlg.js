@@ -1,39 +1,31 @@
 const taskReqDlg = (function () {
 
-
-    let currentPage = 0;
-
-    const showCurrPage = function () {
-        currentPage += 1;
-
-        if (currentPage > 2) {
-            currentPage = 1;
-        }
+    const showCurrPage = function (page) {
 
         $(`.dlg-wrap.task-req-dlg .main-box`).removeClass("show");
-        $(`.dlg-wrap.task-req-dlg .main-box.page${currentPage}`).addClass("show");
+        $(`.dlg-wrap.task-req-dlg .main-box.page${page}`).addClass("show");
     }
 
 
     const setTaskReqDlgClickEvents = function () {
 
         $(`.dlg-wrap.task-req-dlg .steps-wrap .step`).click(() => {
-            showCurrPage();
+            showCurrPage(2);
         });
 
         $(`.dlg-wrap.task-req-dlg .btn.yes`).click(() => {
             openOffer();
         })
+        $(`.dlg-wrap.task-req-dlg .btn-back`).click(() => {
+            showCurrPage(1);
+        });
     }
 
     const open = function () {
 
-        currentPage = 0;
-
-        showCurrPage();
+        showCurrPage(1);
         $(".dlg-wrap.task-req-dlg").addClass("open");
     }
-
 
     const openOffer = function () {
 
