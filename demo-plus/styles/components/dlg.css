@@ -68,7 +68,7 @@
         }
 
         .main-box {
-            display: none;
+            position: relative;
             width: 90%;
             height: 515px;
             margin-top: 50px;
@@ -77,8 +77,14 @@
             border-radius: 10px;
             flex-direction: column;
 
-            &.show {
-                display: flex;
+            .page {
+                height: 100%;
+                display: none;
+                flex-direction: column;
+
+                &.show {
+                    display: flex;
+                }
             }
         }
     }

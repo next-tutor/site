@@ -11,12 +11,16 @@
             height: 490px;
         }
 
-        .main-title {
-            font-weight: 600;
-            font-size: 14px;
+        .task-title {
+            font-size: 14.5px;
             color: #1d1c1b;
-            padding: 55px 30px 15px 35px;
-            margin: 10px 10px 0 10px;
+            margin-top: 5px;
+        }
+
+        .main-title {
+            padding: 65px 45px 15px 45px;
+            font-weight: 500;
+            font-size: 14px;
         }
 
         .inputs-wrap {

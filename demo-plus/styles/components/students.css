@@ -182,8 +182,8 @@
         }
 
         .dlg {
-            height: 685px;
-            width: 630px;
+            height: 660px;
+            width: 615px;
             background: #fff;
             z-index: 4;
             border-radius: 10px;
@@ -191,7 +191,7 @@
             box-sizing: border-box;
 
             .caption {
-                color: #853704;
+                color: #474747;
                 font-size: 24px;
                 margin: 40px 0 30px 0;
             }
@@ -219,7 +219,7 @@
             .actions {
                 display: flex;
                 justify-content: end;
-                margin-top: 100px;
+                margin-top: 80px;
 
                 .btn-save {
                     background-color: #ff7d1e;

@@ -2,8 +2,8 @@ const taskDlg = (function () {
 
     const showCurrPage = function (page) {
 
-        $(`.dlg-wrap.task-dlg .main-box`).removeClass("show");
-        $(`.dlg-wrap.task-dlg .main-box.page${page}`).addClass("show");
+        $(`.dlg-wrap.task-dlg .main-box .page`).removeClass("show");
+        $(`.dlg-wrap.task-dlg .main-box .page.page${page}`).addClass("show");
     }
 
     const setTaskDlgClickEvents = function () {

@@ -2,8 +2,8 @@ const taskReqDlg = (function () {
 
     const showCurrPage = function (page) {
 
-        $(`.dlg-wrap.task-req-dlg .main-box`).removeClass("show");
-        $(`.dlg-wrap.task-req-dlg .main-box.page${page}`).addClass("show");
+        $(`.dlg-wrap.task-req-dlg .main-box .page`).removeClass("show");
+        $(`.dlg-wrap.task-req-dlg .main-box .page.page${page}`).addClass("show");
     }
 
 
