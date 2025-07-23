@@ -9,8 +9,9 @@
     .task-date {
         font-size: 14px;
         display: flex;
-        color: #292929;
-        padding: 35px 45px 25px 40px;
+        color: #965600;
+        padding: 30px 45px 27px 48px;
+        font-weight: 500;
     }
 
     .task-title {

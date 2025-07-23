@@ -9,8 +9,8 @@ const pastLessonDlg = (function () {
             currentPage = 1;
         }
 
-        $(`.dlg-wrap.past-lesson-dlg .main-box`).removeClass("show");
-        $(`.dlg-wrap.past-lesson-dlg .main-box.page${currentPage}`).addClass("show");
+        $(`.dlg-wrap.past-lesson-dlg .main-box .page`).removeClass("show");
+        $(`.dlg-wrap.past-lesson-dlg .main-box .page.page${currentPage}`).addClass("show");
     }
 
 

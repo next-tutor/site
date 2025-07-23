@@ -25,6 +25,7 @@ const taskDlg = (function () {
 
 
     const openInfoTaskDlg = function () {
+
         taskInfoDlg.open();
     }
 
@@ -36,6 +37,7 @@ const taskDlg = (function () {
     const open = function () {
 
         $(".dlg-wrap.task-dlg").addClass("open");
+        showCurrPage(1);
     }
 
     return {

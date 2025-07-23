@@ -25,11 +25,10 @@
 
     .btn-plus {
         .icon {
-            width: 33px;
-            height: 33px;
+            margin-top: 8px;
 
             img {
-                width: 33px;
+                width: 28px;
             }
         }
     }

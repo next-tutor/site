@@ -8,9 +8,11 @@ const lessons = (function () {
         $(".panel.lessons .menu .upcoming").click(() => {
             showLessonList("upcoming");
         });
+
         $(".panel.lessons .menu .past").click(() => {
             showLessonList("past");
         });
+
         $(".panel.lessons .menu .canceled").click(() => {
             showLessonList("canceled");
         });

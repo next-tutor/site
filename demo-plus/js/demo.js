@@ -24,6 +24,7 @@ const init = function () {
             tasks.setTasksClickEvents();
             taskDlg.setTaskDlgClickEvents();
             taskReqDlg.setTaskReqDlgClickEvents();
+            taskUpdateItemDlg.setTaskUpdateItemDlgClickEvents();
             taskInfoDlg.setTaskInfoDlgClickEvents();
             offerDlg.setOfferDlgClickEvents();
             lessons.setLessonClickEvents();

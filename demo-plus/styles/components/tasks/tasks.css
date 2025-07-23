@@ -25,15 +25,24 @@
                 max-width: 200px;
             }
         }
+
+        .handled {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+
+            img {
+                width: 27px;
+            }
+        }
     }
 
     .btn-plus {
         .icon {
-            width: 33px;
-            height: 33px;
+            margin-top: 8px;
 
             img {
-                width: 33px;
+                width: 26px;
             }
         }
     }

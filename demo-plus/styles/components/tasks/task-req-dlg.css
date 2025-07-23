@@ -27,8 +27,9 @@
     .task-date {
         font-size: 14px;
         display: flex;
-        color: #292929;
-        padding: 30px 45px 25px 40px;
+        color: #965600;
+        padding: 30px 45px 27px 48px;
+        font-weight: 500;
     }
 
     .task-title {
@@ -55,13 +56,13 @@
             align-items: center;
             padding: 3px 20px 3px 16px;
             margin-top: 35px;
-            min-width: 85px;
+            min-width: 80px;
             border-radius: 18px;
             font-size: 15px;
             color: #6b1e1e;
 
             img {
-                width: 25px;
+                width: 22px;
                 margin-right: 10px;
             }
         }

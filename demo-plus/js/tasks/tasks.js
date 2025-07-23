@@ -25,9 +25,9 @@ const tasks = (function () {
             openTaskDialog();
         });
 
-        $(`.panel.tasks .title`).click((event) => {
-            openMoreOptionsMenu(event);
-        });
+        // $(`.panel.tasks .title`).click((event) => {
+        //     openMoreOptionsMenu(event);
+        // });
 
         $(`.panel.tasks`).click((event) => {
             closeMoreOptionsMenu();
