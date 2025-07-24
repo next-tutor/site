@@ -51,12 +51,13 @@ body {
   .inner {
 
     .title {
-      font-size: 31px;
+      font-size: 30px;
       font-family: "PT Serif", serif;
       font-weight: 400;
       font-style: normal;
       display: flex;
       justify-content: center;
+      align-items: center;
       margin-bottom: 45px;
       align-items: baseline;
       cursor: pointer;
@@ -75,7 +76,7 @@ body {
       .item {
         padding: 10px 10px 7px 20px;
         border-bottom: 1px solid #fff;
-        font-size: 16px;
+        font-size: 15.5px;
         cursor: pointer;
         display: flex;
         justify-content: center;

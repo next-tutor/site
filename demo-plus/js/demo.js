@@ -33,6 +33,7 @@ const init = function () {
             searchLessonDlg.setSearchLessonDlgClickEvents();
             pastLessonDlg.setPastLessonDlgClickEvents();
             students.setStudentsClickEvents();
+            settings.setSettingsClickEvents();
 
             hidePanels();
             showPanel("students");

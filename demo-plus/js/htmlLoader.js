@@ -13,7 +13,8 @@ const htmlLoader = (function () {
         { id: 'task-req-dlg', file: './html/tasks/task-req-dlg.html' },
         { id: 'task-update-item-dlg', file: './html/tasks/task-update-item-dlg.html' },
         { id: 'offer-dlg', file: './html/tasks/offer-dlg.html' },
-        { id: 'task-info-dlg', file: './html/tasks/task-info-dlg.html' }
+        { id: 'task-info-dlg', file: './html/tasks/task-info-dlg.html' },
+        { id: 'settings', file: './html/settings/settings.html' }
     ];
 
     //---------------------------------------------------
