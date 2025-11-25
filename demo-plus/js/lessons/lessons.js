@@ -21,8 +21,8 @@ const lessons = (function () {
             showPastDialog();
         });
 
-        $(`.panel.lessons .title`).click((event) => {
-            openMoreOptionsMenu(event);
+        $(`.panel.lessons .btn-more`).click((event) => {
+            showMoreDialog();
         });
 
         $(`.panel.lessons`).click((event) => {
@@ -37,14 +37,6 @@ const lessons = (function () {
             openSearchBoxDlg();
         });
 
-    }
-
-
-    //-------------------------------------------
-
-    const openMoreOptionsMenu = function (e) {
-        e.stopPropagation();
-        $(`.panel.lessons .inner`).addClass("show-options-menu");
     }
 
     //-------------------------------------------
@@ -65,6 +57,12 @@ const lessons = (function () {
             $(`.panel.lessons .content .list`).removeClass("show");
             $(`.panel.lessons .content .list.${listName}`).addClass("show");
         }
+    }
+
+    //--------------------------------------------
+
+    const showMoreDialog = function () {
+        lessonOptionsDlg.open();
     }
 
     //--------------------------------------------

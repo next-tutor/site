@@ -12,7 +12,7 @@
                 font-size: 13.5px;
                 margin-right: 10px;
                 padding-left: 5px;
-                color: #965600;
+                color: #b06c43;
                 font-weight: 500;
                 margin-top: 1px;
             }
@@ -23,7 +23,7 @@
         }
     }
 
-    .btn-plus {
+    .btn-corner {
         .icon {
             margin-top: 8px;
 
@@ -31,44 +31,5 @@
                 width: 28px;
             }
         }
-    }
-
-    .more-options {
-        .item {
-
-            &.calendar {
-                img {
-                    width: 95px;
-                }
-            }
-
-            &.find {
-                img {
-                    width: 65px;
-                }
-            }
-
-            &.plus {
-                img {
-                    width: 53px;
-                }
-            }
-
-
-        }
-    }
-
-
-    .inner.show-options-menu {
-
-        .menu,
-        .content {
-            display: none;
-        }
-
-        .more-options {
-            display: flex;
-        }
-
     }
 }

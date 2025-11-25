@@ -27,11 +27,15 @@ const init = function () {
             taskUpdateItemDlg.setTaskUpdateItemDlgClickEvents();
             taskInfoDlg.setTaskInfoDlgClickEvents();
             offerDlg.setOfferDlgClickEvents();
+            moreTaskReqDlg.setMoreTaskReqDlgClickEvents();
             lessons.setLessonClickEvents();
             student.setStudentClickEvents();
             newLessonDlg.setNewLessonDlgClickEvents();
+            newLessonChooseDateDlg.setNewLessonChooseDateDlgClickEvents();
+            newLessonChooseStudentDlg.setNewLessonChooseStudentDlgClickEvents();
             searchLessonDlg.setSearchLessonDlgClickEvents();
             pastLessonDlg.setPastLessonDlgClickEvents();
+            lessonOptionsDlg.setLessonOptionsDlgClickEvents();
             students.setStudentsClickEvents();
             settings.setSettingsClickEvents();
 

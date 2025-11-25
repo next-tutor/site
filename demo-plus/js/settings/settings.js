@@ -31,8 +31,28 @@ const settings = (function () {
             showPage("plan");
         });
 
+        $(".panel.settings .inner.lesson-options .list-item.duration").click(() => {
+            showPage("duration");
+        });
+
+        $(".panel.settings .inner.lesson-options .list-item.pricing").click(() => {
+            showPage("pricing");
+        });
+
+        $(".panel.settings .inner.lesson-options .list-item.cancellation").click(() => {
+            showPage("cancellation");
+        });
+
+        $(".panel.settings .edit-password").click(() => {
+            showEditPassword();
+        });
+
+        $(".panel.settings .close-edit-password").click(() => {
+            closeEditPassword();
+        });
+
         $(".panel.settings .inner .title").click((e) => {
-            showPage($(e.target).data('back'));
+            showPage($(e.target).closest(".title").data('back'));
         });
     }
 
@@ -43,6 +63,24 @@ const settings = (function () {
 
         $(".panel.settings .inner").removeClass("show");
         $(`.panel.settings .inner.${pageName}`).addClass("show");
+    }
+
+    //-------------------------------------
+
+    const showEditPassword = function () {
+
+        $(".panel.settings .new-password").removeClass("hide");
+        $(".panel.settings .current-password").removeClass("hide");
+        $(".panel.settings .password").addClass("hide");
+    }
+
+    //-------------------------------------
+
+    const closeEditPassword = function () {
+
+        $(".panel.settings .new-password").addClass("hide");
+        $(".panel.settings .current-password").addClass("hide");
+        $(".panel.settings .password").removeClass("hide");
     }
 
     return {

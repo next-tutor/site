@@ -1,173 +1,41 @@
 #new-lesson-dlg {
 
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 270px;
-    right: 0;
-    bottom: 0;
-    z-index: 11;
-    justify-content: center;
-    align-items: center;
+    .form {
+        flex: 1;
+        display: none;
+        flex-direction: column;
 
-    .popper {
-        position: absolute;
-        inset: 0;
-        background: #2a2a2a6e;
-        z-index: 1;
+        &.show {
+            display: flex;
+        }
     }
 
-    .dlg {
-        position: relative;
-        display: flex;
-        height: 745px;
-        width: 550px;
-        background: #fff;
-        z-index: 4;
-        border-radius: 10px;
-        padding: 24px 40px;
-        box-sizing: border-box;
+    .caption {
+        color: #8c5000;
+        font-size: 24px;
+        margin: 90px 2px 50px 10px;
+    }
 
-        .form {
-            flex: 1;
-            display: none;
-            flex-direction: column;
+    .fields {
+        flex: 1;
 
-            &.show {
-                display: flex;
-            }
-        }
-
-        .caption {
-            color: #1d1c1b;
-            font-size: 24px;
-            margin: 40px 2px 18px 10px;
-        }
-
-        .fields {
-            flex: 1;
-
-            .field {
-                display: flex;
-                align-items: end;
-                border-bottom: 1px solid #f8bd94;
-                height: 65px;
-                padding: 0px 15px;
-                box-sizing: border-box;
-                font-size: 15px;
-                cursor: pointer;
-                margin: 16px 0;
-                width: 471px;
-                border-radius: 6px;
-                padding-bottom: 13px;
-
-                .txt {
-                    flex: 1;
-                    color: #585858;
-                }
-
-                .icon {
-                    display: flex;
-
-                    svg {
-                        width: 18px;
-                    }
-                }
-
-                &:hover {
-                    border-bottom: 1px solid #fccfb1;
-                }
-            }
-
-        }
-
-        .actions {
-            position: absolute;
-            bottom: 50px;
-            right: 45px;
+        .field {
             display: flex;
-
-            .btn-save,
-            .btn-select-student {
-                background-color: #ff7d1e;
-                color: #fff;
-                width: 85px;
-                height: 40px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                border-radius: 10px;
-                font-size: 15px;
-            }
-
-            .btn-back,
-            .btn-close {
-                color: gray;
-                align-items: center;
-                display: flex;
-                width: 100px;
-                justify-content: center;
-            }
-        }
-
-        .students {
-
-            .find-input {
-                display: flex;
-                align-items: center;
-                border-bottom: 1px solid #edd3bb;
-                margin: 45px 0 42px 0;
-
-                .icon {
-                    img {
-                        width: 20px;
-                    }
-                }
-
-                .txt {
-                    color: gray;
-                    padding: 0 21px 10px 20px;
-                }
-            }
-
-            .student-list {
-                flex: 1;
-
-                .item {
-                    display: flex;
-                    align-items: center;
-                    height: 70px;
-                    background: #8080800f;
-                    margin-bottom: 5px;
-                    border-radius: 20px;
-                    padding: 0 10px;
-
-                    img {
-                        width: 62px;
-                    }
-
-                    .name {
-                        margin-left: 15px;
-                        font-size: 16px;
-                    }
-
-                    &:hover {
-                        background: #8080801a;
-                    }
-                }
-            }
-        }
-
-        .date-nav {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 45px 0 40px 0;
+            align-items: end;
+            border-bottom: 1px solid #f8bd94;
+            height: 65px;
+            padding: 0px 15px;
+            box-sizing: border-box;
+            font-size: 15px;
+            cursor: pointer;
+            margin: 16px 0;
+            width: 595px;
+            border-radius: 6px;
+            padding-bottom: 13px;
 
             .txt {
-                font-weight: 500;
-                padding: 0 15px;
-                font-size: 16px;
+                flex: 1;
+                color: #585858;
             }
 
             .icon {
@@ -177,89 +45,189 @@
                     width: 18px;
                 }
             }
+
+            &:hover {
+                border-bottom: 1px solid #fccfb1;
+            }
         }
 
-        .days {
+    }
+
+    .actions {
+        position: absolute;
+        bottom: 60px;
+        right: 60px;
+        display: flex;
+
+        .btn-save,
+        .btn-select-student {
+            background-color: #ff7d1e;
+            color: #fff;
+            width: 85px;
+            height: 40px;
             display: flex;
-            margin-bottom: 45px;
             justify-content: center;
             align-items: center;
+            border-radius: 10px;
+            font-size: 15px;
+        }
 
-            .day {
+        .btn-back,
+        .btn-close {
+            color: gray;
+            align-items: center;
+            display: flex;
+            width: 100px;
+            justify-content: center;
+        }
+    }
+
+    .students {
+
+        .find-input {
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #edd3bb;
+            margin: 45px 0 42px 0;
+
+            .icon {
+                img {
+                    width: 20px;
+                }
+            }
+
+            .txt {
+                color: gray;
+                padding: 0 21px 10px 20px;
+            }
+        }
+
+        .student-list {
+            flex: 1;
+
+            .item {
                 display: flex;
-                flex-direction: column;
-                padding: 5px 12px;
-                cursor: pointer;
+                align-items: center;
+                height: 70px;
+                background: #8080800f;
+                margin-bottom: 5px;
+                border-radius: 20px;
+                padding: 0 10px;
 
-                .txt {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    font-size: 12px;
-                    color: gray;
-                    margin-bottom: 12px;
+                img {
+                    width: 62px;
                 }
 
-                .num {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    font-size: 15px;
-                    min-width: 30px;
-                    min-height: 30px;
-                    border: 1px solid #fff;
+                .name {
+                    margin-left: 15px;
+                    font-size: 16px;
                 }
 
                 &:hover {
-
-                    .txt,
-                    .num {
-                        color: red;
-                    }
-                }
-
-                &.active {
-
-                    .txt,
-                    .num {
-                        color: #ff6c00;
-                    }
-
-                    .num {
-                        background: #ff7d1e26;
-                        border: 1px solid #e08650;
-                    }
+                    background: #8080801a;
                 }
             }
         }
+    }
 
-        .hours {
-            .row {
+    .date-nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 45px 0 40px 0;
+
+        .txt {
+            font-weight: 500;
+            padding: 0 15px;
+            font-size: 16px;
+        }
+
+        .icon {
+            display: flex;
+
+            svg {
+                width: 18px;
+            }
+        }
+    }
+
+    .days {
+        display: flex;
+        margin-bottom: 45px;
+        justify-content: center;
+        align-items: center;
+
+        .day {
+            display: flex;
+            flex-direction: column;
+            padding: 5px 12px;
+            cursor: pointer;
+
+            .txt {
                 display: flex;
                 justify-content: center;
+                align-items: center;
+                font-size: 12px;
+                color: gray;
+                margin-bottom: 12px;
+            }
 
-                .hour {
-                    border: 1px solid #ffd8c1;
-                    border-radius: 5px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    font-size: 14px;
-                    font-weight: 500;
-                    width: 194px;
-                    height: 34px;
-                    color: #515050;
-                    margin: 5px;
+            .num {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 15px;
+                min-width: 30px;
+                min-height: 30px;
+                border: 1px solid #fff;
+            }
+
+            &:hover {
+
+                .txt,
+                .num {
+                    color: red;
+                }
+            }
+
+            &.active {
+
+                .txt,
+                .num {
+                    color: #ff6c00;
+                }
+
+                .num {
+                    background: #ff7d1e26;
+                    border: 1px solid #e08650;
                 }
             }
         }
+    }
 
-        &.show {
+    .hours {
+        .row {
             display: flex;
+            justify-content: center;
+
+            .hour {
+                border: 1px solid #ffd8c1;
+                border-radius: 5px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 14px;
+                font-weight: 500;
+                width: 194px;
+                height: 34px;
+                color: #515050;
+                margin: 5px;
+            }
         }
     }
 
-    &.open {
+    &.show {
         display: flex;
     }
+
 }

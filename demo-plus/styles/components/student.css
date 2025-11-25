@@ -1,5 +1,6 @@
 .student {
     display: none;
+    justify-content: center;
     position: fixed;
     top: 0;
     left: 0;
@@ -11,110 +12,53 @@
 
     .wrapper {
         display: flex;
-        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
         background: #fff;
+        padding-top: 110px;
+        border-radius: 10px;
     }
 
-    .panel {
-        .title {
-            font-size: 28px;
-            margin-bottom: 50px;
-            align-items: flex-end;
-
-            .name {
-                color: #c66e2d;
-                font-size: 29px;
-                margin-right: 12px;
-                font-weight: 500;
-            }
-        }
-
-        .list {
-            .list-item {
-                height: 72px !important;
-            }
+    .student-avatar {
+        img {
+            width: 190px;
         }
     }
 
-    .student-side-bar {
-        width: 275px;
-        background: #090909;
-        height: 100%;
+    .student-name {
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+    }
 
-        .avatar {
-            margin: 95px 0px 6px 8px;
+    .options {
+        margin-top: 55px;
 
-            img {
-                width: 85px;
-            }
-        }
-
-        .name {
-            color: #ffcaa7;
-            font-size: 19px;
-            margin-left: 20px;
-        }
-
-        .menu {
-            flex: 1;
+        .option {
+            width: 400px;
+            padding: 15px 10px;
+            border-radius: 19px;
             display: flex;
-            flex-direction: column;
-            position: relative;
-            margin-top: 45px;
+            justify-content: center;
+            margin-bottom: 10px;
+            color: #472900;
+            background: #fb7c1e12;
+            font-size: 18px;
+            border: 1px solid #8c50004d;
+            cursor: pointer;
 
-            .item {
-                position: relative;
-                display: flex;
-                align-items: center;
-                padding: 13px 0;
-                font-size: 14px;
-                font-family: Poppins;
-                color: #fff;
-                height: 35px;
-                cursor: pointer;
-
-                .icon {
-                    display: flex;
-                    justify-content: center;
-                    margin-right: 5px;
-                    min-width: 60px;
-
-                    svg {
-                        width: 24px;
-                        height: 24px;
-
-                        path {
-                            fill: #fff;
-                        }
-                    }
-                }
-
-                &:hover {
-                    background: #303030;
-                }
-
-                &.active {
-                    font-weight: 500;
-                    background: #303030;
-                }
-
-                .lbl {
-                    white-space: nowrap;
-                    overflow: hidden;
-                }
-            }
-
-            .splitter {
-                margin: 17px 0;
-                border-top: 1px solid #cecece;
+            &:hover {
+                box-shadow: 0 18px 18px -18px #162d3d3b;
             }
         }
     }
+
 
     .btn-close {
         position: absolute;
-        top: 45px;
-        right: 45px;
+        top: 55px;
+        right: 246px;
         width: 35px;
         height: 35px;
         border-radius: 100%;

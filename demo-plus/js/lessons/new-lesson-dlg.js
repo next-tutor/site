@@ -2,10 +2,10 @@ const newLessonDlg = (function () {
 
     const setNewLessonDlgClickEvents = function () {
         $("#new-lesson-dlg .field.student-name").click(() => {
-            showStudentSearchForm();
+            showStudentSearchDlg();
         });
         $("#new-lesson-dlg .field.date-time").click(() => {
-            showPickDateForm();
+            showPickDateDlg();
         });
         $("#new-lesson-dlg .btn-close").click(() => {
             onCloseBtnClick();
@@ -37,24 +37,20 @@ const newLessonDlg = (function () {
 
     //----------------------------------------------------
 
-    const showStudentSearchForm = function () {
-        $("#new-lesson-dlg .form").removeClass("show");
-        $("#new-lesson-dlg .form.students").addClass("show");
+    const showStudentSearchDlg = function () {
+        newLessonChooseStudentDlg.open();
     }
 
     //----------------------------------------------------
 
-    const showPickDateForm = function () {
-        $("#new-lesson-dlg .form").removeClass("show");
-        $("#new-lesson-dlg .form.dates").addClass("show");
+    const showPickDateDlg = function () {
+        newLessonChooseDateDlg.open();
     }
 
     //----------------------------------------------------
 
     const open = function () {
-        $(".lessons").removeClass("show");
         $("#new-lesson-dlg").addClass("open");
-        $("#new-lesson-dlg .form.main").addClass("show");
     }
 
 

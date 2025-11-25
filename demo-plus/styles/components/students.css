@@ -43,7 +43,7 @@
         }
     }
 
-    .btn-plus {
+    .btn-corner {
         .icon {
             height: 25px;
 
@@ -124,43 +124,12 @@
         }
     }
 
-    .more-options {
-        .item {
-
-            &.find {
-                img {
-                    width: 65px;
-                }
-            }
-
-            &.plus {
-                img {
-                    width: 53px;
-                }
-            }
-
-
-        }
-    }
-
     .inner.hide-title {
 
         .search-input,
         .title {
             display: none;
         }
-    }
-
-    .inner.show-options-menu {
-
-        .items {
-            display: none;
-        }
-
-        .more-options {
-            display: flex;
-        }
-
     }
 
     .add-student-dlg {

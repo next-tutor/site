@@ -25,16 +25,12 @@ const tasks = (function () {
             openTaskDialog();
         });
 
-        // $(`.panel.tasks .title`).click((event) => {
-        //     openMoreOptionsMenu(event);
-        // });
-
-        $(`.panel.tasks`).click((event) => {
-            closeMoreOptionsMenu();
+        $(`.panel.tasks`).click((e) => {
+            closeMoreOptionsMenu(e);
         });
 
-        $(`.panel.tasks .more-options .plus`).click((event) => {
-            openTaskDlg();
+        $(`.panel.tasks .btn-more-req`).click((event) => {
+            openMoreRequestsDlg();
         });
 
         $(`.panel.tasks .more-options .find`).click((event) => {
@@ -42,19 +38,15 @@ const tasks = (function () {
         });
     }
 
-
     //-------------------------------------------
 
-    const openMoreOptionsMenu = function (e) {
-        e.stopPropagation();
-        $(`.panel.tasks .inner`).addClass("show-options-menu");
-    }
+    const closeMoreOptionsMenu = function (e) {
 
-    //-------------------------------------------
-
-    const closeMoreOptionsMenu = function () {
-
-        $(`.panel.tasks .inner`).removeClass("show-options-menu");
+        if ($(e.target).closest(".menu .item.requests").length == 0) {
+            $(`.panel.tasks .inner .request-dropdown`).removeClass("show");
+            $(`.panel.tasks .inner .content`).removeClass("hide");
+            $(`.panel.tasks .inner .btn-corner`).removeClass("hide");
+        }
     }
 
     //-------------------------------------------
@@ -67,6 +59,8 @@ const tasks = (function () {
 
             $(`.panel.tasks .content .list`).removeClass("show");
             $(`.panel.tasks .content .list.${listName}`).addClass("show");
+
+            $(`.panel.tasks .inner .btn-more-req`).toggleClass("hide", listName !== "requests");
         }
     }
 
@@ -80,6 +74,13 @@ const tasks = (function () {
 
     const openTaskDialog = function () {
         taskDlg.open();
+    }
+
+
+    //-------------------------------------------
+
+    const openMoreRequestsDlg = function (listName) {
+        moreTaskReqDlg.open();
     }
 
     //-------------------------------------------

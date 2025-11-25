@@ -51,6 +51,7 @@ body {
   .inner {
 
     .title {
+      position: relative;
       font-size: 30px;
       font-family: "PT Serif", serif;
       font-weight: 400;
@@ -80,13 +81,25 @@ body {
         cursor: pointer;
         display: flex;
         justify-content: center;
+        align-items: center;
         min-width: 225px;
         color: #272828;
+
+        .ddl-arrow {
+          display: none;
+          width: 8px;
+          margin-left: 5px;
+          fill: #8c5000;
+        }
 
         &.active {
           font-weight: 500;
           color: #8c5000;
           border-bottom: 1px solid #DC7878;
+
+          .ddl-arrow {
+            display: block;
+          }
         }
 
         &:hover {
@@ -114,7 +127,7 @@ body {
           padding-left: 15px;
           color: #4c5357;
           text-transform: capitalize;
-          background: #ededed80;
+          background: #daad861c;
 
           .avatar {
             width: 52px;
@@ -168,7 +181,27 @@ body {
   }
 }
 
-.btn-plus {
+.btn-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 100px;
+  right: 50px;
+  height: 55px;
+  width: 55px;
+  cursor: pointer;
+
+  img {
+    width: 14px;
+  }
+
+  .hide {
+    display: none;
+  }
+}
+
+.btn-corner {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -186,43 +219,10 @@ body {
   z-index: 11;
 }
 
-.more-options {
-  display: none;
-  justify-content: center;
-  align-items: center;
-  margin-top: 75px;
+.bold {
+  font-weight: 600;
+}
 
-  .wrap {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    .item {
-      border-radius: 10px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      width: 249px;
-      height: 215px;
-      margin: 0 10px;
-      cursor: pointer;
-      color: #aa4b14;
-      border: 1px solid #ffc39c;
-
-      .img-wrap {
-        min-height: 100px;
-        display: flex;
-        align-items: center;
-      }
-
-      &:hover {
-        background: #a7a7a70f;
-      }
-    }
-  }
-
-  &.show {
-    display: flex;
-  }
+.hide {
+  display: none !important;
 }
