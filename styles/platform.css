@@ -84,20 +84,19 @@
           text-decoration: none;
         }
 
-        .spacer {
-          display: inline;
-          margin-right: 5px;
-        }
-
-        .read-more {
+        .btn-read-more {
           display: none;
+          height: 32px;
+          border-radius: 8px;
+          color: #000;
+          padding: 4px 17px;
+          text-decoration: none;
+          text-transform: unset;
+          font-size: 13px;
+          background: #ff9f23;
+          width: 100px;
           align-items: center;
-
-          .txt {
-            color: #FFA970;
-            font-size: 16px;
-            margin-right: 10px;
-          }
+          margin: 40px 0;
 
           .arrow {
             margin-right: 2px;
@@ -106,14 +105,12 @@
             height: 0px;
             border-top: 6px solid transparent;
             border-bottom: 6px solid transparent;
-            border-left: 6px solid #fba536;
+            border-left: 6px solid #1a1919;
             transition: 0.1s ease-in;
           }
 
-          &:hover {
-            .arrow {
-              transform: translateX(50%);
-            }
+          .txt {
+            margin-right: 7px;
           }
         }
 
@@ -138,6 +135,10 @@
               cursor: pointer;
               display: inline-flex;
             }
+          }
+
+          .btn-read-more {
+            display: flex;
           }
         }
 
