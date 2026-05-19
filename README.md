@@ -1,6 +1,4 @@
-# NextTutor Site
-
-## Installation
+# NextTutor Site - Installation
 
 Install the project dependencies (specifically `vite`):
 

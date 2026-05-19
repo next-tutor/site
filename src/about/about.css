@@ -55,29 +55,24 @@
 /* -------------------------- */
 
 .timeline {
-  padding: 65px 0 100px 0;
+  padding: 140px 0 150px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: visible;
 }
 
 .timeline .header h1 {
   font-size: 47px;
   font-weight: 500;
-  margin: 65px 0;
-}
-
-.timeline .container {
-  display: flex;
-  flex-direction: column;
-  width: 1150px;
+  margin: 0 0 65px 0;
 }
 
 .timeline ul {
   list-style: none;
   width: 100%;
   height: 200px;
-  margin: 200px 0 0;
+  margin: 260px 0 0;
   border-top: 3px solid #fbc54b;
   display: table;
   border-spacing: 30px 0;
@@ -89,19 +84,20 @@
   min-width: 100px;
 }
 
-
 .timeline .circle {
   margin: 0 auto;
   top: -12px;
   left: 0;
   right: 0;
-  width: 14px;
-  height: 14px;
-  background: #fffff0;
-  border: 2px solid #f98262;
+  width: 18px;
+  height: 18px;
+  background: #ffffff;
+  border: 3px solid #f98262;
   border-radius: 50%;
   display: block;
   position: absolute;
+  z-index: 10;
+  transition: all 0.3s ease;
 }
 
 .timeline .circle.fill {
@@ -119,70 +115,67 @@
   border-left: 3px solid #f98262;
 }
 
-/* .timeline li.down .content:before {
-  content: "";
-  width: 50px;
-  height: 100px;
-  left: 50%;
-  margin-left: -2px;
-  position: absolute;
-  border-left: 4px solid #f98262;
-  border-bottom: 4px solid #f98262;
-  -webkit-border-radius: 0 20px;
-  -moz-border-radius: 0 20px;
-  border-radius: 0 20px;
-} */
-
-.timeline li.down .content:before.avatar {
-  top: 80px;
-  left: 100px;
-}
-
-.timeline .avatar {
-  width: 30px;
-  height: 30px;
-  display: block;
-  border-radius: 50%;
-  border: 6px solid #bada55;
-  position: absolute;
-  margin: 0 auto;
-  bottom: -13px;
-  right: 31px;
-  text-align: center;
-  line-height: 30px;
-  background: #fffff0;
-}
-
-
-
 .timeline li.up .content {
-  margin-top: -106px;
+  margin-top: -101px;
 }
-
-.timeline li.up .content:before {
-  border-left: 4px solid #f98262;
-}
-
 
 .timeline .date {
-  margin-top: 106px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 800;
+  color: #fbc54b;
+  margin-top: 24px;
+  display: block;
+  letter-spacing: 0.5px;
 }
 
-.timeline .date .avatar {
-  background: #fffff0;
-  margin-top: -30px;
+.timeline li.down .date {
+  position: absolute;
+  top: -65px;
+  left: 0;
+  right: 0;
+  margin-top: 0;
 }
 
 .timeline .rectangle {
-  border: 1px solid #f98262;
-  border-radius: 30px;
-  height: 30px;
-  width: 200px;
-  top: -19px;
-  position: relative;
-  background: #fffff0;
-  line-height: 30px;
-  text-align: center;
+  border: 1px solid rgba(249, 130, 98, 0.25);
+  border-radius: 12px;
+  padding: 16px;
+  width: 220px;
+  position: absolute;
+  left: -110px; /* Centered relative to stem line */
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.01);
+  text-align: left;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-sizing: border-box;
+}
+
+.timeline li.up .rectangle {
+  bottom: 100px;
+  margin-bottom: 0px;
+}
+
+.timeline li.down .rectangle {
+  top: 100px;
+  margin-top: 0px;
+}
+
+
+.timeline .rectangle h3 {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 0 6px 0;
+  color: #1f2c3a;
+  letter-spacing: -0.2px;
+}
+
+.timeline .rectangle p {
+  font-size: 12px;
+  line-height: 17px;
+  margin: 0;
+  color: #6a7b8c;
+  font-weight: 400;
 }
 
 

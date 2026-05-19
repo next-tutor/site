@@ -129,7 +129,8 @@
 .faq li.content {
   display: none;
   border-bottom: 1px #beb9b9 solid;
-  padding: 0 0 25px 80px;
+  padding: 0 0 0 80px;
+  overflow: hidden;
 }
 
 .faq li.content .txt {
@@ -137,6 +138,13 @@
   margin-left: 5px;
   font-weight: 400;
   color: #807f7f;
+  padding-bottom: 25px;
+  opacity: 0;
+  transition: opacity 0.25s ease-out;
+}
+
+.faq li.title.open + li.content .txt {
+  opacity: 1;
 }
 
 .pricing .table {
@@ -146,11 +154,23 @@
 .pricing .table .col {
   position: relative;
   width: 325px;
-  background-color: #494949;
+  background: rgba(37, 37, 37, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   height: 580px;
   margin: -7px 15px;
   border-radius: 15px;
-  border: 1px solid #f0c0798c;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.02);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+}
+
+.pricing .table .col:hover {
+  transform: translateY(-4px);
+  background: rgba(45, 45, 45, 0.75);
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 15px rgba(255, 255, 255, 0.03);
 }
 
 .pricing .table .col .title {
@@ -180,7 +200,7 @@
   padding-right: 14px;
   width: 289px;
   height: 57px;
-  background: url(images/design/top_fold.png) left top / 100% auto no-repeat;
+  background: url(../images/design/top_fold.png) left top / 100% auto no-repeat;
 }
 
 .pricing .table .col .title.bold {}
@@ -217,7 +237,15 @@
 
 .pricing .col.standard {
   position: relative;
-  border: 1px solid #f0c0798c;
+  background: rgba(43, 41, 38, 0.7);
+  border: 1.5px solid rgba(240, 192, 121, 0.45);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), 0 0 15px rgba(240, 192, 121, 0.1);
+}
+
+.pricing .col.standard:hover {
+  background: rgba(53, 49, 44, 0.85);
+  border-color: rgba(240, 192, 121, 0.75);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(240, 192, 121, 0.2);
 }
 
 .pricing .items {
@@ -261,22 +289,28 @@
   justify-content: center;
   align-items: center;
   padding: 5px 0;
-  cursor: pointer
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 
 .pricing .btn-action:hover {
   background-color: #a09e9e;
+  transform: translateY(-1px);
 }
 
 .pricing .btn-action.bold {
-  color: #000;
+  color: #1a1a1a;
   background-color: #ffdc8b;
-  background-image: linear-gradient(168deg, #fabc2d, #eb8494);
+  background-image: linear-gradient(135deg, #ffd066, #ff9f43);
+  font-weight: 700;
 }
 
 .pricing .btn-action.bold:hover {
-  color: #fff;
+  color: #1a1a1a;
+  opacity: 0.92;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(250, 188, 45, 0.3);
 }
 
 .faq {
