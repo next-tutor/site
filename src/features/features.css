@@ -176,3 +176,83 @@
   border-radius: 100%;
   background-color: #616161;
 }
+
+/* -------------------------- */
+/* Responsive Design (features.css) */
+/* -------------------------- */
+
+@media (max-width: 991px) {
+  .home .container {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 30px;
+  }
+  
+  .home .text-container {
+    max-width: 100%;
+    padding-left: 0;
+  }
+  
+  .home .image-container {
+    margin: 0;
+  }
+  
+  .home .image-container img {
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .solutions {
+    padding-top: 60px;
+  }
+  
+  .solutions .header {
+    margin-bottom: 50px;
+    padding: 0 16px;
+    text-align: center;
+  }
+  
+  .solutions .container {
+    width: 100%;
+    flex-direction: column;
+    margin-left: 0;
+    margin-bottom: 80px;
+    align-items: center;
+    gap: 50px;
+  }
+  
+  .solutions .content {
+    width: 100%;
+    margin-top: 0;
+    padding: 0 24px;
+    box-sizing: border-box;
+  }
+  
+  .solutions .content .item {
+    min-height: auto;
+    margin-bottom: 60px;
+    text-align: center;
+    align-items: center;
+  }
+  
+  .solutions .content .item .txt {
+    max-width: 100%;
+    font-size: 16px;
+    line-height: 30px;
+  }
+  
+  .solutions .images {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 0;
+  }
+  
+  .solutions .images .holder {
+    position: static;
+    top: auto;
+    width: 100%;
+    max-width: 340px;
+    height: 360px;
+  }
+}

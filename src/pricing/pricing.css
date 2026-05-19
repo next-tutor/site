@@ -386,3 +386,93 @@
 .ready-to-start .txt {
   color: #e5e5e5;
 }
+
+/* -------------------------- */
+/* Responsive Design (pricing.css) */
+/* -------------------------- */
+
+@media (max-width: 991px) {
+  .home .container {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 30px;
+  }
+  
+  .home .image-container {
+    margin: 0;
+  }
+  
+  .home .image-container img {
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .pricing {
+    padding-top: 60px;
+  }
+  
+  .pricing .header {
+    padding: 0 16px;
+    text-align: center;
+  }
+  
+  .pricing .container {
+    margin: 50px 0 80px 0;
+    width: 100%;
+    padding: 0 24px;
+    box-sizing: border-box;
+  }
+  
+  .pricing .table {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+  
+  .pricing .table .col {
+    width: 100%;
+    max-width: 325px;
+    height: auto;
+    padding-bottom: 45px;
+    margin: 0;
+  }
+  
+  .faq {
+    padding-top: 60px;
+  }
+  
+  .faq h1 {
+    font-size: 32px;
+    text-align: center;
+    padding: 0 16px;
+  }
+  
+  .faq .container {
+    width: 100%;
+    padding: 0 24px;
+    box-sizing: border-box;
+    margin: 30px 0 80px 0;
+  }
+  
+  .faq ul {
+    width: 100%;
+    padding-left: 0;
+  }
+  
+  .faq li {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .faq li.title .txt {
+    font-size: 18px;
+  }
+  
+  .faq li.content {
+    padding: 0 0 0 55px;
+  }
+  
+  .faq li.content .txt {
+    width: 100%;
+  }
+}

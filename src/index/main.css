@@ -764,3 +764,249 @@ footer .logo img {
 .delay-300 { transition-delay: 0.3s; }
 .delay-400 { transition-delay: 0.4s; }
 .delay-500 { transition-delay: 0.5s; }
+
+/* -------------------------- */
+/* Responsive Design (main.css) */
+/* -------------------------- */
+
+@media (max-width: 991px) {
+  .section {
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+  
+  .navbar-container {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+  
+  .home {
+    height: auto;
+    padding-top: 140px;
+    padding-bottom: 80px;
+  }
+  
+  .home .container {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 40px;
+  }
+  
+  .home .image-container {
+    margin-right: 0;
+    margin-top: 0;
+  }
+  
+  .home .image-container img {
+    width: 100%;
+    max-width: 450px;
+  }
+  
+  .home .actions {
+    justify-content: center;
+  }
+  
+  /* Horizontal momentum scroll swiper */
+  .features .row {
+    flex-direction: row !important;
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    width: 100%;
+    padding: 20px 0 40px 0;
+    margin: 0;
+    gap: 20px;
+    justify-content: flex-start !important;
+    -ms-overflow-style: none;  /* IE/Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  
+  .features .row::-webkit-scrollbar {
+    display: none; /* Hide Chrome scrollbar */
+  }
+  
+  .features .item {
+    flex: 0 0 290px;
+    width: 290px;
+    min-width: 290px;
+    margin: 0;
+    scroll-snap-align: center;
+  }
+  
+  .features .btn {
+    display: none !important;
+  }
+  
+  .why-us {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  
+  .why-us .row {
+    width: 100%;
+    flex-direction: column-reverse !important; /* Stack text below/above image logically */
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+  
+  .why-us .row.middle {
+    flex-direction: column !important; /* Keep order consistent */
+    margin-top: 60px;
+  }
+  
+  .why-us .row.middle .txt-wrap {
+    margin-left: 0;
+  }
+  
+  .why-us .row.bottom {
+    margin-top: 60px;
+  }
+  
+  .why-us .txt {
+    max-width: 100%;
+    font-size: 16px;
+    line-height: 28px;
+  }
+  
+  .why-us img {
+    width: 100% !important;
+    max-width: 320px !important;
+    height: auto !important;
+  }
+  
+  .testimonials .wrap {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 60px;
+  }
+  
+  .testimonials .item {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    padding-bottom: 30px;
+    margin: 0;
+  }
+  
+  .ready-to-start {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 80px 24px;
+    gap: 30px;
+  }
+  
+  .ready-to-start img {
+    margin: 0;
+    width: 180px;
+  }
+  
+  .ready-to-start .content {
+    min-width: 0;
+    padding-top: 0;
+    padding-left: 0;
+  }
+  
+  footer .inner-wrap {
+    flex-direction: column;
+    padding-left: 0;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    gap: 40px;
+    align-items: center;
+    text-align: center;
+  }
+  
+  footer .col.about,
+  footer .links {
+    width: 100%;
+    align-items: center;
+  }
+  
+  footer .col.apps {
+    align-items: center;
+  }
+}
+
+@media (max-width: 767px) {
+  /* Premium Floating Dock Nav System */
+  .navbar-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 10px 24px;
+  }
+  
+  .nav-menu {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10000;
+    background: rgba(18, 18, 18, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 40px;
+    padding: 8px 16px;
+    gap: 4px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25), 0 2px 4px rgba(0, 0, 0, 0.05);
+    width: auto;
+    min-width: 280px;
+    display: inline-flex;
+    justify-content: space-around;
+  }
+  
+  .nav-link {
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  
+  .nav-link::after {
+    display: none;
+  }
+  
+  .nav-link:hover,
+  .nav-link:active {
+    color: #fbc54b !important;
+    background: rgba(255, 255, 255, 0.08);
+  }
+  
+  .btn-login {
+    margin-right: 0;
+    padding: 6px 16px;
+    font-size: 14px;
+    border-radius: 60px;
+  }
+  
+  .home h1 {
+    font-size: 38px;
+    line-height: 48px;
+  }
+  
+  .underline {
+    height: auto;
+  }
+  
+  .testimonials h2 {
+    font-size: 28px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  
+  .ready-to-start .txt {
+    font-size: 24px;
+    line-height: 36px;
+  }
+}

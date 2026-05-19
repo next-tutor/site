@@ -199,3 +199,109 @@
 .ready-to-start .txt {
   color: #e5e5e5;
 }
+
+/* -------------------------- */
+/* Responsive Design (about.css) */
+/* -------------------------- */
+
+@media (max-width: 991px) {
+  .home .container {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 30px;
+  }
+  
+  .home .text-container {
+    margin-left: 0;
+    max-width: 100%;
+    text-align: center;
+    padding: 0 16px;
+  }
+  
+  .home .text-container h1 {
+    font-size: 42px;
+    line-height: 52px;
+  }
+  
+  .home .image-container img {
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .underline {
+    height: auto;
+  }
+  
+  .story {
+    padding: 60px 24px;
+  }
+  
+  .story .container {
+    width: 100%;
+    max-width: 713px;
+    font-size: 17px;
+    line-height: 30px;
+  }
+  
+  /* Vertical timeline transformation */
+  .timeline {
+    padding: 80px 24px;
+  }
+  
+  .timeline ul {
+    display: block;
+    border-top: none;
+    border-left: 3px solid #fbc54b;
+    height: auto;
+    margin: 40px auto 0;
+    padding-left: 30px;
+    max-width: 450px;
+    box-sizing: border-box;
+  }
+  
+  .timeline ul li {
+    display: block;
+    margin-bottom: 50px;
+    width: 100%;
+  }
+  
+  .timeline .circle {
+    left: -39px;
+    right: auto;
+    top: 10px;
+  }
+  
+  .timeline .content {
+    position: static;
+    width: 100%;
+    height: auto;
+    border-left: none;
+    margin-left: 0;
+    text-align: left;
+  }
+  
+  .timeline li.up .content,
+  .timeline li.down .content {
+    margin-top: 0;
+  }
+  
+  .timeline .date {
+    text-align: left;
+    margin-top: 10px;
+    position: static !important;
+    top: auto !important;
+  }
+  
+  .timeline .rectangle {
+    position: static;
+    width: 100%;
+    left: auto;
+  }
+  
+  .timeline li.up .rectangle,
+  .timeline li.down .rectangle {
+    position: static;
+    margin-bottom: 10px;
+    margin-top: 0;
+  }
+}
