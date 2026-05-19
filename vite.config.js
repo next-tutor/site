@@ -82,6 +82,9 @@ export default defineConfig({
       },
     },
   ],
+  server: {
+    allowedHosts: ['small-colts-stand.loca.lt'],
+  },
   build: {
     rollupOptions: {
       input: Object.fromEntries(

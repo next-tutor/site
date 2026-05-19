@@ -15,7 +15,7 @@ html {
 /* overflow-x contained on a wrapper, NOT body, so position:sticky works */
 body {
   font-family: Poppins, sans-serif;
-  background-color: #0c0c0c;
+  background-color: #020202;
   min-height: 100%;
   width: 100%;
   display: flex;
