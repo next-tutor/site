@@ -17,6 +17,7 @@ function registerStickbox() {
 }
 
 // Scroll-driven image swap inside feature-details
+// Scroll-driven image swap inside feature-details using a robust center-detection mechanism
 function registerFeaturesItems() {
   const sections = document.querySelectorAll('.feature-details .item');
   if (!sections.length) return;
@@ -29,19 +30,46 @@ function registerFeaturesItems() {
     document.querySelector(`.feature-details .sticky-box img.${lastFeature}`)?.classList.add('active');
   }
 
-  const observer = new IntersectionObserver(
-    entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          lastFeature = entry.target.dataset.swap;
-          setActive();
-        }
-      });
-    },
-    { threshold: 1 }
-  );
+  function updateActiveFeature() {
+    const viewportCenter = window.innerHeight / 2;
+    let closestSection = null;
+    let minDistance = Infinity;
 
-  sections.forEach(s => observer.observe(s));
+    sections.forEach(section => {
+      const rect = section.getBoundingClientRect();
+      const sectionCenter = rect.top + rect.height / 2;
+      const distance = Math.abs(sectionCenter - viewportCenter);
+
+      if (distance < minDistance) {
+        minDistance = distance;
+        closestSection = section;
+      }
+    });
+
+    if (closestSection) {
+      const curr = closestSection.dataset.swap;
+      if (lastFeature !== curr) {
+        lastFeature = curr;
+        setActive();
+      }
+    }
+  }
+
+  let tick = false;
+  function onScroll() {
+    if (!tick) {
+      window.requestAnimationFrame(() => {
+        updateActiveFeature();
+        tick = false;
+      });
+      tick = true;
+    }
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+
+  updateActiveFeature();
 }
 
 // Lightweight vanilla carousel for "Explore more features"

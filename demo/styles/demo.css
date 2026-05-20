@@ -1,4 +1,6 @@
+html,
 body {
+  height: 100%;
   font-family: Poppins;
   overflow: hidden;
   margin: 0;
@@ -7,7 +9,7 @@ body {
 
 .demo {
   width: 100%;
-  height: 590px;
+  height: 100%;
   display: flex;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -52,6 +54,10 @@ body {
   .panel {
     display: none;
     margin-top: 65px;
+
+    &.show {
+      animation: panel-reveal 0.24s ease-out;
+    }
 
     .title {
       font-size: 30px;
@@ -141,6 +147,18 @@ body {
 
 
 
+
+@keyframes panel-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 @keyframes dash {
   0% {

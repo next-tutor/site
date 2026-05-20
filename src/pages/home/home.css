@@ -18,8 +18,12 @@
   .hero-bg-still,
   .hero-bg {
     position: absolute;
-    inset: 0;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 100%;
+    max-width: 1300px;
     height: 100%;
     object-fit: none;
     object-position: 80% 0;
@@ -36,7 +40,7 @@
     z-index: 1;
     opacity: 0.1;
     backface-visibility: hidden;
-    transform: translateZ(0);
+    transform: translateX(-50%) translateZ(0);
   }
 
   .inner-hp {
@@ -92,82 +96,45 @@
   }
 }
 
-iframe { 
-  border: none !important;
-}
-
 .demo {
   display: flex;
   justify-content: center;
   padding: 130px 0;
-  margin-bottom: 0;
   width: 100%;
-  position: relative;
-
-  /* &::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    height: 70px;
-    pointer-events: none;
-    background: linear-gradient(to bottom, #000 0%, rgba(12, 12, 12, 0) 100%);
-  } */
+  margin-bottom: 0;
 
   .inner-wrap {
-    width: 1110px;
-    max-width: 85%;
+    width: min(1110px, 85%);
     display: flex;
     flex-direction: column;
-    position: relative;
-    margin-top: 0;
+  }
 
-    .page {
-      width: 100%;
-      height: 610px;
-      border-radius: 20px;
-      box-shadow: none;
-      margin-top: 0;
-      z-index: 1;
-      background: transparent;
-      position: relative;
+  .demo-frame {
+    width: 100%;
+    border-radius: 20px;
+    padding: 2px;
+    overflow: hidden;
+    background: linear-gradient(
+      60deg,
+      #fa8273,
+      #e58a36,
+      #69727d,
+      #f1b10d,
+      #e58a36,
+      #956310,
+      #6c374c,
+      #0d1b3e
+    );
+    box-shadow: 0 16px 45px rgba(0, 0, 0, 0.35);
+  }
 
-      .gradient-box {
-        position: absolute;
-        inset: 0;
-        border-radius: 20px;
-      }
-
-      .gradient-box::after {
-        content: '';
-        position: absolute;
-        inset: -5px;
-        background: linear-gradient(60deg, #fa8273, #e58a36, #69727d, #f1b10d, #e58a36, #956310, #6c374c, #0d1b3e);
-        z-index: -1;
-        background-size: 300% 300%;
-        border-radius: 25px;
-      }
-
-      .main-wrap {
-        position: relative;
-        z-index: 1;
-        border-radius: 20px;
-        height: 100%;
-        width: 100%;
-        background: #fff;
-        overflow: hidden;
-
-        iframe {
-          display: block;
-          width: 100%;
-          height: 100%;
-          border: 0 !important;
-          outline: none;
-          box-shadow: none;
-        }
-      }
-    }
+  .demo-iframe {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1110 / 610;
+    border: 0;
+    border-radius: 18px;
+    background: #fff;
   }
 }
 
@@ -309,7 +276,7 @@ iframe {
 
     .item {
       margin-right: 30px;
-      height: 185px;
+      height: 195px;
       width: 450px;
       padding: 1.5rem 2rem;
       background: linear-gradient(180deg, #50505026 0%, #00000000 70%);

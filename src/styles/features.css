@@ -88,6 +88,7 @@
       .sticky-box {
         position: sticky;
         top: 250px;
+        align-self: flex-start;
         width: 575px;
         height: 505px;
         margin-top: 100px;

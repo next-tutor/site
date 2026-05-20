@@ -1,69 +1,85 @@
 .platform {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 
 
   .container {
     padding: 1%;
   }
 
+  > .home-page {
+    width: 100%;
+    max-width: 1300px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    animation: fadeIn 1.5s, slideIn 1.5s;
+    margin-top: 245px;
+    margin-bottom: 115px;
+    padding: 0 30px;
+
+    .title {
+      font-family: Poppins;
+      font-size: 80px;
+      font-weight: 500;
+      line-height: 98px;
+      letter-spacing: -1.8px;
+      max-width: 750px;
+      padding: 35px 0 0;
+    }
+
+    .subtitle {
+      padding: 36px 0 0;
+      color: #c3c3c3;
+      font-family: Poppins;
+      font-size: 19px;
+      line-height: 44px;
+      max-width: 600px;
+    }
+  }
+
   .content {
     display: flex;
     padding: 20px 0 0 40px;
     width: 100%;
-    max-width: 1100px;
+    max-width: 1300px;
 
     .main {
       display: flex;
       flex-direction: column;
-      margin-right: 100px;
-
-
-      .home-page {
-        flex: 1;
-        height: 500px;
-        display: flex;
-        flex-direction: column;
-        animation: fadeIn 1.5s, slideIn 1.5s;
-        margin-top: 265px;
-        margin-bottom: 315px;
-
-        .title {
-          font-family: Poppins;
-          font-size: 72px;
-          font-weight: 500;
-          line-height: 90px;
-          letter-spacing: -1.8px;
-          max-width: 645px;
-          padding: 35px 30px 0 0;
-        }
-
-        .subtitle {
-          padding: 36px 30px 0 0;
-          color: #c3c3c3;
-          font-family: Poppins;
-          font-size: 17px;
-          line-height: 42px;
-          max-width: 525px;
-        }
-      }
+      margin-right: 120px;
 
       .feature {
-        min-height: 585px;
+        min-height: 500px;
         display: flex;
         justify-content: center;
         flex-direction: column;
+        margin-bottom: 120px;
+        transition: transform 0.35s ease;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        &.feature1 {
+          min-height: 657px;
+        }
 
 
         .title {
           display: inline-block;
-          transition: 0.25s;
+          transition: color 0.35s ease, transform 0.35s ease, opacity 0.35s ease;
           font-family: Poppins;
-          font-size: 30px;
+          font-size: 36px;
           font-weight: 400;
           letter-spacing: -1px;
           color: #808080;
           border-bottom: 1px solid transparent;
+          opacity: 0.82;
+          transform: translateX(0);
 
           .gradient {
             margin-right: 13px;
@@ -73,30 +89,45 @@
         }
 
         .text {
-          transition: 0.25s;
-          padding-top: 25px;
+          transition: color 0.35s ease, transform 0.35s ease, opacity 0.35s ease;
+          padding-top: 35px;
           color: #808080;
           font-family: Poppins;
-          font-size: 16px;
+          font-size: 18px;
           font-weight: 400;
-          line-height: 35px;
-          max-width: 500px;
+          line-height: 38px;
+          max-width: 580px;
           text-decoration: none;
+          opacity: 0.82;
+          transform: translateX(0);
+          pointer-events: none;
         }
 
         .btn-read-more {
-          display: none;
-          height: 32px;
+          display: inline-flex;
+          height: 38px;
           border-radius: 8px;
           color: #000;
-          padding: 4px 17px;
+          padding: 8px 20px;
           text-decoration: none;
           text-transform: unset;
-          font-size: 13px;
+          font-size: 15px;
+          font-weight: 500;
           background: #ff9f23;
-          width: 100px;
+          width: max-content;
           align-items: center;
           margin: 40px 0;
+          cursor: pointer;
+          transition: background 0.2s, transform 0.35s ease, opacity 0.35s ease, visibility 0s linear 0.35s;
+          opacity: 0;
+          visibility: hidden;
+          pointer-events: none;
+          transform: translateY(10px);
+
+          &:hover {
+            background: #fca147;
+            transform: translateY(-1px);
+          }
 
           .arrow {
             margin-right: 2px;
@@ -117,6 +148,8 @@
         &.active {
           .title {
             color: #ececec;
+            opacity: 1;
+            transform: translateX(0);
 
             .gradient {
               background: linear-gradient(135deg, #ffc446 0%, #ff6a07f5 100%);
@@ -130,6 +163,8 @@
 
           .text {
             color: #dddbdb;
+            opacity: 1;
+            transform: translateX(0);
 
             .read-more {
               cursor: pointer;
@@ -138,7 +173,25 @@
           }
 
           .btn-read-more {
-            display: flex;
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+            transform: translateY(0);
+            transition-delay: 0s;
+          }
+        }
+
+        &.feature1.active:not(.text-reveal-played) {
+          .title {
+            animation: first-feature-text-reveal 0.7s ease-out both;
+          }
+
+          .text {
+            animation: first-feature-text-reveal 0.7s ease-out 0.08s both;
+          }
+
+          .btn-read-more {
+            animation: first-feature-text-reveal 0.7s ease-out 0.14s both;
           }
         }
 
@@ -157,17 +210,55 @@
     .sticky-box {
       position: -webkit-sticky;
       position: sticky;
-      top: 222px;
-      width: 450px;
-      height: 500px;
+      top: 202px;
+      margin-top: 0;
+      align-self: flex-start;
+      flex: 0 0 549px;
+      min-width: 549px;
+      min-height: 657px;
+      width: 549px;
+      height: 657px;
+      background: #020202;
+      overflow: hidden;
+      border-radius: 10px;
 
-      .feature {
-
+      .sticky-bg {
         position: absolute;
         top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        pointer-events: none;
+        z-index: 0;
+        border-radius: inherit;
+        opacity: 0;
+        transform: scale(1.03);
+        will-change: opacity, transform;
+
+        &.active {
+          opacity: 1;
+          transform: scale(1);
+          animation: sticky-bg-reveal 0.9s ease-out both;
+        }
+
+        &.first-reveal-long.active {
+          animation-duration: 2.5s;
+        }
+      }
+
+      .feature {
+        position: absolute;
+        top: 13%;
+        left: 50%;
+        width: auto;
+        max-width: none;
+        height: 100%;
+        transform: translateX(-50%);
+        filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.24));
         opacity: 0;
         transition: all .5s ease;
-
+        z-index: 1;
 
         &.active {
           opacity: 1;
@@ -177,29 +268,46 @@
   }
 }
 
+@keyframes sticky-bg-reveal {
+  from {
+    opacity: 0;
+    transform: scale(1.03);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes first-feature-text-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .see-more {
   margin-top: 115px;
 }
 
 @media (max-width: 1536px) {
   .platform {
-    .content {
-      .main {
-        .home-page {
-          margin-top: 165px;
+    > .home-page {
+      margin-top: 145px;
 
-          .title {
-            font-size: 66px;
-          }
-        }
+      .title {
+        font-size: 72px;
       }
+    }
 
+    .content {
       .sticky-box {
-        top: 144px;
-
-        img {
-          width: 365px;
-        }
+        top: 124px;
+        margin-top: 0;
       }
     }
   }
@@ -250,33 +358,30 @@
 
 @media (max-width: 650px) {
   .platform {
-    .content {
-      .main {
-        .home-page {
-          margin-top: 170px;
-        }
-      }
+    > .home-page {
+      margin-top: 150px;
     }
   }
 }
 
 @media (max-width: 480px) {
   .platform {
+    > .home-page {
+      margin: 100px 0 160px 0;
+      padding-right: 0;
+
+      .title {
+        font-size: 47px;
+        line-height: 60px;
+      }
+
+      .subtitle {
+        line-height: 38px;
+      }
+    }
+
     .content {
       .main {
-        .home-page {
-          margin: 120px 0 160px 0;
-
-          .title {
-            font-size: 47px;
-            line-height: 60px;
-          }
-
-          .subtitle {
-            line-height: 38px;
-          }
-        }
-
         .feature {
           align-items: normal;
           margin-left: -40px;

@@ -38,3 +38,177 @@
         }
     }
 }
+
+.dlg-wrap.tutee-popup-dlg {
+    --drawer-width: 205px;
+    z-index: 15;
+    align-items: center;
+    justify-content: center;
+    padding-left: calc(var(--drawer-width) / 2);
+    box-sizing: border-box;
+
+    .popper {
+        background: #4f4f4fc7;
+        opacity: 0;
+        transition: opacity .24s ease;
+        cursor: pointer;
+    }
+
+    .dlg.tutee-popup {
+        width: min(460px, calc(100vw - 40px));
+        min-height: 451px;
+        max-height: 83vh;
+        position: relative;
+        right: auto;
+        left: auto;
+        top: auto;
+        bottom: auto;
+        transform: translateY(10px) scale(0.96);
+        border-radius: 28px;
+        padding: 26px 26px 28px;
+        box-sizing: border-box;
+        transition: transform .32s ease, opacity .32s ease;
+        opacity: 0;
+        box-shadow: 0 22px 50px rgba(0, 0, 0, 0.22);
+
+        .close-button {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            position: absolute;
+            top: 18px;
+            right: 16px;
+            border: 0;
+            background: transparent;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            svg {
+                width: 20px;
+                stroke: #707070;
+            }
+        }
+
+        .menu {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .avatar-section {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 16px;
+                margin-top: 8px;
+                margin-bottom: 24px;
+
+                .avatar {
+                    width: 122px;
+                    height: 122px;
+                    object-fit: cover;
+                    border-radius: 50%;
+                    background: #f2f2f2;
+                    padding: 8px 8px 0;
+                    box-sizing: border-box;
+                }
+
+                .name {
+                    font-size: 25px;
+                    font-weight: 500;
+                    color: #2d2d2d;
+                    line-height: 1;
+                }
+            }
+
+            .items-wrapper {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                margin-top: 18px;
+                width: 75%;
+
+                .item {
+                    width: 100%;
+                    height: 44px;
+                    border-radius: 10px;
+                    background: #fdf3ec;
+                    border: 1px solid #e1be9a;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 0 14px;
+                    box-sizing: border-box;
+
+                    span {
+                        font-size: 14px;
+                        color: #3a3a3a;
+                    }
+
+                    .arrow {
+                        font-size: 19px;
+                        line-height: 1;
+                        margin-top: -2px;
+                        color: #a06f45;
+                    }
+                }
+            }
+        }
+    }
+
+    &.open,
+    &.closing {
+        display: flex;
+
+        .popper {
+            display: block;
+        }
+    }
+
+    &.open {
+        .popper {
+            opacity: 1;
+        }
+
+        .dlg.tutee-popup {
+            right: auto;
+            transform: translateY(0) scale(1);
+            opacity: 1;
+            animation: tutee-popup-in .32s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+    }
+
+    &.closing {
+        .popper {
+            opacity: 0;
+        }
+
+        .dlg.tutee-popup {
+            animation: tutee-popup-out .24s ease-in forwards;
+        }
+    }
+}
+
+@keyframes tutee-popup-in {
+    from {
+        transform: translateY(10px) scale(0.96);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes tutee-popup-out {
+    from {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(10px) scale(0.96);
+        opacity: 0;
+    }
+}
