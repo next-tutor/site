@@ -10,6 +10,7 @@ const htmlLoader = (function () {
         { id: 'lessons', file: './html/lessons.html' },
         { id: 'tasks', file: './html/tasks.html' },
         { id: 'incomes', file: './html/incomes.html' },
+        { id: 'settings', file: './html/settings.html' },
         { id: 'income-dlg', file: './html/income-dlg.html' },
         { id: 'past-lesson-dlg', file: './html/past-lesson-dlg.html' },
         { id: 'task-popup-dlg', file: './html/task-popup-dlg.html' },
@@ -17,7 +18,7 @@ const htmlLoader = (function () {
 
     let deferredPromise = null;
 
-    //---------------------------------------------------
+    
 
     const loadHtmlIntoElement = function (elementId, filePath) {
         return fetch(filePath)
@@ -58,7 +59,7 @@ const htmlLoader = (function () {
         return deferredPromise;
     };
 
-    //-----------------------------------------------------
+    
 
     const loadCritical = function () {
         return loadBatch(criticalFiles);

@@ -136,9 +136,6 @@
     }
 }
 
-/* Override the generic panel-reveal animation for tutees only.
-   The default uses translateY(), which creates a new containing block
-   and breaks position:fixed on the floating + button. */
 .main-panel .panel.tutees.show {
     animation: tutees-panel-reveal 0.24s ease-out;
 }
@@ -146,4 +143,19 @@
 @keyframes tutees-panel-reveal {
     from { opacity: 0; }
     to   { opacity: 1; }
+}
+
+@keyframes tutee-pulse {
+    0%, 100% { transform: scale(1); }
+    50%       { transform: scale(1.06); }
+}
+
+.interactive-mode .main-panel .panel.tutees .pic.active {
+    animation: tutee-pulse 2.2s ease-in-out infinite;
+    animation-delay: 0.8s;
+}
+
+.interactive-mode .tutee-popup-dlg.open ~ .items .pic.active,
+.interactive-mode .main-panel .panel.tutees:has(.tutee-popup-dlg.open) .pic.active {
+    animation-play-state: paused;
 }

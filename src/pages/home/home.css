@@ -113,7 +113,7 @@
 
   .demo-frame {
     width: 100%;
-    border-radius: 20px;
+    border-radius: 25px;
     padding: 5px;
     overflow: hidden;
     background: linear-gradient(60deg,
@@ -126,6 +126,8 @@
         #6c374c,
         #0d1b3e);
     box-shadow: 0 16px 45px rgba(0, 0, 0, 0.35);
+    transform: translateZ(0);
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
   }
 
   .demo-iframe {
@@ -135,6 +137,9 @@
     border: 0;
     background: #fff;
     border-radius: 20px;
+    overflow: hidden;
+    transform: translateZ(0);
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
   }
 
   .demo-iframe.video-mode {
@@ -398,7 +403,6 @@
   }
 }
 
-/* ---- Responsive ---- */
 @media (max-width: 1536px) {
   .home-page .inner-hp {
     margin-top: 230px;

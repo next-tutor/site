@@ -1,7 +1,3 @@
-/* -------------------------------------------------------
-   Incomes panel – mirrors the real app structure.
-   Follows the same override pattern as lessons.css.
-------------------------------------------------------- */
 
 .main-panel .incomes .content {
     display: block !important;
@@ -20,10 +16,8 @@
     animation: income-list-in 0.26s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-/* ---- List item base ---- */
 .main-panel .incomes .content .list .list-item {
-    /* reset demo.css generic overrides */
-    border: none !important;
+        border: none !important;
     border-radius: 38px !important;
     max-width: none !important;
     min-height: unset !important;
@@ -31,8 +25,7 @@
     text-transform: none !important;
     padding-left: 15px !important;
 
-    /* real styles */
-    width: 85%;
+        width: 85%;
     height: 60px;
     margin-top: 15px;
     margin-bottom: 0;
@@ -51,7 +44,6 @@
     transform: translateY(-1px);
 }
 
-/* ---- Avatar ---- */
 .main-panel .incomes .content .list .list-item .avatar {
     width: 42px !important;
     height: 42px !important;
@@ -76,7 +68,6 @@
     box-sizing: border-box;
 }
 
-/* ---- Info block ---- */
 .main-panel .incomes .content .list .list-item .info {
     border-left: 4px solid #fff;
     height: 100%;
@@ -102,7 +93,6 @@
     margin-top: 2px;
 }
 
-/* ---- Entry animation ---- */
 @keyframes income-list-in {
     from {
         opacity: 0;

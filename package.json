@@ -12,8 +12,10 @@
     "deploy:preview": "firebase hosting:channel:deploy preview"
   },
   "devDependencies": {
+    "diff": "^5.0.0",
     "firebase-tools": "^14.0.0",
     "sharp": "^0.34.5",
+    "strip-comments": "^2.0.1",
     "vite": "^5.2.11",
     "vite-plugin-compression": "^0.5.1"
   }

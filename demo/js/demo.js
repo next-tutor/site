@@ -2,12 +2,13 @@ const hidePanels = function () {
     $(".main-panel .panel").removeClass("show");
 }
 
-//-------------------------------------------
+
 
 const sectionOrder = ["tutees", "lessons", "tasks", "incomes", "website", "settings"];
 const sectionSwitchIntervalMs = 5000;
 let sectionSwitchTimer = null;
 let isAutoSectionSwitchActive = false;
+let isVideoMode = false;
 
 const getVisiblePanelName = function () {
     for (const section of sectionOrder) {
@@ -63,7 +64,8 @@ const runSectionAutoSwitchStep = function (currentSection) {
     sectionSwitchTimer = setTimeout(() => {
         if (!isAutoSectionSwitchActive) return;
         const currentIndex = sectionOrder.indexOf(currentSection);
-        const nextIndex = currentIndex === -1 ? 0 : (currentIndex + 1) % sectionOrder.length;
+        let nextIndex = currentIndex === -1 ? 1 : (currentIndex + 1) % sectionOrder.length;
+        if (sectionOrder[nextIndex] === "tutees") nextIndex = (nextIndex + 1) % sectionOrder.length;
         const nextSection = sectionOrder[nextIndex];
         showPanel(nextSection, { fromAutoSwitch: true });
         runSectionAutoSwitchStep(nextSection);
@@ -100,13 +102,12 @@ const showPanel = function (panelName, options = {}) {
     if (previousPanel === "incomes" && window.incomes) incomes.onIncomesPanelHidden();
     if (previousPanel === "lessons" && window.lessons) lessons.onLessonsPanelHidden();
     if (previousPanel === "tasks" && window.tasks) tasks.onTasksPanelHidden();
+    if (previousPanel === "settings" && window.settings) settings.onSettingsPanelHidden();
 
     if (panelName !== "") {
         $(`.main-panel .panel.${panelName}`).addClass("show");
         $(`.sidebar .item.${panelName}`).addClass("active");
-        if (panelName === "tutees" && window.tutees) {
-            tutees.onTuteesPanelShown();
-        }
+
         if (panelName === "incomes" && window.incomes) {
             incomes.onIncomesPanelShown();
         }
@@ -116,30 +117,37 @@ const showPanel = function (panelName, options = {}) {
         if (panelName === "tasks" && window.tasks) {
             tasks.onTasksPanelShown();
         }
-        if (panelName !== "tutees" && !options.fromAutoSwitch) {
+        if (panelName === "settings" && window.settings) {
+            settings.onSettingsPanelShown();
+        }
+        if (panelName !== "tutees" && !options.fromAutoSwitch && isVideoMode) {
             startSectionAutoSwitch(panelName);
         }
     }
 }
 
-//-------------------------------------------
+
 
 const bindDeferredEvents = function () {
     dlg.setDlgEvents();
     lessons.setLessonClickEvents();
     tasks.setTasksClickEvents();
     if (window.incomes) incomes.setIncomesEvents();
+    if (window.settings) settings.setSettingsEvents();
 };
 
 const init = function () {
     htmlLoader.loadCritical()
         .then(() => {
-            ensureSectionIndicators();
             sidebar.setSidebarClickEvents();
             tutees.setTuteesEvents();
 
             hidePanels();
             showPanel("tutees");
+
+            if (isVideoMode) {
+                ensureSectionIndicators();
+            }
 
             document.addEventListener("tuteePopupOpened", () => {
                 stopSectionAutoSwitch();
@@ -152,9 +160,23 @@ const init = function () {
         });
 }
 
-//-------------------------------------------
+
 
 $(document).ready(function () {
+    document.body.classList.add('interactive-mode');
     init();
 });
 
+window.addEventListener('message', function (event) {
+    if (!event.data || event.data.type !== 'setAutoSwitch') return;
+    isVideoMode = event.data.enabled;
+    document.body.classList.toggle('interactive-mode', !isVideoMode);
+    if (window.tutees) tutees.setVideoMode(isVideoMode);
+    if (isVideoMode) {
+        ensureSectionIndicators();
+        const current = getVisiblePanelName() || sectionOrder[0];
+        startSectionAutoSwitch(current);
+    } else {
+        stopSectionAutoSwitch();
+    }
+});

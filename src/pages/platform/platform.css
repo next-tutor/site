@@ -8,7 +8,7 @@
     padding: 1%;
   }
 
-  > .home-page {
+  >.home-page {
     width: 100%;
     max-width: 1300px;
     height: 500px;
@@ -50,7 +50,7 @@
     .main {
       display: flex;
       flex-direction: column;
-      margin-right: 120px;
+      margin-right: 230px;
 
       .feature {
         min-height: 500px;
@@ -208,23 +208,19 @@
     }
 
     .sticky-box {
-      picture {
-        display: contents;
-      }
-
       position: -webkit-sticky;
       position: sticky;
       top: 202px;
       margin-top: 0;
       align-self: flex-start;
-      flex: 0 0 549px;
-      min-width: 549px;
-      min-height: 657px;
-      width: 549px;
-      height: 657px;
+      flex: 0 0 429px;
+      min-width: 429px;
+      min-height: 600px;
+      width: 429px;
+      height: 600px;
       background: #020202;
       overflow: hidden;
-      border-radius: 10px;
+      border-radius: 10px 10px 0 0;
 
       .sticky-bg {
         position: absolute;
@@ -234,7 +230,7 @@
         height: 100%;
         object-fit: cover;
         pointer-events: none;
-        z-index: 0;
+        z-index: 5;
         border-radius: inherit;
         opacity: 0;
         transform: scale(1.03);
@@ -251,18 +247,18 @@
         }
       }
 
-      .feature {
+      .sticky-phone {
         position: absolute;
-        top: 13%;
+        top: 10%;
         left: 50%;
         width: auto;
         max-width: none;
-        height: 100%;
-        transform: translateX(-50%);
+        height: 120%;
+        transform: translate(-50%, -10px);
         filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.24));
         opacity: 0;
         transition: all .5s ease;
-        z-index: 1;
+        z-index: 10;
 
         &.active {
           opacity: 1;
@@ -277,6 +273,7 @@
     opacity: 0;
     transform: scale(1.03);
   }
+
   to {
     opacity: 1;
     transform: scale(1);
@@ -288,6 +285,7 @@
     opacity: 0;
     transform: translateY(14px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -300,7 +298,7 @@
 
 @media (max-width: 1536px) {
   .platform {
-    > .home-page {
+    >.home-page {
       margin-top: 145px;
 
       .title {
@@ -362,7 +360,7 @@
 
 @media (max-width: 650px) {
   .platform {
-    > .home-page {
+    >.home-page {
       margin-top: 150px;
     }
   }
@@ -370,7 +368,7 @@
 
 @media (max-width: 480px) {
   .platform {
-    > .home-page {
+    >.home-page {
       margin: 100px 0 160px 0;
       padding-right: 0;
 

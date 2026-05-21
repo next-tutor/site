@@ -1,4 +1,4 @@
-// Scroll-driven feature swap on the Platform page using a robust center-detection mechanism
+
 function registerPlatformScroll() {
   const sections = document.querySelectorAll('.platform .features .feature');
   const stickyBackgrounds = document.querySelectorAll('.platform .sticky-bg');
@@ -31,12 +31,12 @@ function registerPlatformScroll() {
       if (lastFeature !== curr) {
         lastFeature = curr;
         
-        // Remove active class from all platform feature elements and sticky images
-        document.querySelectorAll('.platform .feature').forEach(el => el.classList.remove('active'));
+        
+        document.querySelectorAll('.platform .feature, .platform .sticky-phone').forEach(el => el.classList.remove('active'));
         stickyBackgrounds.forEach(el => el.classList.remove('active'));
         if (firstFeatureBackground) firstFeatureBackground.classList.remove('first-reveal-long');
         
-        // Add active class to current elements
+        
         if (lastFeature) {
           if (lastFeature === 'feature1' && firstFeatureBackground && !hasPlayedFirstFeatureReveal) {
             firstFeatureBackground.classList.add('first-reveal-long');
@@ -69,8 +69,12 @@ function registerPlatformScroll() {
   window.addEventListener('scroll', onScroll, { passive: true });
   window.addEventListener('resize', onScroll);
   
-  // Initial activation
+  
   updateActiveFeature();
 }
 
-document.addEventListener('DOMContentLoaded', registerPlatformScroll);
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', registerPlatformScroll);
+} else {
+  registerPlatformScroll();
+}

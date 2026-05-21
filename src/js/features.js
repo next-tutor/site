@@ -1,4 +1,4 @@
-// Sticky box cover toggle
+
 function registerStickbox() {
   const stickybox = document.querySelector('.feature-details .sticky-box');
   if (!stickybox) return;
@@ -16,8 +16,8 @@ function registerStickbox() {
   observer.observe(stickybox);
 }
 
-// Scroll-driven image swap inside feature-details
-// Scroll-driven image swap inside feature-details using a robust center-detection mechanism
+
+
 function registerFeaturesItems() {
   const sections = document.querySelectorAll('.feature-details .item');
   if (!sections.length) return;
@@ -72,7 +72,7 @@ function registerFeaturesItems() {
   updateActiveFeature();
 }
 
-// Lightweight vanilla carousel for "Explore more features"
+
 function registerCarousel() {
   const wrapper = document.querySelector('.more-features .carousel-wrapper');
   if (!wrapper) return;
@@ -107,8 +107,14 @@ function registerCarousel() {
   update();
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+const initFeatures = () => {
   registerStickbox();
   registerFeaturesItems();
   registerCarousel();
-});
+};
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initFeatures);
+} else {
+  initFeatures();
+}

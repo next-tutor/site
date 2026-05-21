@@ -1,6 +1,6 @@
 const incomes = (function () {
 
-    //-------------------------------------------
+    
 
     const setIncomesEvents = function () {
         $(".panel.incomes .menu .daily").click(() => showIncomeList("daily"));
@@ -16,7 +16,7 @@ const incomes = (function () {
         });
     }
 
-    //-------------------------------------------
+    
 
     const openIncomeDialog = function (item) {
         const $item = $(item);
@@ -27,7 +27,7 @@ const incomes = (function () {
         $(".dlg-wrap.income-dlg").addClass("open");
     }
 
-    //-------------------------------------------
+    
 
     const closeIncomeDialog = function () {
         const $wrap = $(".dlg-wrap.income-dlg");
@@ -36,7 +36,7 @@ const incomes = (function () {
         setTimeout(() => $wrap.removeClass("closing"), 210);
     }
 
-    //-------------------------------------------
+    
 
     const moveTabIndicator = function (listName, animate = true) {
         const $item = $(`.panel.incomes .menu .item.${listName}`);
@@ -67,7 +67,7 @@ const incomes = (function () {
         }
     }
 
-    //-------------------------------------------
+    
 
     const initTabIndicator = function () {
         const $active = $(".panel.incomes .menu .item.active");
@@ -78,7 +78,7 @@ const incomes = (function () {
         }
     }
 
-    //-------------------------------------------
+    
 
     const onIncomesPanelShown = function () {
         initTabIndicator();
@@ -88,7 +88,7 @@ const incomes = (function () {
         closeIncomeDialog();
     }
 
-    //-------------------------------------------
+    
 
     return {
         setIncomesEvents,

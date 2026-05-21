@@ -1,4 +1,4 @@
-// Footer mobile accordion
+
 function registerFooterEvents() {
   const items = document.querySelectorAll('footer .category');
   items.forEach(item => {
@@ -10,7 +10,7 @@ function registerFooterEvents() {
   });
 }
 
-// Mobile hamburger menu
+
 function registerHamburger() {
   const hamburger = document.querySelector('.hamburger');
   if (!hamburger) return;
@@ -20,7 +20,7 @@ function registerHamburger() {
   });
 }
 
-// Close sidebar when a link is clicked
+
 function registerSidebarLinks() {
   const links = document.querySelectorAll('.sidebar a');
   links.forEach(link => {
@@ -31,7 +31,7 @@ function registerSidebarLinks() {
   });
 }
 
-// Scroll-reveal via IntersectionObserver
+
 function registerScrollReveal() {
   const els = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
   if (!els.length) return;
@@ -45,13 +45,13 @@ function registerScrollReveal() {
         }
       });
     },
-    { threshold: 0.12 }
+    { threshold: 0.05, rootMargin: '0px 0px -40px 0px' }
   );
 
   els.forEach(el => observer.observe(el));
 }
 
-// Demo iframe — defer loading until near viewport
+
 function registerLazyDemoIframe() {
   const iframe = document.querySelector('.demo-iframe[data-src]');
   if (!iframe) return;
@@ -61,7 +61,7 @@ function registerLazyDemoIframe() {
     iframe.src = iframe.dataset.src;
   };
 
-  // If iframe is in video-like mode, load immediately and skip lazy loading
+  
   if (iframe.classList.contains('video-mode')) {
     load();
     return;
@@ -87,45 +87,58 @@ function registerLazyDemoIframe() {
   observer.observe(iframe);
 }
 
-// Scroll-to-top reset on page load
+
 window.scrollTo(0, 0);
 
-let isVideoMode = false; // false = interactive iframe mode
+let isVideoMode = false;
 
-document.addEventListener('DOMContentLoaded', () => {
+const init = () => {
   registerFooterEvents();
   registerHamburger();
   registerSidebarLinks();
   registerScrollReveal();
   registerLazyDemoIframe();
-  // Initialize iframe in interactive mode by default
+  
   toggleDemoIframeMode(isVideoMode);
-  // Setup toggle button event listener
+
   const toggleBtn = document.getElementById('toggle-iframe-mode');
   if (toggleBtn) {
+    toggleBtn.textContent = isVideoMode ? 'Switch to Interactive Mode' : 'Switch to Video Mode';
     toggleBtn.addEventListener('click', () => {
       isVideoMode = !isVideoMode;
       toggleDemoIframeMode(isVideoMode);
       toggleBtn.textContent = isVideoMode ? 'Switch to Interactive Mode' : 'Switch to Video Mode';
     });
   }
-});
+};
 
-/**
- * Toggles the demo iframe between video-like mode and real iframe mode.
- * @param {boolean} videoMode - If true, iframe acts like a video (non‑pressable, loads immediately).
- */
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', init);
+} else {
+  init();
+}
+
+function postModeToIframe(iframe, videoMode) {
+  try {
+    iframe.contentWindow.postMessage(
+      { type: 'setAutoSwitch', enabled: videoMode },
+      '*'
+    );
+  } catch (_) {}
+}
+
 function toggleDemoIframeMode(videoMode) {
   const iframe = document.querySelector('.demo-iframe[data-src]');
   if (!iframe) return;
   iframe.classList.toggle('video-mode', videoMode);
   if (videoMode) {
-    // Load immediately and disable interaction
-    iframe.src = iframe.dataset.src;
-  } else {
-    // Reset src to allow lazy loading if not already loaded
-    if (!(iframe.src && iframe.src !== 'about:blank')) {
-      iframe.src = 'about:blank';
+    if (!iframe.src || iframe.src === 'about:blank') {
+      iframe.src = iframe.dataset.src;
+      iframe.addEventListener('load', () => postModeToIframe(iframe, true), { once: true });
+    } else {
+      postModeToIframe(iframe, true);
     }
+  } else {
+    postModeToIframe(iframe, false);
   }
 }

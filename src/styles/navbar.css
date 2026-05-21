@@ -183,8 +183,7 @@ header {
       }
     }
 
-    /* Sidebar (mobile) */
-    .sidebar {
+        .sidebar {
       position: fixed;
       right: -100%;
       top: 60px;
@@ -237,8 +236,7 @@ header {
       }
     }
 
-    /* Hamburger open state */
-    &.open_sidebar {
+        &.open_sidebar {
       .hamburger {
         .btn>span {
           transform: rotate(45deg);

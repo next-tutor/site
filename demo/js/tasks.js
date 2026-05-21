@@ -1,6 +1,6 @@
 const tasks = (function () {
 
-    //-------------------------------------------
+    
 
     const setTasksClickEvents = function () {
 
@@ -35,18 +35,18 @@ const tasks = (function () {
         });
     }
 
-    //-------------------------------------------
+    
 
     let currentTaskPanel = 0;
 
     const openTaskDlg = function ($item) {
         currentTaskPanel = 0;
         
-        // Extract data
+        
         const studentName = $item.find(".info .text").text().trim();
         const taskTitle = $item.find(".info .desc .time").text().trim();
         
-        // Update dialog header
+        
         $("#task-popup-dlg .name").text(studentName);
         $("#task-popup-dlg .title-text").text(taskTitle);
 
@@ -94,7 +94,7 @@ const tasks = (function () {
         $dlg.find(`.s-dot:eq(${currentTaskPanel})`).addClass("active");
     }
 
-    //-------------------------------------------
+    
 
     const moveTabIndicator = function (listName, animate = true) {
         const $item = $(`.panel.tasks .menu .item.${listName}`);
@@ -125,7 +125,7 @@ const tasks = (function () {
         }
     }
 
-    //-------------------------------------------
+    
 
     const initTabIndicator = function () {
         const $active = $(".panel.tasks .menu .item.active");

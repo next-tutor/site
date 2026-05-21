@@ -1,5 +1,3 @@
-/* Override demo.css generic panel .content/.list/.list-item styles
-   Those selectors are 5 classes deep, so we match the full path here */
 
 .main-panel .lessons .content {
     display: block !important;
@@ -19,8 +17,7 @@
 }
 
 .main-panel .lessons .content .list .list-item {
-    /* reset demo.css overrides */
-    border: none !important;
+        border: none !important;
     border-radius: 38px !important;
     max-width: none !important;
     min-height: unset !important;
@@ -28,8 +25,7 @@
     text-transform: none !important;
     padding-left: 15px !important;
 
-    /* real styles */
-    width: 85%;
+        width: 85%;
     height: 60px;
     margin-top: 15px;
     margin-bottom: 0;

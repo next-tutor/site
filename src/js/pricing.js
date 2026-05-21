@@ -1,4 +1,4 @@
-// FAQ accordion
+
 function registerFaqAccordion() {
   const items = document.querySelectorAll('.faq .item');
   items.forEach(item => {
@@ -10,4 +10,8 @@ function registerFaqAccordion() {
   });
 }
 
-document.addEventListener('DOMContentLoaded', registerFaqAccordion);
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', registerFaqAccordion);
+} else {
+  registerFaqAccordion();
+}

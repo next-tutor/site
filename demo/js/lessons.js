@@ -1,6 +1,6 @@
 const lessons = (function () {
 
-    //-------------------------------------------
+    
 
     const setLessonClickEvents = function () {
 
@@ -12,7 +12,7 @@ const lessons = (function () {
             closePastDialog();
         });
 
-        // Attendance toggle — only past lesson first page
+        
         $(document).on("click", ".dlg-wrap.past-lesson-dlg .attendance-item", function () {
             $(".dlg-wrap.past-lesson-dlg .attendance-item").removeClass("active");
             $(this).addClass("active");
@@ -29,7 +29,7 @@ const lessons = (function () {
         });
     }
 
-    //-------------------------------------------
+    
 
     const openDialog = function (type, item) {
         const $wrap = $(".dlg-wrap.past-lesson-dlg");
@@ -48,11 +48,11 @@ const lessons = (function () {
         $wrap.find(".dlg-header .name").text(displayName);
         $wrap.find(".dlg-header .desc").text(desc);
 
-        // Populate type-specific dynamic fields
+        
         $wrap.find(".dlg-date").text(date);
         $wrap.find(".dlg-time").text(time);
 
-        // Reset attendance to Present on every open
+        
         if (type === "past") {
             $wrap.find(".attendance-item").removeClass("active");
             $wrap.find(".attendance-item").first().addClass("active");
@@ -62,7 +62,7 @@ const lessons = (function () {
         $wrap.addClass("open");
     }
 
-    //-------------------------------------------
+    
 
     const closePastDialog = function () {
         const $wrap = $(".dlg-wrap.past-lesson-dlg");
@@ -71,7 +71,7 @@ const lessons = (function () {
         setTimeout(() => $wrap.removeClass("closing"), 210);
     }
 
-    //-------------------------------------------
+    
 
     const moveTabIndicator = function (listName, animate = true) {
         const $item = $(`.panel.lessons .menu .item.${listName}`);
@@ -102,7 +102,7 @@ const lessons = (function () {
         }
     }
 
-    //-------------------------------------------
+    
 
     const initTabIndicator = function () {
         const $active = $(".panel.lessons .menu .item.active");

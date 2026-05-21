@@ -125,14 +125,12 @@
             }
         }
 
-        /* content sections — only the active type is shown */
-        .dlg-content {
+                .dlg-content {
             display: none;
             flex: 1;
         }
 
-        /* Past: attendance */
-        .dlg-content-past {
+                .dlg-content-past {
             .slider-card {
                 width: 100%;
                 background: #fffcfa;
@@ -244,8 +242,7 @@
             }
         }
 
-        /* Upcoming + Canceled: shared info card */
-        .info-card {
+                .info-card {
             background: #f9f9f9;
             border: 1px solid #ebebeb;
             border-radius: 10px;
@@ -276,8 +273,7 @@
             }
         }
 
-        /* Upcoming extras */
-        .dlg-content-upcoming .reschedule-btn,
+                .dlg-content-upcoming .reschedule-btn,
         .dlg-content-upcoming .cancel-lesson-btn {
             margin-top: 0;
             width: 100%;
@@ -304,8 +300,7 @@
             color: #c03a3a;
         }
 
-        /* Canceled: message card */
-        .canceled-slider-card {
+                .canceled-slider-card {
             background: #fffcfa;
             border: 1px solid #ffae7e;
             border-radius: 10px;
@@ -321,8 +316,7 @@
             }
         }
 
-        /* Page indicator — past only */
-        .dlg-page-indicator {
+                .dlg-page-indicator {
             display: none;
             justify-content: center;
             gap: 7px;

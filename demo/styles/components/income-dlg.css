@@ -1,7 +1,3 @@
-/* -------------------------------------------------------
-   Income Side Dialog – mirrors the real app IncomeSideDialog
-   Slides in from the right, overlays the demo.
-------------------------------------------------------- */
 
 .dlg-wrap.income-dlg {
     .dlg.income-dlg {
@@ -54,8 +50,7 @@
             }
         }
 
-        /* ---- Paybook list ---- */
-        .dlg-content {
+                .dlg-content {
             flex: 1;
 
             .paybook-list {
@@ -65,8 +60,7 @@
             }
         }
 
-        /* ---- Individual paybook item ---- */
-        .paybook-item {
+                .paybook-item {
             display: flex;
             align-items: center;
             gap: 0;

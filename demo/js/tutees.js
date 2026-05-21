@@ -2,6 +2,7 @@ const tutees = (function () {
     let hasAutoOpenedPopup = false;
     let closeTimer = null;
     let autoAdvanceTimer = null;
+    let videoMode = false;
     const popupAutoAdvanceMs = 2400;
     const isPopupAutoAdvanceEnabled = true;
 
@@ -47,7 +48,7 @@ const tutees = (function () {
         document.dispatchEvent(new CustomEvent("tuteePopupOpened"));
         stopCircle();
 
-        if (isPopupAutoAdvanceEnabled) {
+        if (isPopupAutoAdvanceEnabled && videoMode) {
             autoAdvanceTimer = setTimeout(function () {
                 if (!popup.hasClass("open")) return;
                 closeTuteePopup();
@@ -103,9 +104,14 @@ const tutees = (function () {
         hasAutoOpenedPopup = false;
     }
 
+    const setVideoMode = function (val) {
+        videoMode = val;
+    }
+
     return {
         setTuteesEvents,
         onTuteesPanelShown,
-        onTuteesPanelHidden
+        onTuteesPanelHidden,
+        setVideoMode
     }
 })();
