@@ -9,7 +9,7 @@ header {
   width: 100%;
   height: 120px;
   padding-top: 0;
-  background: rgb(0 0 0 / 89%);
+  background: #020202f5;
   backdrop-filter: blur(14px) saturate(140%);
   -webkit-backdrop-filter: blur(14px) saturate(140%);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
@@ -28,7 +28,9 @@ header {
       margin-left: 35px;
       transition: opacity 0.2s;
 
-      &:hover { opacity: 0.8; }
+      &:hover {
+        opacity: 0.8;
+      }
 
       img {
         width: 105px;
@@ -102,7 +104,9 @@ header {
         text-transform: uppercase;
         transition: color 0.2s;
 
-        &:hover { color: #fff; }
+        &:hover {
+          color: #fff;
+        }
       }
 
       .btn-start {
@@ -157,9 +161,9 @@ header {
         z-index: 1;
       }
 
-      .btn > span,
-      .btn > span::before,
-      .btn > span::after {
+      .btn>span,
+      .btn>span::before,
+      .btn>span::after {
         display: block;
         position: absolute;
         width: 100%;
@@ -168,8 +172,15 @@ header {
         transition-duration: 0.25s;
       }
 
-      .btn > span::before { content: ''; top: -8px; }
-      .btn > span::after  { content: ''; top:  8px; }
+      .btn>span::before {
+        content: '';
+        top: -8px;
+      }
+
+      .btn>span::after {
+        content: '';
+        top: 8px;
+      }
     }
 
     /* Sidebar (mobile) */
@@ -220,16 +231,28 @@ header {
         width: 100%;
         transition: color 0.2s;
 
-        &:hover { color: #fff; }
+        &:hover {
+          color: #fff;
+        }
       }
     }
 
     /* Hamburger open state */
     &.open_sidebar {
       .hamburger {
-        .btn > span     { transform: rotate(45deg); }
-        .btn > span::before { top: 0; transform: rotate(0); }
-        .btn > span::after  { top: 0; transform: rotate(90deg); }
+        .btn>span {
+          transform: rotate(45deg);
+        }
+
+        .btn>span::before {
+          top: 0;
+          transform: rotate(0);
+        }
+
+        .btn>span::after {
+          top: 0;
+          transform: rotate(90deg);
+        }
       }
 
       .sidebar {
@@ -253,14 +276,23 @@ header {
 
     .logo {
       margin-left: 20px;
+
       img {
         width: 95px;
         height: auto;
       }
     }
 
-    .navbar   { display: none; }
-    .hamburger { display: block; }
-    .sidebar   { display: flex; }
+    .navbar {
+      display: none;
+    }
+
+    .hamburger {
+      display: block;
+    }
+
+    .sidebar {
+      display: flex;
+    }
   }
 }

@@ -61,6 +61,12 @@ function registerLazyDemoIframe() {
     iframe.src = iframe.dataset.src;
   };
 
+  // If iframe is in video-like mode, load immediately and skip lazy loading
+  if (iframe.classList.contains('video-mode')) {
+    load();
+    return;
+  }
+
   if (!('IntersectionObserver' in window)) {
     load();
     return;
@@ -84,10 +90,42 @@ function registerLazyDemoIframe() {
 // Scroll-to-top reset on page load
 window.scrollTo(0, 0);
 
+let isVideoMode = false; // false = interactive iframe mode
+
 document.addEventListener('DOMContentLoaded', () => {
   registerFooterEvents();
   registerHamburger();
   registerSidebarLinks();
   registerScrollReveal();
   registerLazyDemoIframe();
+  // Initialize iframe in interactive mode by default
+  toggleDemoIframeMode(isVideoMode);
+  // Setup toggle button event listener
+  const toggleBtn = document.getElementById('toggle-iframe-mode');
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', () => {
+      isVideoMode = !isVideoMode;
+      toggleDemoIframeMode(isVideoMode);
+      toggleBtn.textContent = isVideoMode ? 'Switch to Interactive Mode' : 'Switch to Video Mode';
+    });
+  }
 });
+
+/**
+ * Toggles the demo iframe between video-like mode and real iframe mode.
+ * @param {boolean} videoMode - If true, iframe acts like a video (non‑pressable, loads immediately).
+ */
+function toggleDemoIframeMode(videoMode) {
+  const iframe = document.querySelector('.demo-iframe[data-src]');
+  if (!iframe) return;
+  iframe.classList.toggle('video-mode', videoMode);
+  if (videoMode) {
+    // Load immediately and disable interaction
+    iframe.src = iframe.dataset.src;
+  } else {
+    // Reset src to allow lazy loading if not already loaded
+    if (!(iframe.src && iframe.src !== 'about:blank')) {
+      iframe.src = 'about:blank';
+    }
+  }
+}
