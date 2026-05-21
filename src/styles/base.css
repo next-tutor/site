@@ -9,12 +9,13 @@
 }
 
 html {
+  background-color: #020202;
   scroll-behavior: smooth;
 }
 
 /* overflow-x contained on a wrapper, NOT body, so position:sticky works */
 body {
-  font-family: Poppins, sans-serif;
+  font-family: Poppins, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   background-color: #020202;
   min-height: 100%;
   width: 100%;
@@ -72,7 +73,7 @@ a:hover {
 
 @keyframes scroll {
   0%   { transform: translateX(0); }
-  100% { transform: translateX(calc(-150px * 10)); }
+  100% { transform: translateX(-50%); }
 }
 
 /* Hero stagger — applied by .hero-animate children */

@@ -1,5 +1,5 @@
-.main-panel .students {
-    .students-search {
+.main-panel .tutees {
+    .tutees-search {
         display: flex;
         align-items: center;
         gap: 12px;
@@ -15,7 +15,7 @@
             flex-shrink: 0;
         }
 
-        .students-search-input {
+        .tutees-search-input {
             flex: 1;
             border: none;
             outline: none;
@@ -30,7 +30,7 @@
         }
     }
 
-    .students-plus-btn {
+    .tutees-plus-btn {
         position: fixed;
         bottom: 30px;
         right: 30px;
@@ -134,4 +134,16 @@
             }
         }
     }
+}
+
+/* Override the generic panel-reveal animation for tutees only.
+   The default uses translateY(), which creates a new containing block
+   and breaks position:fixed on the floating + button. */
+.main-panel .panel.tutees.show {
+    animation: tutees-panel-reveal 0.24s ease-out;
+}
+
+@keyframes tutees-panel-reveal {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }

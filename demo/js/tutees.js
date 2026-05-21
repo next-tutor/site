@@ -1,9 +1,9 @@
-const students = (function () {
+const tutees = (function () {
     let hasAutoOpenedPopup = false;
     let closeTimer = null;
     let autoAdvanceTimer = null;
     const popupAutoAdvanceMs = 2400;
-    const isPopupAutoAdvanceEnabled = false;
+    const isPopupAutoAdvanceEnabled = true;
 
     const clearAutoAdvanceTimer = function () {
         if (autoAdvanceTimer) {
@@ -12,20 +12,20 @@ const students = (function () {
         }
     }
 
-    const setStudentsEvents = function () {
-        $(".students .pic").on("click", function () {
+    const setTuteesEvents = function () {
+        $(".tutees .pic").on("click", function () {
             const avatar = $(this).find("img").attr("src");
             const name = $(this).find(".name").text().trim();
             openTuteePopup(avatar, name);
         });
 
-        $(".tutee-popup-dlg .close-button, .tutee-popup-dlg .popper").on("click", function () {
+        $(document).on("click", ".tutee-popup-dlg .close-button, .tutee-popup-dlg .popper", function () {
             closeTuteePopup();
         });
 
-        $(".students .pic.active .circle .path").on("animationend", function () {
+        $(".tutees .pic.active .circle .path").on("animationend", function () {
             if (hasAutoOpenedPopup) return;
-            const activeStudent = $(".students .pic.active");
+            const activeStudent = $(".tutees .pic.active");
             const avatar = activeStudent.find("img").attr("src");
             const name = activeStudent.find(".name").text().trim();
             openTuteePopup(avatar, name);
@@ -73,13 +73,13 @@ const students = (function () {
     }
 
     const stopCircle = function () {
-        const circle = $(".students .pic.active .circle");
+        const circle = $(".tutees .pic.active .circle");
         circle.hide();
         circle.removeClass("is-running");
     }
 
     const startCircle = function () {
-        const circle = $(".students .pic.active .circle");
+        const circle = $(".tutees .pic.active .circle");
         if (!circle.length) return;
         circle.show();
         circle.removeClass("is-running");
@@ -87,12 +87,12 @@ const students = (function () {
         circle.addClass("is-running");
     }
 
-    const onStudentsPanelShown = function () {
+    const onTuteesPanelShown = function () {
         hasAutoOpenedPopup = false;
         startCircle();
     }
 
-    const onStudentsPanelHidden = function () {
+    const onTuteesPanelHidden = function () {
         clearAutoAdvanceTimer();
         if (closeTimer) {
             clearTimeout(closeTimer);
@@ -104,8 +104,8 @@ const students = (function () {
     }
 
     return {
-        setStudentsEvents,
-        onStudentsPanelShown,
-        onStudentsPanelHidden
+        setTuteesEvents,
+        onTuteesPanelShown,
+        onTuteesPanelHidden
     }
 })();

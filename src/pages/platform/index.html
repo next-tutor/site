@@ -3,18 +3,18 @@
 
 <head>
   <meta charset="UTF-8" />
+  <style id="critical-bg">html,body{background-color:#020202;color-scheme:dark}</style>
+
   <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=5">
   <title>Platform – Next Tutor</title>
   <meta name="description" content="Discover how Next Tutor helps private tutors automate their business, grow income, and delight their students.">
   <link rel="icon" type="image/x-icon" href="/src/assets/images/favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900" rel="stylesheet" />
-  <link rel="stylesheet" href="/src/styles/base.css" />
-  <link rel="stylesheet" href="/src/styles/navbar.css" />
-  <link rel="stylesheet" href="/src/styles/footer.css" />
-  <link rel="stylesheet" href="/src/styles/get-start.css" />
+  <link rel="preload" as="image" href="/src/assets/images/logo/logo-large.png" />
+  <link rel="stylesheet" href="/src/styles/global.css" />
   <link rel="stylesheet" href="/src/pages/platform/platform.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
 </head>
 
 <body>
@@ -22,7 +22,7 @@
 
   <header>
     <div class="inner-header">
-      <a class="logo" href="/"><img src="/src/assets/images/logo/logo-large.png" alt="Next Tutor" width="105" height="32" /></a>
+      <a class="logo" href="/"><img src="/src/assets/images/logo/logo-large.png" fetchpriority="high" alt="Next Tutor" width="105" height="32" /></a>
       <nav class="navbar" role="menubar">
         <div class="nav-buttons-container">
           <a class="navbar-btn active" tabindex="0" role="menuitem" href="/platform">Platform</a>
@@ -139,23 +139,23 @@
         </div>
       </div>
       <div class="sticky-box">
-        <img src="/src/assets/images/platform/backgrounds/feature-1-bg.png" alt="" class="sticky-bg feature1 active" loading="eager" />
-        <img src="/src/assets/images/platform/backgrounds/feature-2-bg.png" alt="" class="sticky-bg feature2" loading="lazy" />
-        <img src="/src/assets/images/platform/backgrounds/feature-3-bg.png" alt="" class="sticky-bg feature3" loading="lazy" />
-        <img src="/src/assets/images/platform/backgrounds/feature-4-bg.png" alt="" class="sticky-bg feature4" loading="lazy" />
-        <img src="/src/assets/images/platform/backgrounds/feature-5-bg.png" alt="" class="sticky-bg feature5" loading="lazy" />
-        <img src="/src/assets/images/platform/sticky-images/feature-1-phone.png" alt="" class="feature feature1 active" loading="eager" />
-        <img src="/src/assets/images/platform/sticky-images/feature-2-phone.png" alt="" class="feature feature2" loading="lazy" />
-        <img src="/src/assets/images/platform/sticky-images/feature-3-phone.png" alt="" class="feature feature3" loading="lazy" />
-        <img src="/src/assets/images/platform/sticky-images/feature-4-phone.png" alt="" class="feature feature4" loading="lazy" />
-        <img src="/src/assets/images/platform/sticky-images/feature-5-phone.png" alt="" class="feature feature5" loading="lazy" />
+        <picture><source srcset="/src/assets/images/platform/backgrounds/feature-1-bg.webp" type="image/webp" /><img src="/src/assets/images/platform/backgrounds/feature-1-bg.png" alt="" class="sticky-bg feature1 active" loading="eager" /></picture>
+        <picture><source srcset="/src/assets/images/platform/backgrounds/feature-2-bg.webp" type="image/webp" /><img src="/src/assets/images/platform/backgrounds/feature-2-bg.png" alt="" class="sticky-bg feature2" loading="lazy" /></picture>
+        <picture><source srcset="/src/assets/images/platform/backgrounds/feature-3-bg.webp" type="image/webp" /><img src="/src/assets/images/platform/backgrounds/feature-3-bg.png" alt="" class="sticky-bg feature3" loading="lazy" /></picture>
+        <picture><source srcset="/src/assets/images/platform/backgrounds/feature-4-bg.webp" type="image/webp" /><img src="/src/assets/images/platform/backgrounds/feature-4-bg.png" alt="" class="sticky-bg feature4" loading="lazy" /></picture>
+        <picture><source srcset="/src/assets/images/platform/backgrounds/feature-5-bg.webp" type="image/webp" /><img src="/src/assets/images/platform/backgrounds/feature-5-bg.png" alt="" class="sticky-bg feature5" loading="lazy" /></picture>
+        <picture><source srcset="/src/assets/images/platform/sticky-images/feature-1-phone.webp" type="image/webp" /><img src="/src/assets/images/platform/sticky-images/feature-1-phone.png" alt="" class="feature feature1 active" loading="eager" /></picture>
+        <picture><source srcset="/src/assets/images/platform/sticky-images/feature-2-phone.webp" type="image/webp" /><img src="/src/assets/images/platform/sticky-images/feature-2-phone.png" alt="" class="feature feature2" loading="lazy" /></picture>
+        <picture><source srcset="/src/assets/images/platform/sticky-images/feature-3-phone.webp" type="image/webp" /><img src="/src/assets/images/platform/sticky-images/feature-3-phone.png" alt="" class="feature feature3" loading="lazy" /></picture>
+        <picture><source srcset="/src/assets/images/platform/sticky-images/feature-4-phone.webp" type="image/webp" /><img src="/src/assets/images/platform/sticky-images/feature-4-phone.png" alt="" class="feature feature4" loading="lazy" /></picture>
+        <picture><source srcset="/src/assets/images/platform/sticky-images/feature-5-phone.webp" type="image/webp" /><img src="/src/assets/images/platform/sticky-images/feature-5-phone.png" alt="" class="feature feature5" loading="lazy" /></picture>
       </div>
     </div>
   </div>
 
   <section class="get-started see-more reveal">
     <div class="wrapper">
-      <img src="/src/assets/images/logo/logo-large.png" alt="Next Tutor" width="130" height="40" loading="lazy" />
+      <img src="/src/assets/images/logo/logo-large.png" fetchpriority="high" alt="Next Tutor" width="130" height="40" loading="lazy" />
       <div class="title">Get started today.</div>
       <div class="btn">Try for free</div>
     </div>

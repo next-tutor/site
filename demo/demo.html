@@ -3,18 +3,13 @@
 
 <head>
   <meta charset="UTF-8" />
+  <style id="critical-bg">html,body{background-color:#fff}</style>
   <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=5.0">
   <title>Next Tutor</title>
-  <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
     rel="stylesheet">
-
-  <link rel="stylesheet" href="./styles/demo.css" />
-  <link rel="stylesheet" href="./styles/components/dlg.css" />
-  <link rel="stylesheet" href="./styles/components/sidebar.css" />
-  <link rel="stylesheet" href="./styles/components/lessons.css" />
-  <link rel="stylesheet" href="./styles/components/students.css" />
+  <link rel="stylesheet" href="./styles/bundle.css" />
 
 </head>
 
@@ -28,8 +23,8 @@
 
     <div class="main-panel">
 
-      <!-- student -->
-      <div id="students" class="panel students">
+      <!-- tutees -->
+      <div id="tutees" class="panel tutees">
       </div>
 
       <!-- lessons -->
@@ -37,23 +32,17 @@
       </div>
 
       <!-- tasks -->
-      <div class="panel tasks">
-        <div class="title">
-          Tasks
-        </div>
+      <div id="tasks" class="panel tasks">
       </div>
 
-      <!-- reports -->
-      <div class="panel reports">
-        <div class="title">
-          Reports
-        </div>
+      <!-- incomes -->
+      <div id="incomes" class="panel incomes">
       </div>
 
       <!-- website -->
       <div class="panel website">
         <div class="title">
-          Lessons
+          Website
         </div>
       </div>
 
@@ -70,15 +59,21 @@
     </div>
     <div id="tutee-popup-dlg" class="dlg-wrap tutee-popup-dlg">
     </div>
+    <div id="task-popup-dlg" class="dlg-wrap task-popup-dlg">
+    </div>
+    <div id="income-dlg" class="dlg-wrap income-dlg">
+    </div>
   </div>
 </body>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="./js/htmlLoader.js"></script>
-<script src="./js/dlg.js"></script>
-<script src="./js/lessons.js"></script>
-<script src="./js/students.js"></script>
-<script src="./js/sidebar.js"></script>
-<script src="./js/demo.js"></script>
+<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script defer src="./js/htmlLoader.js"></script>
+<script defer src="./js/dlg.js"></script>
+<script defer src="./js/lessons.js"></script>
+<script defer src="./js/tutees.js"></script>
+<script defer src="./js/incomes.js"></script>
+<script defer src="./js/sidebar.js"></script>
+<script defer src="./js/tasks.js"></script>
+<script defer src="./js/demo.js"></script>
 
 </html>

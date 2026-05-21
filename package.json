@@ -6,9 +6,15 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "optimize-images": "node scripts/optimize-images.mjs",
+    "deploy": "firebase deploy --only hosting",
+    "deploy:preview": "firebase hosting:channel:deploy preview"
   },
   "devDependencies": {
-    "vite": "^5.2.11"
+    "firebase-tools": "^14.0.0",
+    "sharp": "^0.34.5",
+    "vite": "^5.2.11",
+    "vite-plugin-compression": "^0.5.1"
   }
 }

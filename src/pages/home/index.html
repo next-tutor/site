@@ -3,18 +3,18 @@
 
 <head>
   <meta charset="UTF-8" />
+  <style id="critical-bg">html,body{background-color:#020202;color-scheme:dark}</style>
+
   <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=5">
   <title>Next Tutor – The Ultimate Platform for Private Tutors</title>
   <meta name="description" content="Next Tutor is the first and only platform designed for private tutors. Manage lessons, students, payments and more — all in one place.">
   <link rel="icon" type="image/x-icon" href="/src/assets/images/favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900" rel="stylesheet" />
-  <link rel="stylesheet" href="/src/styles/base.css" />
-  <link rel="stylesheet" href="/src/styles/navbar.css" />
-  <link rel="stylesheet" href="/src/styles/footer.css" />
-  <link rel="stylesheet" href="/src/styles/get-start.css" />
+  <link rel="preload" as="image" href="/src/assets/images/logo/logo-large.png" />
+  <link rel="stylesheet" href="/src/styles/global.css" />
   <link rel="stylesheet" href="/src/pages/home/home.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
 </head>
 
 <body class="home-page-body">
@@ -23,7 +23,7 @@
   <header>
     <div class="inner-header">
       <a class="logo" href="/">
-        <img src="/src/assets/images/logo/logo-large.png" alt="Next Tutor" width="105" height="32" />
+        <img src="/src/assets/images/logo/logo-large.png" fetchpriority="high" alt="Next Tutor" width="105" height="32" />
       </a>
       <nav class="navbar" role="menubar">
         <div class="nav-buttons-container">
@@ -73,9 +73,11 @@
       <div class="demo-frame">
         <iframe
           class="demo-iframe"
-          src="/demo/demo.html"
+          src="about:blank"
+          data-src="/demo/demo.html"
           title="Next Tutor app demo"
           referrerpolicy="strict-origin-when-cross-origin"
+          loading="lazy"
           allowfullscreen
         ></iframe>
       </div>
@@ -202,55 +204,75 @@
         <div class="item" aria-hidden="true">
           <div class="content">
             <div class="text">
-              "Thanks to Next Tutor, I can manage my tutoring business more smoothly than I imagined."
+              "Thanks to Next Tutor, I can manage my tutoring business more smoothly than I imagined. Lessons are paid in
+              advance, and I no longer have to chase after payments."
             </div>
             <div class="info">
               <img class="img" src="/src/assets/images/reviewers/1.png" alt="" width="70" height="70" loading="lazy" />
-              <div class="name"><div class="name">Richard Reeves</div><div class="role">Private Tutor</div></div>
+              <div class="name">
+                <div class="name">Richard Reeves</div>
+                <div class="role">Private Tutor</div>
+              </div>
             </div>
           </div>
         </div>
         <div class="item" aria-hidden="true">
           <div class="content">
             <div class="text">
-              "Next Tutor is a great choice for any tutor who wants to work independently."
+              "Next Tutor is a great choice for any tutor who wants to work independently without the high fees of
+              tutoring companies. Their pricing is very fair. Highly recommended."
             </div>
             <div class="info">
               <img class="img" src="/src/assets/images/reviewers/1.png" alt="" width="70" height="70" loading="lazy" />
-              <div class="name"><div class="name">Katherine Ward</div><div class="role">Private Tutor</div></div>
+              <div class="name">
+                <div class="name">Katherine Ward</div>
+                <div class="role">Private Tutor</div>
+              </div>
             </div>
           </div>
         </div>
         <div class="item" aria-hidden="true">
           <div class="content">
             <div class="text">
-              "Next Tutor has everything I need to teach with less hassle."
+              "Next Tutor has everything I need to teach with less hassle. It keeps me organized and focused. I can't
+              imagine going back to the way things were before."
             </div>
             <div class="info">
               <img class="img" src="/src/assets/images/reviewers/2.png" alt="" width="70" height="70" loading="lazy" />
-              <div class="name"><div class="name">Neomi Kraft</div><div class="role">Private Tutor</div></div>
+              <div class="name">
+                <div class="name">Neomi Kraft</div>
+                <div class="role">Private Tutor</div>
+              </div>
             </div>
           </div>
         </div>
         <div class="item" aria-hidden="true">
           <div class="content">
             <div class="text">
-              "Next Tutor isn't just helpful for tutors – it's great for students too."
+              "Next Tutor isn't just helpful for tutors – it's great for students too. The tools it provides help them
+              come to lessons more prepared and focused."
             </div>
             <div class="info">
               <img class="img" src="/src/assets/images/reviewers/3.png" alt="" width="70" height="70" loading="lazy" />
-              <div class="name"><div class="name">Becca Williams</div><div class="role">Private Tutor</div></div>
+              <div class="name">
+                <div class="name">Becca Williams</div>
+                <div class="role">Private Tutor</div>
+              </div>
             </div>
           </div>
         </div>
         <div class="item" aria-hidden="true">
           <div class="content">
             <div class="text">
-              "I started using Next Tutor back in the BETA stage, and I've been working with them ever since."
+              "I started using Next Tutor back in the BETA stage, and I've been working with them ever since. It's
+              definitely the best app for private tutors."
             </div>
             <div class="info">
               <img class="img" src="/src/assets/images/reviewers/4.png" alt="" width="70" height="70" loading="lazy" />
-              <div class="name"><div class="name">Sophia Brown</div><div class="role">Private Tutor</div></div>
+              <div class="name">
+                <div class="name">Sophia Brown</div>
+                <div class="role">Private Tutor</div>
+              </div>
             </div>
           </div>
         </div>
@@ -260,7 +282,7 @@
 
   <section class="get-started">
     <div class="wrapper reveal">
-      <img src="/src/assets/images/logo/logo-large.png" alt="Next Tutor" width="130" height="40" loading="lazy" />
+      <img src="/src/assets/images/logo/logo-large.png" fetchpriority="high" alt="Next Tutor" width="130" height="40" loading="lazy" />
       <div class="title">Want to see more?</div>
       <div class="btn">Let's start</div>
     </div>

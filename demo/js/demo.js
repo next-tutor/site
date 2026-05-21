@@ -4,7 +4,7 @@ const hidePanels = function () {
 
 //-------------------------------------------
 
-const sectionOrder = ["students", "lessons", "tasks", "website", "reports", "settings"];
+const sectionOrder = ["tutees", "lessons", "tasks", "incomes", "website", "settings"];
 const sectionSwitchIntervalMs = 5000;
 let sectionSwitchTimer = null;
 let isAutoSectionSwitchActive = false;
@@ -20,7 +20,7 @@ const getVisiblePanelName = function () {
 
 const ensureSectionIndicators = function () {
     $(".sidebar .menu .item").each(function () {
-        if ($(this).hasClass("students")) return;
+        if ($(this).hasClass("tutees")) return;
         if (!$(this).find(".interval-indicator").length) {
             $(this).append(
                 `<div class="interval-indicator"><span class="interval-progress"></span></div>`
@@ -36,7 +36,7 @@ const clearSectionIndicators = function () {
 
 const playSectionIndicator = function (sectionName) {
     clearSectionIndicators();
-    if (sectionName === "students") return;
+    if (sectionName === "tutees") return;
     const sectionItem = $(`.sidebar .menu .item.${sectionName}`);
     if (!sectionItem.length) return;
     sectionItem.addClass("interval-active");
@@ -71,7 +71,7 @@ const runSectionAutoSwitchStep = function (currentSection) {
 }
 
 const getFirstSectionWithIndicator = function (startSection) {
-    if (startSection !== "students") return startSection;
+    if (startSection !== "tutees") return startSection;
     return "lessons";
 }
 
@@ -91,17 +91,32 @@ const showPanel = function (panelName, options = {}) {
         stopSectionAutoSwitch();
     }
 
+    const previousPanel = getVisiblePanelName();
+
     $(".main-panel .panel").removeClass("show");
     $(`.sidebar .item`).removeClass("active");
-    if (window.students) students.onStudentsPanelHidden();
+
+    if (previousPanel === "tutees" && window.tutees) tutees.onTuteesPanelHidden();
+    if (previousPanel === "incomes" && window.incomes) incomes.onIncomesPanelHidden();
+    if (previousPanel === "lessons" && window.lessons) lessons.onLessonsPanelHidden();
+    if (previousPanel === "tasks" && window.tasks) tasks.onTasksPanelHidden();
 
     if (panelName !== "") {
         $(`.main-panel .panel.${panelName}`).addClass("show");
         $(`.sidebar .item.${panelName}`).addClass("active");
-        if (panelName === "students" && window.students) {
-            students.onStudentsPanelShown();
+        if (panelName === "tutees" && window.tutees) {
+            tutees.onTuteesPanelShown();
         }
-        if (panelName !== "students" && !options.fromAutoSwitch) {
+        if (panelName === "incomes" && window.incomes) {
+            incomes.onIncomesPanelShown();
+        }
+        if (panelName === "lessons" && window.lessons) {
+            lessons.onLessonsPanelShown();
+        }
+        if (panelName === "tasks" && window.tasks) {
+            tasks.onTasksPanelShown();
+        }
+        if (panelName !== "tutees" && !options.fromAutoSwitch) {
             startSectionAutoSwitch(panelName);
         }
     }
@@ -109,21 +124,31 @@ const showPanel = function (panelName, options = {}) {
 
 //-------------------------------------------
 
+const bindDeferredEvents = function () {
+    dlg.setDlgEvents();
+    lessons.setLessonClickEvents();
+    tasks.setTasksClickEvents();
+    if (window.incomes) incomes.setIncomesEvents();
+};
+
 const init = function () {
-    htmlLoader.load()
+    htmlLoader.loadCritical()
         .then(() => {
             ensureSectionIndicators();
-            dlg.setDlgEvents();
             sidebar.setSidebarClickEvents();
-            lessons.setLessonClickEvents();
-            students.setStudentsEvents();
+            tutees.setTuteesEvents();
 
             hidePanels();
-            showPanel("students");
+            showPanel("tutees");
 
             document.addEventListener("tuteePopupOpened", () => {
                 stopSectionAutoSwitch();
             });
+
+            return htmlLoader.loadDeferred();
+        })
+        .then(() => {
+            bindDeferredEvents();
         });
 }
 

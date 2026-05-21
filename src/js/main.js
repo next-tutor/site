@@ -51,6 +51,36 @@ function registerScrollReveal() {
   els.forEach(el => observer.observe(el));
 }
 
+// Demo iframe — defer loading until near viewport
+function registerLazyDemoIframe() {
+  const iframe = document.querySelector('.demo-iframe[data-src]');
+  if (!iframe) return;
+
+  const load = () => {
+    if (iframe.src && iframe.src !== 'about:blank') return;
+    iframe.src = iframe.dataset.src;
+  };
+
+  if (!('IntersectionObserver' in window)) {
+    load();
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          load();
+          observer.unobserve(iframe);
+        }
+      });
+    },
+    { rootMargin: '200px' }
+  );
+
+  observer.observe(iframe);
+}
+
 // Scroll-to-top reset on page load
 window.scrollTo(0, 0);
 
@@ -59,4 +89,5 @@ document.addEventListener('DOMContentLoaded', () => {
   registerHamburger();
   registerSidebarLinks();
   registerScrollReveal();
+  registerLazyDemoIframe();
 });

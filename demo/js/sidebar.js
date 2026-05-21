@@ -2,8 +2,8 @@ const sidebar = (function () {
 
     const setSidebarClickEvents = function () {
 
-        $(".sidebar .item.students").click(() => {
-            showPanel("students");
+        $(".sidebar .item.tutees").click(() => {
+            showPanel("tutees");
         })
         $(".sidebar .item.lessons").click(() => {
             showPanel("lessons");
@@ -11,11 +11,11 @@ const sidebar = (function () {
         $(".sidebar .item.tasks").click(() => {
             showPanel("tasks");
         })
+        $(".sidebar .item.incomes").click(() => {
+            showPanel("incomes");
+        })
         $(".sidebar .item.website").click(() => {
             showPanel("website");
-        })
-        $(".sidebar .item.reports").click(() => {
-            showPanel("reports");
         })
         $(".sidebar .item.settings").click(() => {
             showPanel("settings");

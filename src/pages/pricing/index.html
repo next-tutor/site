@@ -3,18 +3,18 @@
 
 <head>
   <meta charset="UTF-8" />
+  <style id="critical-bg">html,body{background-color:#020202;color-scheme:dark}</style>
+
   <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=5">
   <title>Pricing – Next Tutor</title>
   <meta name="description" content="Simple, transparent pricing. Start free and upgrade when you're ready. No commissions, no hidden fees.">
   <link rel="icon" type="image/x-icon" href="/src/assets/images/favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900" rel="stylesheet" />
-  <link rel="stylesheet" href="/src/styles/base.css" />
-  <link rel="stylesheet" href="/src/styles/navbar.css" />
-  <link rel="stylesheet" href="/src/styles/footer.css" />
-  <link rel="stylesheet" href="/src/styles/get-start.css" />
+  <link rel="preload" as="image" href="/src/assets/images/logo/logo-large.png" />
+  <link rel="stylesheet" href="/src/styles/global.css" />
   <link rel="stylesheet" href="/src/pages/pricing/pricing.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
 </head>
 
 <body>
@@ -22,7 +22,7 @@
 
   <header>
     <div class="inner-header">
-      <a class="logo" href="/"><img src="/src/assets/images/logo/logo-large.png" alt="Next Tutor" width="105" height="32" /></a>
+      <a class="logo" href="/"><img src="/src/assets/images/logo/logo-large.png" fetchpriority="high" alt="Next Tutor" width="105" height="32" /></a>
       <nav class="navbar" role="menubar">
         <div class="nav-buttons-container">
           <a class="navbar-btn" tabindex="0" role="menuitem" href="/platform">Platform</a>
@@ -92,7 +92,7 @@
 
   <section class="get-started reveal">
     <div class="wrapper">
-      <img src="/src/assets/images/logo/logo-large.png" alt="Next Tutor" width="130" height="40" loading="lazy" />
+      <img src="/src/assets/images/logo/logo-large.png" fetchpriority="high" alt="Next Tutor" width="130" height="40" loading="lazy" />
       <div class="title">Ready to start?</div>
       <div class="btn">Get Started</div>
     </div>

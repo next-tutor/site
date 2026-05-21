@@ -2,24 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <style id="critical-bg">html,body{background-color:#020202;color-scheme:dark}</style>
+
   <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=5">
   <title>Automation – Next Tutor</title>
   <meta name="description" content="Let Next Tutor automate scheduling, payments and reminders so you can focus on teaching.">
   <link rel="icon" type="image/x-icon" href="/src/assets/images/favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900" rel="stylesheet" />
-  <link rel="stylesheet" href="/src/styles/base.css" />
-  <link rel="stylesheet" href="/src/styles/navbar.css" />
-  <link rel="stylesheet" href="/src/styles/footer.css" />
-  <link rel="stylesheet" href="/src/styles/get-start.css" />
+  <link rel="preload" as="image" href="/src/assets/images/logo/logo-large.png" />
+  <link rel="stylesheet" href="/src/styles/global.css" />
   <link rel="stylesheet" href="/src/styles/features.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
 <div class="page-wrapper">
   <header>
     <div class="inner-header">
-      <a class="logo" href="/"><img src="/src/assets/images/logo/logo-large.png" alt="Next Tutor" width="105" height="32" /></a>
+      <a class="logo" href="/"><img src="/src/assets/images/logo/logo-large.png" fetchpriority="high" alt="Next Tutor" width="105" height="32" /></a>
       <nav class="navbar" role="menubar">
         <div class="nav-buttons-container">
           <a class="navbar-btn" tabindex="0" role="menuitem" href="/platform">Platform</a>
@@ -44,8 +44,10 @@
   <div class="feature-opening">
     <div class="page welcome">
       <picture class="image-wrap">
+        <source srcset="/src/assets/images/features/tasks/tasks-mini.webp" type="image/webp" media="(max-width: 1536px)" />
         <source srcset="/src/assets/images/features/tasks/tasks-mini.png" media="(max-width: 1536px)" />
         <div class="gradient-box"></div>
+        <source srcset="/src/assets/images/features/tasks/tasks1.webp" type="image/webp" />
         <img src="/src/assets/images/features/tasks/tasks1.png" alt="Offline Tasks preview" loading="eager" />
       </picture>
     </div>
@@ -108,7 +110,7 @@
 
   <section class="get-started see-more reveal">
     <div class="wrapper">
-      <img src="/src/assets/images/logo/logo-large.png" alt="Next Tutor" width="130" height="40" loading="lazy" />
+      <img src="/src/assets/images/logo/logo-large.png" fetchpriority="high" alt="Next Tutor" width="130" height="40" loading="lazy" />
       <div class="title">Want to see more?</div>
       <div class="btn">Let's start</div>
     </div>

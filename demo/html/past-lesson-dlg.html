@@ -1,4 +1,80 @@
 <div class="dlg past-lesson-dlg">
+    <button class="dlg-close-btn" type="button" aria-label="Close">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round">
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+        </svg>
+    </button>
+
+    <div class="dlg-header">
+        <div class="name">Olivia Bennett</div>
+        <div class="desc">May 12, 2025 · 16:00 - 17:00</div>
+    </div>
+
+    <!-- Past: attendance picker (first page only) -->
+    <div class="dlg-content dlg-content-past">
+        <div class="slider-card">
+            <div class="attendance-title">Lesson Attendance</div>
+            <div class="attendance">
+                <div class="attendance-item active">
+                    <div class="radio"><div class="radio-dot"></div></div>
+                    <div class="attendance-label">Tutee was Present</div>
+                </div>
+                <div class="attendance-item">
+                    <div class="radio"><div class="radio-dot"></div></div>
+                    <div class="attendance-label">Tutee was absent</div>
+                </div>
+                <div class="attendance-item">
+                    <div class="radio"><div class="radio-dot"></div></div>
+                    <div class="attendance-label">You were absent</div>
+                </div>
+            </div>
+            <div class="slider-footer">
+                <div class="nav-group">
+                    <div class="nav-btn prev">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                    </div>
+                    <div class="slider-dots">
+                        <span class="s-dot active"></span>
+                        <span class="s-dot"></span>
+                        <span class="s-dot"></span>
+                    </div>
+                    <div class="nav-btn next">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Upcoming: lesson details -->
+    <div class="dlg-content dlg-content-upcoming">
+        <div class="info-card">
+            <div class="info-row">
+                <span class="info-label">Date</span>
+                <span class="info-value dlg-date"></span>
+            </div>
+            <div class="info-divider"></div>
+            <div class="info-row">
+                <span class="info-label">Time</span>
+                <span class="info-value dlg-time"></span>
+            </div>
+            <div class="info-divider"></div>
+            <div class="info-row">
+                <span class="info-label">Duration</span>
+                <span class="info-value">60 min</span>
+            </div>
+        </div>
+        <button class="reschedule-btn" type="button">Reschedule</button>
+        <button class="cancel-lesson-btn" type="button">Cancel Lesson</button>
+    </div>
+
+    <!-- Canceled: cancellation message -->
+    <div class="dlg-content dlg-content-canceled">
+        <div class="slider-card canceled-slider-card">
+            <div class="canceled-content">The student requested to cancel this lesson due to a scheduling conflict.</div>
+        </div>
+    </div>
 
 </div>
 <div class="popper"></div>
