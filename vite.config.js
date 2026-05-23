@@ -1,39 +1,15 @@
 import { defineConfig } from 'vite';
-import { resolve } from 'path';
+import { dirname, resolve } from 'path';
+import { fileURLToPath } from 'url';
 import fs from 'fs';
 import viteCompression from 'vite-plugin-compression';
+import { pages, formatPageTitle } from './src/shared/pages.js';
 
-const pages = {
-  home: 'src/pages/home/index.html',
-  platform: 'src/pages/platform/index.html',
-  pricing: 'src/pages/pricing/index.html',
-  about: 'src/pages/about/index.html',
-  contact: 'src/pages/contact/index.html',
-  'features-website': 'src/pages/features/website/index.html',
-  'features-reports': 'src/pages/features/reports/index.html',
-  'features-students': 'src/pages/features/students/index.html',
-  'features-tasks': 'src/pages/features/tasks/index.html',
-  'features-automation': 'src/pages/features/automation/index.html',
-  privacy: 'src/pages/legal/privacy/index.html',
-  terms: 'src/pages/legal/terms/index.html',
-  credits: 'src/pages/legal/credits/index.html',
-};
+const root = dirname(fileURLToPath(import.meta.url));
 
-const urlMap = {
-  '/': '/src/pages/home/index.html',
-  '/platform': '/src/pages/platform/index.html',
-  '/pricing': '/src/pages/pricing/index.html',
-  '/about': '/src/pages/about/index.html',
-  '/contact': '/src/pages/contact/index.html',
-  '/features/website': '/src/pages/features/website/index.html',
-  '/features/reports': '/src/pages/features/reports/index.html',
-  '/features/students': '/src/pages/features/students/index.html',
-  '/features/tasks': '/src/pages/features/tasks/index.html',
-  '/features/automation': '/src/pages/features/automation/index.html',
-  '/privacy': '/src/pages/legal/privacy/index.html',
-  '/terms': '/src/pages/legal/terms/index.html',
-  '/credits': '/src/pages/legal/credits/index.html',
-};
+const urlMap = Object.fromEntries(
+  Object.values(pages).map(({ url, path }) => [url, `/${path}`])
+);
 
 const previewUrlMap = {
   '/': '/index.html',
@@ -51,6 +27,10 @@ const previewUrlMap = {
   '/credits': '/credits/index.html',
 };
 
+const titleByPath = new Map(
+  Object.values(pages).map(({ path, title }) => [resolve(root, path), formatPageTitle(title)])
+);
+
 function htmlRouterMiddleware(map) {
   return (req, _res, next) => {
     const url = req.url?.split('?')[0].replace(/\/$/, '') || '/';
@@ -61,7 +41,7 @@ function htmlRouterMiddleware(map) {
 }
 
 function moveDistFiles() {
-  const distRoot = resolve(__dirname, 'dist');
+  const distRoot = resolve(root, 'dist');
   const distSrc = resolve(distRoot, 'src/pages');
   if (!fs.existsSync(distSrc)) return;
 
@@ -93,8 +73,8 @@ function moveDistFiles() {
 }
 
 function copyDemoToDist() {
-  const demoSrc = resolve(__dirname, 'demo');
-  const demoDest = resolve(__dirname, 'dist/demo');
+  const demoSrc = resolve(root, 'demo');
+  const demoDest = resolve(root, 'dist/demo');
   if (!fs.existsSync(demoSrc)) return;
   fs.cpSync(demoSrc, demoDest, { recursive: true });
 }
@@ -141,10 +121,22 @@ function cssBeforeJsPlugin() {
   };
 }
 
+function pageTitlePlugin() {
+  return {
+    name: 'page-titles',
+    transformIndexHtml(html, ctx) {
+      const title = titleByPath.get(ctx.filename);
+      if (!title) return html;
+      return html.replace(/<title>[^<]*<\/title>/i, `<title>${title}</title>`);
+    },
+  };
+}
+
 export default defineConfig({
   plugins: [
     criticalBgPlugin(),
     cssBeforeJsPlugin(),
+    pageTitlePlugin(),
     {
       name: 'html-router',
       configureServer(server) {
@@ -169,7 +161,7 @@ export default defineConfig({
     assetsInlineLimit: 4096,
     rollupOptions: {
       input: Object.fromEntries(
-        Object.entries(pages).map(([key, path]) => [key, resolve(__dirname, path)])
+        Object.entries(pages).map(([key, { path }]) => [key, resolve(root, path)])
       ),
     },
   },
