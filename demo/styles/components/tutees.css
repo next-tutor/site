@@ -136,15 +136,6 @@
     }
 }
 
-.main-panel .panel.tutees.show {
-    animation: tutees-panel-reveal 0.24s ease-out;
-}
-
-@keyframes tutees-panel-reveal {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
 @keyframes tutee-pulse {
     0%, 100% { transform: scale(1); }
     50%       { transform: scale(1.06); }

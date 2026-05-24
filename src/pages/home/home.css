@@ -1,5 +1,5 @@
 .home-page-body .get-started {
-  background: #141414;
+  background-color: #141414;
 }
 
 .home-page {
@@ -104,7 +104,8 @@
   padding: 130px 0;
   width: 100%;
   margin-bottom: 0;
-  background-color: #000;
+  background-color: #020202;
+  isolation: isolate;
 
   .inner-wrap {
     width: min(1110px, 85%);
@@ -127,8 +128,6 @@
         #6c374c,
         #0d1b3e);
     box-shadow: 0 16px 45px rgba(0, 0, 0, 0.35);
-    transform: translateZ(0);
-    -webkit-mask-image: -webkit-radial-gradient(white, black);
   }
 
   .demo-iframe {
@@ -139,8 +138,6 @@
     background: #fff;
     border-radius: 20px;
     overflow: hidden;
-    transform: translateZ(0);
-    -webkit-mask-image: -webkit-radial-gradient(white, black);
   }
 
   .demo-iframe.video-mode {

@@ -1,5 +1,8 @@
+
 .pricing {
-  margin-top: 215px;
+  margin-top: 0;
+  padding-top: 215px;
+  padding-bottom: 75px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -43,9 +46,6 @@
   .wrapper {
     display: flex;
     margin-top: 140px;
-    animation:
-      slideIn 0.5s ease-in-out,
-      fadeIn 0.5s ease-in-out;
 
     .card {
       width: 410px;
@@ -188,7 +188,7 @@
 }
 
 .faq {
-  margin-top: 75px;
+  margin-top: 0;
   padding: 85px 0 120px;
   width: 100%;
   display: flex;
@@ -290,34 +290,14 @@
 }
 
 .get-started {
-  background: #0a0a0a;
-
-  .wrapper.reveal {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.55s ease, transform 0.55s ease;
-
-    &.revealed {
-      opacity: 1;
-      transform: none;
-    }
-  }
+  background-color: #0a0a0a;
 }
 
-/* Keep section/card backgrounds visible — animate position only */
-.pricing .card.reveal,
-.faq .item.reveal {
-  opacity: 1;
-}
-
-.pricing .card.reveal.revealed,
-.faq .item.reveal.revealed {
-  opacity: 1;
-}
 
 @media (max-width: 1536px) {
   .pricing {
-    margin-top: 155px;
+    padding-top: 155px;
+    margin-top: 0;
 
     .wrapper {
       margin-top: 100px;
@@ -327,7 +307,8 @@
 
 @media (max-width: 900px) {
   .pricing {
-    margin-top: 150px;
+    padding-top: 150px;
+    margin-top: 0;
 
     .wrapper {
       margin-top: 100px;
@@ -374,7 +355,8 @@
 
 @media (max-width: 450px) {
   .pricing {
-    margin-top: 150px;
+    padding-top: 150px;
+    margin-top: 0;
 
     .title {
       font-size: 45px;
