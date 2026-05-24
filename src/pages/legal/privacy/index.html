@@ -43,51 +43,93 @@
   <section class="privacy">
     <div class="main-wrap">
       <div class="title">Privacy Policy</div>
-      <div class="last-update">Last update: July 13th, 2024</div>
+      <div class="last-update">Last update: May 24th, 2026</div>
       <div class="content">
-        <p>Next Tutor Ltd. ("Next Tutor", "we", "us", or "our") respects your privacy and is committed to protecting your personal information. This Privacy Policy describes how we collect, use, disclose, and safeguard your data when you use our website, mobile app, and services (collectively, the "Services").</p>
+        <p>Next Tutor Ltd. ("Next Tutor", "we", "us", or "our") respects your privacy and is committed to protecting your personal information. This Privacy Policy describes how we collect, use, disclose, and safeguard your data when you use our website, mobile app, and services (collectively, the "Services"), including our backend integrations.</p>
         <p>By using Next Tutor, you agree to this Privacy Policy. If you do not agree, please do not use the Services.</p>
+
         <h2>1. Information We Collect:</h2>
+        
         <h3>1.1 Information You Provide:</h3>
-        <p>When you use our Services, you may provide us with:</p>
-        <ul><li>Full name</li><li>Email address</li><li>Phone number</li><li>Profile information (e.g., bio, teaching subjects, photo – optional)</li><li>Communications via the platform (e.g., chat, files)</li><li>Payment-related information (processed by third parties)</li><li>Role information (e.g., student or tutor)</li></ul>
-        <h3>1.2 Information Collected Automatically</h3>
+        <p>When you register and use our Services, you may provide us with:</p>
+        <ul>
+          <li><strong>Account Data:</strong> Full name, email address, phone number, profile photo, bio, and billing coordinates.</li>
+          <li><strong>Tutoring Data:</strong> Student rosters, lesson logs, attendance tracking, lesson schedules, student progress reports, and tasks/assignments.</li>
+          <li><strong>Financial Details:</strong> Tutors connect their PayPal account email/details to receive payments from students. We do not store raw card numbers or PayPal credentials; payments are processed securely via PayPal.</li>
+        </ul>
+
+        <h3>1.2 Information Collected Automatically:</h3>
         <p>We may collect:</p>
-        <ul><li>Device and browser information</li><li>IP address and general location (not precise)</li><li>Platform usage data (e.g., features used, session durations)</li></ul>
-        <h3>1.3 Information from Third Parties</h3>
-        <p>We may receive data from:</p>
-        <ul><li>Payment processors (e.g., transaction status)</li><li>Identity verification providers (if used in the future)</li></ul>
-        <p>We do not collect sensitive biometric, health, or precise geolocation data.</p>
+        <ul>
+          <li>Device metadata (OS, browser type).</li>
+          <li>IP address and general geographical region.</li>
+          <li>Usage statistics (pages visited, features used, session durations).</li>
+        </ul>
+
+        <h3>1.3 Information from Third-Party Services (e.g., Google OAuth):</h3>
+        <p>If you choose to authorize Next Tutor to connect with third-party services, we may collect:</p>
+        <ul>
+          <li><strong>Google OAuth Data:</strong> If you link Google Drive to your Next Tutor account, we receive your Google email address, access tokens, and a secure refresh token to maintain the connection.</li>
+          <li><strong>Google Drive Metadata:</strong> When you select a specific file from your Google Drive to share on the platform, we retrieve and store the file's name, MIME type (format), file icon, and the Google Drive web view link.</li>
+        </ul>
+
         <h2>2. How We Use Your Information:</h2>
-        <p>We use your information to:</p>
-        <ul><li>Provide and maintain the platform</li><li>Enable users to find and contact each other independently</li><li>Facilitate communication and payments between users</li><li>Provide support and respond to user requests</li><li>Improve security, performance, and reliability</li><li>Comply with legal obligations</li></ul>
-        <p>We do not match or recommend specific tutors or students. All interactions are initiated voluntarily by the users.</p>
-        <h2>3. Sharing of Information</h2>
-        <p>We do not sell your personal data.</p>
-        <p>We may share data with:</p>
-        <ul><li>Service Providers – such as hosting, analytics, email, and payment processing providers</li><li>Other Users – basic public profile data is visible to other users (e.g., name, subject taught)</li><li>Legal or Regulatory Authorities – if required by applicable law or legal process</li><li>In the Event of a Merger or Sale – user data may be transferred with the business, with notice</li></ul>
-        <p>We require third parties to handle your data responsibly and only for intended purposes.</p>
-        <h2>4. Data Retention</h2>
-        <h3>We retain personal data for as long as necessary to:</h3>
-        <ul><li>Provide the Services</li><li>Comply with legal and accounting obligations</li><li>Resolve disputes and enforce agreements</li></ul>
-        <p>You may request deletion of your account and data at any time, subject to applicable laws.</p>
-        <h2>5. Data Security</h2>
-        <p>We use industry-standard technical and organizational measures to protect your data, including:</p>
-        <ul><li>HTTPS encryption</li><li>Access controls</li><li>Secure storage of user credentials (e.g., hashed passwords)</li></ul>
-        <p>While we do our best to secure your data, no system is entirely immune from risk.</p>
-        <h2>6. Your Rights:</h2>
-        <p>Depending on your location, you may have the right to:</p>
-        <ul><li>Access and receive a copy of your data</li><li>Correct inaccurate information</li><li>Request deletion of your data</li><li>Object to certain processing</li><li>Withdraw consent (where applicable)</li></ul>
-        <p>To exercise your rights, contact us at: privacy@nexttutor.app</p>
-        <p>We may ask for verification to protect your privacy.</p>
-        <h2>7. Children's Privacy</h2>
-        <p>The Services are intended for users aged 13 and older. If we learn we have collected personal data from a child under 13 without verifiable parental consent, we will delete it promptly.</p>
-        <h2>8. International Data Transfers</h2>
-        <p>We may process data on servers located outside your country of residence. By using the Services, you consent to such transfers in accordance with this Policy and applicable law.</p>
+        <p>We use the collected information for the following purposes:</p>
+        <ul>
+          <li>To operate, maintain, and provide the features of the Next Tutor platform.</li>
+          <li>To generate and host the tutor's professional public website.</li>
+          <li>To send transactional emails, schedule notifications, and automated lesson reminders to tutors and students (routed through <strong>Brevo</strong>).</li>
+          <li>To securely process subscriptions and facilitate peer-to-peer lesson payments (routed through <strong>PayPal</strong>).</li>
+          <li>To support and resolve technical or billing inquiries.</li>
+        </ul>
+
+        <h2>3. Google API Services User Data & Google Drive Integration</h2>
+        <p>Our platform allows tutors to link their Google Drive to attach learning materials, homework, or documents directly to lessons and tasks. If you use this feature:</p>
+        <ul>
+          <li><strong>Limited Access Scope:</strong> We do not download, modify, or scan the contents of your Google Drive files. We only access the metadata (file title, link, and file type) of the specific files you voluntarily select and attach.</li>
+          <li><strong>Sharing Permissions:</strong> To enable students to view the attachments, our backend invokes the Google Drive API to create a read-only view permission (making it accessible to anyone with the link). This permission is set strictly on the files you choose to share.</li>
+          <li><strong>Strict Confidentiality:</strong> Your Google OAuth credentials (refresh tokens) are stored securely on our encrypted Firestore database and are never shared with any third party, other than calling Google's official API servers.</li>
+          <li><strong>Limited Use Policy:</strong> Next Tutor's use and transfer of information received from Google APIs to any other app will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener noreferrer">Google API Services User Data Policy</a>, including the Limited Use requirements.</li>
+          <li><strong>Revocation:</strong> You can disconnect your Google account from Next Tutor at any time in your Settings, which deletes your Google refresh token from our systems, or by revoking access in your Google Account Security settings.</li>
+        </ul>
+
+        <h2>4. Sharing of Information</h2>
+        <p>We do not sell, rent, or trade your personal data. We only share information with trusted third-party providers under strict data processing agreements:</p>
+        <ul>
+          <li><strong>Brevo (Sendinblue):</strong> We share basic notification parameters (such as names and emails) with Brevo to deliver automated email reminders and service notices.</li>
+          <li><strong>PayPal:</strong> We transmit purchase details and account identification to PayPal for processing premium subscriptions and distributing student payouts.</li>
+          <li><strong>Google Cloud Platform &amp; Firebase:</strong> Our core databases and file storage (for custom websites) are securely hosted on Google Cloud infrastructure.</li>
+        </ul>
+
+        <h2>5. Data Retention</h2>
+        <p>We retain your personal data for as long as your active account exists, or as needed to provide the Services, comply with legal/accounting guidelines, and enforce agreements. You may delete your account and associated student records at any time. Upon deletion, personal data is permanently removed from our active systems, except for residual backups which are purged according to our cycle.</p>
+
+        <h2>6. Data Security</h2>
+        <p>We apply robust technical and organizational security measures to protect your data, including:</p>
+        <ul>
+          <li>HTTPS data transfer encryption.</li>
+          <li>Encrypted database storage (Firestore).</li>
+          <li>Restricted backend service access keys (secrets managed in secure vaults).</li>
+          <li>Access control audits on server-side functions.</li>
+        </ul>
+        <p>However, please note that no method of transmission or storage is 100% secure.</p>
+
+        <h2>7. Your Rights</h2>
+        <p>Under international privacy regulations (such as GDPR), you have the right to request access to your personal data, rectify inaccuracies, request erasure of records, or withdraw your consent. To exercise any of these rights, contact us at: <a href="mailto:service@nexttutor.io">service@nexttutor.io</a>.</p>
+
+        <h2>8. Children's Privacy</h2>
+        <p>The platform is intended for tutors (who must be 18 or older). When tutors input minor student records (under 13) onto the platform for progress tracking, they represent that they have obtained appropriate parental consent to store that data. If we find that we have directly collected personal information from children under 13 without consent, we will remove it immediately.</p>
+
         <h2>9. Changes to This Policy</h2>
-        <p>We may update this Privacy Policy from time to time. Material changes will be communicated via in-app notice or email. Continued use of the Services after such updates indicates your acceptance.</p>
+        <p>We may update this Privacy Policy from time to time. If we make material modifications, we will notify you by email or via in-app alert. Your continued use of the platform after updates indicates acceptance of the revised policy.</p>
+
         <h2>10. Contact Us:</h2>
-        <ul><li>For any privacy-related questions or requests, please contact: <p><a href="mailto:support@nexttutor.io">support@nexttutor.io</a>.</p></li></ul>
+        <p>For any privacy questions, data requests, or policy inquiries, please contact us at:</p>
+        <p>
+          Next Tutor Ltd.<br />
+          Email: <span class="email"><a href="mailto:service@nexttutor.io">service@nexttutor.io</a></span><br />
+          Location: Tel Aviv, Israel
+        </p>
       </div>
     </div>
   </section>

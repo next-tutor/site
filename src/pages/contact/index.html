@@ -46,33 +46,56 @@
 
   <section class="contact">
     <div class="main-wrap">
-      <div class="main-title hero-animate">How can we help?</div>
+      <div class="main-title hero-animate">How can we <span class="gradient">help?</span></div>
       <div class="inner-wrap">
         <div class="left-panel reveal">
-          <form>
+          <form id="contact-form" novalidate>
+            <!-- Honeypot Spam Protection -->
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
             <div class="question q1">
-              <div class="lbl-wrap"><label for="email">Your Email address</label></div>
-              <input type="email" required autocomplete="off" id="email" placeholder="Enter your email" />
+              <div class="lbl-wrap">
+                <label for="email">Your Email address <span class="required-asterisk">*</span></label>
+              </div>
+              <input type="email" required autocomplete="email" id="email" name="email" placeholder="Enter your email" aria-errormessage="email-error" />
+              <div id="email-error" class="error-msg">
+                <span aria-hidden="true">⚠️</span> Please enter a valid email address.
+              </div>
             </div>
             <div class="question q2">
-              <div class="lbl-wrap"><label for="message">Your Message</label></div>
-              <textarea required id="message" name="message" placeholder="Write your message"></textarea>
+              <div class="lbl-wrap">
+                <label for="message">Your Message <span class="required-asterisk">*</span></label>
+              </div>
+              <textarea required id="message" name="message" placeholder="Write your message" aria-errormessage="message-error"></textarea>
+              <div id="message-error" class="error-msg">
+                <span aria-hidden="true">⚠️</span> Please write your message.
+              </div>
             </div>
             <div class="btn-submit">
               <button type="submit">Submit
                 <svg fill="none" height="24" viewBox="0 0 24 24" width="24" aria-hidden="true"><path d="M10.75 8.75L14.25 12L10.75 15.25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
               </button>
             </div>
+            <div id="form-status" class="form-status-msg" aria-live="polite"></div>
           </form>
+
+          <div id="contact-success" class="success-panel" style="display: none;">
+            <div class="success-icon">
+              <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 22 2 12 2ZM10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z" fill="currentColor"/>
+              </svg>
+            </div>
+            <h3 class="success-title">Message Sent!</h3>
+            <p class="success-text">Thank you for reaching out. We will get back to you shortly.</p>
+            <button type="button" id="btn-send-another" class="btn-another">Send another message</button>
+          </div>
         </div>
         <div class="right-panel reveal">
           <div class="info">
             <div class="title">Get Help</div>
-            <div class="email">support@nexttutor.com</div>
-          </div>
-          <div class="info">
-            <div class="title">Work at Next Tutor</div>
-            <div class="email">careers@nexttutor.com</div>
+            <div class="email">
+              <a href="mailto:service@nexttutor.io">service@nexttutor.io</a>
+            </div>
           </div>
         </div>
       </div>
@@ -102,5 +125,6 @@
 
 </div>
 <script type="module" src="/src/js/main.js"></script>
+<script type="module" src="/src/js/contact.js"></script>
 </body>
 </html>
