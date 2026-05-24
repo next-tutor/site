@@ -1,3 +1,7 @@
+.home-page-body {
+  --navbar-bg: #050505;
+}
+
 .home-page-body .get-started {
   background-color: #141414;
 }

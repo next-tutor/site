@@ -1,3 +1,7 @@
+body {
+  --navbar-bg: #131313;
+}
+
 .credits {
   width: 100%;
   display: flex;

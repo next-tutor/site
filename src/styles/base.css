@@ -14,6 +14,7 @@ html {
 }
 
 body {
+  --navbar-bg: #020202;
   font-family: Poppins, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   background-color: #020202;
   min-height: 100vh;

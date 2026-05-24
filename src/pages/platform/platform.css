@@ -1,3 +1,7 @@
+body {
+  --navbar-bg: #080808;
+}
+
 .platform {
   display: flex;
   flex-direction: column;
