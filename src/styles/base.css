@@ -73,3 +73,37 @@ body.no_overflow {
     overflow-x: hidden;
   }
 }
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: none;
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.reveal-left.revealed {
+  opacity: 1;
+  transform: none;
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.reveal-right.revealed {
+  opacity: 1;
+  transform: none;
+}
+

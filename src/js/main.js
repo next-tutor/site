@@ -67,6 +67,34 @@ function registerLazyDemoIframe() {
   observer.observe(iframe);
 }
 
+function registerRevealAnimations() {
+  const revealItems = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .demo-reveal');
+  if (!revealItems.length) return;
+
+  const revealElement = element => {
+    element.classList.add('revealed');
+    element.querySelector('.iframe-reveal')?.classList.add('revealed');
+  };
+
+  if (!('IntersectionObserver' in window)) {
+    revealItems.forEach(revealElement);
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        revealElement(entry.target);
+        observer.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.02 }
+  );
+
+  revealItems.forEach(item => observer.observe(item));
+}
+
 
 window.scrollTo(0, 0);
 
@@ -77,7 +105,8 @@ const init = () => {
   registerHamburger();
   registerSidebarLinks();
   registerLazyDemoIframe();
-  
+  registerRevealAnimations();
+
   toggleDemoIframeMode(isVideoMode);
 
   const toggleBtn = document.getElementById('toggle-iframe-mode');

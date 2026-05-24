@@ -1,3 +1,10 @@
+html,
+body,
+.page-wrapper {
+  background-color: #020202 !important;
+  --navbar-bg: #020202;
+}
+
 header {
   background-color: #050505 !important;
 }
@@ -11,7 +18,7 @@ header {
   padding-top: 240px;
   padding-bottom: 140px;
   margin-bottom: 0;
-  background-color: #020202;
+  background-color: transparent;
   overflow: hidden;
 
   .wrapper {
@@ -24,6 +31,19 @@ header {
     background-image: url("/src/assets/images/dots.png");
     background-position: center;
     background-repeat: no-repeat;
+
+    .hero-animate {
+      opacity: 0;
+      animation: fadeInUp 0.7s ease forwards;
+
+      &:nth-child(1) {
+        animation-delay: 0.05s;
+      }
+
+      &:nth-child(2) {
+        animation-delay: 0.18s;
+      }
+    }
 
     .title {
       text-align: center;
@@ -70,7 +90,25 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #020202;
+  background-color: rgba(0, 0, 0, 0);
+
+  /* Wrapper must stay fully opaque — fading the parent while the img is GPU-promoted causes a black ghost */
+  .img-wrap.reveal-right {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .img-wrap.reveal-right img {
+    opacity: 0;
+    transform: translateX(30px);
+    transition: opacity 0.55s ease, transform 0.55s ease;
+  }
+
+  .img-wrap.reveal-right.revealed img {
+    opacity: 1;
+    transform: none;
+  }
 
   .img-wrap {
     display: flex;
@@ -133,7 +171,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #0c0c0c;
+  background-color: #050505;
 
   img {
     height: auto;
@@ -225,7 +263,14 @@ header {
 }
 
 .get-started {
-  background-color: #141414;
+  background-color: #030303;
+  isolation: isolate;
+
+  .wrapper {
+    transform: none;
+    transition: none;
+    opacity: 1;
+  }
 }
 
 
@@ -365,5 +410,17 @@ header {
         }
       }
     }
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

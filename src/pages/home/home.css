@@ -6,6 +6,78 @@
   background-color: #141414;
 }
 
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.home-page .inner-hp .hero-animate {
+  opacity: 0;
+  animation: fadeInUp 0.7s ease forwards;
+}
+
+.home-page .inner-hp .hero-animate:nth-child(1) {
+  animation-delay: 0.05s;
+}
+
+.home-page .inner-hp .hero-animate:nth-child(2) {
+  animation-delay: 0.18s;
+}
+
+.home-page .inner-hp .hero-animate:nth-child(3) {
+  animation-delay: 0.31s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-page .inner-hp .hero-animate {
+    opacity: 1;
+    animation: none;
+  }
+}
+
+
+
+
+
+.reveal-slide,
+.demo-reveal {
+  transform: translateY(30px);
+  transition: transform 0.55s ease;
+}
+
+.reveal-slide.revealed,
+.demo-reveal.revealed {
+  transform: none;
+}
+
+.iframe-reveal {
+  opacity: 0;
+  transition: opacity 0.55s ease 0.18s;
+}
+
+.iframe-reveal.revealed {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal-left,
+  .reveal-right,
+  .reveal-slide,
+  .demo-reveal,
+  .iframe-reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 .home-page {
   height: 950px;
   min-height: 600px;
@@ -115,6 +187,7 @@
     width: min(1110px, 85%);
     display: flex;
     flex-direction: column;
+    background-color: #020202;
   }
 
   .demo-frame {
@@ -260,6 +333,7 @@
   align-items: center;
   background: #141414;
   contain: layout style;
+  padding-bottom: 70px;
 
   .subtitle {
     padding-top: 47px;

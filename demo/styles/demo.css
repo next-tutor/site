@@ -56,6 +56,10 @@ body {
     display: none;
     margin-top: 65px;
 
+    &.show {
+      animation: panel-reveal 0.24s ease-out;
+    }
+
     .title {
       font-size: 30px;
       font-family: "PT Serif", serif;
@@ -151,6 +155,18 @@ body {
 
 
 
+
+@keyframes panel-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 @keyframes dash {
   0% {
