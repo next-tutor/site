@@ -84,11 +84,10 @@ body {
       margin-right: 230px;
 
       .feature {
-        min-height: 380px;
+        min-height: 600px;
         display: flex;
         justify-content: center;
         flex-direction: column;
-        margin-bottom: 50px;
         transition: transform 0.35s ease;
 
         &:last-child {

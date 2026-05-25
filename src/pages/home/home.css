@@ -191,6 +191,7 @@
   }
 
   .demo-frame {
+    position: relative;
     width: 100%;
     border-radius: 25px;
     padding: 5px;
@@ -207,7 +208,21 @@
     box-shadow: 0 16px 45px rgba(0, 0, 0, 0.35);
   }
 
+  .demo-frame::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    background: #fff;
+    border-radius: 20px;
+    z-index: 1;
+  }
+
   .demo-iframe {
+    position: relative;
+    z-index: 2;
     display: block;
     width: 100%;
     aspect-ratio: 1110 / 610;

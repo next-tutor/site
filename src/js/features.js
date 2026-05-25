@@ -6,8 +6,11 @@ function registerStickbox() {
   const observer = new IntersectionObserver(
     entries => {
       entries.forEach(entry => {
-        document.querySelector('.feature-details .more-details')
-          ?.classList.toggle('show', entry.isIntersecting);
+        if (entry.isIntersecting) {
+          document.querySelector('.feature-details .more-details')
+            ?.classList.add('show');
+          observer.unobserve(stickybox);
+        }
       });
     },
     { threshold: [0.75, 1] }
@@ -83,28 +86,81 @@ function registerCarousel() {
   const nextBtn = wrapper.querySelector('.carousel-next');
   if (!track || !items.length) return;
 
-  let current = 0;
-
   function visibleCount() {
-    return window.innerWidth >= 900 ? 2 : 1;
+    if (window.innerWidth >= 1100) return 3;
+    if (window.innerWidth >= 700) return 2;
+    return 1;
   }
 
-  function maxIndex() {
-    return Math.max(0, items.length - visibleCount());
-  }
+  // Prepend cloned last 3 items, and append cloned first 3 items for seamless infinite scroll
+  const originalItems = items.filter(el => !el.classList.contains('cloned'));
+  track.innerHTML = '';
+  originalItems.forEach(item => track.appendChild(item));
 
-  function update() {
+  const lastClones = originalItems.slice(-3).map(el => {
+    const clone = el.cloneNode(true);
+    clone.classList.add('cloned');
+    return clone;
+  });
+  lastClones.reverse().forEach(clone => track.insertBefore(clone, track.firstChild));
+
+  const firstClones = originalItems.slice(0, 3).map(el => {
+    const clone = el.cloneNode(true);
+    clone.classList.add('cloned');
+    return clone;
+  });
+  firstClones.forEach(clone => track.appendChild(clone));
+
+  let current = 3;
+  let isTransitioning = false;
+
+  function update(animated = true) {
     const gap = 20;
-    const itemW = items[0].getBoundingClientRect().width + gap;
+    const itemW = originalItems[0].getBoundingClientRect().width + gap;
+    
+    if (animated) {
+      track.style.transition = 'transform 0.35s ease';
+    } else {
+      track.style.transition = 'none';
+    }
+    
     track.style.transform = `translateX(-${current * itemW}px)`;
-    if (prevBtn) prevBtn.disabled = current === 0;
-    if (nextBtn) nextBtn.disabled = current >= maxIndex();
   }
 
-  prevBtn?.addEventListener('click', () => { if (current > 0) { current--; update(); } });
-  nextBtn?.addEventListener('click', () => { if (current < maxIndex()) { current++; update(); } });
-  window.addEventListener('resize', () => { current = Math.min(current, maxIndex()); update(); });
-  update();
+  function handleTransitionEnd() {
+    isTransitioning = false;
+    const totalOriginal = originalItems.length;
+
+    if (current >= totalOriginal + 3) {
+      current = current - totalOriginal;
+      update(false);
+    } else if (current < 3) {
+      current = current + totalOriginal;
+      update(false);
+    }
+  }
+
+  track.addEventListener('transitionend', handleTransitionEnd);
+
+  prevBtn?.addEventListener('click', () => {
+    if (isTransitioning) return;
+    isTransitioning = true;
+    current--;
+    update(true);
+  });
+
+  nextBtn?.addEventListener('click', () => {
+    if (isTransitioning) return;
+    isTransitioning = true;
+    current++;
+    update(true);
+  });
+
+  window.addEventListener('resize', () => {
+    update(false);
+  });
+
+  update(false);
 }
 
 const initFeatures = () => {
