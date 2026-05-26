@@ -40,7 +40,7 @@ export const pages = {
   'features-reports': {
     path: 'src/pages/features/reports/index.html',
     url: '/features/reports',
-    title: 'Reports',
+    title: 'Incomes',
   },
   'features-students': {
     path: 'src/pages/features/students/index.html',
@@ -50,7 +50,7 @@ export const pages = {
   'features-tasks': {
     path: 'src/pages/features/tasks/index.html',
     url: '/features/tasks',
-    title: 'Offline Tasks',
+    title: 'Tasks',
   },
   'features-automation': {
     path: 'src/pages/features/automation/index.html',
