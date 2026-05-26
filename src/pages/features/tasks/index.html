@@ -24,9 +24,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
 </head>
 
-<body>
+<body class="tasks-feature-page">
   <div class="page-wrapper">
     <header>
+      <input type="checkbox" id="sidebar-toggle" style="display: none;">
       <div class="inner-header">
         <a class="logo" href="/"><img src="/src/assets/images/logo/logo-large.png" fetchpriority="high" alt="Next Tutor"
             width="105" height="32" /></a>
@@ -39,7 +40,7 @@
           <a class="btn-login" tabindex="0" href="#">Login</a>
           <a href="/plus/plus.html" class="btn-start" tabindex="0">Let's Start</a>
         </nav>
-        <div class="hamburger"><label class="btn" aria-label="Toggle menu"><span></span></label></div>
+        <div class="hamburger"><label for="sidebar-toggle" class="btn" aria-label="Toggle menu"><span></span></label></div>
         <div class="sidebar" role="dialog" aria-label="Mobile navigation">
           <a class="btn-login" tabindex="0" href="#">Login</a>
           <a href="/plus/plus.html" class="btn-start" tabindex="0">Let's Start</a>
@@ -56,13 +57,11 @@
         <div class="title"><strong class="gradient">Increase</strong> your incomes.</div>
       </div>
     </div>
-
     <div class="feature-opening">
       <div class="page welcome">
-        <picture class="image-wrap">
-          <source srcset="/src/assets/images/features/tasks/tasks-mini.png" media="(max-width: 1536px)" />
-          <img src="/src/assets/images/features/tasks/tasks1.png" alt="Offline Tasks preview" loading="eager" />
-        </picture>
+        <div class="image-wrap">
+          <img src="/src/assets/images/features/tasks/tasks.svg" alt="Offline Tasks preview" loading="eager" />
+        </div>
       </div>
     </div>
 
@@ -71,36 +70,33 @@
         <div class="more-details">
           <div class="sticky-box">
             <div class="cover"></div>
-            <img src="/src/assets/images/features/tasks/task-req.png" class="i1 active" alt="" loading="eager">
-            <img src="/src/assets/images/features/tasks/reject-req.png" class="i2" alt="" loading="lazy">
-            <img src="/src/assets/images/features/tasks/task-messages.png" class="i3" alt="" loading="lazy">
+            <img src="/src/assets/images/features/tasks/feature-a.svg" class="i1 active" alt="" loading="eager">
+            <img src="/src/assets/images/features/tasks/feature-b.svg" class="i2" alt="" loading="lazy">
+            <img src="/src/assets/images/features/tasks/feature-c.svg" class="i3" alt="" loading="lazy">
           </div>
           <div class="items">
             <div class="item i1" data-swap="i1">
-              <picture class="small-image-wrap">
-                <source srcset="/src/assets/images/features/tasks/task-messages.png" media="(min-width: 550px)" /><img
-                  src="/src/assets/images/features/tasks/tasks-450.png" alt="" loading="lazy" />
-              </picture>
+              <div class="small-image-wrap">
+                <img src="/src/assets/images/features/tasks/feature-a.svg" alt="" loading="lazy" />
+              </div>
               <div class="title wheat">Receive Requests</div>
               <div class="desc">Let your students send you requests for help—anything from solving exercises to writing
                 assignments. You can choose to accept or decline each request. If you decide to proceed, you'll be asked
                 to provide an estimated completion time and a price quote.</div>
             </div>
             <div class="item i2" data-swap="i2">
-              <picture class="small-image-wrap">
-                <source srcset="/src/assets/images/features/tasks/task-messages.png" media="(min-width: 550px)" /><img
-                  src="/src/assets/images/features/tasks/tasks-450.png" alt="" loading="lazy" />
-              </picture>
+              <div class="small-image-wrap">
+                <img src="/src/assets/images/features/tasks/feature-b.svg" alt="" loading="lazy" />
+              </div>
               <div class="title wheat">Wait for Payment</div>
               <div class="desc">The student reviews your offer on his portal. If he accepts your time estimate and
                 price, payment is required upfront (via PayPal or any provider you choose). Only then do you begin
                 working.</div>
             </div>
             <div class="item i3" data-swap="i3">
-              <picture class="small-image-wrap">
-                <source srcset="/src/assets/images/features/tasks/task-messages.png" media="(min-width: 550px)" /><img
-                  src="/src/assets/images/features/tasks/tasks-450.png" alt="" loading="lazy" />
-              </picture>
+              <div class="small-image-wrap">
+                <img src="/src/assets/images/features/tasks/feature-c.svg" alt="" loading="lazy" />
+              </div>
               <div class="title wheat">Work on Your Own Time</div>
               <div class="desc">Once payment is made, it's your turn to get to work. You can deliver the work all at
                 once or in stages to collect feedback. Everything is clear, smooth, and hassle-free—no more
@@ -111,13 +107,21 @@
       </div>
     </div>
 
+    <!-- Carousel slide controls (JS-free) -->
+    <input type="radio" name="carousel-slide" id="slide-1" checked style="display:none;">
+    <input type="radio" name="carousel-slide" id="slide-2" style="display:none;">
+    <input type="radio" name="carousel-slide" id="slide-3" style="display:none;">
+    <input type="radio" name="carousel-slide" id="slide-4" style="display:none;">
+
     <div class="more-features">
       <div class="caption">Explore more features</div>
       <div class="carousel-wrapper">
-        <button class="carousel-prev" aria-label="Previous"><svg width="24" height="24" viewBox="0 0 24 24"
-            aria-hidden="true">
-            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" fill="white" />
-          </svg></button>
+        <!-- Prev buttons -->
+        <label for="slide-4" class="carousel-prev p-1" aria-label="Previous"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" fill="white" /></svg></label>
+        <label for="slide-1" class="carousel-prev p-2" aria-label="Previous"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" fill="white" /></svg></label>
+        <label for="slide-2" class="carousel-prev p-3" aria-label="Previous"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" fill="white" /></svg></label>
+        <label for="slide-3" class="carousel-prev p-4" aria-label="Previous"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" fill="white" /></svg></label>
+
         <div class="carousel-viewport">
           <div class="carousel-track">
             <a class="carousel-item" href="/features/automation">
@@ -142,10 +146,12 @@
             </a>
           </div>
         </div>
-        <button class="carousel-next" aria-label="Next"><svg width="24" height="24" viewBox="0 0 24 24"
-            aria-hidden="true">
-            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="white" />
-          </svg></button>
+
+        <!-- Next buttons -->
+        <label for="slide-2" class="carousel-next n-1" aria-label="Next"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="white" /></svg></label>
+        <label for="slide-3" class="carousel-next n-2" aria-label="Next"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="white" /></svg></label>
+        <label for="slide-4" class="carousel-next n-3" aria-label="Next"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="white" /></svg></label>
+        <label for="slide-1" class="carousel-next n-4" aria-label="Next"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="white" /></svg></label>
       </div>
     </div>
 
@@ -187,52 +193,51 @@
       </div>
       <div class="mobile">
         <div class="line"></div>
-        <div class="category">
-          <div class="header">
+        <details class="category">
+          <summary class="header">
             <div class="title">Company</div><svg width="15" height="10" viewBox="0 0 10 8" fill="none"
               aria-hidden="true">
               <path d="M1 1.59814L5.08941 5.68764L9.17904 1.59814" stroke="white" stroke-width="2"></path>
             </svg>
-          </div>
+          </summary>
           <div class="content"><a href="/platform">Platform</a><a href="/about">About</a><a href="/pricing">Pricing</a>
           </div>
-        </div>
-        <div class="category">
-          <div class="header">
+        </details>
+        <details class="category">
+          <summary class="header">
             <div class="title">Features</div><svg width="15" height="10" viewBox="0 0 10 8" fill="none"
               aria-hidden="true">
               <path d="M1 1.59814L5.08941 5.68764L9.17904 1.59814" stroke="white" stroke-width="2"></path>
             </svg>
-          </div>
-          <div class="content"><a href="/features/tasks">Offline Tasks</a><a href="/features/website">Web Studio</a><a
-              href="/features/reports">Reports</a><a href="/features/students">Student Portal</a></div>
-        </div>
-        <div class="category">
-          <div class="header">
+          </summary>
+          <div class="content"><a href="/features/tasks">Offline Tasks</a><a href="/features/website">Web
+              Studio</a><a href="/features/reports">Reports</a><a href="/features/students">Student Portal</a></div>
+        </details>
+        <details class="category">
+          <summary class="header">
             <div class="title">Legal</div><svg width="15" height="10" viewBox="0 0 10 8" fill="none" aria-hidden="true">
               <path d="M1 1.59814L5.08941 5.68764L9.17904 1.59814" stroke="white" stroke-width="2"></path>
             </svg>
-          </div>
+          </summary>
           <div class="content"><a href="/privacy">Privacy Policy</a><a href="/terms">Terms of Service</a><a
               href="/credits">Images Credits</a></div>
-        </div>
-        <div class="category">
-          <div class="header">
+        </details>
+        <details class="category">
+          <summary class="header">
             <div class="title">Support</div><svg width="15" height="10" viewBox="0 0 10 8" fill="none"
               aria-hidden="true">
               <path d="M1 1.59814L5.08941 5.68764L9.17904 1.59814" stroke="white" stroke-width="2"></path>
             </svg>
-          </div>
+          </summary>
           <div class="content"><a href="/contact">Contact us</a></div>
-        </div>
+        </details>
         <div class="info">
           <div class="rights"><span class="sign">©</span> 2024 Next Tutor.</div>
         </div>
       </div>
     </footer>
   </div>
-  <script type="module" src="/src/js/main.js"></script>
-  <script type="module" src="/src/js/features.js"></script>
+
 </body>
 
 </html>

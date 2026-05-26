@@ -122,6 +122,7 @@ body {
   display: flex;
   justify-content: center;
   isolation: isolate;
+  background: #0b0b0b;
 
   .inner-details {
     max-width: 1270px;
@@ -768,4 +769,373 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* ==========================================================================
+   Tasks Page Native CSS Overrides (JS-free)
+   ========================================================================== */
+
+/* Sidebar checkbox toggle logic */
+.tasks-feature-page #sidebar-toggle:checked ~ .inner-header .hamburger .btn > span {
+  transform: rotate(45deg);
+}
+.tasks-feature-page #sidebar-toggle:checked ~ .inner-header .hamburger .btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+.tasks-feature-page #sidebar-toggle:checked ~ .inner-header .hamburger .btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+.tasks-feature-page #sidebar-toggle:checked ~ .inner-header .sidebar {
+  right: 0;
+  z-index: 20;
+}
+/* Prevent body scroll when sidebar open */
+body.tasks-feature-page:has(#sidebar-toggle:checked) {
+  overflow: hidden;
+}
+
+/* Mobile Footer details/summary overrides */
+.tasks-feature-page footer .mobile .category {
+  display: flex;
+  flex-direction: column;
+  height: 60px;
+  overflow: hidden;
+  transition: height 0.3s ease-in-out;
+  width: 100%;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+
+.tasks-feature-page footer .mobile .category[open] {
+  height: 200px;
+}
+
+.tasks-feature-page footer .mobile .category summary {
+  list-style: none;
+  outline: none;
+}
+
+.tasks-feature-page footer .mobile .category summary::-webkit-details-marker {
+  display: none;
+}
+
+.tasks-feature-page footer .mobile .category[open] .header svg {
+  transform: rotate(180deg);
+}
+
+.tasks-feature-page footer .mobile .category[open] .content {
+  opacity: 1;
+  max-height: 9em;
+  transition: all 200ms linear;
+  will-change: opacity, max-height;
+}
+
+/* Radio-controlled CSS Carousel */
+.tasks-feature-page .carousel-viewport {
+  overflow: hidden !important;
+  scroll-snap-type: none !important;
+}
+
+.tasks-feature-page .carousel-prev,
+.tasks-feature-page .carousel-next {
+  display: none !important;
+}
+
+/* Show correct chevron labels based on active radio slide */
+.tasks-feature-page #slide-1:checked ~ .more-features .carousel-prev.p-1,
+.tasks-feature-page #slide-1:checked ~ .more-features .carousel-next.n-1,
+.tasks-feature-page #slide-2:checked ~ .more-features .carousel-prev.p-2,
+.tasks-feature-page #slide-2:checked ~ .more-features .carousel-next.n-2,
+.tasks-feature-page #slide-3:checked ~ .more-features .carousel-prev.p-3,
+.tasks-feature-page #slide-3:checked ~ .more-features .carousel-next.n-3,
+.tasks-feature-page #slide-4:checked ~ .more-features .carousel-prev.p-4,
+.tasks-feature-page #slide-4:checked ~ .more-features .carousel-next.n-4 {
+  display: flex !important;
+}
+
+/* Translate carousel track */
+.tasks-feature-page #slide-1:checked ~ .more-features .carousel-track {
+  transform: translateX(0);
+}
+.tasks-feature-page #slide-2:checked ~ .more-features .carousel-track {
+  transform: translateX(calc(-11.111% - 2px));
+}
+.tasks-feature-page #slide-3:checked ~ .more-features .carousel-track {
+  transform: translateX(calc(-22.222% - 4px));
+}
+.tasks-feature-page #slide-4:checked ~ .more-features .carousel-track {
+  transform: translateX(calc(-33.333% - 6px));
+}
+
+@media (max-width: 1100px) {
+  .tasks-feature-page #slide-2:checked ~ .more-features .carousel-track {
+    transform: translateX(calc(-33.333% - 6.667px));
+  }
+  .tasks-feature-page #slide-3:checked ~ .more-features .carousel-track {
+    transform: translateX(calc(-66.667% - 13.333px));
+  }
+  .tasks-feature-page #slide-4:checked ~ .more-features .carousel-track {
+    transform: translateX(calc(-100% - 20px));
+  }
+}
+
+@media (max-width: 700px) {
+  .tasks-feature-page #slide-2:checked ~ .more-features .carousel-track {
+    transform: translateX(calc(-100% - 20px));
+  }
+  .tasks-feature-page #slide-3:checked ~ .more-features .carousel-track {
+    transform: translateX(calc(-200% - 40px));
+  }
+  .tasks-feature-page #slide-4:checked ~ .more-features .carousel-track {
+    transform: translateX(calc(-300% - 60px));
+  }
+}
+
+/* Scroll-Driven Animations (Desktop only) */
+@media (min-width: 1001px) {
+  .tasks-feature-page .more-details {
+    timeline-scope: --item-1, --item-2, --item-3;
+  }
+  
+  .tasks-feature-page .item.i1 {
+    view-timeline: --item-1 block;
+  }
+  .tasks-feature-page .item.i2 {
+    view-timeline: --item-2 block;
+  }
+  .tasks-feature-page .item.i3 {
+    view-timeline: --item-3 block;
+  }
+  
+  .tasks-feature-page .sticky-box img {
+    transition: none !important; /* Prevents CSS transitions from lagging scroll-driven animation */
+  }
+
+  .tasks-feature-page .sticky-box img.i1 {
+    opacity: 1 !important;
+    z-index: 1;
+    animation: none !important;
+  }
+  .tasks-feature-page .sticky-box img.i2 {
+    z-index: 2;
+    animation: fade-in-stay auto linear both;
+    animation-timeline: --item-2;
+    animation-range: entry 100% exit 0%;
+  }
+  .tasks-feature-page .sticky-box img.i3 {
+    z-index: 3;
+    animation: fade-in-stay auto linear both;
+    animation-timeline: --item-3;
+    animation-range: entry 100% exit 0%;
+  }
+  
+  /* Overlapping image crossfade keyframes (image-to-image with no black/empty gaps) */
+  @keyframes fade-in-stay {
+    0%, 35% {
+      opacity: 0;
+    }
+    45%, 100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Text highlight transitions with parent card view timelines */
+  .tasks-feature-page .item.i1 .title.wheat {
+    background: linear-gradient(135deg, #fead00 0%, #ff781ff5 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: wheat; /* fallback */
+    
+    animation: title-first-anim auto linear both;
+    animation-timeline: --item-1;
+    animation-range: entry 100% exit 0%;
+    transition: none !important;
+  }
+
+  .tasks-feature-page .item.i2 .title.wheat {
+    background: linear-gradient(135deg, #fead00 0%, #ff781ff5 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: wheat; /* fallback */
+    
+    animation: title-middle-anim auto linear both;
+    animation-timeline: --item-2;
+    animation-range: entry 100% exit 0%;
+    transition: none !important;
+  }
+
+  .tasks-feature-page .item.i3 .title.wheat {
+    background: linear-gradient(135deg, #fead00 0%, #ff781ff5 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: wheat; /* fallback */
+    
+    animation: title-last-anim auto linear both;
+    animation-timeline: --item-3;
+    animation-range: entry 100% exit 0%;
+    transition: none !important;
+  }
+  
+  .tasks-feature-page .item.i1 .desc {
+    animation: desc-first-anim auto linear both;
+    animation-timeline: --item-1;
+    animation-range: entry 100% exit 0%;
+    transition: none !important;
+  }
+
+  .tasks-feature-page .item.i2 .desc {
+    animation: desc-middle-anim auto linear both;
+    animation-timeline: --item-2;
+    animation-range: entry 100% exit 0%;
+    transition: none !important;
+  }
+
+  .tasks-feature-page .item.i3 .desc {
+    animation: desc-last-anim auto linear both;
+    animation-timeline: --item-3;
+    animation-range: entry 100% exit 0%;
+    transition: none !important;
+  }
+  
+  @keyframes title-first-anim {
+    0%, 75% {
+      filter: grayscale(0%);
+      opacity: 1;
+    }
+    85%, 100% {
+      filter: grayscale(100%);
+      opacity: 0.5;
+    }
+  }
+
+  @keyframes title-middle-anim {
+    0%, 35%, 85%, 100% {
+      filter: grayscale(100%);
+      opacity: 0.5;
+    }
+    45%, 75% {
+      filter: grayscale(0%);
+      opacity: 1;
+    }
+  }
+
+  @keyframes title-last-anim {
+    0%, 35% {
+      filter: grayscale(100%);
+      opacity: 0.5;
+    }
+    45%, 100% {
+      filter: grayscale(0%);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes desc-first-anim {
+    0%, 75% {
+      color: #bbbbbb;
+      opacity: 1;
+    }
+    85%, 100% {
+      color: #808080;
+      opacity: 0.82;
+    }
+  }
+
+  @keyframes desc-middle-anim {
+    0%, 35%, 85%, 100% {
+      color: #808080;
+      opacity: 0.82;
+    }
+    45%, 75% {
+      color: #bbbbbb;
+      opacity: 1;
+    }
+  }
+
+  @keyframes desc-last-anim {
+    0%, 35% {
+      color: #808080;
+      opacity: 0.82;
+    }
+    45%, 100% {
+      color: #bbbbbb;
+      opacity: 1;
+    }
+  }
+  
+  .tasks-feature-page .sticky-box .cover {
+    animation: cover-fade auto linear both;
+    animation-timeline: view();
+    animation-range: entry 10% entry 90%;
+  }
+  
+  @keyframes cover-fade {
+    from {
+      opacity: 0.85;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tasks-feature-page .sticky-box img {
+    opacity: 0 !important;
+    animation: none !important;
+  }
+  .tasks-feature-page .sticky-box img.i1 {
+    opacity: 1 !important;
+  }
+  .tasks-feature-page .item .title.wheat {
+    animation: none !important;
+    color: wheat !important;
+    background: linear-gradient(135deg, #fead00 0%, #ff781ff5 100%) !important;
+    background-clip: text !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+  }
+  .tasks-feature-page .item .desc {
+    animation: none !important;
+    color: #bbbbbb !important;
+    opacity: 1 !important;
+  }
+  .tasks-feature-page .sticky-box .cover {
+    animation: none !important;
+    opacity: 0 !important;
+  }
+}
+
+/* Reveal animation on entering feature details section */
+@supports (animation-timeline: view()) {
+  .tasks-feature-page .feature-details {
+    animation: reveal-details-section auto linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 30%;
+  }
+}
+
+@keyframes reveal-details-section {
+  from {
+    opacity: 0.2;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Force all carousel titles to gold gradient */
+.tasks-feature-page .more-features .carousel-item .title {
+  color: #fead00 !important;
+  background: linear-gradient(135deg, #fead00 0%, #ff781ff5 100%) !important;
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
 }
