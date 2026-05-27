@@ -34,7 +34,8 @@ function registerFeaturesItems() {
   }
 
   function updateActiveFeature() {
-    const viewportCenter = window.innerHeight / 2;
+    const isMobile = window.innerWidth <= 1000;
+    const viewportCenter = isMobile ? window.innerHeight * 0.75 : window.innerHeight / 2;
     let closestSection = null;
     let minDistance = Infinity;
 

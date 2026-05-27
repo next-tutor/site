@@ -11,7 +11,8 @@ function registerPlatformScroll() {
   let hasPlayedFirstFeatureTextReveal = false;
 
   function updateActiveFeature() {
-    const viewportCenter = window.innerHeight / 2;
+    const isDesktop = window.innerWidth > 1200;
+    const viewportCenter = isDesktop ? window.innerHeight / 2 : window.innerHeight * 0.75;
     let closestSection = null;
     let minDistance = Infinity;
 
@@ -36,8 +37,9 @@ function registerPlatformScroll() {
         if (firstFeatureBackground) firstFeatureBackground.classList.remove('first-reveal-long');
 
         if (lastFeature) {
-          if (lastFeature === 'feature1' && firstFeatureBackground && !hasPlayedFirstFeatureReveal) {
-            firstFeatureBackground.classList.add('first-reveal-long');
+          if (lastFeature === 'feature1' && !hasPlayedFirstFeatureReveal) {
+            if (firstFeatureBackground) firstFeatureBackground.classList.add('first-reveal-long');
+            if (firstFeatureTextSection) firstFeatureTextSection.classList.add('first-reveal-long');
             hasPlayedFirstFeatureReveal = true;
           }
           if (lastFeature === 'feature1' && firstFeatureTextSection && !hasPlayedFirstFeatureTextReveal) {

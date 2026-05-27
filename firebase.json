@@ -3,6 +3,26 @@
     "public": "dist",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "cleanUrls": true,
-    "predeploy": ["npm run build"]
+    "predeploy": ["npm run build"],
+    "headers": [
+      {
+        "source": "**/*.@(js|css|webp|png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=31536000, immutable"
+          }
+        ]
+      },
+      {
+        "source": "**/*.@(html)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=0, s-maxage=3600, must-revalidate"
+          }
+        ]
+      }
+    ]
   }
 }

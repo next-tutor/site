@@ -152,6 +152,7 @@ header {
     letter-spacing: 0.45px;
     max-width: 730px;
     padding: 0 50px;
+    text-align: center;
   }
 
   strong {

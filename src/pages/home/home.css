@@ -472,7 +472,10 @@
         align-items: center;
 
         img {
-          width: 70px;
+          width: 66px;
+          height: 66px;
+          flex-shrink: 0;
+          object-fit: cover;
         }
 
         .name {

@@ -153,12 +153,9 @@ export default defineConfig({
     viteCompression({ algorithm: 'gzip', ext: '.gz' }),
     viteCompression({ algorithm: 'brotliCompress', ext: '.br' }),
   ],
-  server: {
-    allowedHosts: ['small-colts-stand.loca.lt'],
-  },
   build: {
     cssCodeSplit: true,
-    assetsInlineLimit: 4096,
+    assetsInlineLimit: 0,
     rollupOptions: {
       input: Object.fromEntries(
         Object.entries(pages).map(([key, { path }]) => [key, resolve(root, path)])

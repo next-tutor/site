@@ -53,21 +53,21 @@ footer .main {
       }
     }
 
-    .get-app-wrapper {
-      display: flex;
-      flex-direction: column;
-      margin-left: 110px;
-      margin-right: auto;
+      .get-app-wrapper {
+        display: flex;
+        flex-direction: column;
+        margin-top: 25px;
+        gap: 20px;
 
-      .btn {
-        margin-top: 20px;
-        transition: 0.3s ease-in-out;
+        .btn {
+          margin-top: 20px;
+          transition: 0.3s ease-in-out;
 
-        &:hover {
-          scale: 1.04;
+          &:hover {
+            scale: 1.04;
+          }
         }
       }
-    }
 
     .list {
       display: flex;
@@ -246,14 +246,18 @@ footer .mobile {
       color: transparent !important;
     }
   }
+  .mobile-apps {
+    display: flex;
+    gap: 15px;
+    margin: 30px 0 10px;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+  }
 }
 
 @media (max-width: 1153px) {
   footer .main {
-    .get-app-wrapper {
-      margin-left: 76px;
-    }
-
     .list {
       margin-left: 76px !important;
     }
@@ -276,4 +280,60 @@ footer .mobile {
       width: 70%;
     }
   }
+}
+.store-btn {
+  display: flex;
+  align-items: center;
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.3s ease;
+  width: 170px;
+}
+
+.store-btn:hover {
+  background-color: #2a2a2a;
+  border-color: #555;
+  transform: translateY(-2px);
+}
+
+.store-btn svg {
+  width: 24px;
+  height: 24px;
+  margin-right: 12px;
+  fill: #fff;
+  flex-shrink: 0;
+}
+
+.store-btn:last-child svg {
+  width: 20px;
+  height: 20px;
+  margin-left: 2px;
+  margin-right: 14px;
+}
+
+.store-btn .store-texts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.store-btn .store-sub {
+  font-family: Poppins;
+  font-size: 9px;
+  text-transform: uppercase;
+  color: #a0a0a0;
+  line-height: 1;
+  margin-bottom: 2px;
+}
+
+.store-btn .store-title {
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  color: #fff;
 }
