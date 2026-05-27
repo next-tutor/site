@@ -155,7 +155,8 @@ header {
         width: 26px;
         height: 26px;
         cursor: pointer;
-        z-index: 1;
+        z-index: 1001;
+        /* Stay above everything */
       }
 
       .btn>span,
@@ -166,7 +167,9 @@ header {
         width: 100%;
         height: 2px;
         background-color: #b9b8b8;
-        transition-duration: 0.25s;
+        transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+          top 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+          background-color 0.25s ease;
       }
 
       .btn>span::before {
@@ -182,17 +185,23 @@ header {
 
     .sidebar {
       position: fixed;
-      right: -100%;
-      top: 60px;
-      bottom: 0;
+      left: 0;
+      right: 0;
+      top: -100dvh;
+      height: 100dvh;
       width: 100%;
-      z-index: 0;
-      background: #000;
-      transition: right 0.3s ease-in-out;
+      z-index: 998;
+      background: #020202;
+      transition: top 0.45s cubic-bezier(0.16, 1, 0.3, 1);
       display: none;
+
+
       align-items: center;
       flex-direction: column;
-      padding: 45px 25px 0;
+      padding: 110px 24px 40px;
+      overflow-y: auto;
+      gap: 16px;
+
 
       .btn-login,
       .btn-start {
@@ -200,80 +209,120 @@ header {
         justify-content: center;
         align-items: center;
         z-index: 20;
-        border: 1px solid rgb(112, 112, 112);
-        border-radius: 5px;
-        height: 45px;
+        border-radius: 12px;
+        height: 52px;
         width: 100%;
-        color: #c2c2c2;
+        font-size: 15px;
+        font-weight: 500;
+        letter-spacing: 0.3px;
         text-decoration: none;
+        transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .btn-login {
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        background: rgba(255, 255, 255, 0.05);
+        color: #e3e3e3;
+        margin-top: 10px;
+
+        &:hover {
+          background: rgba(255, 255, 255, 0.1);
+          color: #fff;
+          border-color: rgba(255, 255, 255, 0.3);
+        }
       }
 
       .btn-start {
-        background: #fba536;
+        background: linear-gradient(135deg, #fba536 0%, #f8922d 100%);
         color: #000;
-        margin: 15px 0 25px;
-        border-color: transparent;
+        border: none;
+        margin-bottom: 24px;
+        box-shadow: 0 4px 15px rgba(251, 165, 54, 0.25);
+
+        &:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 6px 20px rgba(251, 165, 54, 0.4);
+        }
+
+        &:active {
+          transform: translateY(0);
+        }
       }
 
       .item {
         display: flex;
         align-items: center;
+        justify-content: center;
         text-decoration: none;
         color: #b4b4b4;
-        height: 56px;
-        border-bottom: 1px solid #393939;
-        font-weight: 600;
-        font-size: 15px;
+        height: 52px;
+        font-weight: 500;
+        font-size: 17px;
         width: 100%;
-        transition: color 0.2s;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0);
+        transition: all 0.2s ease;
+        border-bottom: none;
 
         &:hover {
           color: #fff;
+          background: rgba(255, 255, 255, 0.05);
         }
       }
     }
 
-    &.open_sidebar {
-      .hamburger {
-        .btn>span {
-          transform: rotate(45deg);
-        }
-
-        .btn>span::before {
-          top: 0;
-          transform: rotate(0);
-        }
-
-        .btn>span::after {
-          top: 0;
-          transform: rotate(90deg);
-        }
-      }
-
-      .sidebar {
-        right: 0;
-        z-index: 20;
-      }
-    }
   }
 }
 
 @media (max-width: 800px) {
   header {
-    height: 88px;
-    padding-top: 8px;
+    height: 72px;
+    padding-top: 0;
+    background: transparent;
+    border-bottom: none;
+    will-change: auto;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 72px;
+      background: #020202;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      z-index: 999;
+    }
+
+    .inner-header {
+      background: transparent;
+
+    }
+  }
+
+
+  /* Prevent background scrolling when mobile menu is open */
+  html:has(.open_sidebar),
+  html:has(#sidebar-toggle:checked),
+  body.no_overflow,
+  body:has(#sidebar-toggle:checked) {
+    overflow: hidden !important;
+    height: 100dvh !important;
   }
 
   header .inner-header {
+    height: 100%;
     justify-content: space-between;
     padding-top: 0;
     transform: none;
 
     .logo {
-      margin-left: 20px;
+      margin-left: 24px;
+      position: relative;
+      z-index: 1000;
 
       img {
-        width: 95px;
+        width: 105px;
         height: auto;
       }
     }
@@ -284,10 +333,60 @@ header {
 
     .hamburger {
       display: block;
+      margin-right: 24px;
+      position: relative;
+      z-index: 1000;
     }
 
     .sidebar {
       display: flex;
+      height: calc(100dvh - 72px);
+      padding: 30px 24px 40px;
     }
   }
+
+  /* JS-triggered open states */
+  header .inner-header.open_sidebar .sidebar {
+    top: 72px;
+  }
+
+  header .inner-header.open_sidebar .hamburger .btn>span {
+    background-color: transparent !important;
+  }
+
+  header .inner-header.open_sidebar .hamburger .btn>span::before {
+    top: 0;
+    transform: rotate(45deg);
+    background-color: #fff;
+  }
+
+  header .inner-header.open_sidebar .hamburger .btn>span::after {
+    top: 0;
+    transform: rotate(-45deg);
+    background-color: #fff;
+  }
+
+  /* CSS-triggered open states (checkbox hack) */
+  #sidebar-toggle:checked~.inner-header .sidebar {
+    top: 72px;
+  }
+
+
+  #sidebar-toggle:checked~.inner-header .hamburger .btn>span {
+    background-color: transparent !important;
+  }
+
+  #sidebar-toggle:checked~.inner-header .hamburger .btn>span::before {
+    top: 0;
+    transform: rotate(45deg);
+    background-color: #fff;
+  }
+
+  #sidebar-toggle:checked~.inner-header .hamburger .btn>span::after {
+    top: 0;
+    transform: rotate(-45deg);
+    background-color: #fff;
+  }
+
+
 }

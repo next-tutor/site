@@ -3,11 +3,18 @@
 
 <head>
   <meta charset="UTF-8" />
-  <style id="critical-bg">html,body{background-color:#020202;color-scheme:dark}</style>
+  <style id="critical-bg">
+    html,
+    body {
+      background-color: #020202;
+      color-scheme: dark
+    }
+  </style>
 
   <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=5">
   <title>Contact Us – Next Tutor</title>
-  <meta name="description" content="Reach out to the Next Tutor support team. We're here to help with any questions or issues.">
+  <meta name="description"
+    content="Reach out to the Next Tutor support team. We're here to help with any questions or issues.">
   <link rel="icon" type="image/x-icon" href="/src/assets/images/favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,113 +25,175 @@
 </head>
 
 <body>
-<div class="page-wrapper">
+  <div class="page-wrapper">
 
-  <header>
-    <div class="inner-header">
-      <a class="logo" href="/"><img src="/src/assets/images/logo/logo-large.png" fetchpriority="high" alt="Next Tutor" width="105" height="32" /></a>
-      <nav class="navbar" role="menubar">
-        <div class="nav-buttons-container">
-          <a class="navbar-btn" tabindex="0" role="menuitem" href="/platform">Platform</a>
-          <a class="navbar-btn" tabindex="0" role="menuitem" href="/about">About</a>
-          <a class="navbar-btn" tabindex="0" role="menuitem" href="/pricing">Pricing</a>
+    <header>
+      <div class="inner-header">
+        <a class="logo" href="/"><img src="/src/assets/images/logo/logo-large.png" fetchpriority="high" alt="Next Tutor"
+            width="105" height="32" /></a>
+        <nav class="navbar" role="menubar">
+          <div class="nav-buttons-container">
+            <a class="navbar-btn" tabindex="0" role="menuitem" href="/platform">Platform</a>
+            <a class="navbar-btn" tabindex="0" role="menuitem" href="/about">About</a>
+            <a class="navbar-btn" tabindex="0" role="menuitem" href="/pricing">Pricing</a>
+          </div>
+          <a class="btn-login" tabindex="0" href="#">Login</a>
+          <a href="/plus/plus.html" class="btn-start" tabindex="0" role="menuitem">Let's Start</a>
+        </nav>
+        <div class="hamburger"><label class="btn" aria-label="Toggle menu"><span></span></label></div>
+        <div class="sidebar" role="dialog" aria-label="Mobile navigation">
+          <a class="btn-login" tabindex="0" href="#">Login</a>
+          <a href="/plus/plus.html" class="btn-start" tabindex="0">Let's Start</a>
+          <a class="item" href="/platform">Platform</a>
+          <a class="item" href="/about">About</a>
+          <a class="item" href="/pricing">Pricing</a>
+          <a class="item" href="/contact">Contact us</a>
         </div>
-        <a class="btn-login" tabindex="0" href="#">Login</a>
-        <a href="/plus/plus.html" class="btn-start" tabindex="0" role="menuitem">Let's Start</a>
-      </nav>
-      <div class="hamburger"><label class="btn" aria-label="Toggle menu"><span></span></label></div>
-      <div class="sidebar" role="dialog" aria-label="Mobile navigation">
-        <a class="btn-login" tabindex="0" href="#">Login</a>
-        <a href="/plus/plus.html" class="btn-start" tabindex="0">Let's Start</a>
-        <a class="item" href="/platform">Platform</a>
-        <a class="item" href="/about">About</a>
-        <a class="item" href="/pricing">Pricing</a>
-        <a class="item" href="/contact">Contact us</a>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <section class="contact">
-    <div class="main-wrap">
-      <div class="main-title">How can we <span class="gradient">help?</span></div>
-      <div class="inner-wrap">
-        <div class="left-panel">
-          <form id="contact-form" novalidate>
-            <!-- Honeypot Spam Protection -->
-            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+    <section class="contact">
+      <div class="main-wrap">
+        <div class="main-title">How can we <span class="gradient">help?</span></div>
+        <div class="inner-wrap">
+          <div class="left-panel">
+            <form id="contact-form" novalidate>
+              <!-- Honeypot Spam Protection -->
+              <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
-            <div class="question q1">
-              <div class="lbl-wrap">
-                <label for="email">Your Email address <span class="required-asterisk">*</span></label>
+              <div class="question q1">
+                <div class="lbl-wrap">
+                  <label for="email">Your Email address <span class="required-asterisk">*</span></label>
+                </div>
+                <input type="email" required autocomplete="email" id="email" name="email" placeholder="Enter your email"
+                  aria-errormessage="email-error" />
+                <div id="email-error" class="error-msg">
+                  <span aria-hidden="true">⚠️</span> Please enter a valid email address.
+                </div>
               </div>
-              <input type="email" required autocomplete="email" id="email" name="email" placeholder="Enter your email" aria-errormessage="email-error" />
-              <div id="email-error" class="error-msg">
-                <span aria-hidden="true">⚠️</span> Please enter a valid email address.
+              <div class="question q2">
+                <div class="lbl-wrap">
+                  <label for="message">Your Message <span class="required-asterisk">*</span></label>
+                </div>
+                <textarea required id="message" name="message" placeholder="Write your message"
+                  aria-errormessage="message-error"></textarea>
+                <div id="message-error" class="error-msg">
+                  <span aria-hidden="true">⚠️</span> Please write your message.
+                </div>
               </div>
-            </div>
-            <div class="question q2">
-              <div class="lbl-wrap">
-                <label for="message">Your Message <span class="required-asterisk">*</span></label>
+              <div class="btn-submit">
+                <button type="submit">Submit
+                  <svg fill="none" height="24" viewBox="0 0 24 24" width="24" aria-hidden="true">
+                    <path d="M10.75 8.75L14.25 12L10.75 15.25" stroke="currentColor" stroke-linecap="round"
+                      stroke-linejoin="round" stroke-width="1.5"></path>
+                  </svg>
+                </button>
               </div>
-              <textarea required id="message" name="message" placeholder="Write your message" aria-errormessage="message-error"></textarea>
-              <div id="message-error" class="error-msg">
-                <span aria-hidden="true">⚠️</span> Please write your message.
-              </div>
-            </div>
-            <div class="btn-submit">
-              <button type="submit">Submit
-                <svg fill="none" height="24" viewBox="0 0 24 24" width="24" aria-hidden="true"><path d="M10.75 8.75L14.25 12L10.75 15.25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
-              </button>
-            </div>
-            <div id="form-status" class="form-status-msg" aria-live="polite"></div>
-          </form>
+              <div id="form-status" class="form-status-msg" aria-live="polite"></div>
+            </form>
 
-          <div id="contact-success" class="success-panel" style="display: none;">
-            <div class="success-icon">
-              <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 22 2 12 2ZM10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z" fill="currentColor"/>
-              </svg>
+            <div id="contact-success" class="success-panel" style="display: none;">
+              <div class="success-icon">
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true">
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 22 2 12 2ZM10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"
+                    fill="currentColor" />
+                </svg>
+              </div>
+              <h3 class="success-title">Message Sent!</h3>
+              <p class="success-text">Thank you for reaching out. We will get back to you shortly.</p>
+              <button type="button" id="btn-send-another" class="btn-another">Send another message</button>
             </div>
-            <h3 class="success-title">Message Sent!</h3>
-            <p class="success-text">Thank you for reaching out. We will get back to you shortly.</p>
-            <button type="button" id="btn-send-another" class="btn-another">Send another message</button>
+          </div>
+          <div class="right-panel">
+            <div class="info">
+              <div class="title">Get Help</div>
+              <div class="email">
+                <a href="mailto:service@nexttutor.io">service@nexttutor.io</a>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="right-panel">
-          <div class="info">
-            <div class="title">Get Help</div>
-            <div class="email">
-              <a href="mailto:service@nexttutor.io">service@nexttutor.io</a>
-            </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="main">
+        <div class="line"></div>
+        <div class="box">
+          <div class="left-side">
+            <div class="address">Tel Aviv, Israel</div>
+            <div class="icons"><a target="_blank" href="https://www.linkedin.com/company/next-tutor/about"
+                aria-label="LinkedIn"><img src="/src/assets/images/icons/linkedin.svg" alt="LinkedIn" width="24"
+                  height="24" loading="lazy"></a></div>
+          </div>
+          <div class="list">
+            <div class="title">Company</div><a href="/platform">Platform</a><a href="/about">About</a><a
+              href="/pricing">Pricing</a>
+          </div>
+          <div class="list">
+            <div class="title">Features</div><a href="/features/tasks">Offline Tasks</a><a href="/features/website">Web
+              Studio</a><a href="/features/reports">Reports</a><a href="/features/students">Student Portal</a>
+          </div>
+          <div class="list">
+            <div class="title">Legal</div><a href="/privacy">Privacy Policy</a><a href="/terms">Terms of Service</a><a
+              href="/credits">Images Credits</a>
+          </div>
+          <div class="list">
+            <div class="title">Support</div><a href="/contact">Contact us</a>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="main">
-      <div class="line"></div>
-      <div class="box">
-        <div class="left-side"><div class="address">Tel Aviv, Israel</div><div class="icons"><a target="_blank" href="https://www.linkedin.com/company/next-tutor/about" aria-label="LinkedIn"><img src="/src/assets/images/icons/linkedin.svg" alt="LinkedIn" width="24" height="24" loading="lazy"></a></div></div>
-        <div class="list"><div class="title">Company</div><a href="/platform">Platform</a><a href="/about">About</a><a href="/pricing">Pricing</a></div>
-        <div class="list"><div class="title">Features</div><a href="/features/tasks">Offline Tasks</a><a href="/features/website">Web Studio</a><a href="/features/reports">Reports</a><a href="/features/students">Student Portal</a></div>
-        <div class="list"><div class="title">Legal</div><a href="/privacy">Privacy Policy</a><a href="/terms">Terms of Service</a><a href="/credits">Images Credits</a></div>
-        <div class="list"><div class="title">Support</div><a href="/contact">Contact us</a></div>
+      <div class="mobile">
+        <div class="line"></div>
+        <div class="category">
+          <div class="header">
+            <div class="title">Company</div><svg width="15" height="10" viewBox="0 0 10 8" fill="none"
+              aria-hidden="true">
+              <path d="M1 1.59814L5.08941 5.68764L9.17904 1.59814" stroke="white" stroke-width="2"></path>
+            </svg>
+          </div>
+          <div class="content"><a href="/platform">Platform</a><a href="/about">About</a><a href="/pricing">Pricing</a>
+          </div>
+        </div>
+        <div class="category">
+          <div class="header">
+            <div class="title">Features</div><svg width="15" height="10" viewBox="0 0 10 8" fill="none"
+              aria-hidden="true">
+              <path d="M1 1.59814L5.08941 5.68764L9.17904 1.59814" stroke="white" stroke-width="2"></path>
+            </svg>
+          </div>
+          <div class="content"><a href="/features/tasks">Offline Tasks</a><a href="/features/website">Web Studio</a><a
+              href="/features/reports">Reports</a><a href="/features/students">Student Portal</a></div>
+        </div>
+        <div class="category">
+          <div class="header">
+            <div class="title">Legal</div><svg width="15" height="10" viewBox="0 0 10 8" fill="none" aria-hidden="true">
+              <path d="M1 1.59814L5.08941 5.68764L9.17904 1.59814" stroke="white" stroke-width="2"></path>
+            </svg>
+          </div>
+          <div class="content"><a href="/privacy">Privacy Policy</a><a href="/terms">Terms of Service</a><a
+              href="/credits">Images Credits</a></div>
+        </div>
+        <div class="category">
+          <div class="header">
+            <div class="title">Support</div><svg width="15" height="10" viewBox="0 0 10 8" fill="none"
+              aria-hidden="true">
+              <path d="M1 1.59814L5.08941 5.68764L9.17904 1.59814" stroke="white" stroke-width="2"></path>
+            </svg>
+          </div>
+          <div class="content"><a href="/contact">Contact us</a></div>
+        </div>
+        <div class="info">
+          <div class="rights"><span class="sign">©</span> 2026 Next Tutor.</div>
+        </div>
       </div>
-    </div>
-    <div class="mobile">
-      <div class="line"></div>
-      <div class="category"><div class="header"><div class="title">Company</div><svg width="15" height="10" viewBox="0 0 10 8" fill="none" aria-hidden="true"><path d="M1 1.59814L5.08941 5.68764L9.17904 1.59814" stroke="white" stroke-width="2"></path></svg></div><div class="content"><a href="/platform">Platform</a><a href="/about">About</a><a href="/pricing">Pricing</a></div></div>
-      <div class="category"><div class="header"><div class="title">Features</div><svg width="15" height="10" viewBox="0 0 10 8" fill="none" aria-hidden="true"><path d="M1 1.59814L5.08941 5.68764L9.17904 1.59814" stroke="white" stroke-width="2"></path></svg></div><div class="content"><a href="/features/tasks">Offline Tasks</a><a href="/features/website">Web Studio</a><a href="/features/reports">Reports</a><a href="/features/students">Student Portal</a></div></div>
-      <div class="category"><div class="header"><div class="title">Legal</div><svg width="15" height="10" viewBox="0 0 10 8" fill="none" aria-hidden="true"><path d="M1 1.59814L5.08941 5.68764L9.17904 1.59814" stroke="white" stroke-width="2"></path></svg></div><div class="content"><a href="/privacy">Privacy Policy</a><a href="/terms">Terms of Service</a><a href="/credits">Images Credits</a></div></div>
-      <div class="category"><div class="header"><div class="title">Support</div><svg width="15" height="10" viewBox="0 0 10 8" fill="none" aria-hidden="true"><path d="M1 1.59814L5.08941 5.68764L9.17904 1.59814" stroke="white" stroke-width="2"></path></svg></div><div class="content"><a href="/contact">Contact us</a></div></div>
-      <div class="info"><div class="rights"><span class="sign">©</span> 2024 Next Tutor.</div></div>
-    </div>
-  </footer>
+    </footer>
 
-</div>
-<script type="module" src="/src/js/main.js"></script>
-<script type="module" src="/src/js/contact.js"></script>
+  </div>
+  <script type="module" src="/src/js/main.js"></script>
+  <script type="module" src="/src/js/contact.js"></script>
 </body>
+
 </html>

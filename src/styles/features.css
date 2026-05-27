@@ -744,23 +744,26 @@ body {
 
 /* Sidebar checkbox toggle logic */
 .tasks-feature-page #sidebar-toggle:checked~.inner-header .hamburger .btn>span {
-  transform: rotate(45deg);
+  background-color: transparent !important;
 }
 
 .tasks-feature-page #sidebar-toggle:checked~.inner-header .hamburger .btn>span::before {
   top: 0;
-  transform: rotate(0);
+  transform: rotate(45deg);
+  background-color: #fff;
 }
 
 .tasks-feature-page #sidebar-toggle:checked~.inner-header .hamburger .btn>span::after {
   top: 0;
-  transform: rotate(90deg);
+  transform: rotate(-45deg);
+  background-color: #fff;
 }
 
 .tasks-feature-page #sidebar-toggle:checked~.inner-header .sidebar {
-  right: 0;
-  z-index: 20;
+  top: 72px;
 }
+
+
 
 /* Prevent body scroll when sidebar open */
 body.tasks-feature-page:has(#sidebar-toggle:checked) {
