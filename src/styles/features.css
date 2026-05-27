@@ -8,51 +8,12 @@ body {
   width: 100%;
 }
 
-.feature-hero {
-  width: 100%;
-  max-width: 1300px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  margin: 205px auto 115px;
-  padding: 0 30px;
-  background-color: transparent;
-  box-sizing: border-box;
-
-  .main-title {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-
-    .title {
-      font-family: Poppins;
-      font-size: 80px;
-      font-weight: 500;
-      line-height: 98px;
-      letter-spacing: -1.8px;
-      padding: 35px 0 0;
-      opacity: 0;
-      animation: fadeInUp 0.7s ease forwards;
-    }
-
-    .subtitle {
-      padding: 36px 0 0;
-      color: #c3c3c3;
-      font-family: Poppins;
-      font-size: 19px;
-      line-height: 44px;
-      max-width: 600px;
-      opacity: 0;
-      animation: fadeInUp 0.7s ease forwards;
-      animation-delay: 0.18s;
-    }
-  }
+.tasks-feature-page .page-wrapper {
+  margin-top: 205px;
 }
 
 .feature-opening {
-  margin: 0 auto 120px;
+  margin: 25px auto 170px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -76,6 +37,7 @@ body {
       border-radius: 25px;
       padding: 5px;
       overflow: hidden;
+      box-shadow: 1px 0px 7px 6px #ec7a38d4;
       background: linear-gradient(60deg,
           #fa8273,
           #e58a36,
@@ -85,7 +47,6 @@ body {
           #956310,
           #6c374c,
           #0d1b3e);
-      box-shadow: 0 16px 45px rgba(0, 0, 0, 0.35);
       display: block;
 
       &::before {
@@ -123,6 +84,7 @@ body {
   justify-content: center;
   isolation: isolate;
   background: #0b0b0b;
+  padding: 100px 0;
 
   .inner-details {
     max-width: 1270px;
@@ -242,9 +204,18 @@ body {
 
           &.active {
             .title.wheat {
-              color: wheat;
+              color: #d4950e;
               opacity: 1;
-              background: linear-gradient(135deg, #fead00 0%, #ff781ff5 100%);
+              background: linear-gradient(135deg, #ffc837 0%, #d4950e 100%);
+              background-clip: text;
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+            }
+
+            .title.cyan-title {
+              color: #0072ff;
+              opacity: 1;
+              background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
               background-clip: text;
               -webkit-background-clip: text;
               -webkit-text-fill-color: transparent;
@@ -284,7 +255,6 @@ body {
   justify-content: center;
   align-items: center;
   height: 730px;
-  padding-top: 70px;
 
   .caption {
     font-family: Poppins;
@@ -316,7 +286,7 @@ body {
     flex-direction: column;
     justify-content: center;
     box-sizing: border-box;
-    border: 2px solid #fead00;
+    border: 2px solid #d4950e;
     cursor: pointer;
     text-decoration: none;
 
@@ -486,8 +456,8 @@ body {
 
             .title {
               width: 100%;
-              color: wheat;
-              background: linear-gradient(135deg, #fead00 0%, #ff781ff5 100%);
+              color: #d4950e;
+              background: linear-gradient(135deg, #ffc837 0%, #d4950e 100%);
               background-clip: text;
               -webkit-background-clip: text;
               -webkit-text-fill-color: transparent;
@@ -709,6 +679,7 @@ body {
   .more-features .carousel-item {
     flex: 0 0 calc(50% - 10px);
   }
+
   .more-features .carousel-wrapper {
     max-width: 900px;
     width: 85%;
@@ -720,6 +691,7 @@ body {
   .more-features .carousel-item {
     flex: 0 0 100%;
   }
+
   .more-features .carousel-wrapper {
     max-width: 600px;
     width: 85%;
@@ -728,34 +700,29 @@ body {
 }
 
 @media (max-width: 1536px) {
-  .feature-hero {
+  .tasks-feature-page .page-wrapper {
     margin-top: 145px;
-    margin-bottom: 75px;
+  }
 
-    .main-title {
-      .title {
-        font-size: 72px;
-        line-height: 86px;
-      }
-    }
+  .tasks-feature-page .main-title .title {
+    font-size: 72px;
+    line-height: 86px;
   }
 }
 
 @media (max-width: 480px) {
-  .feature-hero {
-    margin: 100px auto 60px;
+  .tasks-feature-page .page-wrapper {
+    margin-top: 100px;
+  }
 
-    .main-title {
-      .title {
-        font-size: 47px;
-        line-height: 60px;
-      }
+  .tasks-feature-page .main-title .title {
+    font-size: 47px;
+    line-height: 60px;
+  }
 
-      .subtitle {
-        line-height: 38px;
-        font-size: 17px;
-      }
-    }
+  .tasks-feature-page .main-title .subtitle {
+    line-height: 38px;
+    font-size: 17px;
   }
 }
 
@@ -776,21 +743,25 @@ body {
    ========================================================================== */
 
 /* Sidebar checkbox toggle logic */
-.tasks-feature-page #sidebar-toggle:checked ~ .inner-header .hamburger .btn > span {
+.tasks-feature-page #sidebar-toggle:checked~.inner-header .hamburger .btn>span {
   transform: rotate(45deg);
 }
-.tasks-feature-page #sidebar-toggle:checked ~ .inner-header .hamburger .btn > span::before {
+
+.tasks-feature-page #sidebar-toggle:checked~.inner-header .hamburger .btn>span::before {
   top: 0;
   transform: rotate(0);
 }
-.tasks-feature-page #sidebar-toggle:checked ~ .inner-header .hamburger .btn > span::after {
+
+.tasks-feature-page #sidebar-toggle:checked~.inner-header .hamburger .btn>span::after {
   top: 0;
   transform: rotate(90deg);
 }
-.tasks-feature-page #sidebar-toggle:checked ~ .inner-header .sidebar {
+
+.tasks-feature-page #sidebar-toggle:checked~.inner-header .sidebar {
   right: 0;
   z-index: 20;
 }
+
 /* Prevent body scroll when sidebar open */
 body.tasks-feature-page:has(#sidebar-toggle:checked) {
   overflow: hidden;
@@ -844,51 +815,58 @@ body.tasks-feature-page:has(#sidebar-toggle:checked) {
 }
 
 /* Show correct chevron labels based on active radio slide */
-.tasks-feature-page #slide-1:checked ~ .more-features .carousel-prev.p-1,
-.tasks-feature-page #slide-1:checked ~ .more-features .carousel-next.n-1,
-.tasks-feature-page #slide-2:checked ~ .more-features .carousel-prev.p-2,
-.tasks-feature-page #slide-2:checked ~ .more-features .carousel-next.n-2,
-.tasks-feature-page #slide-3:checked ~ .more-features .carousel-prev.p-3,
-.tasks-feature-page #slide-3:checked ~ .more-features .carousel-next.n-3,
-.tasks-feature-page #slide-4:checked ~ .more-features .carousel-prev.p-4,
-.tasks-feature-page #slide-4:checked ~ .more-features .carousel-next.n-4 {
+.tasks-feature-page #slide-1:checked~.more-features .carousel-prev.p-1,
+.tasks-feature-page #slide-1:checked~.more-features .carousel-next.n-1,
+.tasks-feature-page #slide-2:checked~.more-features .carousel-prev.p-2,
+.tasks-feature-page #slide-2:checked~.more-features .carousel-next.n-2,
+.tasks-feature-page #slide-3:checked~.more-features .carousel-prev.p-3,
+.tasks-feature-page #slide-3:checked~.more-features .carousel-next.n-3,
+.tasks-feature-page #slide-4:checked~.more-features .carousel-prev.p-4,
+.tasks-feature-page #slide-4:checked~.more-features .carousel-next.n-4 {
   display: flex !important;
 }
 
 /* Translate carousel track */
-.tasks-feature-page #slide-1:checked ~ .more-features .carousel-track {
+.tasks-feature-page #slide-1:checked~.more-features .carousel-track {
   transform: translateX(0);
 }
-.tasks-feature-page #slide-2:checked ~ .more-features .carousel-track {
+
+.tasks-feature-page #slide-2:checked~.more-features .carousel-track {
   transform: translateX(calc(-11.111% - 2px));
 }
-.tasks-feature-page #slide-3:checked ~ .more-features .carousel-track {
+
+.tasks-feature-page #slide-3:checked~.more-features .carousel-track {
   transform: translateX(calc(-22.222% - 4px));
 }
-.tasks-feature-page #slide-4:checked ~ .more-features .carousel-track {
+
+.tasks-feature-page #slide-4:checked~.more-features .carousel-track {
   transform: translateX(calc(-33.333% - 6px));
 }
 
 @media (max-width: 1100px) {
-  .tasks-feature-page #slide-2:checked ~ .more-features .carousel-track {
+  .tasks-feature-page #slide-2:checked~.more-features .carousel-track {
     transform: translateX(calc(-33.333% - 6.667px));
   }
-  .tasks-feature-page #slide-3:checked ~ .more-features .carousel-track {
+
+  .tasks-feature-page #slide-3:checked~.more-features .carousel-track {
     transform: translateX(calc(-66.667% - 13.333px));
   }
-  .tasks-feature-page #slide-4:checked ~ .more-features .carousel-track {
+
+  .tasks-feature-page #slide-4:checked~.more-features .carousel-track {
     transform: translateX(calc(-100% - 20px));
   }
 }
 
 @media (max-width: 700px) {
-  .tasks-feature-page #slide-2:checked ~ .more-features .carousel-track {
+  .tasks-feature-page #slide-2:checked~.more-features .carousel-track {
     transform: translateX(calc(-100% - 20px));
   }
-  .tasks-feature-page #slide-3:checked ~ .more-features .carousel-track {
+
+  .tasks-feature-page #slide-3:checked~.more-features .carousel-track {
     transform: translateX(calc(-200% - 40px));
   }
-  .tasks-feature-page #slide-4:checked ~ .more-features .carousel-track {
+
+  .tasks-feature-page #slide-4:checked~.more-features .carousel-track {
     transform: translateX(calc(-300% - 60px));
   }
 }
@@ -898,19 +876,22 @@ body.tasks-feature-page:has(#sidebar-toggle:checked) {
   .tasks-feature-page .more-details {
     timeline-scope: --item-1, --item-2, --item-3;
   }
-  
+
   .tasks-feature-page .item.i1 {
     view-timeline: --item-1 block;
   }
+
   .tasks-feature-page .item.i2 {
     view-timeline: --item-2 block;
   }
+
   .tasks-feature-page .item.i3 {
     view-timeline: --item-3 block;
   }
-  
+
   .tasks-feature-page .sticky-box img {
-    transition: none !important; /* Prevents CSS transitions from lagging scroll-driven animation */
+    transition: none !important;
+    /* Prevents CSS transitions from lagging scroll-driven animation */
   }
 
   .tasks-feature-page .sticky-box img.i1 {
@@ -918,37 +899,44 @@ body.tasks-feature-page:has(#sidebar-toggle:checked) {
     z-index: 1;
     animation: none !important;
   }
+
   .tasks-feature-page .sticky-box img.i2 {
     z-index: 2;
     animation: fade-in-stay auto linear both;
     animation-timeline: --item-2;
     animation-range: entry 100% exit 0%;
   }
+
   .tasks-feature-page .sticky-box img.i3 {
     z-index: 3;
     animation: fade-in-stay auto linear both;
     animation-timeline: --item-3;
     animation-range: entry 100% exit 0%;
   }
-  
+
   /* Overlapping image crossfade keyframes (image-to-image with no black/empty gaps) */
   @keyframes fade-in-stay {
-    0%, 35% {
+
+    0%,
+    35% {
       opacity: 0;
     }
-    45%, 100% {
+
+    45%,
+    100% {
       opacity: 1;
     }
   }
-  
+
   /* Text highlight transitions with parent card view timelines */
   .tasks-feature-page .item.i1 .title.wheat {
-    background: linear-gradient(135deg, #fead00 0%, #ff781ff5 100%);
+    background: linear-gradient(135deg, #ffc837 0%, #d4950e 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    color: wheat; /* fallback */
-    
+    color: #d4950e;
+    /* fallback */
+
     animation: title-first-anim auto linear both;
     animation-timeline: --item-1;
     animation-range: entry 100% exit 0%;
@@ -956,12 +944,27 @@ body.tasks-feature-page:has(#sidebar-toggle:checked) {
   }
 
   .tasks-feature-page .item.i2 .title.wheat {
-    background: linear-gradient(135deg, #fead00 0%, #ff781ff5 100%);
+    background: linear-gradient(135deg, #ffc837 0%, #d4950e 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    color: wheat; /* fallback */
-    
+    color: #d4950e;
+    /* fallback */
+
+    animation: title-middle-anim auto linear both;
+    animation-timeline: --item-2;
+    animation-range: entry 100% exit 0%;
+    transition: none !important;
+  }
+
+  .tasks-feature-page .item.i2 .title.cyan-title {
+    background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #0072ff;
+    /* fallback */
+
     animation: title-middle-anim auto linear both;
     animation-timeline: --item-2;
     animation-range: entry 100% exit 0%;
@@ -969,18 +972,19 @@ body.tasks-feature-page:has(#sidebar-toggle:checked) {
   }
 
   .tasks-feature-page .item.i3 .title.wheat {
-    background: linear-gradient(135deg, #fead00 0%, #ff781ff5 100%);
+    background: linear-gradient(135deg, #ffc837 0%, #d4950e 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    color: wheat; /* fallback */
-    
+    color: #d4950e;
+    /* fallback */
+
     animation: title-last-anim auto linear both;
     animation-timeline: --item-3;
     animation-range: entry 100% exit 0%;
     transition: none !important;
   }
-  
+
   .tasks-feature-page .item.i1 .desc {
     animation: desc-first-anim auto linear both;
     animation-timeline: --item-1;
@@ -1001,83 +1005,112 @@ body.tasks-feature-page:has(#sidebar-toggle:checked) {
     animation-range: entry 100% exit 0%;
     transition: none !important;
   }
-  
+
   @keyframes title-first-anim {
-    0%, 75% {
+
+    0%,
+    75% {
       filter: grayscale(0%);
       opacity: 1;
     }
-    85%, 100% {
+
+    85%,
+    100% {
       filter: grayscale(100%);
       opacity: 0.5;
     }
   }
 
   @keyframes title-middle-anim {
-    0%, 35%, 85%, 100% {
+
+    0%,
+    35%,
+    85%,
+    100% {
       filter: grayscale(100%);
       opacity: 0.5;
     }
-    45%, 75% {
+
+    45%,
+    75% {
       filter: grayscale(0%);
       opacity: 1;
     }
   }
 
   @keyframes title-last-anim {
-    0%, 35% {
+
+    0%,
+    35% {
       filter: grayscale(100%);
       opacity: 0.5;
     }
-    45%, 100% {
+
+    45%,
+    100% {
       filter: grayscale(0%);
       opacity: 1;
     }
   }
-  
+
   @keyframes desc-first-anim {
-    0%, 75% {
+
+    0%,
+    75% {
       color: #bbbbbb;
       opacity: 1;
     }
-    85%, 100% {
+
+    85%,
+    100% {
       color: #808080;
       opacity: 0.82;
     }
   }
 
   @keyframes desc-middle-anim {
-    0%, 35%, 85%, 100% {
+
+    0%,
+    35%,
+    85%,
+    100% {
       color: #808080;
       opacity: 0.82;
     }
-    45%, 75% {
+
+    45%,
+    75% {
       color: #bbbbbb;
       opacity: 1;
     }
   }
 
   @keyframes desc-last-anim {
-    0%, 35% {
+
+    0%,
+    35% {
       color: #808080;
       opacity: 0.82;
     }
-    45%, 100% {
+
+    45%,
+    100% {
       color: #bbbbbb;
       opacity: 1;
     }
   }
-  
+
   .tasks-feature-page .sticky-box .cover {
     animation: cover-fade auto linear both;
     animation-timeline: view();
     animation-range: entry 10% entry 90%;
   }
-  
+
   @keyframes cover-fade {
     from {
       opacity: 0.85;
     }
+
     to {
       opacity: 0;
     }
@@ -1089,22 +1122,35 @@ body.tasks-feature-page:has(#sidebar-toggle:checked) {
     opacity: 0 !important;
     animation: none !important;
   }
+
   .tasks-feature-page .sticky-box img.i1 {
     opacity: 1 !important;
   }
+
   .tasks-feature-page .item .title.wheat {
     animation: none !important;
-    color: wheat !important;
-    background: linear-gradient(135deg, #fead00 0%, #ff781ff5 100%) !important;
+    color: #d4950e !important;
+    background: linear-gradient(135deg, #ffc837 0%, #d4950e 100%) !important;
     background-clip: text !important;
     -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
   }
+
+  .tasks-feature-page .item .title.cyan-title {
+    animation: none !important;
+    color: #0072ff !important;
+    background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%) !important;
+    background-clip: text !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+  }
+
   .tasks-feature-page .item .desc {
     animation: none !important;
     color: #bbbbbb !important;
     opacity: 1 !important;
   }
+
   .tasks-feature-page .sticky-box .cover {
     animation: none !important;
     opacity: 0 !important;
@@ -1125,16 +1171,25 @@ body.tasks-feature-page:has(#sidebar-toggle:checked) {
     opacity: 0.2;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-/* Force all carousel titles to gold gradient */
+
+/* Force all carousel titles to #ff9f23 by default */
 .tasks-feature-page .more-features .carousel-item .title {
-  color: #fead00 !important;
-  background: linear-gradient(135deg, #fead00 0%, #ff781ff5 100%) !important;
+  color: #ff9f23 !important;
+  background: none !important;
+  -webkit-text-fill-color: initial !important;
+}
+
+/* Force the active/center carousel item title to the gold gradient */
+.tasks-feature-page .more-features .carousel-item .title.cyan-title {
+  color: #d4950e !important;
+  background: linear-gradient(135deg, #ffc837 0%, #d4950e 100%) !important;
   background-clip: text !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
