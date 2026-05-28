@@ -484,23 +484,23 @@ body {
           }
 
           &.feature1 .small-image {
-            background-image: url('/src/assets/images/platform/backgrounds/bg-main.webp');
+            background-image: url('/src/assets/images/platform/backgrounds/bg-website.webp');
           }
 
           &.feature2 .small-image {
-            background-image: url('/src/assets/images/platform/backgrounds/bg-orange.webp');
+            background-image: url('/src/assets/images/platform/backgrounds/bg-tasks.webp');
           }
 
           &.feature3 .small-image {
-            background-image: url('/src/assets/images/platform/backgrounds/bg-orange.webp');
+            background-image: url('/src/assets/images/platform/backgrounds/bg-students.webp');
           }
 
           &.feature4 .small-image {
-            background-image: url('/src/assets/images/platform/backgrounds/bg-orange.webp');
+            background-image: url('/src/assets/images/platform/backgrounds/bg-automation.webp');
           }
 
           &.feature5 .small-image {
-            background-image: url('/src/assets/images/platform/backgrounds/bg-blue.webp');
+            background-image: url('/src/assets/images/platform/backgrounds/bg-reports.webp');
           }
         }
       }
