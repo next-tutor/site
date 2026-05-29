@@ -31,6 +31,10 @@ const titleByPath = new Map(
   Object.values(pages).map(({ path, title }) => [resolve(root, path), formatPageTitle(title)])
 );
 
+const urlByPath = new Map(
+  Object.values(pages).map(({ path, url }) => [resolve(root, path), url])
+);
+
 function htmlRouterMiddleware(map) {
   return (req, _res, next) => {
     const url = req.url?.split('?')[0].replace(/\/$/, '') || '/';
@@ -132,11 +136,57 @@ function pageTitlePlugin() {
   };
 }
 
+function seoPlugin() {
+  return {
+    name: 'dynamic-seo',
+    transformIndexHtml(html, ctx) {
+      const url = urlByPath.get(ctx.filename) || '/';
+      const title = titleByPath.get(ctx.filename) || 'Next Tutor';
+
+      const descMatch = html.match(/<meta[^>]*name="description"[^>]*content="([^"]*)"/i) || 
+                        html.match(/<meta[^>]*content="([^"]*)"[^>]*name="description"/i);
+      const description = descMatch ? descMatch[1] : "Next Tutor is the first and only platform designed for private tutors.";
+
+      const canonicalUrl = `https://www.nexttutor.net${url === '/' ? '' : url}`;
+
+      const seoTags = `
+  <!-- Canonical Link -->
+  <link rel="canonical" href="${canonicalUrl}" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="${canonicalUrl}" />
+  <meta property="og:title" content="${title}" />
+  <meta property="og:description" content="${description}" />
+  <meta property="og:site_name" content="Next Tutor" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:url" content="${canonicalUrl}" />
+  <meta name="twitter:title" content="${title}" />
+  <meta name="twitter:description" content="${description}" />
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Next Tutor",
+    "url": "${canonicalUrl}"
+  }
+  </script>`;
+
+      return html.replace(/<\/head>/i, `${seoTags}\n</head>`);
+    },
+  };
+}
+
 export default defineConfig({
   plugins: [
     criticalBgPlugin(),
     cssBeforeJsPlugin(),
     pageTitlePlugin(),
+    seoPlugin(),
     {
       name: 'html-router',
       configureServer(server) {
