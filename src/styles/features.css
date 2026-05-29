@@ -34,7 +34,6 @@ body {
     .image-wrap {
       position: relative;
       width: 100%;
-      height: 654px;
       border-radius: 25px;
       padding: 5px;
       overflow: hidden;
@@ -265,6 +264,7 @@ body {
     margin-bottom: 100px;
     display: flex;
     justify-content: center;
+    text-align: center;
     padding: 0 35px;
   }
 
@@ -425,6 +425,45 @@ body {
   }
 }
 
+@media (max-width: 1400px) {
+  .feature-details .inner-details .main-title {
+    align-items: center;
+  }
+
+  .feature-details .inner-details .main-title .title,
+  .feature-details .inner-details .main-title .subtitle {
+    text-align: center;
+    padding-right: 0;
+  }
+
+  .more-details {
+    /* Use flex spacing instead of constant padding */
+  }
+
+  .more-details .sticky-box {
+    width: 45%;
+    height: auto;
+    aspect-ratio: 540 / 410;
+    flex-shrink: 0;
+  }
+
+  .more-details .items {
+    margin-left: auto;
+  }
+
+  .more-details .items .item {
+    padding-left: 0;
+  }
+
+  .more-details .items .item .title,
+  .more-details .items .item .desc {
+    width: 100%;
+    max-width: 480px;
+  }
+}
+
+
+
 @media (max-width: 1000px) {
 
   .feature-opening {
@@ -432,7 +471,6 @@ body {
 
     .page .image-wrap {
       height: auto;
-      aspect-ratio: 1110 / 654;
     }
   }
 
@@ -1228,38 +1266,4 @@ body.tasks-feature-page:has(#sidebar-toggle:checked) {
 /* Title Visibility Overrides */
 .mobile-only {
   display: none !important;
-}
-
-@media (max-width: 1000px) {
-  .mobile-only.main-title {
-    display: flex !important;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 40px;
-    width: 100%;
-  }
-
-  .mobile-only.main-title .title {
-    font-family: Poppins;
-    font-size: 50px;
-    font-weight: 500;
-    line-height: 65px;
-    letter-spacing: -1.8px;
-    padding: 0;
-    text-align: center;
-    width: 350px;
-    max-width: 100%;
-  }
-
-  .desktop-only {
-    display: none !important;
-  }
-}
-
-@media (max-width: 480px) {
-  .mobile-only.main-title .title {
-    font-size: 47px;
-    line-height: 60px;
-    width: 90%;
-  }
 }

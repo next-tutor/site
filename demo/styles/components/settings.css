@@ -766,3 +766,10 @@
         opacity: 1;
     }
 }
+
+@media (max-width: 950px) {
+    .main-panel .panel.settings {
+        padding: 20px !important;
+        margin: 0 !important;
+    }
+}

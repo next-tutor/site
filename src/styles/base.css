@@ -8,6 +8,11 @@
   box-sizing: border-box;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 html {
   background-color: #020202;
   scroll-behavior: smooth;

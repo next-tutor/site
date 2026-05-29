@@ -125,7 +125,7 @@
     z-index: 1;
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 95%;
     max-width: 1300px;
     margin-top: 285px;
 
@@ -185,7 +185,7 @@
   isolation: isolate;
 
   .inner-wrap {
-    width: min(1110px, 85%);
+    width: min(1110px, 91%);
     display: flex;
     flex-direction: column;
     background-color: #020202;
@@ -235,6 +235,18 @@
 
   .demo-iframe.video-mode {
     pointer-events: none;
+  }
+
+  @media (max-width: 1110px) {
+    .demo-iframe {
+      aspect-ratio: 16 / 10;
+    }
+  }
+
+  @media (max-width: 950px) {
+    .demo-iframe {
+      aspect-ratio: 16 / 11;
+    }
   }
 }
 
@@ -501,16 +513,6 @@
   }
 }
 
-@media (max-width: 1536px) {
-  .home-page .inner-hp {
-    margin-top: 230px;
-
-    .title {
-      font-size: 64px;
-    }
-  }
-}
-
 @media (max-width: 1200px) {
   .why-us .why {
     width: 925px;
@@ -563,8 +565,6 @@
     margin-top: 235px;
 
     .title {
-      width: 600px;
-      font-size: 70px;
       margin-left: 30px;
     }
 
@@ -579,7 +579,34 @@
   }
 }
 
+@media (max-width: 900px) {
+  .home-page .inner-hp .title {
+    width: 750px;
+    font-size: 70px;
+  }
+}
+
 @media (max-width: 820px) {
+  .home-page .inner-hp {
+    align-items: center;
+  }
+
+  .home-page .inner-hp .title,
+  .home-page .inner-hp .subtitle,
+  .home-page .inner-hp .btn-start {
+    margin-left: 0;
+  }
+
+  .home-page .inner-hp .title,
+  .home-page .inner-hp .subtitle {
+    text-align: center;
+  }
+
+  .home-page .inner-hp .title {
+    width: 91.5vw;
+    font-size: 8.5vw;
+  }
+
   .why-us .main-title {
     font-size: 37px;
   }
@@ -589,13 +616,29 @@
   }
 }
 
+@media (max-width: 730px) {
+  .home-page .inner-hp .title {
+    width: 400px;
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 475px) {
+  .home-page .inner-hp .title {
+    width: 360px;
+    font-size: 54px;
+  }
+}
+
+@media (max-width: 390px) {
+  .home-page .inner-hp .title {
+    width: 310px;
+    font-size: 46px;
+  }
+}
+
 @media (max-width: 700px) {
   .home-page .inner-hp {
-    .title {
-      width: 500px;
-      font-size: 55px;
-    }
-
     .subtitle {
       width: 400px;
       font-size: 17px;
@@ -677,11 +720,6 @@
 
     .inner-hp {
       margin-top: 120px;
-
-      .title {
-        width: 400px;
-        font-size: 45px;
-      }
 
       .subtitle {
         width: 300px;

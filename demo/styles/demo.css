@@ -179,3 +179,26 @@ body {
     stroke-dashoffset: 0;
   }
 }
+
+@media (max-width: 1110px) {
+  .main-panel .panel {
+    max-width: 100% !important;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+  
+  .main-panel .panel .content {
+    max-width: 100% !important;
+    margin-left: 0 !important;
+  }
+  
+  .sidebar {
+    height: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  .main-panel .panel:not(.settings) {
+    zoom: 0.85;
+  }
+}
